@@ -1,24 +1,55 @@
 <html>
 
 <head>
-<h1>COE 4 Class Generator</h1>
+<style>
+div {
+  background-color: lightgrey;
+  width: 900;
+  border: 5px inset gold;
+  padding: 20px;
+  margin: 20px;
+}
+.button {
+  background-color: gold;
+  border: inset gold;
+  color: black;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<div>
+<p style= "background-color:rgba(140, 100, 90, 0.8);">
+<h1 style="font-family:verdana;">COE 4 Class Generator</h1>
+<h2 style="font-family:verdana;">by Nurhaci</h2>
+
+</p> 
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-<body>
-<h2>by Nurhaci</h2>
-<b> Number of Classes Generated</b>
+<body style=background-image:url("20191029053048_1.jpg")>
+
+<b style="font-family:System;"> Number of Classes Generated</b>
 <input type="text" id="classnumber" value="10" size="5">
-- Choose how many custom classes you want(Not counting the 2 generated if <b>Overwrite Voice of El and Troll King </b> is checked. Conquest of Elysium can only load a maximum of 75 classes, including the ones in base game.)
 <br>
 <br>
-<p id="mainout" style="font-family:Serif;"></p> 
-<p id="mainout2" style="font-family:Serif;"></p> 
-<button onclick="download()" id="downloadbutton">Save Results</button>
+Choose how many custom classes you want(Not counting the 2 generated if <b>Overwrite Voice of El and Troll King </b> is checked. Conquest of Elysium can only load a maximum of 75 classes, including the ones in base game.)
 <br>
 <br>
-<button onclick="download2()" id="downloadbutton2">Overwrite Voice of El and Troll King</button>
-- The Troll King and Voice of El have special rituals which are tied into their respective class numbers. This option will overwrite their classes to make functioning random classes for them. Unfortunatly, this comes at the cost of having only one randomly generated class per generation for each.
-<p id="mainoutput" style="font-family:Serif;"></p> 
+<p id="mainout" style="font-family:System;"></p> 
+<p id="mainout2" style="font-family:System;"></p> 
+<button class="button" onclick="download()" id="downloadbutton">Save Results</button>
+<button class="button" onclick="download2()" id="downloadbutton2">Overwrite Voice of El and Troll King*</button>
+<br>
+* The Troll King and Voice of El have special rituals which are tied into their respective class numbers. This option will overwrite their classes to make functioning random classes for them. Unfortunatly, this comes at the cost of having only one randomly generated class for each.
+<p id="mainoutput" style="font-family:Serif;"></p>
+ 
+</div>
 </body>
 <script src="COE4.js"></script>
 </html>
