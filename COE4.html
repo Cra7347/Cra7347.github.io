@@ -1,0 +1,24 @@
+<html>
+
+<head>
+<h1>COE 4 Class Generator</h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<h2>by Nurhaci</h2>
+<b> Number of Classes Generated</b>
+<input type="text" id="classnumber" value="10" size="5">
+- Choose how many custom classes you want(Not counting the 2 generated if <b>Overwrite Voice of El and Troll King </b> is checked. Conquest of Elysium can only load a maximum of 75 classes, including the ones in base game.)
+<br>
+<br>
+<p id="mainout" style="font-family:Serif;"></p> 
+<p id="mainout2" style="font-family:Serif;"></p> 
+<button onclick="download()" id="downloadbutton">Save Results</button>
+<br>
+<br>
+<button onclick="download2()" id="downloadbutton2">Overwrite Voice of El and Troll King</button>
+- The Troll King and Voice of El have special rituals which are tied into their respective class numbers. This option will overwrite their classes to make functioning random classes for them. Unfortunatly, this comes at the cost of having only one randomly generated class per generation for each.
+<p id="mainoutput" style="font-family:Serif;"></p> 
+</body>
+<script src="COE4.js"></script>
+</html>
