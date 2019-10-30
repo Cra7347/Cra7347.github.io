@@ -202,8 +202,8 @@ let team1 = [
 	{name: "Black Cat Familiar", num: 25, gold: 50, iron: 0, chance: 100},	
 	{name: "Crocodile", num: 1, gold: 20, iron: 0, chance: 100},	
 	{name: "Frog", num: 25, gold: 50, iron: 0, chance: 100},	
-	{name: "Giant Toad", num: 1, gold: 30, iron: 0, chance: 100},
-	{name: "Marsh Worm", num: 1, gold: 25, iron: 0, chance: 100},	
+	{name: "Giant Toad", num: 1, gold: 40, iron: 0, chance: 100},
+	{name: "Marsh Worm", num: 1, gold: 30, iron: 0, chance: 100},	
 	{name: "Giant Snail", num: 7, gold: 50, iron: 0, chance: 100},
 	{name: "Hydra Hatchling", num: 1, gold: 20, iron: 0, chance: 100},	
 	
@@ -254,25 +254,25 @@ let team2 = [
 	{name: "Princess", gold: 40, iron: 0, chance: 5, goldplus: 100},
 
 //weird	
-	{name: "Dragon Hatchling", gold: 30, iron: 0, chance: 5, goldplus: 40},
+	{name: "Dragon Hatchling", gold: 40, iron: 0, chance: 5, goldplus: 40},
 	{name: "Mind Slime Horror", gold: 60, iron: 0, chance: 5, goldplus: 40},
 	{name: "Peddler", gold: 20, iron: 0, chance: 5, goldplus: 40},	
 	{name: "Beholder", gold: 150, iron: 0, chance: 3, goldplus: 100},
 	{name: "Amphiptere", gold: 70, iron: 0, chance: 3, goldplus: 80},
-	{name: "Wyvern", gold: 30, iron: 0, chance: 3, goldplus: 80},
-	{name: "Gargoyle", gold: 30, iron: 0, chance: 5, goldplus: 30},
-	{name: "Wood Golem", gold: 35, iron: 0, chance: 3, goldplus: 40},
-	{name: "Animated Armor", gold: 0, iron: 50, chance: 5, goldplus: 0},
-	{name: "Kraken", gold: 45, iron: 0, chance: 5, goldplus: 30},
-	{name: "Yithian Sage", gold: 40, iron: 0, chance: 5, goldplus: 30},
-	{name: "Banshee", gold: 150, iron: 0, chance: 1, goldplus: 100},
-	{name: "Brass Claw Horror", gold: 40, iron: 0, chance: 5, goldplus: 40},
-	{name: "Cave Grub", gold: 40, iron: 0, chance: 5, goldplus: 40},
-	{name: "Fire Elemental", gold: 40, iron: 0, chance: 5, goldplus: 70},
-	{name: "Water Elemental", gold: 40, iron: 0, chance: 5, goldplus: 70},
-	{name: "Air Elemental", gold: 40, iron: 0, chance: 5, goldplus: 70},
-	{name: "Earth Elemental", gold: 40, iron: 0, chance: 5, goldplus: 70},
-	{name: "Lake Troll", gold: 50, iron: 20, chance: 5, goldplus: 0},
+	{name: "Wyvern", gold: 50, iron: 0, chance: 3, goldplus: 70},
+	{name: "Gargoyle", gold: 50, iron: 0, chance: 5, goldplus: 30},
+	{name: "Wood Golem", gold: 50, iron: 0, chance: 3, goldplus: 50},
+	{name: "Animated Armor", gold: 50, iron: 0, chance: 5, goldplus: 50},
+	{name: "Kraken", gold: 60, iron: 0, chance: 5, goldplus: 50},
+	{name: "Yithian Sage", gold: 60, iron: 0, chance: 5, goldplus: 60},
+	{name: "Banshee", gold: 200, iron: 0, chance: 1, goldplus: 100},
+	{name: "Brass Claw Horror", gold: 70, iron: 0, chance: 5, goldplus: 40},
+	{name: "Cave Grub", gold: 60, iron: 0, chance: 5, goldplus: 60},
+	{name: "Fire Elemental", gold: 60, iron: 0, chance: 5, goldplus: 70},
+	{name: "Water Elemental", gold: 60, iron: 0, chance: 5, goldplus: 70},
+	{name: "Air Elemental", gold: 60, iron: 0, chance: 5, goldplus: 70},
+	{name: "Earth Elemental", gold: 60, iron: 0, chance: 5, goldplus: 70},
+	{name: "Lake Troll", gold: 60, iron: 20, chance: 5, goldplus: 20},
 	{name: "Kitsune", gold: 60, iron: 0, chance: 5, goldplus: 40},
 	{name: "Swamp Drake", gold: 40, iron: 0, chance: 5, goldplus: 30},
 	{name: "Reveler", gold: 30, iron: 0, chance: 5, goldplus: 30},
@@ -281,7 +281,7 @@ let team2 = [
 	{name: "Renata", gold: 50, iron: 0, chance: 5, goldplus: 20},	
 	{name: "Renatus", gold: 110, iron: 0, chance: 5, goldplus: 20},
 	{name: "Serpent Acolyte", gold: 50, iron: 0, chance: 5, goldplus: 20},	
-	{name: "Uba", gold: 50, iron: 0, chance: 5, goldplus: 20},
+	{name: "Uba", gold: 50, iron: 0, chance: 5, goldplus: 50},
 	{name: "Caveman Chief", gold: 40, iron: 0, chance: 5, goldplus: 10},
 	{name: "Ichtyid Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},	
 	{name: "Giant Snail", gold: 30, iron: 0, chance: 10, goldplus: 10},	
@@ -338,7 +338,8 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',
 			 'Chattering','Howling','Mad','Dreaming','Salty','Prolific','Moon','Shelled','Chanting',
 			 'Seducing','Bloodthirsty','Imprisoned','Yearning','Emerging','Aspiring','Mourning','Loyal',
 			 'Pitiful','Cherubic','Secretive','Thunder','Polar','Crying','Gravel','Toothy',
-			 'Bile','Vomit','Tribal'
+			 'Bile','Vomit','Tribal','Horned','Electronic','Winged','Nubile','Encrusted',
+			 'Bejeweled','Honest','Robber'
 	
 			 ]
 
@@ -351,7 +352,8 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 'Potentate','Sultan','Khan','Yeoman','Elemental','Glutton','Savior','Chaos',
 			 'Mutant','Ninja','Dragon','Scholar','Wonderland','Lunatic','Multiplier','Gamemaster',
 			 'Nymph','Lassie','Climber','Berserker','Thrall','Gravekeeper','Consort','Doll',
-			 'Edge','Clown','Piston','Mane','Arc','Kami','Giant'
+			 'Edge','Clown','Piston','Mane','Arc','Kami','Giant','Goliath','Bug','Hussar',
+			 'Raja','Key','Kitten','Sloar','Esquire','Keeper'
 			 ]	
 
 let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear','the Swamp',
@@ -360,7 +362,7 @@ let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear',
 			 'the Inbetween','Blades','the Trees','the East','the West','the South',
 			 'the North','the Pale','the Wish','the Sands','El','the Mirror','Harmony',
 			 'Hades','Haproons','the First Sin','the Oriant','the Monastery','the Craft',
-			 'the Winds','Many Colors','White Robes'
+			 'the Winds','Many Colors','White Robes','the Trove','the Horde'
 			 ]
 let team8 = ['5','6','7','40','41','42','43','70','90','105','109','158','196',
 		     '222'
