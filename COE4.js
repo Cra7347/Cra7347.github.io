@@ -428,6 +428,7 @@ let comnumber = 10
 let timeset = 0
 let illapp = "'"
 let descrroll
+let dump
 var id = setInterval(test, 300);
 var allowshuffle = true;
 function test(){
@@ -1156,6 +1157,8 @@ text += 'addstartterr '+ randomItem(team8) + '\n'
 }	
 text += ' \n'
 }
+dump += text
+return dump
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
   element.setAttribute('download', filename);
@@ -1931,7 +1934,9 @@ text += 'hometerr ' + randomItem(team4) + '  \n'
 coin = Math.floor(Math.random() * 4)
 text += 'clearstartterr \n'
 text += 'addstartterr '+ randomItem(team8) + '\n'	
-text += ' \n'	
+text += ' \n'
+dump += text
+return dump
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
   element.setAttribute('download', filename);
