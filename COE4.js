@@ -443,6 +443,7 @@ setInterval(function test3(){document.getElementById('mainout2').innerHTML = "To
 }
 
 function download(filename, text) {
+dump = " "	
 	filename = 'Randomclasses.c4m'
 	text = ""
 	text += randomItem(team13)
@@ -775,6 +776,9 @@ comnumber = 0
 classnumber = parseInt(document.getElementById("classnumber").value, 10);
 unitnumber = parseInt(document.getElementById("unitnumber").value, 10);
 comnumber = parseInt(document.getElementById("comnumber").value, 10);
+if(classnumber <= 1){
+classnumber = 1	
+}	
 while(i <= (classnumber -1)){
 descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'
 	
