@@ -38,15 +38,17 @@ div {
 <input type="text" id="classnumber" value="10" size="5">
 <br>
 <br>
-Choose how many custom classes you want(Not counting the 2 generated if <b>Overwrite Voice of El and Troll King </b> is checked. Conquest of Elysium can only load a maximum of 75 classes, including the ones in base game.)
+Choose how many custom classes you want. (Not counting the 3 generated if <b>Overwrite Voice of El and Troll King </b> is checked. Conquest of Elysium can only load a maximum of 75 classes, including the ones in base game.)
 <br>
 <br>
+ <span hidden><input type="checkbox" id="allowshuffle" value="true"> Prevent class power upon mastery. - Changes it so random classes will levelup into units that have different ritual powers.</span hidden>
+<br> 
 <p id="mainout" style="font-family:System;"></p> 
 <p id="mainout2" style="font-family:System;"></p> 
 <button class="button" onclick="download()" id="downloadbutton">Save Results</button>
-<button class="button" onclick="download2()" id="downloadbutton2">Overwrite Voice of El and Troll King*</button>
+<button class="button" onclick="download2()" id="downloadbutton2">Overwrite Voice of El, The Baron, and Troll King*</button>
 <br>
-* The Troll King and Voice of El have special rituals which are tied into their respective class numbers. This option will overwrite their classes to make functioning random classes for them. Unfortunatly, this comes at the cost of having only one randomly generated class for each.
+* The Troll King, Baron, and Voice of El have special rituals which are tied into their respective class numbers. This option will overwrite their classes to make functioning random classes for them. Unfortunatly, this comes at the cost of having only one randomly generated class for each.
 <p id="mainoutput" style="font-family:Serif;"></p>
  
 </div>
