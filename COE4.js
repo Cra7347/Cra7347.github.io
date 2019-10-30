@@ -834,7 +834,8 @@ text += 'copyspr "' + leader + '" \n'
 
 if(shuffle2 === 0){
 text += 'power 1 1 \n'
-text += 'power 2 1 \n'	
+text += 'power 2 1 \n'
+text += 'sensedead 1 \n'	
 text += 'gatherhands \n'	
 }
 if(shuffle2 === 1){
@@ -922,7 +923,8 @@ shuffle2 = Math.floor(Math.random() * 16)
 
 if(shuffle2 === 0){
 text += 'power 1 2 \n'
-text += 'power 2 2 \n'	
+text += 'power 2 2 \n'
+text += 'sensedead 1 \n'	
 text += 'gatherhands \n'	
 }
 if(shuffle2 === 1){
@@ -1010,7 +1012,8 @@ shuffle2 = Math.floor(Math.random() * 16)
 
 if(shuffle2 === 0){
 text += 'power 1 3 \n'
-text += 'power 2 3 \n'	
+text += 'power 2 3 \n'
+text += 'sensedead 1 \n'	
 text += 'gatherhands \n'	
 }
 if(shuffle2 === 1){
