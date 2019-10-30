@@ -18,11 +18,38 @@ div {
   margin: 10px;
   
 }
+.smol_2 {
+  background-color: lightbrown;
+   height: 271; 
+  width: 200;
+  position: relative;
+  z-index: 0;   
+  left: 221px;
+  bottom: 302px; 
+  border: 5px inset red;
+  padding: 5px;
+  margin: 10px;
+  
+}
+.smol_3 {
+  background-color: lightbrown;
+   height: 271; 
+  width: 200;
+  position: relative;
+  z-index: 0;   
+  left: 442px;
+ bottom: 601px;   
+  border: 5px inset yellow;
+  padding: 5px;
+  margin: 10px;
+  
+}
 .windowfollow {
   background-color: rgba(0, 0, 0, 0.4);
   border: inset gold;
   height: 145; 
   width: 675; 
+  z-index: 1;  
   bottom: 0;
   right: 0; 
   color: black;
@@ -205,7 +232,7 @@ div {
   text-decoration: none;
   display: inline-block;
 }
-.linkflare_Opera{
+.linkflare_opera{
   background-color: brown;
    border: inset black; 
   padding-top: 50px;
@@ -229,6 +256,83 @@ div {
   text-decoration: none;
   display: inline-block;
 }
+
+.linkflare_edge{
+  background-color: lightblue;
+   border: inset black; 
+  padding-top: 50px;
+  padding-bottom: 50px;  
+  color: black;
+  margin: 5px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.linkflare_internet{
+  background-color: cyan;
+   border: inset black; 
+  padding-top: 50px;
+  padding-bottom: 50px;  
+  color: black;
+  margin: 5px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.linkflare_waterfox{
+  background-color: darkcyan;
+   border: inset black; 
+  padding-top: 50px;
+  padding-bottom: 50px;  
+  color: black;
+  margin: 5px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.linkflare_tor{
+  background-color: lightgrey;
+   border: inset black; 
+  padding-top: 50px;
+  padding-bottom: 50px;  
+  color: black;
+  margin: 5px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.linkflare_safari{
+  background-color: lightcyan;
+   border: inset black; 
+  padding-top: 50px;
+  padding-bottom: 50px;  
+  color: black;
+  margin: 5px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.linkflare_dissenter{
+  background-color: green;
+   border: inset black; 
+  padding-top: 50px;
+  padding-bottom: 50px;  
+  color: black;
+  margin: 5px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
 .lineflare{
    border: inset Green; 
 }
@@ -301,9 +405,9 @@ Choose how many custom classes you want. Conquest of Elysium can only load a max
 <div class="button_est">
 <b> <p id="mainout2" style="font-family:System;"></p></b>
 </div>
-<button class="button_normal" onclick="download()" id="downloadbutton">Save Random Classes</button>
+<button class="button_normal" onclick='download_file("Randomclasses.c4m", download())' id="downloadbutton">Save Random Classes</button>
 
-<button class="button_el" onclick="download2()" id="downloadbutton2">Overwrite Voice of El, The Baron, and Troll King*</button>
+<button class="button_el" onclick='download_file("Randomclasses_2.c4m", download2())' id="downloadbutton2">Overwrite Voice of El, The Baron, and Troll King*</button>
  <a href="https://drive.google.com/open?id=19_aRKR48Gjg--ZaMm0wVqpAP9D7eIUIM" class="button_folder" target="_blank">Download Mod Folder</a>
 </div>
 <h3>Stuff to Know:</h3>
@@ -319,7 +423,7 @@ Choose how many custom classes you want. Conquest of Elysium can only load a max
 <h2 style="font-family:verdana;">Install Instructions</h2>
 1. Download the mod folder.
 <br><br>
-2. Set the options to your prefrences and click Save Results or Overwrite Voice of El, or both if you want.
+2. Set the options to your prefrences and click <b>Save Random Classes</b> or <b>Overwrite Voice of El, The Baron, and Troll King,</b> or both if you want.
 <br><br>
 3. If you are using Brave or Opera, the browser will ask you where to place the file. Place "Randomclasses.c4m" and the Randomclass folder in C:\Users\YourUserName\AppData\Roaming\coe4\mods.
 <br><br> That's it! Overwrite the file many times as you want.
@@ -328,7 +432,7 @@ Choose how many custom classes you want. Conquest of Elysium can only load a max
 <br>
 If your download is not working, consider switching to a recommended browser.
 <div class="smol">
-<br><br><b>Recommended and Tested Browsers:</b>
+<br><br><b>Recommended Browsers:</b>
 <hr>
 <ul>
  <a style="font-family:System" class= "linkflare_brave" href="https://brave.com/" target="_blank" >Brave </a>
@@ -336,8 +440,51 @@ If your download is not working, consider switching to a recommended browser.
  <a style="font-family:System" class= "linkflare_opera" href="https://www.opera.com/"target="_blank" >Opera </a>
  <a style="font-family:System" class= "linkflare_firefox" href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" >Firefox </a>
 </div> 
+<div class="smol_2">
+<br><br><b>Not Recommended:</b>
+<hr>
+<ul>
+ <a style="font-family:System" class= "linkflare_edge">Edge </a>
+ <a style="font-family:System" class= "linkflare_internet">Internet Explorer </a>
+</div>
+<div class="smol_3">
+<br><br><b>Not Tested:</b>
+<hr>
+<ul>
+ <a style="font-family:System" class= "linkflare_waterfox" >Waterfox </a>
+ <a style="font-family:System" class= "linkflare_tor" >Tor </a><br>
+ <a style="font-family:System" class= "linkflare_safari" >Safari </a>
+ <a style="font-family:System" class= "linkflare_dissenter">Dissenter </a>
+</div> 
 </ul>
 </div>
+    <button onclick='download_file("Randomclasses.c4m", download())'>Download</button>
+    <script>
+    function dynamic_text() {
+        return  'fggdgddgdfg';
+    }	
+
+    function download_file(name, contents, mime_type) {
+        mime_type = mime_type || "text/plain";
+
+        var blob = new Blob([contents], {type: mime_type});
+
+        var dlink = document.createElement('a');
+        dlink.download = name;
+        dlink.href = window.URL.createObjectURL(blob);
+        dlink.onclick = function(e) {
+            // revokeObjectURL needs a delay to work properly
+            var that = this;
+            setTimeout(function() {
+                window.URL.revokeObjectURL(that.href);
+            }, 1500);
+        };
+
+        dlink.click();
+        dlink.remove();
+    }
+    </script>
+
 </body>
 <script src="COE4.js"></script>
 </html>
