@@ -4,7 +4,7 @@
 <style>
 div {
   background-color: lightgrey;
-  width: 900;
+  width: 750;
   border: 5px inset gold;
   padding: 20px;
   margin: 20px;
@@ -41,6 +41,16 @@ div {
 Choose how many custom classes you want. (Not counting the 3 generated if <b>Overwrite Voice of El and Troll King </b> is checked. Conquest of Elysium can only load a maximum of 75 classes, including the ones in base game.)
 <br>
 <br>
+<b style="font-family:System;"> Maximum Number of Random Units Per Class</b>
+<input type="text" id="unitnumber" value="6" size="5">
+<br>
+<br>
+<b style="font-family:System;"> Maximum Number of Random Commanders Per Class</b>
+<input type="text" id="comnumber" value="3" size="5">
+- The maximum number of generated units per class may be no higher than 128.
+
+<br>
+<br>
  <span hidden><input type="checkbox" id="allowshuffle" value="true"> Prevent class power upon mastery. - Changes it so random classes will levelup into units that have different ritual powers.</span hidden>
 <br> 
 <p id="mainout" style="font-family:System;"></p> 
@@ -50,7 +60,15 @@ Choose how many custom classes you want. (Not counting the 3 generated if <b>Ove
 <br>
 * The Troll King, Baron, and Voice of El have special rituals which are tied into their respective class numbers. This option will overwrite their classes to make functioning random classes for them. Unfortunatly, this comes at the cost of having only one randomly generated class for each.
 <p id="mainoutput" style="font-family:Serif;"></p>
- 
+
+<h2 style="font-family:verdana;">Install Instructions</h2>
+1. Download the mod folder here.
+<button class="button"  onclick="window.location.href = 'https://drive.google.com/open?id=19_aRKR48Gjg--ZaMm0wVqpAP9D7eIUIM';">Download Mod File</button>
+<br>
+2. Set the options above and click Save Results or Overwrite Voice of El, or both if you want.
+<br><br>
+3. If you are using Brave or Opera, the browser will ask you where to place the file. Place "Randomclasses.c4m" and the Randomclass folder in C:\Users\YourUserName\AppData\Roaming\coe4\mods.
+<br><br> That's it! Overwrite the file many times as you want.
 </div>
 </body>
 <script src="COE4.js"></script>
