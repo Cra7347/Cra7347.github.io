@@ -60,11 +60,11 @@ let team1 = [
 	{name: "O Bakemono", num: 1, gold: 25, iron: 0, chance: 100},
 	{name: "Dai Bakemono", num: 3, gold: 50, iron: 15, chance: 100},
 	{name: "Dai Bakemono Archer", num: 3, gold: 50, iron: 15, chance: 100},
-	{name: "Aka Oni", num: 2, gold: 50, iron: 0, chance: 100},
-	{name: "Ao Oni", num: 2, gold: 50, iron: 0, chance: 100},
-	{name: "Kappa", num: 5, gold: 50, iron: 25, chance: 100},
+	{name: "Aka Oni", num: 2, gold: 60, iron: 0, chance: 10},
+	{name: "Ao Oni", num: 2, gold: 60, iron: 0, chance: 10},
+	{name: "Kappa", num: 4, gold: 50, iron: 25, chance: 100},
 	{name: "Karasu Tengu", num: 2, gold: 50, iron: 10, chance: 100},
-	{name: "Mezu", num: 1, gold: 25, iron: 5, chance: 10},
+	{name: "Mezu", num: 1, gold: 50, iron: 5, chance: 10},
 	
 //barbarian
 	{name: "Barbarian Bowman", num: 7, gold: 50, iron: 0, chance: 100},
@@ -238,7 +238,7 @@ let team1 = [
 	{name: "Lion Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "Hyena Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Ichtyid Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "War Elephant", num: 1, gold: 60, iron: 0, chance: 10},		
+	{name: "War Elephant", num: 1, gold: 65, iron: 0, chance: 10},		
 ]	
 let team2 = [
 //vanilla humans
@@ -337,7 +337,8 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',
 			 'Fertile','Snow','Alpha','Omega','Wash','Wight','Repulsive','Channeling','Squirming',
 			 'Chattering','Howling','Mad','Dreaming','Salty','Prolific','Moon','Shelled','Chanting',
 			 'Seducing','Bloodthirsty','Imprisoned','Yearning','Emerging','Aspiring','Mourning','Loyal',
-			 'Pitiful','Cherubic','Secretive','Thunder','Polar'
+			 'Pitiful','Cherubic','Secretive','Thunder','Polar','Crying','Gravel','Toothy',
+			 'Bile','Vomit','Tribal'
 	
 			 ]
 
@@ -350,7 +351,7 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 'Potentate','Sultan','Khan','Yeoman','Elemental','Glutton','Savior','Chaos',
 			 'Mutant','Ninja','Dragon','Scholar','Wonderland','Lunatic','Multiplier','Gamemaster',
 			 'Nymph','Lassie','Climber','Berserker','Thrall','Gravekeeper','Consort','Doll',
-			 'Edge','Clown',''
+			 'Edge','Clown','Piston','Mane','Arc','Kami','Giant'
 			 ]	
 
 let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear','the Swamp',
@@ -358,7 +359,8 @@ let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear',
 			 'the Fold','the Legion','the Light','Rebirth','the Reach','the Tower',
 			 'the Inbetween','Blades','the Trees','the East','the West','the South',
 			 'the North','the Pale','the Wish','the Sands','El','the Mirror','Harmony',
-			 'Hades','Haproons','the First Sin','the Oriant','the Monastery','the Craft'
+			 'Hades','Haproons','the First Sin','the Oriant','the Monastery','the Craft',
+			 'the Winds','Many Colors','White Robes'
 			 ]
 let team8 = ['5','6','7','40','41','42','43','70','90','105','109','158','196',
 		     '222'
@@ -371,6 +373,7 @@ let team9 = ['Once upon a time, a great evil fell upon Elysium.',
 			 'The kingdom once knew of a wretch so poor, the neglected creature dwelt in the darkest gutters of the slums, waiting for death from starvation. However, when a strange force merged with the wretch from the forgotten burrows beneath the city, the lost soul was given strange powers.',
 			 'Long ago, a once beautiful diety descended to Elysium to be with its true love. Yet, when its lover beheld its mishapen new mortal form, they were driven to suicide in despair. The now mortal monster decided to vent its frustration upon all those it happened upon.',
 			 'To overthrow the heathens of Elysium, the high holiest church of El have birthed a strange creature from the womb of a comly desert jackal.',			 
+			 'Unbeknownst to the mortal of the Elysium plane, the forces of the Nexus held a great contest to determine a warrior who was worthy of universal aclaim. A powerful untamed creature won the contest through pure savagery alone, but managed to escape into the mortal world to test its might upon Elysium',	
 			 ]
 
 let team10 = ['It was due to this force that the invading barbarians and squabbling nobles were driven away.',
@@ -380,6 +383,7 @@ let team10 = ['It was due to this force that the invading barbarians and squabbl
 			  'In bitter revolt against its betters, it freed the slaves and razed the palaces of the kings.',
 			  'In the end, all it wanted was to be loved. So, in a quest to be loved by others, it enslaved millions of frightened souls.',
 			  'Once respected and pious men fell to their knees and converted to a new heretical religion, uniting in a great crusade against the orthodoxy.',
+			  'It knew that it was destined to die in battle and sought to find the most challeging opponent among the legions of mortal men.',
 			  ]
 let team11 = ['Later, it would be crowned king of the land, obtaining power only to be dreamed of.',
 			  'Knights from far and wide would seek it out, looking for honor in the epic struggle.',
@@ -388,6 +392,7 @@ let team11 = ['Later, it would be crowned king of the land, obtaining power only
 			  'Impressed, the infernal forces of abyss made a pact with their potential new ally, hoping to win a new minion to help in their conquest of the mortal world.',
 			  'Still not satisfied with what was acquired, it hungered evermore for the sweet taste it craved.',
 			  'In the end, the monster ended up succumbing to a deadly plague that rotted its very soul. It still fought for life, desperatly holding on to its gains.',
+			  'After a horrific massacre all sentient life in the mortal plane was extinquished in an orgy of blood.',
 			  ]			 
 
 let team12 = ['But, fate is not kind and the master fell from grace.',
@@ -397,6 +402,7 @@ let team12 = ['But, fate is not kind and the master fell from grace.',
 			  'A blessed baby was soon born from the monster, cursing the land with a new prophecy of apocolypse. Who will prevail in the end?',
 			  'In a desperate bid, the warring forces of Elysium has temporarly joined forces to deal with this threat, but against all odds, their alliance was dashed in a crushing defeat.',
 			  'Overcome by fatigue, the monster decided to settle down for a long nap, sparing the world... for now.',
+			  'The monster was eventually captured by an oriental warrior and taken away to a far eastern monastery. Instead of killing the beast, the warrior spared the monster and taught it a strange code of honor.',
 			  ]
 let team13 = ['icon "Randomclass/Randombanner.tga"' + '\n',
 			  'icon "Randomclass/Randombanner_1.tga"' + '\n',
