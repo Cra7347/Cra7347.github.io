@@ -337,7 +337,7 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',
 			 'Fertile','Snow','Alpha','Omega','Wash','Wight','Repulsive','Channeling','Squirming',
 			 'Chattering','Howling','Mad','Dreaming','Salty','Prolific','Moon','Shelled','Chanting',
 			 'Seducing','Bloodthirsty','Imprisoned','Yearning','Emerging','Aspiring','Mourning','Loyal',
-			 'Pitiful','Cherubic','Secretive'
+			 'Pitiful','Cherubic','Secretive','Thunder','Polar'
 	
 			 ]
 
@@ -345,11 +345,12 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 'Butcher','Slayer','Eater','Gardener','Slave','Child','Wretch','Judge','Lich','Heathen',
 			 'Warrior','Flinger','Mystic','Lictor','Sorceror','Mother','Father','Ancient',
 			 'Champion','Fox','Cannibal','Spawn','Choker','Angel','Barbarian','Serpent',
-			 'Rat','Drinker','Leech','Weasel','Nibbler','Bard','Begger','Slime','Fool',
+			 'Rat','Drinker','Leech','Weasel','Nibbler','Bard','Begger','Slime','Fool','Reaper',
 			 'Vision','Shocker','Strike','Pyre','Gulper','Cutie','Bane','Gum','Chicken',
 			 'Potentate','Sultan','Khan','Yeoman','Elemental','Glutton','Savior','Chaos',
 			 'Mutant','Ninja','Dragon','Scholar','Wonderland','Lunatic','Multiplier','Gamemaster',
-			 'Nymph','Lassie','Climber','Berserker','Thrall','Gravekeeper','Consort','Doll'
+			 'Nymph','Lassie','Climber','Berserker','Thrall','Gravekeeper','Consort','Doll',
+			 'Edge','Clown',''
 			 ]	
 
 let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear','the Swamp',
@@ -422,6 +423,8 @@ let mymonster2store
 let mymonster3store
 let allow_overwrite = true
 let classnumber = 10
+let unitnumber = 6
+let comnumber = 10
 let timeset = 0
 let illapp = "'"
 let descrroll
@@ -429,10 +432,12 @@ var id = setInterval(test, 300);
 var allowshuffle = true;
 function test(){
 
-classnumber = parseInt(document.getElementById("classnumber").value, 10);	
+classnumber = parseInt(document.getElementById("classnumber").value, 10);
+unitnumber = parseInt(document.getElementById("unitnumber").value, 10);
+comnumber = parseInt(document.getElementById("comnumber").value, 10);	
 setInterval(function test2(){document.getElementById('mainout').innerHTML = "Classes to be Generated:" + (classnumber)
 })
-setInterval(function test3(){document.getElementById('mainout2').innerHTML = "Total Classes in Game:" + (classnumber + 21)
+setInterval(function test3(){document.getElementById('mainout2').innerHTML = "Total Classes in Game after Generation:" + (classnumber + 21)
 })
 }
 
@@ -764,7 +769,11 @@ text += ' \n'
 	
 i = 0
 classnumber = 0	
+unitnumber = 0
+comnumber = 0	
 classnumber = parseInt(document.getElementById("classnumber").value, 10);
+unitnumber = parseInt(document.getElementById("unitnumber").value, 10);
+comnumber = parseInt(document.getElementById("comnumber").value, 10);
 while(i <= (classnumber -1)){
 descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'
 	
@@ -774,8 +783,14 @@ z = 0
 w = 0
 v = 0
 
-limit = (Math.floor(Math.random() * 10)) + 1
-limit2 = Math.floor(Math.random() * 7)
+limit = (Math.floor(Math.random() * unitnumber)) + 1
+limit2 = Math.floor(Math.random() * comnumber) + 1
+if(limit <= 0){
+limit = 4	
+}
+if(limit2 <= 0){
+limit2 = 4	
+}	
 limit3 = Math.floor(Math.random() * 4)	
 i++
 shuffle = randomItem(team8)
@@ -1480,10 +1495,18 @@ y = 0
 z = 0
 w = 0
 v = 0
+unitnumber = parseInt(document.getElementById("unitnumber").value, 10);
+comnumber = parseInt(document.getElementById("comnumber").value, 10);
 
-limit = (Math.floor(Math.random() * 10)) + 1
-limit2 = Math.floor(Math.random() * 7)
-limit3 = Math.floor(Math.random() * 4)	
+limit = (Math.floor(Math.random() * unitnumber)) + 1
+limit2 = Math.floor(Math.random() * comnumber) + 1
+limit3 = Math.floor(Math.random() * 4)
+if(limit <= 0){
+limit = 4	
+}
+if(limit2 <= 0){
+limit2 = 4	
+}		
 shuffle = randomItem(team8)
 
 coin = Math.floor(Math.random() * 4)
@@ -1620,9 +1643,15 @@ z = 0
 w = 0
 v = 0
 
-limit = (Math.floor(Math.random() * 10)) + 1
-limit2 = Math.floor(Math.random() * 7)
-limit3 = Math.floor(Math.random() * 4)	
+limit = (Math.floor(Math.random() * unitnumber)) + 1
+limit2 = Math.floor(Math.random() * comnumber) + 1
+limit3 = Math.floor(Math.random() * 4)
+if(limit <= 0){
+limit = 4	
+}
+if(limit2 <= 0){
+limit2 = 4	
+}	
 shuffle = randomItem(team8)
 
 coin = Math.floor(Math.random() * 4)
@@ -1763,9 +1792,15 @@ z = 0
 w = 0
 v = 0
 
-limit = (Math.floor(Math.random() * 10)) + 1
-limit2 = Math.floor(Math.random() * 7)
-limit3 = Math.floor(Math.random() * 4)	
+limit = (Math.floor(Math.random() * unitnumber)) + 1
+limit2 = Math.floor(Math.random() * comnumber) + 1
+limit3 = Math.floor(Math.random() * 4)
+if(limit <= 0){
+limit = 4	
+}
+if(limit2 <= 0){
+limit2 = 4	
+}		
 shuffle = randomItem(team8)
 
 coin = Math.floor(Math.random() * 4)
