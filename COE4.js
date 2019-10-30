@@ -1172,6 +1172,7 @@ return dump
 }
 // El and Troll King
 function download2(filename, text) {
+dump = ""	
 filename = 'Randomclasses_Two.c4m'
 text = ""
 text += 'icon "Randomclass/Randombanner_a.tga"' + '\n'
