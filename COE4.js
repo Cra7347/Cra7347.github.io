@@ -435,9 +435,9 @@ function test(){
 classnumber = parseInt(document.getElementById("classnumber").value, 10);
 unitnumber = parseInt(document.getElementById("unitnumber").value, 10);
 comnumber = parseInt(document.getElementById("comnumber").value, 10);	
-setInterval(function test2(){document.getElementById('mainout').innerHTML = "Classes to be Generated:" + (classnumber)
+setInterval(function test2(){document.getElementById('mainout').innerHTML = "Classes to be Generated: " + (classnumber)
 })
-setInterval(function test3(){document.getElementById('mainout2').innerHTML = "Total Classes in Game after Generation:" + (classnumber + 21)
+setInterval(function test3(){document.getElementById('mainout2').innerHTML = "Total Classes in Game after Generation: " + (classnumber + 21)
 })
 }
 
