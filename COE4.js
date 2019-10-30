@@ -219,13 +219,27 @@ let team1 = [
 	{name: "Siren", num: 1, gold: 25, iron: 0, chance: 50},
 	{name: "Pygmy", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Sinner", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Brass Claw Horror", num: 2, gold: 60, iron: 10, chance: 100},
+	{name: "Brass Claw Horror", num: 2, gold: 80, iron: 10, chance: 100},
 	{name: "Float Cat Horror", num: 1, gold: 40, iron: 0, chance: 100},
 	{name: "Hybrid Fisherman", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "Hybrid Soldier", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Runner", num: 5, gold: 50, iron: 0, chance: 100},	
-]
-
+	{name: "Runner", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Lizardman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Lizardman Warrior", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Caveman", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Voi Spearman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Voi Axeman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Voi Archer", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Peshti Spearman", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Militia", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Heavy Spearman", num: 5, gold: 50, iron: 25, chance: 100},
+	{name: "Light Cavalry", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Heavy Cavalry", num: 5, gold: 50, iron: 25, chance: 100},
+	{name: "Lion Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Hyena Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Ichtyid Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "War Elephant", num: 1, gold: 60, iron: 0, chance: 10},		
+]	
 let team2 = [
 //vanilla humans
 	{name: "Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},
@@ -259,7 +273,7 @@ let team2 = [
 	{name: "Air Elemental", gold: 40, iron: 0, chance: 5, goldplus: 70},
 	{name: "Earth Elemental", gold: 40, iron: 0, chance: 5, goldplus: 70},
 	{name: "Lake Troll", gold: 50, iron: 20, chance: 5, goldplus: 0},
-	{name: "Kitsune", gold: 30, iron: 0, chance: 5, goldplus: 30},
+	{name: "Kitsune", gold: 60, iron: 0, chance: 5, goldplus: 40},
 	{name: "Swamp Drake", gold: 40, iron: 0, chance: 5, goldplus: 30},
 	{name: "Reveler", gold: 30, iron: 0, chance: 5, goldplus: 30},
 	{name: "Centurion", gold: 30, iron: 0, chance: 5, goldplus: 30},
@@ -268,68 +282,128 @@ let team2 = [
 	{name: "Renatus", gold: 110, iron: 0, chance: 5, goldplus: 20},
 	{name: "Serpent Acolyte", gold: 50, iron: 0, chance: 5, goldplus: 20},	
 	{name: "Uba", gold: 50, iron: 0, chance: 5, goldplus: 20},
+	{name: "Caveman Chief", gold: 40, iron: 0, chance: 5, goldplus: 10},
+	{name: "Ichtyid Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},	
+	{name: "Giant Snail", gold: 30, iron: 0, chance: 10, goldplus: 10},	
 	]
 
-let team3 = ["Beholder","Eye Tyrant","King","Senator",
-			 "High Lord","Yeti","Wyrm","Crystal Golem",
+let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth','Scorpion Man',
+			 "High Lord","Yeti","Wyrm","Crystal Golem","Moon Horror",'Horror Olm',
 			 "Troll King","Doppelganger Captain","Gore Tide Horror", "Olm Sage", "King of the Deep",
-			 "Dragon","Captain",
-			 "Wood Golem","Stone Golem",'Flesh Golem','Gargoyle','Troglodyte',			 
-			 "Hydra","Formless Spawn","Yithian Sage","Displacer Beast",
+			 "Dragon","Captain","Freak Lord","Lizardman Shaman","Spine Membrane Horror","Horror Mantis",
+			 "Wood Golem","Stone Golem",'Flesh Golem','Gargoyle','Troglodyte','Lesser Demon',"Serpent Fiend","Spine Devil",		 
+			 "Hydra","Formless Spawn","Yithian Sage","Displacer Beast","Ichtyid Captain",'Harlequin',
 			 "Carrion","Dracolich","Mummy","Tartarian Spirit","Barbarian Leader","Mounted Chief",
-			 "Manticore","Demonic Locust","Goblin","Hidden Freak",
-			 "Lake Troll King","Gelatinous Cube","Black Cat Familiar","Creeping Doom",
-			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard",
-			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental']
+			 "Manticore","Demonic Locust","Goblin","Hidden Freak","Large Spider","Dream Horror","Anakite Captain",
+			 "Lake Troll King","Gelatinous Cube","Black Cat Familiar","Creeping Doom","Rakshasa","Hanya",
+			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard",'Commander','Mounted Commander',
+			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
+			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape"]
 			 
-let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of the Deep",
+let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of the Deep","Ichtyid Captain",
 			 "Captain","Hydra Hatchling","Yithian","Wood Golem","Stone Golem",'Flesh Golem','Gargoyle','Troglodyte',
-			 "Barbarian Leader","Mounted Chief","Hogmeister",'Wolf','Serpent','Senator',
-			 "Demonic Locust",'Scorpion Beast','Lesser Fire','Lesser Earth',"Goblin",
-			 "Lake Troll","Black Cat Familiar",'Lesser Water','Cave Grub',
-			 "Frog","Giant Snail","Serpent Priest","White Wizard","Hidden Freak",
-			 "Rabbit","Beast Bat"]
+			 "Barbarian Leader","Mounted Chief","Hogmeister",'Wolf','Serpent','Senator','Harlequin',"Hanya",
+			 "Demonic Locust",'Scorpion Beast','Lesser Fire','Lesser Earth',"Goblin",'Commander','Mounted Commander',
+			 "Lake Troll","Black Cat Familiar",'Lesser Water','Cave Grub',"Large Spider",'Lesser Demon',"Serpent Fiend","Spine Devil",
+			 "Rabbit","Beast Bat","Freak Lord","Lizardman Shaman",'Hidden Aboleth',"Anakite Captain",
+			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Spine Membrane Horror","Horror Mantis",
+			 ]
 
-let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak",
-			 "High Lord","Yeti","Wood Golem","Stone Golem",'Flesh Golem',
-			 "Troll King","Doppelganger Captain", "Olm Sage", "King of the Deep",
-			 "Captain",'Scorpion Beast','Lesser Fire','Lesser Earth','Gargoyle',
-			"Hydra","Formless Spawn","Yithian Sage","Displacer Beast",'Lesser Water','Cave Grub',
-			 "Carrion","Mummy","Barbarian Leader","Mounted Chief",'Troglodyte',
-			 "Manticore","Demonic Locust",'Scorpion Beast','Lesser Fire','Lesser Earth',
-			 "Lake Troll King","Gelatinous Cube","Black Cat Familiar","Creeping Doom",
-			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard",
-			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental']					 
+let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider","Ichtyid Captain",
+			 "High Lord","Yeti","Wood Golem","Stone Golem",'Flesh Golem','Priest','Commander','Mounted Commander',
+			 "Troll King","Doppelganger Captain", "Olm Sage", "King of the Deep","Rakshasa",'Harlequin',
+			 "Captain",'Scorpion Beast','Lesser Fire','Lesser Earth','Gargoyle',"Olm Sage","Spine Membrane Horror","Horror Mantis",
+			 "Hydra","Formless Spawn","Yithian Sage","Displacer Beast",'Lesser Water','Cave Grub',"Anakite Captain",
+			 "Carrion","Mummy","Barbarian Leader","Mounted Chief",'Troglodyte',"Dream Horror",
+			 "Manticore","Demonic Locust",'Scorpion Beast','Lesser Fire','Lesser Earth',"Hanya",
+			 "Lake Troll King","Gelatinous Cube","Black Cat Familiar","Creeping Doom",'Lesser Demon',"Serpent Fiend","Spine Devil",
+			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard","Freak Lord","Lizardman Shaman",
+			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
+			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape",'Hidden Aboleth']					 
 			 
 let team4 = ['3','9','20','22','23','24','25','26','28','29','30','31',
 			 '38','57','106','113','110','112','114','121','124','151','152','154',
-			 '156','160','210','213','216','219','223','232','236'
+			 '156','160','210','213','216','219','223'
 			 ]	
 
 let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',
 			 'Aging','Burning','Cuddly','Plump','Dying','Lovely','Golden','Crystal',
-			 'Mighty', 'Blood','Cutie','Plague','Void','Sullen','Ivory','Beast','Bull',
+			 'Mighty', 'Blood','Abyssal','Plague','Void','Sullen','Ivory','Beast','Bull',
 			 'Mindless','Questing','Armored','Little','Greater','Elder','Newborn',
-			 'Starving','Gurgling','Reaching','Diving','Beckoning','Soulless'
+			 'Starving','Gurgling','Reaching','Diving','Beckoning','Soulless',
+			 'Soul','Greedy','Cursed','Pale','Coughing','Profane','False','Crunching',
+			 'Devil','Quaking','Comical','Unforgiving','Godly','Merry','Dwarf','Elf','Human',
+			 'Goblin','Choking','Unsurly','Bushido','Warpath','Blightooze','Swimming',
+			 'Fertile','Snow','Alpha','Omega','Wash','Wight','Repulsive','Channeling','Squirming',
+			 'Chattering','Howling','Mad','Dreaming','Salty','Prolific','Moon','Shelled','Chanting',
+			 'Seducing','Bloodthirsty','Imprisoned','Yearning','Emerging','Aspiring','Mourning','Loyal',
+			 'Pitiful','Cherubic','Secretive'
 	
 			 ]
 
-let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief',
-			 'Butcher','Slayer','Eater','Gardener','Slave','Child','Wretch','Judge',
+let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','Smith','Vampire',
+			 'Butcher','Slayer','Eater','Gardener','Slave','Child','Wretch','Judge','Lich','Heathen',
 			 'Warrior','Flinger','Mystic','Lictor','Sorceror','Mother','Father','Ancient',
 			 'Champion','Fox','Cannibal','Spawn','Choker','Angel','Barbarian','Serpent',
-			 'Rat'
+			 'Rat','Drinker','Leech','Weasel','Nibbler','Bard','Begger','Slime','Fool',
+			 'Vision','Shocker','Strike','Pyre','Gulper','Cutie','Bane','Gum','Chicken',
+			 'Potentate','Sultan','Khan','Yeoman','Elemental','Glutton','Savior','Chaos',
+			 'Mutant','Ninja','Dragon','Scholar','Wonderland','Lunatic','Multiplier','Gamemaster',
+			 'Nymph','Lassie','Climber','Berserker','Thrall','Gravekeeper','Consort','Doll'
 			 ]	
 
-let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear',
+let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear','the Swamp',
 			 'Funk', 'Nations','Fingernails','the Secret','Elysium','the Cult','Magic',
 			 'the Fold','the Legion','the Light','Rebirth','the Reach','the Tower',
-			 'the Inbetween','Blades','the Trees'
+			 'the Inbetween','Blades','the Trees','the East','the West','the South',
+			 'the North','the Pale','the Wish','the Sands','El','the Mirror','Harmony',
+			 'Hades','Haproons','the First Sin','the Oriant','the Monastery','the Craft'
 			 ]
 let team8 = ['5','6','7','40','41','42','43','70','90','105','109','158','196',
 		     '222'
-			 ]			 
+			 ]	
 
+let team9 = ['Once upon a time, a great evil fell upon Elysium.',
+			 'Do you not know? The mother is coming to Elysium.',
+			 'People tell of a little lost child who drifted upon the shores of Elysium. However, according to the prophecy all was not as it seems.',			 
+			 'On a cold winter night, a single star fell from the ink black sky. From the crater arose a strange sight, indeed.',
+			 'The kingdom once knew of a wretch so poor, the neglected creature dwelt in the darkest gutters of the slums, waiting for death from starvation. However, when a strange force merged with the wretch from the forgotten burrows beneath the city, the lost soul was given strange powers.',
+			 'Long ago, a once beautiful diety descended to Elysium to be with its true love. Yet, when its lover beheld its mishapen new mortal form, they were driven to suicide in despair. The now mortal monster decided to vent its frustration upon all those it happened upon.',
+			 'To overthrow the heathens of Elysium, the high holiest church of El have birthed a strange creature from the womb of a comly desert jackal.',			 
+			 ]
+
+let team10 = ['It was due to this force that the invading barbarians and squabbling nobles were driven away.',
+			  'It hungered for the tasty viscera of mortals and surplanted every nation to sate the hunger.',
+			  'Knowing the evil in the hearts of men, it charmed the world with its power to grant wishes.',
+			  'Magic was channeled into its thirsting body, sucking the very life out of the world.',
+			  'In bitter revolt against its betters, it freed the slaves and razed the palaces of the kings.',
+			  'In the end, all it wanted was to be loved. So, in a quest to be loved by others, it enslaved millions of frightened souls.',
+			  'Once respected and pious men fell to their knees and converted to a new heretical religion, uniting in a great crusade against the orthodoxy.',
+			  ]
+let team11 = ['Later, it would be crowned king of the land, obtaining power only to be dreamed of.',
+			  'Knights from far and wide would seek it out, looking for honor in the epic struggle.',
+			  'The inquisitors were called from the alerted clergy to exorcise the monster, but all that was found was the burnt remains of their bodies.',
+			  'Having gained sentience after some time, it aspired to rule the universe and wished to start with the world of men.',			  
+			  'Impressed, the infernal forces of abyss made a pact with their potential new ally, hoping to win a new minion to help in their conquest of the mortal world.',
+			  'Still not satisfied with what was acquired, it hungered evermore for the sweet taste it craved.',
+			  'In the end, the monster ended up succumbing to a deadly plague that rotted its very soul. It still fought for life, desperatly holding on to its gains.',
+			  ]			 
+
+let team12 = ['But, fate is not kind and the master fell from grace.',
+			  'Only when it was time to seek a mate, did the world finally know peace.',
+			  'Now, it is too late. Having grown too powerful, the world is at the mercy of the monster',
+			  'Villagers spread rumors that it is still somewhere inside the darkest forests of Elysium, ready to burst out when we least expect it.',
+			  'A blessed baby was soon born from the monster, cursing the land with a new prophecy of apocolypse. Who will prevail in the end?',
+			  'In a desperate bid, the warring forces of Elysium has temporarly joined forces to deal with this threat, but against all odds, their alliance was dashed in a crushing defeat.',
+			  'Overcome by fatigue, the monster decided to settle down for a long nap, sparing the world... for now.',
+			  ]
+let team13 = ['icon "Randomclass/Randombanner.tga"' + '\n',
+			  'icon "Randomclass/Randombanner_1.tga"' + '\n',
+			  'icon "Randomclass/Randombanner_2.tga"' + '\n',
+			  'icon "Randomclass/Randombanner_3.tga"' + '\n',
+			  'icon "Randomclass/Randombanner_4.tga"' + '\n',			  
+			  ]	
+			  
 let	text	
 let picky
 let shuffle 
@@ -350,7 +424,9 @@ let allow_overwrite = true
 let classnumber = 10
 let timeset = 0
 let illapp = "'"
+let descrroll
 var id = setInterval(test, 300);
+var allowshuffle = true;
 function test(){
 
 classnumber = parseInt(document.getElementById("classnumber").value, 10);	
@@ -363,10 +439,10 @@ setInterval(function test3(){document.getElementById('mainout2').innerHTML = "To
 function download(filename, text) {
 	filename = 'Randomclasses.c4m'
 	text = ""
-	text += 'icon "unholyalliances/unholyalliances.tga"' + '\n'
-	text += 'description "Desperate times call for desperate measures"' + '\n'	
+	text += randomItem(team13)
+	text += 'description "The world has gone mad!"' + '\n'	
 	text += '# All Done <3' + '\n \n'
-	
+allowshuffle = document.getElementById("allowshuffle").checked;	
 text += 'newmonster "Hidden Freak" \n'	
 text += 'descr "Who knows what horrors dwell in the random chaos of Elysium?" \n'	
 text += 'copystats "Troglodyte" \n'	
@@ -384,6 +460,27 @@ text += 'size2x2 \n'
 text += 'rank -1 \n'
 text += ' \n'
 
+text += 'newmonster "Python" \n'	
+text += 'descr "Who knows what horrors dwell in the random chaos of Elysium?" \n'	
+text += 'copystats "Troglodyte" \n'	
+text += 'hp 150\n'
+text += 'mr 8 \n'
+text += 'str 8 \n'
+text += 'mor 20 \n'
+text += 'spr1 "Randomclass/2791_1.tga" \n'
+text += 'spr2 "Randomclass/2791_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 25 42 \n'
+text += 'clearspec \n'
+text += 'water \n'
+text += 'fastheal \n'
+text += 'coldblood \n'
+text += 'tunnel \n'
+text += 'fear 1\n'
+text += 'huge \n'
+text += 'rank -1 \n'
+text += ' \n'
+
 text += 'newmonster "Runner" \n'
 text += 'name "Runner" \n'
 text += 'descr "" \n'
@@ -393,12 +490,283 @@ text += 'spr2 "Randomclass/0173_2.tga" \n'
 text += 'clearspec \n'
 text += 'coldblood \n'
 text += 'fast \n'
+text += ' \n'
+
+text += 'newmonster "Lizardman" \n'
+text += 'name "Lizardman" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 8 \n'
+text += 'spr1 "Randomclass/0171_1.tga" \n'
+text += 'spr2 "Randomclass/0171_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Trident" \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += 'coldblood \n'
+text += ' \n'
+
+text += 'newmonster "Lizardman Warrior" \n'
+text += 'name "Lizardman Warrior" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 9 \n'
+text += 'armor 1 \n'
+text += 'spr1 "Randomclass/0172_1.tga" \n'
+text += 'spr2 "Randomclass/0172_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 1 "Trident" \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += 'coldblood \n'
+text += ' \n'
+
+text += 'newmonster "Caveman" \n'
+text += 'name "Caveman" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 6 \n'
+text += 'armor 0 \n'
+text += 'spr1 "Randomclass/1615_1.tga" \n'
+text += 'spr2 "Randomclass/1615_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Club" \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Caveman Chief" \n'
+text += 'name "Caveman Chief" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 7 \n'
+text += 'armor 0 \n'
+text += 'spr1 "Randomclass/1616_1.tga" \n'
+text += 'spr2 "Randomclass/1616_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Club" \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Voi Spearman" \n'
+text += 'name "Voi Spearman" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'armor 0 \n'
+text += 'spr1 "Randomclass/1929_1.tga" \n'
+text += 'spr2 "Randomclass/1929_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Spear" \n'
+text += 'rangedweapon 0 "Javelin" \n'
+text += 'clearspec \n'
+text += 'shield \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Peshti Spearman" \n'
+text += 'name "Peshti Spearman" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'armor 1 \n'
+text += 'spr1 "Randomclass/1928_1.tga" \n'
+text += 'spr2 "Randomclass/1928_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 1 "Spear" \n'
+text += 'clearspec \n'
+text += 'shield \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Voi Axeman" \n'
+text += 'name "Voi Axeman" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'armor 0 \n'
+text += 'spr1 "Randomclass/1930_1.tga" \n'
+text += 'spr2 "Randomclass/1930_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Axe" \n'
+text += 'clearspec \n'
+text += 'shield \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Voi Archer" \n'
+text += 'name "Voi Archer" \n'
+text += 'descr "" \n'
+text += 'copystats "Archer" \n'
+text += 'spr1 "Randomclass/1931_1.tga" \n'
+text += 'spr2 "Randomclass/1931_2.tga" \n'
+text += ' \n'
+
+text += 'newmonster "Lizardman Shaman" \n'
+text += 'name "Lizardman Shaman" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 8 \n'
+text += 'mr 6 \n'
+text += 'spr1 "Randomclass/0170_1.tga" \n'
+text += 'spr2 "Randomclass/0170_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Club" \n'
+text += 'spellweapon 21 1 \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += 'coldblood \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Freak Lord" \n'
+text += 'name "Freak Lord" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 15 \n'
+text += 'mr 7 \n'
+text += 'str 5 \n'
+text += 'spr1 "Randomclass/0246_1.tga" \n'
+text += 'spr2 "Randomclass/0246_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 4 "fist" \n'
+text += 'meleeweapon 4 "fist" \n'
+text += 'spellweapon 10 2 \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += 'fear 1 \n'
+text += 'trample 1 \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Militia" \n'
+text += 'name "Militia" \n'
+text += 'descr "" \n'
+text += 'copystats "Levy" \n'
+text += 'copyspr "Levy" \n'
+text += 'clearmove \n'
+text += ' \n'
+
+text += 'newmonster "Commander" \n'
+text += 'name "Commander" \n'
+text += 'descr "" \n'
+text += 'copystats "Captain" \n'
+text += 'spr1 "Randomclass/0034_1.tga" \n'
+text += 'spr2 "Randomclass/0034_2.tga" \n'
+text += 'shield \n'
+text += ' \n'
+
+text += 'newmonster "Heavy Spearman" \n'
+text += 'name "Heavy Spearman" \n'
+text += 'descr "" \n'
+text += 'copystats "Heavy Infantry" \n'
+text += 'spr1 "Randomclass/0038_1.tga" \n'
+text += 'spr2 "Randomclass/0038_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 2 "Spear" \n'
+text += 'clearspec \n'
+text += 'shield \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Light Cavalry" \n'
+text += 'name "Light Cavalry" \n'
+text += 'descr "" \n'
+text += 'copystats "Barbarian Lancer" \n'
+text += 'spr1 "Randomclass/0024_1.tga" \n'
+text += 'spr2 "Randomclass/0024_2.tga" \n'
+text += 'hp 8 \n'
+text += 'armor 0 \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 2 "Spear" \n'
+text += 'rangedweapon 0 "Javelin" \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Mounted Commander" \n'
+text += 'name "Mounted Commander" \n'
+text += 'descr "" \n'
+text += 'copystats "Barbarian Lancer" \n'
+text += 'spr1 "Randomclass/0046_1.tga" \n'
+text += 'spr2 "Randomclass/0046_2.tga" \n'
+text += 'hp 10 \n'
+text += 'armor 1 \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Broadsword" \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Heavy Cavalry" \n'
+text += 'name "Heavy Cavalry" \n'
+text += 'descr "" \n'
+text += 'copystats "Barbarian Lancer" \n'
+text += 'spr1 "Randomclass/0020_1.tga" \n'
+text += 'spr2 "Randomclass/0020_2.tga" \n'
+text += 'hp 10 \n'
+text += 'armor 2 \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Priest" \n'
+text += 'name "Priest" \n'
+text += 'descr "" \n'
+text += 'copystats "Bishop" \n'
+text += 'spr1 "Randomclass/2276_1.tga" \n'
+text += 'spr2 "Randomclass/2276_2.tga" \n'
+text += 'hp 4 \n'
+text += 'mr 5 \n'
+text += ' \n'
+
+text += 'newweapon "Soul Leech" \n'
+text += 'clearwspec \n'
+text += 'trgrank 1 \n'
+text += 'range 7 \n'
+text += 'dmgtype 7 \n'
+text += 'dmg 0 \n'
+text += 'aoe 1 \n'
+text += 'sound 18 \n'
+text += 'look 75 \n'
+text += 'init 3 \n'
+text += 'nostr \n'
+text += 'an \n'
+text += 'hardmr \n'
+text += ' \n'
+
+text += 'newmonster "Hidden Aboleth" \n'
+text += 'name "Hidden Aboleth" \n'
+text += 'descr "Aboleths are ancient beings sprung from the depths of the ocean. They resemble huge mud-crawling fish with tentacles and large, dark eyes covering their foreheads. As they grow in size, they shed the scales of their Giboleth form and become paler and softer. Aboleths have the ability to project their will on others and can dominate lesser beings with sheer strength of mind. Through their superior minds, the Aboleths have enslaved other water-dwelling races and built an underwater slave-based empire. The larger and older an Aboleth is, the more powerful his powers of domination." \n'
+text += 'copystats "Ogre" \n'
+text += 'hp 50 \n'
+text += 'armor 1 \n'
+text += 'mor 20 \n'
+text += 'str 1 \n'
+text += 'mr 8 \n'
+text += 'spr1 "Randomclass/1520_1.tga" \n'
+text += 'spr2 "Randomclass/1520_2.tga" \n'
+text += 'clearweapons \n'
+text += 'rangedweaponbonus 15 "Soul Leech" \n'
+text += 'rangedweaponbonus 15 "Soul Leech" \n'
+text += 'rangedweaponbonus 1 "Mind Blast" \n'
+text += 'spellweapon 42 2 \n'
+text += 'spellweapon 61 2 \n'
+text += 'spellweapon 43 2 \n'
+text += 'voidsanity 10 \n'
+text += 'water \n'
+text += 'slow \n'
+text += 'saner 5 \n'
+text += 'rank -1 \n'
+text += 'miscslots \n'
+text += 'nametype 17 \n'
+text += ' \n'
+	
 	
 i = 0
 classnumber = 0	
 classnumber = parseInt(document.getElementById("classnumber").value, 10);
 while(i <= (classnumber -1)){
-	
+descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'
 	
 x = 0
 y = 0
@@ -411,7 +779,7 @@ limit2 = Math.floor(Math.random() * 7)
 limit3 = Math.floor(Math.random() * 4)	
 i++
 shuffle = randomItem(team8)
-shuffle2 = Math.floor(Math.random() * 20)
+shuffle2 = Math.floor(Math.random() * 16)
 
 coin = Math.floor(Math.random() * 4)
 if(coin === 3){
@@ -445,7 +813,7 @@ mymonster3store = 'newmonster "' + mymonster3 + '" \n'
 leader = randomItem(team3_2)
 
 text += mymonsterstore
-text += 'descr "" \n'
+text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
@@ -499,44 +867,43 @@ text += 'power 15 1 \n'
 text += 'gathergems \n'	
 }
 if(shuffle2 === 12){
-text += 'power 18 1 \n'
-text += 'gathergems \n'	
-}
-if(shuffle2 === 13){
-text += 'power 19 1 \n'
-text += 'gathergems \n'	
-}
-if(shuffle2 === 14){
-text += 'power 20 1 \n'
-text += 'gathergems \n'	
-}
-if(shuffle2 === 15){
-text += 'power 21 1 \n'
-text += 'gathergems \n'	
-}
-if(shuffle2 === 16){
 text += 'power 23 1 \n'	
 text += 'gathersacr \n'	
 }
-if(shuffle2 === 17){
+if(shuffle2 === 13){
 text += 'power 26 1 \n'	
+text += 'gathergems \n'	
+}
+if(shuffle2 === 14){
+
+text += 'gathergems \n'	
+}
+if(shuffle2 === 15){
+
 text += 'gathergems \n'	
 }
 coin2 = Math.floor(Math.random() * 2)
 spell = Math.floor(Math.random() * 62)
 
 if(coin2 === 1){
-text += 'spellweapon ' + spell + ' 1 \n'	
+text += 'spellweaponbonus ' + spell + ' 1 \n'	
 }
 text += 'rank -1 \n'
+if(allowshuffle === true){
+text += '#'
+}
 text += 'mastery 1 \n'
 text += ' \n'
 
 leader = randomItem(team3_3)	
 text += mymonster2store	
-text += 'descr "" \n'
+text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
+
+if(allowshuffle === true){
+shuffle2 = Math.floor(Math.random() * 16)
+}
 
 if(shuffle2 === 0){
 text += 'power 1 2 \n'
@@ -588,27 +955,19 @@ text += 'power 15 2 \n'
 text += 'gathergems \n'	
 }
 if(shuffle2 === 12){
-text += 'power 18 2 \n'
-text += 'gathergems \n'	
-}
-if(shuffle2 === 13){
-text += 'power 19 2 \n'
-text += 'gathergems \n'	
-}
-if(shuffle2 === 14){
-text += 'power 20 2 \n'
-text += 'gathergems \n'	
-}
-if(shuffle2 === 15){
-text += 'power 21 2 \n'
-text += 'gathergems \n'	
-}
-if(shuffle2 === 16){
 text += 'power 23 2 \n'	
 text += 'gathersacr \n'	
 }
-if(shuffle2 === 17){
+if(shuffle2 === 13){
 text += 'power 26 2 \n'	
+text += 'gathergems \n'	
+}
+if(shuffle2 === 14){
+
+text += 'gathergems \n'	
+}
+if(shuffle2 === 15){
+
 text += 'gathergems \n'	
 }
 coin2 = Math.floor(Math.random() * 2)
@@ -618,14 +977,21 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 2 \n'	
 }
 text += 'rank -1 \n'
+if(allowshuffle === true){
+text += '#'
+}
 text += 'mastery 2 \n'
 text += ' \n'
 
 leader = randomItem(team3)	
 text += mymonster3store	
-text += 'descr "" \n'
+text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
+
+if(allowshuffle === true){
+shuffle2 = Math.floor(Math.random() * 16)
+}
 
 if(shuffle2 === 0){
 text += 'power 1 3 \n'
@@ -677,29 +1043,22 @@ text += 'power 15 3 \n'
 text += 'gathergems \n'	
 }
 if(shuffle2 === 12){
-text += 'power 18 3 \n'
-text += 'gathergems \n'	
-}
-if(shuffle2 === 13){
-text += 'power 19 3 \n'
-text += 'gathergems \n'	
-}
-if(shuffle2 === 14){
-text += 'power 20 3 \n'
-text += 'gathergems \n'	
-}
-if(shuffle2 === 15){
-text += 'power 21 3 \n'
-text += 'gathergems \n'	
-}
-if(shuffle2 === 16){
 text += 'power 23 3 \n'	
 text += 'gathersacr \n'	
 }
-if(shuffle2 === 17){
+if(shuffle2 === 13){
 text += 'power 26 3 \n'	
 text += 'gathergems \n'	
 }
+if(shuffle2 === 14){
+
+text += 'gathergems \n'	
+}
+if(shuffle2 === 15){
+
+text += 'gathergems \n'	
+}
+
 coin2 = Math.floor(Math.random() * 2)
 spell = Math.floor(Math.random() * 62)
 
@@ -707,12 +1066,15 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 3 \n'	
 }
 text += 'rank -1 \n'
+if(allowshuffle === true){
+text += '#'
+}
 text += 'mastery 3 \n'
 text += ' \n'
 
 text += 'newclass \n'
 text += 'setclassname "'+ mymonster + '" \n'
-text += 'classdescr "" \n'
+text += 'class' + descrroll
 text += 'clearrec  \n'
 while (x <= limit){	
 x++
@@ -720,18 +1082,28 @@ roll = Math.floor(Math.random() * team1.length)
 text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
 
 }
+
+
 while (y <= limit2){	
 y++
 roll = Math.floor(Math.random() * team2.length)
 text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
 
 }
-if (shuffle2 === 17){	
-text += 'addmercrec "Mirror" 100 1 10 0 \n'
-text += 'addmercrec "Large Mirror" 100 1 25 0 \n'
-text += 'addmercrec "Silver Mirror" 100 1 50 0 \n'
-text += 'addmercrec "Gold Mirror" 100 1 150 0 \n'
+if (shuffle2 === 13){	
+text += 'addmercrec "Mirror" 100 1 10 0 0\n'
+text += 'addmercrec "Large Mirror" 100 1 25 0 0\n'
+text += 'addmercrec "Silver Mirror" 100 1 50 0 0\n'
+text += 'addmercrec "Gold Mirror" 100 1 150 0 0\n'
 }
+if(shuffle2 === 15){
+text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
+}
+
+if(allowshuffle === true){
+text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
+}
+
 text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
 text += 'nostdtroops  \n'
 text += 'clearstartunits  \n'
@@ -753,6 +1125,12 @@ text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
 }
 text += 'setmaincom "' + mymonster + '"  \n'
 text += 'addstartcom "' + team2[roll].name + '"  \n'
+if (shuffle2 === 14){	
+text += 'addstartcom "Young Dvala"  \n'
+}
+if(shuffle2 === 15){
+text += 'addstartcom "Warlock'+ illapp +'s Apprentice" \n'
+}
 text += 'hometerr ' + randomItem(team4) + '  \n'
 coin = Math.floor(Math.random() * 4)
 if(coin === 3){
@@ -773,11 +1151,12 @@ text += ' \n'
 }
 // El and Troll King
 function download2(filename, text) {
-filename = 'Randomclasses_2.c4m'
+filename = 'Randomclasses_Two.c4m'
 text = ""
-text += 'icon "unholyalliances/unholyalliances.tga"' + '\n'
-text += 'description "Desperate times call for desperate measures"' + '\n'	
+text += 'icon "Randomclass/Randombanner_a.tga"' + '\n'
+text += 'description "The world has gone mad!"' + '\n'	
 text += '# All Done <3' + '\n \n'
+
 text += 'newmonster "Hidden Freak" \n'	
 text += 'descr "Who knows what horrors dwell in the random chaos of Elysium?" \n'	
 text += 'copystats "Troglodyte" \n'	
@@ -795,6 +1174,27 @@ text += 'size2x2 \n'
 text += 'rank -1 \n'
 text += ' \n'
 
+text += 'newmonster "Python" \n'	
+text += 'descr "Who knows what horrors dwell in the random chaos of Elysium?" \n'	
+text += 'copystats "Troglodyte" \n'	
+text += 'hp 150\n'
+text += 'mr 8 \n'
+text += 'str 8 \n'
+text += 'mor 20 \n'
+text += 'spr1 "Randomclass/2791_1.tga" \n'
+text += 'spr2 "Randomclass/2791_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 25 42 \n'
+text += 'clearspec \n'
+text += 'water \n'
+text += 'fastheal \n'
+text += 'coldblood \n'
+text += 'tunnel \n'
+text += 'fear 1\n'
+text += 'huge \n'
+text += 'rank -1 \n'
+text += ' \n'
+
 text += 'newmonster "Runner" \n'
 text += 'name "Runner" \n'
 text += 'descr "" \n'
@@ -804,7 +1204,277 @@ text += 'spr2 "Randomclass/0173_2.tga" \n'
 text += 'clearspec \n'
 text += 'coldblood \n'
 text += 'fast \n'
-	
+text += ' \n'
+
+text += 'newmonster "Lizardman" \n'
+text += 'name "Lizardman" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 8 \n'
+text += 'spr1 "Randomclass/0171_1.tga" \n'
+text += 'spr2 "Randomclass/0171_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Trident" \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += 'coldblood \n'
+text += ' \n'
+
+text += 'newmonster "Lizardman Warrior" \n'
+text += 'name "Lizardman Warrior" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 9 \n'
+text += 'armor 1 \n'
+text += 'spr1 "Randomclass/0172_1.tga" \n'
+text += 'spr2 "Randomclass/0172_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 1 "Trident" \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += 'coldblood \n'
+text += ' \n'
+
+text += 'newmonster "Caveman" \n'
+text += 'name "Caveman" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 6 \n'
+text += 'armor 0 \n'
+text += 'spr1 "Randomclass/1615_1.tga" \n'
+text += 'spr2 "Randomclass/1615_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Club" \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Caveman Chief" \n'
+text += 'name "Caveman Chief" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 7 \n'
+text += 'armor 0 \n'
+text += 'spr1 "Randomclass/1616_1.tga" \n'
+text += 'spr2 "Randomclass/1616_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Club" \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Voi Spearman" \n'
+text += 'name "Voi Spearman" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'armor 0 \n'
+text += 'spr1 "Randomclass/1929_1.tga" \n'
+text += 'spr2 "Randomclass/1929_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Spear" \n'
+text += 'rangedweapon 0 "Javelin" \n'
+text += 'clearspec \n'
+text += 'shield \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Peshti Spearman" \n'
+text += 'name "Peshti Spearman" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'armor 1 \n'
+text += 'spr1 "Randomclass/1928_1.tga" \n'
+text += 'spr2 "Randomclass/1928_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 1 "Spear" \n'
+text += 'clearspec \n'
+text += 'shield \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Voi Axeman" \n'
+text += 'name "Voi Axeman" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'armor 0 \n'
+text += 'spr1 "Randomclass/1930_1.tga" \n'
+text += 'spr2 "Randomclass/1930_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Axe" \n'
+text += 'clearspec \n'
+text += 'shield \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Voi Archer" \n'
+text += 'name "Voi Archer" \n'
+text += 'descr "" \n'
+text += 'copystats "Archer" \n'
+text += 'spr1 "Randomclass/1931_1.tga" \n'
+text += 'spr2 "Randomclass/1931_2.tga" \n'
+text += ' \n'
+
+text += 'newmonster "Lizardman Shaman" \n'
+text += 'name "Lizardman Shaman" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 8 \n'
+text += 'mr 6 \n'
+text += 'spr1 "Randomclass/0170_1.tga" \n'
+text += 'spr2 "Randomclass/0170_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Club" \n'
+text += 'spellweapon 21 1 \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += 'coldblood \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Freak Lord" \n'
+text += 'name "Freak Lord" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 15 \n'
+text += 'mr 7 \n'
+text += 'str 5 \n'
+text += 'spr1 "Randomclass/0246_1.tga" \n'
+text += 'spr2 "Randomclass/0246_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 4 "fist" \n'
+text += 'meleeweapon 4 "fist" \n'
+text += 'spellweapon 10 2 \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += 'fear 1 \n'
+text += 'trample 1 \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Militia" \n'
+text += 'name "Militia" \n'
+text += 'descr "" \n'
+text += 'copystats "Levy" \n'
+text += 'copyspr "Levy" \n'
+text += 'clearmove \n'
+text += ' \n'
+
+text += 'newmonster "Commander" \n'
+text += 'name "Commander" \n'
+text += 'descr "" \n'
+text += 'copystats "Captain" \n'
+text += 'spr1 "Randomclass/0034_1.tga" \n'
+text += 'spr2 "Randomclass/0034_2.tga" \n'
+text += 'shield \n'
+text += ' \n'
+
+text += 'newmonster "Heavy Spearman" \n'
+text += 'name "Heavy Spearman" \n'
+text += 'descr "" \n'
+text += 'copystats "Heavy Infantry" \n'
+text += 'spr1 "Randomclass/0038_1.tga" \n'
+text += 'spr2 "Randomclass/0038_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 2 "Spear" \n'
+text += 'clearspec \n'
+text += 'shield \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Light Cavalry" \n'
+text += 'name "Light Cavalry" \n'
+text += 'descr "" \n'
+text += 'copystats "Barbarian Lancer" \n'
+text += 'spr1 "Randomclass/0024_1.tga" \n'
+text += 'spr2 "Randomclass/0024_2.tga" \n'
+text += 'hp 8 \n'
+text += 'armor 0 \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 2 "Spear" \n'
+text += 'rangedweapon 0 "Javelin" \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Mounted Commander" \n'
+text += 'name "Mounted Commander" \n'
+text += 'descr "" \n'
+text += 'copystats "Barbarian Lancer" \n'
+text += 'spr1 "Randomclass/0046_1.tga" \n'
+text += 'spr2 "Randomclass/0046_2.tga" \n'
+text += 'hp 10 \n'
+text += 'armor 1 \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 0 "Broadsword" \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Heavy Cavalry" \n'
+text += 'name "Heavy Cavalry" \n'
+text += 'descr "" \n'
+text += 'copystats "Barbarian Lancer" \n'
+text += 'spr1 "Randomclass/0020_1.tga" \n'
+text += 'spr2 "Randomclass/0020_2.tga" \n'
+text += 'hp 10 \n'
+text += 'armor 2 \n'
+text += 'clearspec \n'
+text += 'allitemslots \n'
+text += ' \n'
+
+text += 'newmonster "Priest" \n'
+text += 'name "Priest" \n'
+text += 'descr "" \n'
+text += 'copystats "Bishop" \n'
+text += 'spr1 "Randomclass/2276_1.tga" \n'
+text += 'spr2 "Randomclass/2276_2.tga" \n'
+text += 'hp 4 \n'
+text += 'mr 5 \n'
+text += ' \n'
+
+text += 'newweapon "Soul Leech" \n'
+text += 'clearwspec \n'
+text += 'trgrank 1 \n'
+text += 'range 7 \n'
+text += 'dmgtype 7 \n'
+text += 'dmg 0 \n'
+text += 'aoe 1 \n'
+text += 'sound 18 \n'
+text += 'look 75 \n'
+text += 'init 3 \n'
+text += 'nostr \n'
+text += 'an \n'
+text += 'hardmr \n'
+text += ' \n'
+
+text += 'newmonster "Hidden Aboleth" \n'
+text += 'name "Hidden Aboleth" \n'
+text += 'descr "Aboleths are ancient beings sprung from the depths of the ocean. They resemble huge mud-crawling fish with tentacles and large, dark eyes covering their foreheads. As they grow in size, they shed the scales of their Giboleth form and become paler and softer. Aboleths have the ability to project their will on others and can dominate lesser beings with sheer strength of mind. Through their superior minds, the Aboleths have enslaved other water-dwelling races and built an underwater slave-based empire. The larger and older an Aboleth is, the more powerful his powers of domination." \n'
+text += 'copystats "Ogre" \n'
+text += 'hp 50 \n'
+text += 'armor 1 \n'
+text += 'mor 20 \n'
+text += 'str 1 \n'
+text += 'mr 8 \n'
+text += 'spr1 "Randomclass/1520_1.tga" \n'
+text += 'spr2 "Randomclass/1520_2.tga" \n'
+text += 'clearweapons \n'
+text += 'rangedweaponbonus 15 "Soul Leech" \n'
+text += 'rangedweaponbonus 15 "Soul Leech" \n'
+text += 'rangedweaponbonus 1 "Mind Blast" \n'
+text += 'spellweapon 42 2 \n'
+text += 'spellweapon 61 2 \n'
+text += 'spellweapon 43 2 \n'
+text += 'voidsanity 10 \n'
+text += 'water \n'
+text += 'slow \n'
+text += 'saner 5 \n'
+text += 'rank -1 \n'
+text += 'miscslots \n'
+text += 'nametype 17 \n'
+text += ' \n'
+descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'
 x = 0
 y = 0
 z = 0
@@ -848,7 +1518,146 @@ mymonster3store = 'newmonster "' + mymonster3 + '" \n'
 leader = randomItem(team3_2)
 
 text += mymonsterstore
-text += 'descr "" \n'
+text += descrroll
+text += 'copystats "' + leader + '" \n'
+text += 'copyspr "' + leader + '" \n'
+
+text += 'power 6 1 \n'		
+
+coin2 = Math.floor(Math.random() * 2)
+spell = Math.floor(Math.random() * 62)
+
+if(coin2 === 1){
+text += 'spellweaponbonus ' + spell + ' 1 \n'	
+}
+text += 'rank -1 \n'
+text += 'mastery 1 \n'
+text += ' \n'
+
+leader = randomItem(team3_3)	
+text += mymonster2store	
+text += descrroll
+text += 'copystats "' + leader + '" \n'
+text += 'copyspr "' + leader + '" \n'
+
+text += 'power 6 2 \n'
+	
+coin2 = Math.floor(Math.random() * 2)
+spell = Math.floor(Math.random() * 62)
+
+if(coin2 === 1){
+text += 'spellweaponbonus ' + spell + ' 2 \n'	
+}
+text += 'rank -1 \n'
+text += 'mastery 2 \n'
+text += ' \n'
+
+leader = randomItem(team3)	
+text += mymonster3store	
+text += descrroll
+text += 'copystats "' + leader + '" \n'
+text += 'copyspr "' + leader + '" \n'
+
+text += 'power 6 3 \n'
+
+coin2 = Math.floor(Math.random() * 2)
+spell = Math.floor(Math.random() * 62)
+
+if(coin2 === 1){
+text += 'spellweaponbonus ' + spell + ' 3 \n'	
+}
+text += 'rank -1 \n'
+text += 'mastery 3 \n'
+text += ' \n'
+
+text += 'selectclass 1 \n'
+text += 'clearrec  \n'
+while (x <= limit){	
+x++
+roll = Math.floor(Math.random() * team1.length)
+text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
+
+}
+while (y <= limit2){	
+y++
+roll = Math.floor(Math.random() * team2.length)
+text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
+
+}
+text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
+text += 'addcomrec "'+ mymonster2 +'" 100 150 0 0 \n'
+text += 'reclimiter  "='+ mymonster +'" \n'
+text += 'addcomrec "'+ mymonster3 +'" 100 400 0 0 \n'
+text += 'reclimiter  "='+ mymonster2 +'" \n'
+text += 'clearstartunits  \n'
+while (z <= 1){	
+z++
+roll = Math.floor(Math.random() * team2.length)
+hasunits = 0
+if(team1[roll].num <= 5 && team1[roll].num > 1){
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
+hasunits ++
+}
+if(team1[roll].num > 5){
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
+hasunits ++
+}
+if(team1[roll].num === 1 && hasunits ===0){
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
+}
+}
+text += 'setmaincom "' + mymonster + '"  \n'
+text += 'addstartcom "' + team2[roll].name + '"  \n'
+text += 'hometerr 30 \n'
+coin = Math.floor(Math.random() * 4)
+text += 'clearstartterr \n'
+text += 'addstartterr '+ randomItem(team8) + '\n'	
+text += ' \n'		
+descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'	
+x = 0
+y = 0
+z = 0
+w = 0
+v = 0
+
+limit = (Math.floor(Math.random() * 10)) + 1
+limit2 = Math.floor(Math.random() * 7)
+limit3 = Math.floor(Math.random() * 4)	
+shuffle = randomItem(team8)
+
+coin = Math.floor(Math.random() * 4)
+if(coin === 3){
+mymonster = randomItem(team5) + " " + randomItem(team6) + ' of ' + randomItem(team7)	
+mymonsterstore = 'newmonster "' + mymonster + '" \n'	
+}	
+if(coin != 3){
+mymonster =	 randomItem(team5) + " " + randomItem(team6)
+mymonsterstore = 'newmonster "' + mymonster + '" \n'	
+}
+
+coin = Math.floor(Math.random() * 4)
+if(coin === 3){
+mymonster2 = randomItem(team5) + " " + randomItem(team6) + ' of ' + randomItem(team7)	
+mymonster2store = 'newmonster "' + mymonster2 + '" \n'	
+}	
+if(coin != 3){
+mymonster2 =	 randomItem(team5) + " " + randomItem(team6)
+mymonster2store = 'newmonster "' + mymonster2 + '" \n'	
+}
+
+coin = Math.floor(Math.random() * 4)
+if(coin === 3){
+mymonster3 = randomItem(team5) + " " + randomItem(team6) + ' of ' + randomItem(team7)	
+mymonster3store = 'newmonster "' + mymonster3 + '" \n'	
+}	
+if(coin != 3){
+mymonster3 =	 randomItem(team5) + " " + randomItem(team6)
+mymonster3store = 'newmonster "' + mymonster3 + '" \n'	
+}
+leader = randomItem(team3_2)
+
+text += mymonsterstore
+text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
@@ -859,7 +1668,7 @@ coin2 = Math.floor(Math.random() * 2)
 spell = Math.floor(Math.random() * 62)
 
 if(coin2 === 1){
-text += 'spellweapon ' + spell + ' 1 \n'	
+text += 'spellweaponbonus ' + spell + ' 1 \n'	
 }
 text += 'rank -1 \n'
 text += 'mastery 1 \n'
@@ -867,7 +1676,7 @@ text += ' \n'
 
 leader = randomItem(team3_3)	
 text += mymonster2store	
-text += 'descr "" \n'
+text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
@@ -886,7 +1695,7 @@ text += ' \n'
 
 leader = randomItem(team3)	
 text += mymonster3store	
-text += 'descr "" \n'
+text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
@@ -946,7 +1755,7 @@ coin = Math.floor(Math.random() * 4)
 text += 'clearstartterr \n'
 text += 'addstartterr '+ randomItem(team8) + '\n'	
 text += ' \n'
-
+descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'
 
 x = 0
 y = 0
@@ -991,7 +1800,7 @@ mymonster3store = 'newmonster "' + mymonster3 + '" \n'
 leader = randomItem(team3_2)
 
 text += mymonsterstore
-text += 'descr "" \n'
+text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
@@ -1002,7 +1811,7 @@ coin2 = Math.floor(Math.random() * 2)
 spell = Math.floor(Math.random() * 62)
 
 if(coin2 === 1){
-text += 'spellweapon ' + spell + ' 1 \n'	
+text += 'spellweaponbonus ' + spell + ' 1 \n'	
 }
 text += 'rank -1 \n'
 text += 'mastery 1 \n'
@@ -1010,7 +1819,7 @@ text += ' \n'
 
 leader = randomItem(team3_3)	
 text += mymonster2store	
-text += 'descr "" \n'
+text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
@@ -1029,7 +1838,7 @@ text += ' \n'
 
 leader = randomItem(team3)	
 text += mymonster3store	
-text += 'descr "" \n'
+text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
