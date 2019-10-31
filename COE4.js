@@ -284,6 +284,7 @@ let team2 = [
 	{name: "Caveman Chief", gold: 40, iron: 0, chance: 5, goldplus: 10},
 	{name: "Ichtyid Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},	
 	{name: "Giant Snail", gold: 30, iron: 0, chance: 10, goldplus: 10},	
+	{name: "Mound King", gold: 30, iron: 0, chance: 10, goldplus: 10},	
 	]
 
 let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth','Scorpion Man',
