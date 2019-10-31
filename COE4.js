@@ -60,8 +60,8 @@ let team1 = [
 	{name: "O Bakemono", num: 1, gold: 25, iron: 0, chance: 100},
 	{name: "Dai Bakemono", num: 3, gold: 50, iron: 15, chance: 100},
 	{name: "Dai Bakemono Archer", num: 3, gold: 50, iron: 15, chance: 100},
-	{name: "Aka Oni", num: 2, gold: 60, iron: 0, chance: 10},
-	{name: "Ao Oni", num: 2, gold: 60, iron: 0, chance: 10},
+	{name: "Aka Oni", num: 3, gold: 60, iron: 0, chance: 10},
+	{name: "Ao Oni", num: 3, gold: 60, iron: 0, chance: 10},
 	{name: "Kappa", num: 4, gold: 50, iron: 25, chance: 100},
 	{name: "Karasu Tengu", num: 2, gold: 50, iron: 10, chance: 100},
 	{name: "Mezu", num: 1, gold: 50, iron: 5, chance: 10},
@@ -110,12 +110,12 @@ let team1 = [
 	{name: "Deer", num: 15, gold: 50, iron: 0, chance: 100},
 	{name: "Dog", num: 8, gold: 50, iron: 0, chance: 100},
 	{name: "Donkey", num: 8, gold: 50, iron: 0, chance: 100},
-	{name: "Fire Ant", num: 10, gold: 50, iron: 0, chance: 100},
-	{name: "Giant Mantis", num: 4, gold: 50, iron: 0, chance: 100},	
-	{name: "Giant Ant", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Fire Ant", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Giant Mantis", num: 3, gold: 50, iron: 0, chance: 100},	
+	{name: "Giant Ant", num: 3, gold: 50, iron: 0, chance: 100},	
 	{name: "Giant Moose", num: 1, gold: 90, iron: 0, chance: 15},
 	{name: "Giant Rat", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Horse", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Horse", num: 4, gold: 50, iron: 0, chance: 100},	
 	{name: "Goat", num: 15, gold: 50, iron: 0, chance: 100},
 	{name: "Great Boar", num: 3, gold: 50, iron: 0, chance: 100},
 	{name: "Rabbit", num: 20, gold: 50, iron: 0, chance: 100},	
@@ -159,10 +159,10 @@ let team1 = [
 	{name: "Centaur", num: 3, gold: 60, iron: 0, chance: 100},
 	{name: "Minotaur", num: 3, gold: 60, iron: 0, chance: 100},
 	{name: "Harpy", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Centaur Warrior", num: 2, gold: 60, iron: 5, chance: 100},	
+	{name: "Centaur Warrior", num: 3, gold: 60, iron: 5, chance: 100},	
 	{name: "Satyr Javelinist", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Satyr Warrior", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Minotaur Warrior", num: 2, gold: 60, iron: 0, chance: 100},
+	{name: "Minotaur Warrior", num: 3, gold: 60, iron: 5, chance: 100},
 
 	//Pale One
 	{name: "Pale One", num: 5, gold: 50, iron: 0, chance: 100},
@@ -204,7 +204,7 @@ let team1 = [
 	{name: "Frog", num: 25, gold: 50, iron: 0, chance: 100},	
 	{name: "Giant Toad", num: 1, gold: 40, iron: 0, chance: 100},
 	{name: "Marsh Worm", num: 1, gold: 30, iron: 0, chance: 100},	
-	{name: "Giant Snail", num: 7, gold: 50, iron: 0, chance: 100},
+	{name: "Giant Snail", num: 8, gold: 50, iron: 0, chance: 100},
 	{name: "Hydra Hatchling", num: 1, gold: 20, iron: 0, chance: 100},	
 	
 	//Senator
@@ -233,8 +233,8 @@ let team1 = [
 	{name: "Peshti Spearman", num: 5, gold: 50, iron: 5, chance: 100},
 	{name: "Militia", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "Heavy Spearman", num: 5, gold: 50, iron: 25, chance: 100},
-	{name: "Light Cavalry", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Heavy Cavalry", num: 5, gold: 50, iron: 25, chance: 100},
+	{name: "Light Cavalry", num: 4, gold: 50, iron: 0, chance: 100},
+	{name: "Heavy Cavalry", num: 4, gold: 50, iron: 20, chance: 100},
 	{name: "Lion Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "Hyena Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Ichtyid Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
@@ -262,10 +262,9 @@ let team2 = [
 	{name: "Wyvern", gold: 50, iron: 0, chance: 3, goldplus: 70},
 	{name: "Gargoyle", gold: 50, iron: 0, chance: 5, goldplus: 30},
 	{name: "Wood Golem", gold: 50, iron: 0, chance: 3, goldplus: 50},
-	{name: "Animated Armor", gold: 50, iron: 0, chance: 5, goldplus: 50},
+	{name: "Animated Armor", gold: 50, iron: 0, chance: 5, goldplus: 10},
 	{name: "Kraken", gold: 60, iron: 0, chance: 5, goldplus: 50},
 	{name: "Yithian Sage", gold: 60, iron: 0, chance: 5, goldplus: 60},
-	{name: "Banshee", gold: 200, iron: 0, chance: 1, goldplus: 100},
 	{name: "Brass Claw Horror", gold: 70, iron: 0, chance: 5, goldplus: 40},
 	{name: "Cave Grub", gold: 60, iron: 0, chance: 5, goldplus: 60},
 	{name: "Fire Elemental", gold: 60, iron: 0, chance: 5, goldplus: 70},
@@ -298,7 +297,9 @@ let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth',
 			 "Lake Troll King","Gelatinous Cube","Black Cat Familiar","Creeping Doom","Rakshasa","Hanya",
 			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard",'Commander','Mounted Commander',
 			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
-			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape"]
+			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Mound King",
+			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout",			 
+			 ]
 			 
 let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of the Deep","Ichtyid Captain",
 			 "Captain","Hydra Hatchling","Yithian","Wood Golem","Stone Golem",'Flesh Golem','Gargoyle','Troglodyte',
@@ -307,6 +308,7 @@ let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of 
 			 "Lake Troll","Black Cat Familiar",'Lesser Water','Cave Grub',"Large Spider",'Lesser Demon',"Serpent Fiend","Spine Devil",
 			 "Rabbit","Beast Bat","Freak Lord","Lizardman Shaman",'Hidden Aboleth',"Anakite Captain",
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Spine Membrane Horror","Horror Mantis",
+			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Mound King"
 			 ]
 
 let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider","Ichtyid Captain",
@@ -319,7 +321,9 @@ let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider
 			 "Lake Troll King","Gelatinous Cube","Black Cat Familiar","Creeping Doom",'Lesser Demon',"Serpent Fiend","Spine Devil",
 			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard","Freak Lord","Lizardman Shaman",
 			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
-			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape",'Hidden Aboleth']					 
+			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape",'Hidden Aboleth',"Mound King",
+			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout",			 
+			 ]					 
 			 
 let team4 = ['3','9','20','22','23','24','25','26','28','29','30','31',
 			 '38','57','106','113','110','112','114','121','124','151','152','154',
@@ -339,7 +343,7 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',
 			 'Seducing','Bloodthirsty','Imprisoned','Yearning','Emerging','Aspiring','Mourning','Loyal',
 			 'Pitiful','Cherubic','Secretive','Thunder','Polar','Crying','Gravel','Toothy',
 			 'Bile','Vomit','Tribal','Horned','Electronic','Winged','Nubile','Encrusted',
-			 'Bejeweled','Honest','Robber','Amoeba'
+			 'Bejeweled','Honest','Robber','Amoeba','Disgusting'
 	
 			 ]
 
@@ -353,7 +357,7 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 'Mutant','Ninja','Dragon','Scholar','Wonderland','Lunatic','Multiplier','Gamemaster',
 			 'Nymph','Lassie','Climber','Berserker','Thrall','Gravekeeper','Consort','Doll',
 			 'Edge','Clown','Piston','Mane','Arc','Kami','Giant','Goliath','Bug','Hussar',
-			 'Raja','Key','Kitten','Sloar','Esquire','Keeper','Enigma'
+			 'Raja','Key','Kitten','Sloar','Esquire','Keeper','Enigma','Glutton'
 			 ]	
 
 let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear','the Swamp',
@@ -362,7 +366,7 @@ let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear',
 			 'the Inbetween','Blades','the Trees','the East','the West','the South',
 			 'the North','the Pale','the Wish','the Sands','El','the Mirror','Harmony',
 			 'Hades','Haproons','the First Sin','the Oriant','the Monastery','the Craft',
-			 'the Winds','Many Colors','White Robes','the Trove','the Horde'
+			 'the Winds','Many Colors','White Robes','the Trove','the Horde','Hate'
 			 ]
 let team8 = ['5','6','7','40','41','42','43','70','90','105','109','158','196',
 		     '222'
@@ -375,7 +379,8 @@ let team9 = ['Once upon a time, a great evil fell upon Elysium.',
 			 'The kingdom once knew of a wretch so poor, the neglected creature dwelt in the darkest gutters of the slums, waiting for death from starvation. However, when a strange force merged with the wretch from the forgotten burrows beneath the city, the lost soul was given strange powers.',
 			 'Long ago, a once beautiful diety descended to Elysium to be with its true love. Yet, when its lover beheld its mishapen new mortal form, they were driven to suicide in despair. The now mortal monster decided to vent its frustration upon all those it happened upon.',
 			 'To overthrow the heathens of Elysium, the high holiest church of El have birthed a strange creature from the womb of a comly desert jackal.',			 
-			 'Unbeknownst to the mortal of the Elysium plane, the forces of the Nexus held a great contest to determine a warrior who was worthy of universal aclaim. A powerful untamed creature won the contest through pure savagery alone, but managed to escape into the mortal world to test its might upon Elysium',	
+			 'Unbeknownst to the mortal of the Elysium plane, the forces of the Nexus held a great contest to determine a warrior who was worthy of universal aclaim. A powerful untamed creature won the contest through pure savagery alone, but managed to escape into the mortal world to test its might upon Elysium.',	
+			 'Once upon a time, a small boy found a strange egg in the woods and took it home with him to show to his family. Little did the family know a strange thing emerged at night and crawled into the forests of Elysium and grew in the dark solitude.',
 			 ]
 
 let team10 = ['It was due to this force that the invading barbarians and squabbling nobles were driven away.',
@@ -386,6 +391,7 @@ let team10 = ['It was due to this force that the invading barbarians and squabbl
 			  'In the end, all it wanted was to be loved. So, in a quest to be loved by others, it enslaved millions of frightened souls.',
 			  'Once respected and pious men fell to their knees and converted to a new heretical religion, uniting in a great crusade against the orthodoxy.',
 			  'It knew that it was destined to die in battle and sought to find the most challeging opponent among the legions of mortal men.',
+			  'When several villages and hamlets were found burnt to cinders and their occupents slain, the local authorities realized something was wrong',
 			  ]
 let team11 = ['Later, it would be crowned king of the land, obtaining power only to be dreamed of.',
 			  'Knights from far and wide would seek it out, looking for honor in the epic struggle.',
@@ -395,16 +401,18 @@ let team11 = ['Later, it would be crowned king of the land, obtaining power only
 			  'Still not satisfied with what was acquired, it hungered evermore for the sweet taste it craved.',
 			  'In the end, the monster ended up succumbing to a deadly plague that rotted its very soul. It still fought for life, desperatly holding on to its gains.',
 			  'After a horrific massacre all sentient life in the mortal plane was extinquished in an orgy of blood.',
+			  'Mercenaries and bounty hunters combed the woods and hills for the foul beast, hoping to collect a lucrative reward for their efforts.',
 			  ]			 
 
 let team12 = ['But, fate is not kind and the master fell from grace.',
 			  'Only when it was time to seek a mate, did the world finally know peace.',
-			  'Now, it is too late. Having grown too powerful, the world is at the mercy of the monster',
+			  'Now, it is too late. Having grown too powerful, the world is at the mercy of the monster.',
 			  'Villagers spread rumors that it is still somewhere inside the darkest forests of Elysium, ready to burst out when we least expect it.',
 			  'A blessed baby was soon born from the monster, cursing the land with a new prophecy of apocolypse. Who will prevail in the end?',
 			  'In a desperate bid, the warring forces of Elysium has temporarly joined forces to deal with this threat, but against all odds, their alliance was dashed in a crushing defeat.',
 			  'Overcome by fatigue, the monster decided to settle down for a long nap, sparing the world... for now.',
 			  'The monster was eventually captured by an oriental warrior and taken away to a far eastern monastery. Instead of killing the beast, the warrior spared the monster and taught it a strange code of honor.',
+			  'To everybodies suprise, the monster was overthrown by a mysterious young boy who was barely out of diapers. With a mere sling as a weapon, he brought low the threat and later was made emperor of Elysium after the army staged a coup in his honor. Still, the monster was not completely gone and waited for its chance to arise again for revenge.',			  
 			  ]
 let team13 = ['icon "Randomclass/Randombanner.tga"' + '\n',
 			  'icon "Randomclass/Randombanner_1.tga"' + '\n',
@@ -426,9 +434,11 @@ let hasunits
 let mymonster
 let mymonster2
 let mymonster3
+let mymonster4
 let mymonsterstore
 let mymonster2store
 let mymonster3store
+let mymonster4store
 let allow_overwrite = true
 let classnumber = 10
 let unitnumber = 6
@@ -438,7 +448,7 @@ let illapp = "'"
 let descrroll
 let dump
 var id = setInterval(test, 300);
-var allowshuffle = true;
+var rit2 = false;
 function test(){
 
 classnumber = parseInt(document.getElementById("classnumber").value, 10);
@@ -457,7 +467,7 @@ dump = " "
 	text += randomItem(team13)
 	text += 'description "The world has gone mad!"' + '\n'	
 	text += '# All Done <3' + '\n \n'
-allowshuffle = document.getElementById("allowshuffle").checked;	
+
 text += 'newmonster "Hidden Freak" \n'	
 text += 'descr "Who knows what horrors dwell in the random chaos of Elysium?" \n'	
 text += 'copystats "Troglodyte" \n'	
@@ -918,9 +928,7 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 1 \n'	
 }
 text += 'rank -1 \n'
-if(allowshuffle === true){
-text += '#'
-}
+
 text += 'mastery 1 \n'
 text += ' \n'
 
@@ -930,9 +938,6 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-if(allowshuffle === true){
-shuffle2 = Math.floor(Math.random() * 16)
-}
 
 if(shuffle2 === 0){
 text += 'power 1 2 \n'
@@ -1007,9 +1012,6 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 2 \n'	
 }
 text += 'rank -1 \n'
-if(allowshuffle === true){
-text += '#'
-}
 text += 'mastery 2 \n'
 text += ' \n'
 
@@ -1018,10 +1020,6 @@ text += mymonster3store
 text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
-
-if(allowshuffle === true){
-shuffle2 = Math.floor(Math.random() * 16)
-}
 
 if(shuffle2 === 0){
 text += 'power 1 3 \n'
@@ -1097,9 +1095,7 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 3 \n'	
 }
 text += 'rank -1 \n'
-if(allowshuffle === true){
-text += '#'
-}
+
 text += 'mastery 3 \n'
 text += ' \n'
 
@@ -1131,30 +1127,35 @@ if(shuffle2 === 15){
 text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
 }
 
-if(allowshuffle === true){
-text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
-}
 
 text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
 text += 'nostdtroops  \n'
 text += 'clearstartunits  \n'
-while (z <= 1){	
-z++
-roll = Math.floor(Math.random() * team2.length)
 hasunits = 0
-if(team1[roll].num <= 5 && team1[roll].num > 1){
+
+roll = Math.floor(Math.random() * team1.length)
 text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits ++
-}
-if(team1[roll].num > 5){
+hasunits += team1[roll].num
+
+roll = Math.floor(Math.random() * team1.length)
 text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits ++
+hasunits += team1[roll].num
+
+if(hasunits < 9){
+roll = Math.floor(Math.random() * team1.length)	
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num  +' \n'
+hasunits += team1[roll].num
 }
-if(team1[roll].num === 1 && hasunits ===0){
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
-}
-}
+roll = Math.floor(Math.random() * team2.length)	
+
+rit2 = document.getElementById("rit2").checked;	
+
+if(rit2 === false){	
 text += 'setmaincom "' + mymonster + '"  \n'
+}
+if(rit2 === true){	
+text += 'setmaincom "' + mymonster2 + '"  \n'
+}
 text += 'addstartcom "' + team2[roll].name + '"  \n'
 if (shuffle2 === 14){	
 text += 'addstartcom "Young Dvala"  \n'
@@ -1512,6 +1513,7 @@ text += 'miscslots \n'
 text += 'nametype 17 \n'
 text += ' \n'
 descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'
+
 x = 0
 y = 0
 z = 0
@@ -1635,23 +1637,33 @@ text += 'reclimiter  "='+ mymonster +'" \n'
 text += 'addcomrec "'+ mymonster3 +'" 100 400 0 0 \n'
 text += 'reclimiter  "='+ mymonster2 +'" \n'
 text += 'clearstartunits  \n'
-while (z <= 1){	
-z++
-roll = Math.floor(Math.random() * team2.length)
+
 hasunits = 0
-if(team1[roll].num <= 5 && team1[roll].num > 1){
+
+roll = Math.floor(Math.random() * team1.length)
 text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits ++
-}
-if(team1[roll].num > 5){
+hasunits += team1[roll].num
+
+roll = Math.floor(Math.random() * team1.length)
 text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits ++
+hasunits += team1[roll].num
+
+if(hasunits < 9){
+roll = Math.floor(Math.random() * team1.length)	
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num  +' \n'
+hasunits += team1[roll].num
 }
-if(team1[roll].num === 1 && hasunits ===0){
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
-}
-}
+roll = Math.floor(Math.random() * team2.length)
+		
+rit2 = document.getElementById("rit2").checked;	
+
+if(rit2 === false){	
 text += 'setmaincom "' + mymonster + '"  \n'
+}
+if(rit2 === true){	
+text += 'setmaincom "' + mymonster2 + '"  \n'
+}
+
 text += 'addstartcom "' + team2[roll].name + '"  \n'
 text += 'hometerr 30 \n'
 coin = Math.floor(Math.random() * 4)
@@ -1784,23 +1796,31 @@ text += 'reclimiter  "='+ mymonster +'" \n'
 text += 'addcomrec "'+ mymonster3 +'" 100 250 0 0 \n'
 text += 'reclimiter  "='+ mymonster2 +'" \n'
 text += 'clearstartunits  \n'
-while (z <= 1){	
-z++
-roll = Math.floor(Math.random() * team2.length)
 hasunits = 0
-if(team1[roll].num <= 5 && team1[roll].num > 1){
+
+roll = Math.floor(Math.random() * team1.length)
 text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits ++
-}
-if(team1[roll].num > 5){
+hasunits += team1[roll].num
+
+roll = Math.floor(Math.random() * team1.length)
 text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits ++
+hasunits += team1[roll].num
+
+if(hasunits < 9){
+roll = Math.floor(Math.random() * team1.length)	
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num  +' \n'
+hasunits += team1[roll].num
 }
-if(team1[roll].num === 1 && hasunits ===0){
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
-}
-}
+
+roll = Math.floor(Math.random() * team2.length)	
+rit2 = document.getElementById("rit2").checked;	
+
+if(rit2 === false){	
 text += 'setmaincom "' + mymonster + '"  \n'
+}
+if(rit2 === true){	
+text += 'setmaincom "' + mymonster2 + '"  \n'
+}
 text += 'addstartcom "' + team2[roll].name + '"  \n'
 text += 'hometerr ' + randomItem(team4) + '  \n'
 coin = Math.floor(Math.random() * 4)
@@ -1928,23 +1948,31 @@ text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team
 }
 text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
 text += 'clearstartunits  \n'
-while (z <= 1){	
-z++
-roll = Math.floor(Math.random() * team2.length)
 hasunits = 0
-if(team1[roll].num <= 5 && team1[roll].num > 1){
+
+roll = Math.floor(Math.random() * team1.length)
 text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits ++
-}
-if(team1[roll].num > 5){
+hasunits += team1[roll].num
+
+roll = Math.floor(Math.random() * team1.length)
 text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits ++
+hasunits += team1[roll].num
+
+if(hasunits < 9){
+roll = Math.floor(Math.random() * team1.length)	
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num  +' \n'
+hasunits += team1[roll].num
 }
-if(team1[roll].num === 1 && hasunits ===0){
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
-}
-}
+roll = Math.floor(Math.random() * team2.length)
+	
+rit2 = document.getElementById("rit2").checked;	
+
+if(rit2 === false){	
 text += 'setmaincom "' + mymonster + '"  \n'
+}
+if(rit2 === true){	
+text += 'setmaincom "' + mymonster2 + '"  \n'
+}
 text += 'addstartcom "' + team2[roll].name + '"  \n'
 text += 'hometerr ' + randomItem(team4) + '  \n'
 coin = Math.floor(Math.random() * 4)
@@ -1996,6 +2024,16 @@ mymonster3store = 'newmonster "' + mymonster3 + '" \n'
 if(coin != 3){
 mymonster3 =	 randomItem(team5) + " " + randomItem(team6)
 mymonster3store = 'newmonster "' + mymonster3 + '" \n'	
+}
+
+coin = Math.floor(Math.random() * 4)
+if(coin === 3){
+mymonster4 = randomItem(team5) + " " + randomItem(team6) + ' of ' + randomItem(team7)	
+mymonster4store = 'newmonster "' + mymonster4 + '" \n'	
+}	
+if(coin != 3){
+mymonster4 =	 randomItem(team5) + " " + randomItem(team6)
+mymonster4store = 'newmonster "' + mymonster4 + '" \n'	
 }
 leader = randomItem(team3_2)
 
@@ -2055,6 +2093,26 @@ text += 'rank -1 \n'
 text += 'mastery 3 \n'
 text += ' \n'
 
+leader = randomItem(team3)	
+text += mymonster4store	
+text += descrroll
+text += 'copystats "' + leader + '" \n'
+text += 'copyspr "' + leader + '" \n'
+
+text += 'power 25 4 \n'
+text += 'gatherrelics \n'
+
+coin2 = Math.floor(Math.random() * 2)
+spell = Math.floor(Math.random() * 62)
+
+if(coin2 === 1){
+text += 'spellweaponbonus ' + spell + ' 3 \n'	
+}
+text += 'rank -1 \n'
+text += 'mastery 4 \n'
+text += ' \n'
+
+
 text += 'selectclass 21 \n'
 text += 'clearrec  \n'
 while (x <= limit){	
@@ -2063,6 +2121,8 @@ roll = Math.floor(Math.random() * team1.length)
 text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
 
 }
+text += 'addunitrec "Temple Guard" 100 5 50 0 5 \n'
+text += 'recxcost 12 5 \n'
 while (y <= limit2){	
 y++
 roll = Math.floor(Math.random() * team2.length)
@@ -2074,24 +2134,33 @@ text += 'addcomrec "'+ mymonster2 +'" 100 100 0 0 \n'
 text += 'reclimiter  "='+ mymonster +'" \n'
 text += 'addcomrec "'+ mymonster3 +'" 100 250 0 0 \n'
 text += 'reclimiter  "='+ mymonster2 +'" \n'
+text += 'addcomrec "'+ mymonster4 +'" 100 600 0 0 \n'
+text += 'reclimiter  "='+ mymonster3 +'" \n'
 text += 'clearstartunits  \n'
-while (z <= 1){	
-z++
-roll = Math.floor(Math.random() * team2.length)
 hasunits = 0
-if(team1[roll].num <= 5 && team1[roll].num > 1){
+
+roll = Math.floor(Math.random() * team1.length)
 text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits ++
-}
-if(team1[roll].num > 5){
+hasunits += team1[roll].num
+
+roll = Math.floor(Math.random() * team1.length)
 text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits ++
+hasunits += team1[roll].num
+
+if(hasunits < 9){
+roll = Math.floor(Math.random() * team1.length)	
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num  +' \n'
+hasunits += team1[roll].num
 }
-if(team1[roll].num === 1 && hasunits ===0){
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
-}
-}
+roll = Math.floor(Math.random() * team2.length)
+rit2 = document.getElementById("rit2").checked;	
+
+if(rit2 === false){	
 text += 'setmaincom "' + mymonster + '"  \n'
+}
+if(rit2 === true){	
+text += 'setmaincom "' + mymonster2 + '"  \n'
+}
 text += 'addstartcom "' + team2[roll].name + '"  \n'
 text += 'hometerr ' + randomItem(team4) + '  \n'
 coin = Math.floor(Math.random() * 4)
@@ -2219,23 +2288,29 @@ text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team
 }
 text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
 text += 'clearstartunits  \n'
+hasunits = 0
 while (z <= 1){	
 z++
+roll = Math.floor(Math.random() * team1.length)
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
+hasunits += team1[roll].num
+
+}
+if(hasunits < 9){
+roll = Math.floor(Math.random() * team1.length)	
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num  +' \n'
+hasunits += team1[roll].num
+}
+
 roll = Math.floor(Math.random() * team2.length)
-hasunits = 0
-if(team1[roll].num <= 5 && team1[roll].num > 1){
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits ++
-}
-if(team1[roll].num > 5){
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits ++
-}
-if(team1[roll].num === 1 && hasunits ===0){
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
-}
-}
+rit2 = document.getElementById("rit2").checked;	
+
+if(rit2 === false){	
 text += 'setmaincom "' + mymonster + '"  \n'
+}
+if(rit2 === true){	
+text += 'setmaincom "' + mymonster2 + '"  \n'
+}
 text += 'addstartcom "' + team2[roll].name + '"  \n'
 text += 'hometerr 236 \n'
 coin = Math.floor(Math.random() * 4)
