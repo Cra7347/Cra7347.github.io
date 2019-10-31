@@ -156,13 +156,13 @@ let team1 = [
 
 	//Dryad
 	{name: "Satyr", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Centaur", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Minotaur", num: 3, gold: 50, iron: 0, chance: 100},
+	{name: "Centaur", num: 3, gold: 60, iron: 0, chance: 100},
+	{name: "Minotaur", num: 3, gold: 60, iron: 0, chance: 100},
 	{name: "Harpy", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Centaur Warrior", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Centaur Warrior", num: 2, gold: 60, iron: 5, chance: 100},	
 	{name: "Satyr Javelinist", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Satyr Warrior", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Minotaur Warrior", num: 3, gold: 50, iron: 0, chance: 100},
+	{name: "Minotaur Warrior", num: 2, gold: 60, iron: 0, chance: 100},
 
 	//Pale One
 	{name: "Pale One", num: 5, gold: 50, iron: 0, chance: 100},
@@ -339,7 +339,7 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',
 			 'Seducing','Bloodthirsty','Imprisoned','Yearning','Emerging','Aspiring','Mourning','Loyal',
 			 'Pitiful','Cherubic','Secretive','Thunder','Polar','Crying','Gravel','Toothy',
 			 'Bile','Vomit','Tribal','Horned','Electronic','Winged','Nubile','Encrusted',
-			 'Bejeweled','Honest','Robber'
+			 'Bejeweled','Honest','Robber','Amoeba'
 	
 			 ]
 
@@ -353,7 +353,7 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 'Mutant','Ninja','Dragon','Scholar','Wonderland','Lunatic','Multiplier','Gamemaster',
 			 'Nymph','Lassie','Climber','Berserker','Thrall','Gravekeeper','Consort','Doll',
 			 'Edge','Clown','Piston','Mane','Arc','Kami','Giant','Goliath','Bug','Hussar',
-			 'Raja','Key','Kitten','Sloar','Esquire','Keeper'
+			 'Raja','Key','Kitten','Sloar','Esquire','Keeper','Enigma'
 			 ]	
 
 let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear','the Swamp',
@@ -904,7 +904,7 @@ text += 'power 26 1 \n'
 text += 'gathergems \n'	
 }
 if(shuffle2 === 14){
-
+text += 'power 30 1 \n'	 
 text += 'gathergems \n'	
 }
 if(shuffle2 === 15){
@@ -993,7 +993,7 @@ text += 'power 26 2 \n'
 text += 'gathergems \n'	
 }
 if(shuffle2 === 14){
-
+text += 'power 30 1 \n'	 
 text += 'gathergems \n'	
 }
 if(shuffle2 === 15){
@@ -1082,7 +1082,7 @@ text += 'power 26 3 \n'
 text += 'gathergems \n'	
 }
 if(shuffle2 === 14){
-
+text += 'power 30 1 \n'	 
 text += 'gathergems \n'	
 }
 if(shuffle2 === 15){
@@ -1143,7 +1143,7 @@ z++
 roll = Math.floor(Math.random() * team2.length)
 hasunits = 0
 if(team1[roll].num <= 5 && team1[roll].num > 1){
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
 hasunits ++
 }
 if(team1[roll].num > 5){
@@ -1166,7 +1166,10 @@ text += 'hometerr ' + randomItem(team4) + '  \n'
 coin = Math.floor(Math.random() * 4)
 if(coin === 3){
 text += 'addstartterr '+ randomItem(team8) + '\n'	
-}	
+}
+if(shuffle2 === 6){
+text += 'addstartterr 70 \n'	
+}		
 text += ' \n'
 }
 dump += text
@@ -1637,7 +1640,7 @@ z++
 roll = Math.floor(Math.random() * team2.length)
 hasunits = 0
 if(team1[roll].num <= 5 && team1[roll].num > 1){
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
 hasunits ++
 }
 if(team1[roll].num > 5){
@@ -1656,6 +1659,7 @@ text += 'clearstartterr \n'
 text += 'addstartterr '+ randomItem(team8) + '\n'	
 text += ' \n'		
 descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'	
+
 x = 0
 y = 0
 z = 0
@@ -1785,7 +1789,7 @@ z++
 roll = Math.floor(Math.random() * team2.length)
 hasunits = 0
 if(team1[roll].num <= 5 && team1[roll].num > 1){
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
 hasunits ++
 }
 if(team1[roll].num > 5){
@@ -1800,8 +1804,7 @@ text += 'setmaincom "' + mymonster + '"  \n'
 text += 'addstartcom "' + team2[roll].name + '"  \n'
 text += 'hometerr ' + randomItem(team4) + '  \n'
 coin = Math.floor(Math.random() * 4)
-text += 'clearstartterr \n'
-text += 'addstartterr '+ randomItem(team8) + '\n'	
+text += 'clearstartterr \n'	
 text += ' \n'
 descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'
 
@@ -1930,7 +1933,7 @@ z++
 roll = Math.floor(Math.random() * team2.length)
 hasunits = 0
 if(team1[roll].num <= 5 && team1[roll].num > 1){
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
 hasunits ++
 }
 if(team1[roll].num > 5){
@@ -1945,9 +1948,300 @@ text += 'setmaincom "' + mymonster + '"  \n'
 text += 'addstartcom "' + team2[roll].name + '"  \n'
 text += 'hometerr ' + randomItem(team4) + '  \n'
 coin = Math.floor(Math.random() * 4)
-text += 'clearstartterr \n'
-text += 'addstartterr '+ randomItem(team8) + '\n'	
+text += 'clearstartterr \n'	
 text += ' \n'
+
+x = 0
+y = 0
+z = 0
+w = 0
+v = 0
+
+limit = (Math.floor(Math.random() * unitnumber)) + 1
+limit2 = Math.floor(Math.random() * comnumber) + 1
+limit3 = Math.floor(Math.random() * 4)
+if(limit <= 0){
+limit = 4	
+}
+if(limit2 <= 0){
+limit2 = 4	
+}	
+shuffle = randomItem(team8)
+
+coin = Math.floor(Math.random() * 4)
+if(coin === 3){
+mymonster = randomItem(team5) + " " + randomItem(team6) + ' of ' + randomItem(team7)	
+mymonsterstore = 'newmonster "' + mymonster + '" \n'	
+}	
+if(coin != 3){
+mymonster =	 randomItem(team5) + " " + randomItem(team6)
+mymonsterstore = 'newmonster "' + mymonster + '" \n'	
+}
+
+coin = Math.floor(Math.random() * 4)
+if(coin === 3){
+mymonster2 = randomItem(team5) + " " + randomItem(team6) + ' of ' + randomItem(team7)	
+mymonster2store = 'newmonster "' + mymonster2 + '" \n'	
+}	
+if(coin != 3){
+mymonster2 =	 randomItem(team5) + " " + randomItem(team6)
+mymonster2store = 'newmonster "' + mymonster2 + '" \n'	
+}
+
+coin = Math.floor(Math.random() * 4)
+if(coin === 3){
+mymonster3 = randomItem(team5) + " " + randomItem(team6) + ' of ' + randomItem(team7)	
+mymonster3store = 'newmonster "' + mymonster3 + '" \n'	
+}	
+if(coin != 3){
+mymonster3 =	 randomItem(team5) + " " + randomItem(team6)
+mymonster3store = 'newmonster "' + mymonster3 + '" \n'	
+}
+leader = randomItem(team3_2)
+
+text += mymonsterstore
+text += descrroll
+text += 'copystats "' + leader + '" \n'
+text += 'copyspr "' + leader + '" \n'
+
+text += 'power 25 1 \n'	
+text += 'gatherrelics \n'	
+
+coin2 = Math.floor(Math.random() * 2)
+spell = Math.floor(Math.random() * 62)
+
+if(coin2 === 1){
+text += 'spellweaponbonus ' + spell + ' 1 \n'	
+}
+text += 'rank -1 \n'
+text += 'mastery 1 \n'
+text += ' \n'
+
+leader = randomItem(team3_3)	
+text += mymonster2store	
+text += descrroll
+text += 'copystats "' + leader + '" \n'
+text += 'copyspr "' + leader + '" \n'
+
+text += 'power 25 2 \n'
+text += 'gatherrelics \n'
+	
+coin2 = Math.floor(Math.random() * 2)
+spell = Math.floor(Math.random() * 62)
+
+if(coin2 === 1){
+text += 'spellweaponbonus ' + spell + ' 2 \n'	
+}
+text += 'rank -1 \n'
+text += 'mastery 2 \n'
+text += ' \n'
+
+leader = randomItem(team3)	
+text += mymonster3store	
+text += descrroll
+text += 'copystats "' + leader + '" \n'
+text += 'copyspr "' + leader + '" \n'
+
+text += 'power 25 3 \n'
+text += 'gatherrelics \n'
+
+coin2 = Math.floor(Math.random() * 2)
+spell = Math.floor(Math.random() * 62)
+
+if(coin2 === 1){
+text += 'spellweaponbonus ' + spell + ' 3 \n'	
+}
+text += 'rank -1 \n'
+text += 'mastery 3 \n'
+text += ' \n'
+
+text += 'selectclass 21 \n'
+text += 'clearrec  \n'
+while (x <= limit){	
+x++
+roll = Math.floor(Math.random() * team1.length)
+text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
+
+}
+while (y <= limit2){	
+y++
+roll = Math.floor(Math.random() * team2.length)
+text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
+
+}
+text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
+text += 'addcomrec "'+ mymonster2 +'" 100 100 0 0 \n'
+text += 'reclimiter  "='+ mymonster +'" \n'
+text += 'addcomrec "'+ mymonster3 +'" 100 250 0 0 \n'
+text += 'reclimiter  "='+ mymonster2 +'" \n'
+text += 'clearstartunits  \n'
+while (z <= 1){	
+z++
+roll = Math.floor(Math.random() * team2.length)
+hasunits = 0
+if(team1[roll].num <= 5 && team1[roll].num > 1){
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
+hasunits ++
+}
+if(team1[roll].num > 5){
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
+hasunits ++
+}
+if(team1[roll].num === 1 && hasunits ===0){
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
+}
+}
+text += 'setmaincom "' + mymonster + '"  \n'
+text += 'addstartcom "' + team2[roll].name + '"  \n'
+text += 'hometerr ' + randomItem(team4) + '  \n'
+coin = Math.floor(Math.random() * 4)
+text += 'clearstartterr \n'	
+text += ' \n'
+descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'
+
+x = 0
+y = 0
+z = 0
+w = 0
+v = 0
+
+limit = (Math.floor(Math.random() * unitnumber)) + 1
+limit2 = Math.floor(Math.random() * comnumber) + 1
+limit3 = Math.floor(Math.random() * 4)
+if(limit <= 0){
+limit = 4	
+}
+if(limit2 <= 0){
+limit2 = 4	
+}		
+shuffle = randomItem(team8)
+
+coin = Math.floor(Math.random() * 4)
+if(coin === 3){
+mymonster = randomItem(team5) + " " + randomItem(team6) + ' of ' + randomItem(team7)	
+mymonsterstore = 'newmonster "' + mymonster + '" \n'	
+}	
+if(coin != 3){
+mymonster =	 randomItem(team5) + " " + randomItem(team6)
+mymonsterstore = 'newmonster "' + mymonster + '" \n'	
+}
+
+coin = Math.floor(Math.random() * 4)
+if(coin === 3){
+mymonster2 = randomItem(team5) + " " + randomItem(team6) + ' of ' + randomItem(team7)	
+mymonster2store = 'newmonster "' + mymonster2 + '" \n'	
+}	
+if(coin != 3){
+mymonster2 =	 randomItem(team5) + " " + randomItem(team6)
+mymonster2store = 'newmonster "' + mymonster2 + '" \n'	
+}
+
+coin = Math.floor(Math.random() * 4)
+if(coin === 3){
+mymonster3 = randomItem(team5) + " " + randomItem(team6) + ' of ' + randomItem(team7)	
+mymonster3store = 'newmonster "' + mymonster3 + '" \n'	
+}	
+if(coin != 3){
+mymonster3 =	 randomItem(team5) + " " + randomItem(team6)
+mymonster3store = 'newmonster "' + mymonster3 + '" \n'	
+}
+leader = randomItem(team3_2)
+
+text += mymonsterstore
+text += descrroll
+text += 'copystats "' + leader + '" \n'
+text += 'copyspr "' + leader + '" \n'
+
+text += 'power 47 1 \n'	
+text += 'gatherherbs \n'	
+
+coin2 = Math.floor(Math.random() * 2)
+spell = Math.floor(Math.random() * 62)
+
+if(coin2 === 1){
+text += 'spellweaponbonus ' + spell + ' 1 \n'	
+}
+text += 'rank -1 \n'
+text += 'mastery 1 \n'
+text += ' \n'
+
+leader = randomItem(team3_3)	
+text += mymonster2store	
+text += descrroll
+text += 'copystats "' + leader + '" \n'
+text += 'copyspr "' + leader + '" \n'
+
+text += 'power 47 2 \n'
+text += 'gatherherbs \n'
+	
+coin2 = Math.floor(Math.random() * 2)
+spell = Math.floor(Math.random() * 62)
+
+if(coin2 === 1){
+text += 'spellweaponbonus ' + spell + ' 2 \n'	
+}
+text += 'rank -1 \n'
+text += 'mastery 2 \n'
+text += ' \n'
+
+leader = randomItem(team3)	
+text += mymonster3store	
+text += descrroll
+text += 'copystats "' + leader + '" \n'
+text += 'copyspr "' + leader + '" \n'
+
+text += 'power 47 3 \n'
+text += 'gatherherbs \n'
+
+coin2 = Math.floor(Math.random() * 2)
+spell = Math.floor(Math.random() * 62)
+
+if(coin2 === 1){
+text += 'spellweaponbonus ' + spell + ' 3 \n'	
+}
+text += 'rank -1 \n'
+text += 'mastery 3 \n'
+text += ' \n'
+
+text += 'selectclass 24 \n'
+text += 'clearrec  \n'
+while (x <= limit){	
+x++
+roll = Math.floor(Math.random() * team1.length)
+text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
+
+}
+while (y <= limit2){	
+y++
+roll = Math.floor(Math.random() * team2.length)
+text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
+
+}
+text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
+text += 'clearstartunits  \n'
+while (z <= 1){	
+z++
+roll = Math.floor(Math.random() * team2.length)
+hasunits = 0
+if(team1[roll].num <= 5 && team1[roll].num > 1){
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
+hasunits ++
+}
+if(team1[roll].num > 5){
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
+hasunits ++
+}
+if(team1[roll].num === 1 && hasunits ===0){
+text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num * 2 +' \n'
+}
+}
+text += 'setmaincom "' + mymonster + '"  \n'
+text += 'addstartcom "' + team2[roll].name + '"  \n'
+text += 'hometerr 236 \n'
+coin = Math.floor(Math.random() * 4)
+text += 'clearstartterr \n'	
+text += ' \n'
+
 dump += text
 return dump
   var element = document.createElement('a');
