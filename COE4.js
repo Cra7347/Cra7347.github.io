@@ -189,9 +189,9 @@ let team1 = [
 	{name: "Hog Hussar", num: 5, gold: 50, iron: 5, chance: 100},
 		
 	//warlock
-	{name: "Lesser Fire", num: 5, gold: 60, iron: 0, chance: 100},
-	{name: "Lesser Water", num: 5, gold: 60, iron: 0, chance: 100},
-	{name: "Lesser Earth", num: 5, gold: 60, iron: 0, chance: 100},
+	{name: "Lesser Fire", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Lesser Water", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Lesser Earth", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Winter Wolf", num: 3, gold: 50, iron: 0, chance: 100},	
 
 	// witch
