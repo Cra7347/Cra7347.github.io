@@ -297,7 +297,7 @@ let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth',
 			 "Lake Troll King","Gelatinous Cube","Black Cat Familiar","Creeping Doom","Rakshasa","Hanya",
 			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard",'Commander','Mounted Commander',
 			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
-			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Mound King",
+			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Mound King","Snake",
 			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout",			 
 			 ]
 			 
@@ -308,7 +308,7 @@ let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of 
 			 "Lake Troll","Black Cat Familiar",'Lesser Water','Cave Grub',"Large Spider",'Lesser Demon',"Serpent Fiend","Spine Devil",
 			 "Rabbit","Beast Bat","Freak Lord","Lizardman Shaman",'Hidden Aboleth',"Anakite Captain",
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Spine Membrane Horror","Horror Mantis",
-			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Mound King"
+			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Mound King","Snake"
 			 ]
 
 let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider","Ichtyid Captain",
@@ -322,7 +322,7 @@ let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider
 			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard","Freak Lord","Lizardman Shaman",
 			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape",'Hidden Aboleth',"Mound King",
-			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout",			 
+			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Snake"			 
 			 ]					 
 			 
 let team4 = ['3','9','20','22','23','24','25','26','28','29','30','31',
@@ -343,7 +343,7 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',
 			 'Seducing','Bloodthirsty','Imprisoned','Yearning','Emerging','Aspiring','Mourning','Loyal',
 			 'Pitiful','Cherubic','Secretive','Thunder','Polar','Crying','Gravel','Toothy',
 			 'Bile','Vomit','Tribal','Horned','Electronic','Winged','Nubile','Encrusted',
-			 'Bejeweled','Honest','Robber','Amoeba','Disgusting'
+			 'Bejeweled','Honest','Robber','Amoeba','Disgusting','Yearly'
 	
 			 ]
 
@@ -357,7 +357,7 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 'Mutant','Ninja','Dragon','Scholar','Wonderland','Lunatic','Multiplier','Gamemaster',
 			 'Nymph','Lassie','Climber','Berserker','Thrall','Gravekeeper','Consort','Doll',
 			 'Edge','Clown','Piston','Mane','Arc','Kami','Giant','Goliath','Bug','Hussar',
-			 'Raja','Key','Kitten','Sloar','Esquire','Keeper','Enigma','Glutton'
+			 'Raja','Key','Kitten','Sloar','Esquire','Keeper','Enigma','Glutton','Autocrat'
 			 ]	
 
 let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear','the Swamp',
@@ -381,6 +381,7 @@ let team9 = ['Once upon a time, a great evil fell upon Elysium.',
 			 'To overthrow the heathens of Elysium, the high holiest church of El have birthed a strange creature from the womb of a comly desert jackal.',			 
 			 'Unbeknownst to the mortal of the Elysium plane, the forces of the Nexus held a great contest to determine a warrior who was worthy of universal aclaim. A powerful untamed creature won the contest through pure savagery alone, but managed to escape into the mortal world to test its might upon Elysium.',	
 			 'Once upon a time, a small boy found a strange egg in the woods and took it home with him to show to his family. Little did the family know a strange thing emerged at night and crawled into the forests of Elysium and grew in the dark solitude.',
+			 'In the darkest woods of Elysium, a poor peasant gave birth to a squirming monstrosity. Overcome by pity, she tried desperatly to hide the creature from the outside world, but was eventually tempted to sell her progeny to a travelling circus for a moderate sum of gold. Later the monster escaped in the heart of the night, driven by a lust to see the outside world.',		
 			 ]
 
 let team10 = ['It was due to this force that the invading barbarians and squabbling nobles were driven away.',
@@ -389,9 +390,9 @@ let team10 = ['It was due to this force that the invading barbarians and squabbl
 			  'Magic was channeled into its thirsting body, sucking the very life out of the world.',
 			  'In bitter revolt against its betters, it freed the slaves and razed the palaces of the kings.',
 			  'In the end, all it wanted was to be loved. So, in a quest to be loved by others, it enslaved millions of frightened souls.',
-			  'Once respected and pious men fell to their knees and converted to a new heretical religion, uniting in a great crusade against the orthodoxy.',
+			  'In honor of this strange sight, once respected and pious men fell to their knees and converted to a new heretical religion, uniting in a great crusade against the orthodoxy.',
 			  'It knew that it was destined to die in battle and sought to find the most challeging opponent among the legions of mortal men.',
-			  'When several villages and hamlets were found burnt to cinders and their occupents slain, the local authorities realized something was wrong',
+			  'When several villages and hamlets were found burnt to cinders and their occupents slain, the local authorities realized something was wrong.',
 			  ]
 let team11 = ['Later, it would be crowned king of the land, obtaining power only to be dreamed of.',
 			  'Knights from far and wide would seek it out, looking for honor in the epic struggle.',
