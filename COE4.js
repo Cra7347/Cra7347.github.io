@@ -309,7 +309,7 @@ let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth',
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Mound King","Snake",
 			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout",'Markgraf',
 			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',			 
-			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo"
+			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo","Werewolf"
 			 ]
 			 
 let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of the Deep","Ichtyid Captain",
@@ -321,7 +321,7 @@ let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of 
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Spine Membrane Horror","Horror Mantis",
 			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Mound King","Snake",'Markgraf',
 			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',
-			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo"
+			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo","Werewolf"
 			 ]
 
 let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider","Ichtyid Captain",
@@ -337,7 +337,7 @@ let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape",'Hidden Aboleth',"Mound King",
 			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Snake",			 
 			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',
-			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo"			 
+			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo","Werewolf"			 
 			 ]					 
 			 
 let team4 = ['3','9','20','22','23','24','25','26','28','29','30','31',
