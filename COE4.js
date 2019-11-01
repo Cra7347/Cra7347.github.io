@@ -157,12 +157,9 @@ let team1 = [
 	//Dryad
 	{name: "Satyr", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Centaur", num: 3, gold: 60, iron: 0, chance: 100},
+	{name: "Centauride", num: 3, gold: 60, iron: 0, chance: 100},	
 	{name: "Minotaur", num: 3, gold: 60, iron: 0, chance: 100},
 	{name: "Harpy", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Centaur Warrior", num: 3, gold: 60, iron: 5, chance: 100},	
-	{name: "Satyr Javelinist", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Satyr Warrior", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Minotaur Warrior", num: 3, gold: 60, iron: 5, chance: 100},
 
 	//Pale One
 	{name: "Pale One", num: 5, gold: 50, iron: 0, chance: 100},
@@ -243,6 +240,11 @@ let team1 = [
 let team2 = [
 //vanilla humans
 	{name: "Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},
+	{name: "Commander", gold: 40, iron: 0, chance: 10, goldplus: 10},
+	{name: "Mounted Chief", gold: 40, iron: 0, chance: 10, goldplus: 10},	
+	{name: "Soothsayer", gold: 40, iron: 0, chance: 5, goldplus: 20},
+	{name: "Mounted Commander", gold: 40, iron: 0, chance: 10, goldplus: 10},
+	{name: "Priest", gold: 50, iron: 0, chance: 5, goldplus: 10},	
 	{name: "Monk", gold: 50, iron: 0, chance: 10, goldplus: 10},
 	{name: "Hedge Wizard", gold: 40, iron: 0, chance: 5, goldplus: 40},
 	{name: "High Lord", gold: 40, iron: 5, chance: 10, goldplus: 50},
@@ -283,8 +285,11 @@ let team2 = [
 	{name: "Uba", gold: 50, iron: 0, chance: 5, goldplus: 50},
 	{name: "Caveman Chief", gold: 40, iron: 0, chance: 5, goldplus: 10},
 	{name: "Ichtyid Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},	
+	{name: "Pale One Commander", gold: 50, iron: 0, chance: 10, goldplus: 10},
 	{name: "Giant Snail", gold: 30, iron: 0, chance: 10, goldplus: 10},	
 	{name: "Mound King", gold: 30, iron: 0, chance: 10, goldplus: 10},	
+	{name: "Harpy", gold: 30, iron: 0, chance: 10, goldplus: 10},
+	{name: "Satyr Commander", gold: 30, iron: 0, chance: 10, goldplus: 10},
 	]
 
 let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth','Scorpion Man',
@@ -299,7 +304,8 @@ let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth',
 			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard",'Commander','Mounted Commander',
 			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Mound King","Snake",
-			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout",			 
+			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout",'Markgraf',
+			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord'			 
 			 ]
 			 
 let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of the Deep","Ichtyid Captain",
@@ -309,7 +315,8 @@ let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of 
 			 "Lake Troll","Black Cat Familiar",'Lesser Water','Cave Grub',"Large Spider",'Lesser Demon',"Serpent Fiend","Spine Devil",
 			 "Rabbit","Beast Bat","Freak Lord","Lizardman Shaman",'Hidden Aboleth',"Anakite Captain",
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Spine Membrane Horror","Horror Mantis",
-			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Mound King","Snake"
+			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Mound King","Snake",'Markgraf',
+			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord'
 			 ]
 
 let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider","Ichtyid Captain",
@@ -317,13 +324,14 @@ let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider
 			 "Troll King","Doppelganger Captain", "Olm Sage", "King of the Deep","Rakshasa",'Harlequin',
 			 "Captain",'Scorpion Beast','Lesser Fire','Lesser Earth','Gargoyle',"Olm Sage","Spine Membrane Horror","Horror Mantis",
 			 "Hydra","Formless Spawn","Yithian Sage","Displacer Beast",'Lesser Water','Cave Grub',"Anakite Captain",
-			 "Carrion","Mummy","Barbarian Leader","Mounted Chief",'Troglodyte',"Dream Horror",
+			 "Carrion","Mummy","Barbarian Leader","Mounted Chief",'Troglodyte',"Dream Horror",'Markgraf',
 			 "Manticore","Demonic Locust",'Scorpion Beast','Lesser Fire','Lesser Earth',"Hanya",
 			 "Lake Troll King","Gelatinous Cube","Black Cat Familiar","Creeping Doom",'Lesser Demon',"Serpent Fiend","Spine Devil",
 			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard","Freak Lord","Lizardman Shaman",
 			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape",'Hidden Aboleth',"Mound King",
-			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Snake"			 
+			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Snake",			 
+			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord'
 			 ]					 
 			 
 let team4 = ['3','9','20','22','23','24','25','26','28','29','30','31',
@@ -1130,6 +1138,48 @@ while (x <= limit){
 x++
 roll = Math.floor(Math.random() * team1.length)
 text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
+if (team1[roll].name === "Satyr"){
+text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Hoplite" 100 5 25 0 15 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Steel Hoplite" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+}
+if (team1[roll].name === "Centaur"){
+text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centaur" \n'
+}
+if (team1[roll].name === "Centauride"){
+text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centauride" \n'
+
+}
+if (team1[roll].name === "Minotaur"){
+text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
+text += 'reclimiter "=Minotaur" \n'
+
+}
+if (team1[roll].name === "Harpy"){
+text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
+text += 'reclimiter "=Harpy" \n'
+}
 
 }
 
@@ -1139,6 +1189,28 @@ y++
 roll = Math.floor(Math.random() * team2.length)
 text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
 
+}
+if(shuffle2 === 11){
+text += 'addcomrec "Oracle of Subterranean Fire" 0 150 30 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Oracle of Subterranean Waters" 0 150 30 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Oracle of the Dead" 0 150 30 0 \n'
+text += 'templerec \n'
+}
+if(shuffle2 === 12){
+text += 'addcomrec "Sun Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Blood Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Sky Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Rain Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Moon Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Death Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
 }
 if (shuffle2 === 13){	
 text += 'addmercrec "Mirror" 100 1 10 0 0\n'
@@ -1666,6 +1738,48 @@ while (x <= limit){
 x++
 roll = Math.floor(Math.random() * team1.length)
 text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
+if (team1[roll].name === "Satyr"){
+text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Hoplite" 100 5 25 0 15 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Steel Hoplite" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+}
+if (team1[roll].name === "Centaur"){
+text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centaur" \n'
+}
+if (team1[roll].name === "Centauride"){
+text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centauride" \n'
+
+}
+if (team1[roll].name === "Minotaur"){
+text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
+text += 'reclimiter "=Minotaur" \n'
+
+}
+if (team1[roll].name === "Harpy"){
+text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
+text += 'reclimiter "=Harpy" \n'
+}
 
 }
 while (y <= limit2){	
@@ -1825,6 +1939,48 @@ while (x <= limit){
 x++
 roll = Math.floor(Math.random() * team1.length)
 text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
+if (team1[roll].name === "Satyr"){
+text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Hoplite" 100 5 25 0 15 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Steel Hoplite" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+}
+if (team1[roll].name === "Centaur"){
+text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centaur" \n'
+}
+if (team1[roll].name === "Centauride"){
+text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centauride" \n'
+
+}
+if (team1[roll].name === "Minotaur"){
+text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
+text += 'reclimiter "=Minotaur" \n'
+
+}
+if (team1[roll].name === "Harpy"){
+text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
+text += 'reclimiter "=Harpy" \n'
+}
 
 }
 while (y <= limit2){	
@@ -1981,6 +2137,48 @@ while (x <= limit){
 x++
 roll = Math.floor(Math.random() * team1.length)
 text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
+if (team1[roll].name === "Satyr"){
+text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Hoplite" 100 5 25 0 15 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Steel Hoplite" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+}
+if (team1[roll].name === "Centaur"){
+text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centaur" \n'
+}
+if (team1[roll].name === "Centauride"){
+text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centauride" \n'
+
+}
+if (team1[roll].name === "Minotaur"){
+text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
+text += 'reclimiter "=Minotaur" \n'
+
+}
+if (team1[roll].name === "Harpy"){
+text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
+text += 'reclimiter "=Harpy" \n'
+}
 
 }
 while (y <= limit2){	
@@ -2162,6 +2360,48 @@ while (x <= limit){
 x++
 roll = Math.floor(Math.random() * team1.length)
 text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
+if (team1[roll].name === "Satyr"){
+text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Hoplite" 100 5 25 0 15 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Steel Hoplite" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+}
+if (team1[roll].name === "Centaur"){
+text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centaur" \n'
+}
+if (team1[roll].name === "Centauride"){
+text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centauride" \n'
+
+}
+if (team1[roll].name === "Minotaur"){
+text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
+text += 'reclimiter "=Minotaur" \n'
+
+}
+if (team1[roll].name === "Harpy"){
+text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
+text += 'reclimiter "=Harpy" \n'
+}
 
 }
 text += 'addunitrec "Temple Guard" 100 5 50 0 5 \n'
@@ -2321,6 +2561,48 @@ while (x <= limit){
 x++
 roll = Math.floor(Math.random() * team1.length)
 text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
+if (team1[roll].name === "Satyr"){
+text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Hoplite" 100 5 25 0 15 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Steel Hoplite" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+}
+if (team1[roll].name === "Centaur"){
+text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centaur" \n'
+}
+if (team1[roll].name === "Centauride"){
+text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centauride" \n'
+
+}
+if (team1[roll].name === "Minotaur"){
+text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
+text += 'reclimiter "=Minotaur" \n'
+
+}
+if (team1[roll].name === "Harpy"){
+text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
+text += 'reclimiter "=Harpy" \n'
+}
 
 }
 while (y <= limit2){	
