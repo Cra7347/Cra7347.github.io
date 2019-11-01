@@ -2933,7 +2933,6 @@ text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[
 
 limit = limit - 2 
 
-
 if(limit <= 0){
 limit = 1	
 }
@@ -3017,7 +3016,7 @@ text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_emp
 hasunits += team1_melee_empty[roll].num
 
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
-text += 'addstartunits "' + team1_ranged_empty.name + '" '+ team1_ranged_empty.num +' \n'
+text += 'addstartunits "' + team1_ranged_empty[roll].name + '" '+ team1_ranged_empty[roll].num +' \n'
 hasunits += team1_ranged_empty[roll].num
 
 if(hasunits < 9){
@@ -3239,7 +3238,7 @@ text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_emp
 hasunits += team1_melee_empty[roll].num
 
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
-text += 'addstartunits "' + team1_ranged_empty.name + '" '+ team1_ranged_empty.num +' \n'
+text += 'addstartunits "' + team1_ranged_empty[roll].name + '" '+ team1_ranged_empty[roll].num +' \n'
 hasunits += team1_ranged_empty[roll].num
 
 if(hasunits < 9){
@@ -3455,7 +3454,7 @@ text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_emp
 hasunits += team1_melee_empty[roll].num
 
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
-text += 'addstartunits "' + team1_ranged_empty.name + '" '+ team1_ranged_empty.num +' \n'
+text += 'addstartunits "' + team1_ranged_empty[roll].name + '" '+ team1_ranged_empty[roll].num +' \n'
 hasunits += team1_ranged_empty[roll].num
 
 if(hasunits < 9){
@@ -3707,7 +3706,7 @@ text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_emp
 hasunits += team1_melee_empty[roll].num
 
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
-text += 'addstartunits "' + team1_ranged_empty.name + '" '+ team1_ranged_empty.num +' \n'
+text += 'addstartunits "' + team1_ranged_empty[roll].name + '" '+ team1_ranged_empty[roll].num +' \n'
 hasunits += team1_ranged_empty[roll].num
 
 if(hasunits < 9){
@@ -3921,7 +3920,7 @@ text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_emp
 hasunits += team1_melee_empty[roll].num
 
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
-text += 'addstartunits "' + team1_ranged_empty.name + '" '+ team1_ranged_empty.num +' \n'
+text += 'addstartunits "' + team1_ranged_empty[roll].name + '" '+ team1_ranged_empty[roll].num +' \n'
 hasunits += team1_ranged_empty[roll].num
 
 if(hasunits < 9){
