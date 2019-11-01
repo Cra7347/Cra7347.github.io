@@ -290,6 +290,8 @@ let team2 = [
 	{name: "Mound King", gold: 30, iron: 0, chance: 10, goldplus: 10},	
 	{name: "Harpy", gold: 30, iron: 0, chance: 10, goldplus: 10},
 	{name: "Satyr Commander", gold: 30, iron: 0, chance: 10, goldplus: 10},
+	{name: "Dancing Sword", gold: 10, iron: 0, chance: 10, goldplus: 10},
+	{name: "Animated Bow", gold: 20, iron: 0, chance: 10, goldplus: 10},
 	]
 
 let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth','Scorpion Man',
@@ -305,7 +307,8 @@ let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth',
 			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Mound King","Snake",
 			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout",'Markgraf',
-			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord'			 
+			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',			 
+			 "Dancing Sword","Animated Bow","Necrotod","Deep One","Weirdo"
 			 ]
 			 
 let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of the Deep","Ichtyid Captain",
@@ -316,7 +319,8 @@ let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of 
 			 "Rabbit","Beast Bat","Freak Lord","Lizardman Shaman",'Hidden Aboleth',"Anakite Captain",
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Spine Membrane Horror","Horror Mantis",
 			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Mound King","Snake",'Markgraf',
-			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord'
+			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',
+			 "Dancing Sword","Animated Bow","Necrotod","Deep One","Weirdo"
 			 ]
 
 let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider","Ichtyid Captain",
@@ -331,7 +335,8 @@ let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider
 			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape",'Hidden Aboleth',"Mound King",
 			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Snake",			 
-			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord'
+			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',
+			 "Dancing Sword","Animated Bow","Necrotod","Deep One","Weirdo"			 
 			 ]					 
 			 
 let team4 = ['3','9','20','22','23','24','25','26','28','29','30','31',
@@ -546,6 +551,15 @@ text += 'spr2 "Randomclass/0173_2.tga" \n'
 text += 'clearspec \n'
 text += 'coldblood \n'
 text += 'fast \n'
+text += ' \n'
+
+text += 'newmonster "Weirdo" \n'
+text += 'name "Weirdo" \n'
+text += 'descr "" \n'
+text += 'copystats "Strange Thing" \n'
+text += 'copyspr "Strange Thing" \n'
+text += 'clearmove \n'
+text += 'slow \n'
 text += ' \n'
 
 text += 'newmonster "Lizardman" \n'
@@ -1357,6 +1371,15 @@ text += 'spr2 "Randomclass/0173_2.tga" \n'
 text += 'clearspec \n'
 text += 'coldblood \n'
 text += 'fast \n'
+text += ' \n'
+
+text += 'newmonster "Weirdo" \n'
+text += 'name "Weirdo" \n'
+text += 'descr "" \n'
+text += 'copystats "Strange Thing" \n'
+text += 'copyspr "Strange Thing" \n'
+text += 'clearmove \n'
+text += 'slow \n'
 text += ' \n'
 
 text += 'newmonster "Lizardman" \n'
