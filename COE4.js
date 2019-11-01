@@ -294,7 +294,7 @@ let team2 = [
 	]
 
 let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth','Scorpion Man',
-			 "High Lord","Yeti","Wyrm","Crystal Golem","Moon Horror",'Horror Olm',"Ormr",
+			 "High Lord","Yeti","Wyrm","Moon Horror",'Horror Olm',"Ormr",
 			 "Troll King","Doppelganger Captain","Gore Tide Horror", "Olm Sage", "King of the Deep",
 			 "Dragon","Captain","Freak Lord","Lizardman Shaman","Spine Membrane Horror","Horror Mantis",
 			 "Wood Golem","Stone Golem",'Flesh Golem','Gargoyle','Troglodyte','Lesser Demon',"Serpent Fiend","Spine Devil",		 
