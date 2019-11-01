@@ -136,7 +136,7 @@ let team1 = [
 	{name: "Animated Armor", num: 5, gold: 0, iron: 50, chance: 100},
 	{name: "Terracotta Soldier", num: 5, gold: 60, iron: 0, chance: 100},
 	{name: "Living Bow", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Dancing Sword", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Dancing Sword", num: 5, gold: 40, iron: 5, chance: 100},	
 	{name: "Gargoyle", num: 1, gold: 30, iron: 5, chance: 100},	
 
 //cult
