@@ -2832,9 +2832,7 @@ team3_empty = team3_empty.concat(team3_2_empty)
 limit = (Math.floor(Math.random() * unitnumber)) + 1
 limit2 = Math.floor(Math.random() * comnumber) + 1
 limit3 = Math.floor(Math.random() * 4)
-if(limit <= 0){
-limit = 4	
-}
+
 if(limit2 <= 0){
 limit2 = 4	
 }		
@@ -2926,7 +2924,15 @@ text += ' \n'
 
 text += 'selectclass 1 \n'
 text += 'clearrec  \n'
+
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
+
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+
 limit = limit - 2 
+
 
 if(limit <= 0){
 limit = 1	
@@ -3142,6 +3148,13 @@ text += ' \n'
 
 text += 'selectclass 21 \n'
 text += 'clearrec  \n'
+
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
+
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+
 limit = limit - 2 
 
 if(limit <= 0){
@@ -3355,7 +3368,14 @@ text += ' \n'
 
 text += 'selectclass 14 \n'
 text += 'clearrec  \n'
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
+
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+
 limit = limit - 2 
+ 
 
 if(limit <= 0){
 limit = 1	
@@ -3593,7 +3613,14 @@ text += ' \n'
 
 text += 'selectclass 21 \n'
 text += 'clearrec  \n'
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
+
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+
 limit = limit - 2 
+
 
 if(limit <= 0){
 limit = 1	
@@ -3808,7 +3835,14 @@ text += ' \n'
 
 text += 'selectclass 24 \n'
 text += 'clearrec  \n'
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
+
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+
 limit = limit - 2 
+
 
 if(limit <= 0){
 limit = 1	
