@@ -259,7 +259,6 @@ let team2 = [
 	{name: "Dragon Hatchling", gold: 40, iron: 0, chance: 5, goldplus: 40},
 	{name: "Mind Slime Horror", gold: 60, iron: 0, chance: 5, goldplus: 40},
 	{name: "Peddler", gold: 20, iron: 0, chance: 5, goldplus: 40},	
-	{name: "Beholder", gold: 150, iron: 0, chance: 3, goldplus: 100},
 	{name: "Amphiptere", gold: 70, iron: 0, chance: 3, goldplus: 80},
 	{name: "Wyvern", gold: 50, iron: 0, chance: 3, goldplus: 70},
 	{name: "Gargoyle", gold: 50, iron: 0, chance: 5, goldplus: 30},
