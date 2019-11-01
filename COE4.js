@@ -1232,7 +1232,7 @@ if (shuffle2 === 13){
 text += 'addmercrec "Mirror" 100 1 10 0 0\n'
 text += 'addmercrec "Large Mirror" 100 1 25 0 0\n'
 text += 'addmercrec "Silver Mirror" 100 1 50 0 0\n'
-text += 'addmercrec "Gold Mirror" 100 1 150 0 0\n'
+text += 'addmercrec "Golden Mirror" 100 1 150 0 0\n'
 }
 if(shuffle2 === 15){
 text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
