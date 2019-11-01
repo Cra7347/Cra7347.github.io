@@ -1238,7 +1238,7 @@ text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
 }
 
 
-text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
+text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
 text += 'nostdtroops  \n'
 text += 'clearstartunits  \n'
 hasunits = 0
@@ -1812,7 +1812,7 @@ roll = Math.floor(Math.random() * team2.length)
 text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
 
 }
-text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
+text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
 text += 'addcomrec "'+ mymonster2 +'" 100 150 0 0 \n'
 text += 'reclimiter  "='+ mymonster +'" \n'
 text += 'addcomrec "'+ mymonster3 +'" 100 400 0 0 \n'
@@ -2013,7 +2013,7 @@ roll = Math.floor(Math.random() * team2.length)
 text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
 
 }
-text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
+text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
 text += 'addcomrec "'+ mymonster2 +'" 100 100 0 0 \n'
 text += 'reclimiter  "='+ mymonster +'" \n'
 text += 'addcomrec "'+ mymonster3 +'" 100 250 0 0 \n'
@@ -2211,7 +2211,7 @@ roll = Math.floor(Math.random() * team2.length)
 text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
 
 }
-text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
+text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
 text += 'clearstartunits  \n'
 hasunits = 0
 
@@ -2436,7 +2436,7 @@ roll = Math.floor(Math.random() * team2.length)
 text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
 
 }
-text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
+text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
 text += 'addcomrec "'+ mymonster2 +'" 100 100 0 0 \n'
 text += 'reclimiter  "='+ mymonster +'" \n'
 text += 'addcomrec "'+ mymonster3 +'" 100 250 0 0 \n'
@@ -2635,7 +2635,7 @@ roll = Math.floor(Math.random() * team2.length)
 text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
 
 }
-text += 'addcomrec "'+ mymonster +'" 5 70 30 0 \n'
+text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
 text += 'clearstartunits  \n'
 hasunits = 0
 while (z <= 1){	
