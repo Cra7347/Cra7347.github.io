@@ -236,7 +236,9 @@ let team1 = [
 	{name: "Hyena Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Ichtyid Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "War Elephant", num: 1, gold: 65, iron: 0, chance: 10},		
-]	
+	{name: "Wolf Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Wolf Tribe Bowman", num: 5, gold: 50, iron: 0, chance: 100},	
+	]	
 let team2 = [
 //vanilla humans
 	{name: "Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},
