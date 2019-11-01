@@ -309,7 +309,7 @@ let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth',
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Mound King","Snake",
 			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout",'Markgraf',
 			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',			 
-			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo"
+			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo","Miracle Eye"
 			 ]
 			 
 let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of the Deep","Ichtyid Captain",
@@ -321,7 +321,7 @@ let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of 
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Spine Membrane Horror","Horror Mantis",
 			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Mound King","Snake",'Markgraf',
 			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',
-			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo"
+			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo","Miracle Eye"
 			 ]
 
 let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider","Ichtyid Captain",
@@ -335,7 +335,7 @@ let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider
 			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard","Freak Lord","Lizardman Shaman",
 			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape",'Hidden Aboleth',"Mound King",
-			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Snake",			 
+			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Snake","Miracle Eye",		 
 			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',
 			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo"			 
 			 ]					 
@@ -831,6 +831,21 @@ text += 'saner 5 \n'
 text += 'rank -1 \n'
 text += 'miscslots \n'
 text += 'nametype 17 \n'
+text += ' \n'
+
+text += 'newmonster "Miracle Eye" \n'
+text += 'name "Miracle Eye" \n'
+text += 'descr "" \n'
+text += 'copystats "Floating Eye" \n'
+text += 'hp 8 \n'
+text += 'copyspr "Floating Eye" \n'
+text += 'spellweaponbonus 36 1 \n'
+text += 'clearspec \n'
+text += 'ethereal \n'
+text += 'Spiritsight \n'
+text += 'clearmove \n'
+text += 'float \n'
+text += 'rank -1 \n'
 text += ' \n'
 	
 	
@@ -1672,6 +1687,22 @@ text += 'rank -1 \n'
 text += 'miscslots \n'
 text += 'nametype 17 \n'
 text += ' \n'
+
+text += 'newmonster "Miracle Eye" \n'
+text += 'name "Miracle Eye" \n'
+text += 'descr "" \n'
+text += 'copystats "Floating Eye" \n'
+text += 'hp 8 \n'
+text += 'copyspr "Floating Eye" \n'
+text += 'spellweaponbonus 36 1 \n'
+text += 'clearspec \n'
+text += 'ethereal \n'
+text += 'Spiritsight \n'
+text += 'clearmove \n'
+text += 'float \n'
+text += 'rank -1 \n'
+text += ' \n'
+
 descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'
 
 x = 0
