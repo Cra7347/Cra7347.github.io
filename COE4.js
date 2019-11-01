@@ -3909,7 +3909,7 @@ text += 'reclimiter "=Centauride" \n'
 }
 while (y <= limit2){	
 y++
-roll = Math.floor(Math.random() * team2.length)
+roll = Math.floor(Math.random() * team2_empty.length)
 text += 'addcomrec "' + team2_empty[roll].name + '" '+ team2_empty[roll].chance + ' ' + team2_empty[roll].gold + ' ' + team2_empty[roll].goldplus + ' ' + team2_empty[roll].iron + ' \n'
 
 }
@@ -3930,7 +3930,7 @@ text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_emp
 hasunits += team1_melee_empty[roll].num
 }
 
-roll = Math.floor(Math.random() * team2.length)
+roll = Math.floor(Math.random() * team2_empty.length)
 rit2 = document.getElementById("rit2").checked;	
 
 if(rit2 === false){	
