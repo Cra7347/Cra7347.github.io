@@ -219,7 +219,7 @@ let team1 = [
 	{name: "Siren", num: 1, gold: 25, iron: 0, chance: 50},
 	{name: "Pygmy", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Sinner", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Brass Claw Horror", num: 2, gold: 80, iron: 10, chance: 100},
+	{name: "Brass Claw Horror", num: 2, gold: 70, iron: 20, chance: 100},
 	{name: "Float Cat Horror", num: 1, gold: 40, iron: 0, chance: 100},
 	{name: "Hybrid Fisherman", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "Hybrid Soldier", num: 5, gold: 50, iron: 0, chance: 100},
@@ -288,7 +288,7 @@ let team2 = [
 	]
 
 let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth','Scorpion Man',
-			 "High Lord","Yeti","Wyrm","Crystal Golem","Moon Horror",'Horror Olm',
+			 "High Lord","Yeti","Wyrm","Crystal Golem","Moon Horror",'Horror Olm',"Ormr",
 			 "Troll King","Doppelganger Captain","Gore Tide Horror", "Olm Sage", "King of the Deep",
 			 "Dragon","Captain","Freak Lord","Lizardman Shaman","Spine Membrane Horror","Horror Mantis",
 			 "Wood Golem","Stone Golem",'Flesh Golem','Gargoyle','Troglodyte','Lesser Demon',"Serpent Fiend","Spine Devil",		 
@@ -415,6 +415,7 @@ let team12 = ['But, fate is not kind and the master fell from grace.',
 			  'Overcome by fatigue, the monster decided to settle down for a long nap, sparing the world... for now.',
 			  'The monster was eventually captured by an oriental warrior and taken away to a far eastern monastery. Instead of killing the beast, the warrior spared the monster and taught it a strange code of honor.',
 			  'To everybodies suprise, the monster was overthrown by a mysterious young boy who was barely out of diapers. With a mere sling as a weapon, he brought low the threat and later was made emperor of Elysium after the army staged a coup in his honor. Still, the monster was not completely gone and waited for its chance to arise again for revenge.',			  
+			  'To everybodies horror, to finalize its reign of terror, the monster produced a strange melody that enraptured the children of Elysium. In a disturbing procession, it merrily led the children into the sea where they drowned. The monster disappeared for decades soon after, but peasants spread rumors of its inevitable return.',	
 			  ]
 let team13 = ['icon "Randomclass/Randombanner.tga"' + '\n',
 			  'icon "Randomclass/Randombanner_1.tga"' + '\n',
@@ -503,6 +504,26 @@ text += 'water \n'
 text += 'fastheal \n'
 text += 'coldblood \n'
 text += 'tunnel \n'
+text += 'fear 1\n'
+text += 'huge \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Ormr" \n'	
+text += 'descr "Who knows what horrors dwell in the random chaos of Elysium?" \n'	
+text += 'copystats "Troglodyte" \n'	
+text += 'hp 150\n'
+text += 'mr 9 \n'
+text += 'str 8 \n'
+text += 'mor 20 \n'
+text += 'spr1 "Randomclass/2800_1.tga" \n'
+text += 'spr2 "Randomclass/2800_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 25 42 \n'
+text += 'clearspec \n'
+text += 'water \n'
+text += 'fastheal \n'
+text += 'coldblood \n'
 text += 'fear 1\n'
 text += 'huge \n'
 text += 'rank -1 \n'
@@ -1230,6 +1251,26 @@ text += 'water \n'
 text += 'fastheal \n'
 text += 'coldblood \n'
 text += 'tunnel \n'
+text += 'fear 1\n'
+text += 'huge \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Ormr" \n'	
+text += 'descr "Who knows what horrors dwell in the random chaos of Elysium?" \n'	
+text += 'copystats "Troglodyte" \n'	
+text += 'hp 150\n'
+text += 'mr 9 \n'
+text += 'str 8 \n'
+text += 'mor 20 \n'
+text += 'spr1 "Randomclass/2800_1.tga" \n'
+text += 'spr2 "Randomclass/2800_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 25 42 \n'
+text += 'clearspec \n'
+text += 'water \n'
+text += 'fastheal \n'
+text += 'coldblood \n'
 text += 'fear 1\n'
 text += 'huge \n'
 text += 'rank -1 \n'
