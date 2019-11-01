@@ -3532,7 +3532,7 @@ if(coin != 3){
 mymonster4 =	 randomItem(team5) + " " + randomItem(team6)
 mymonster4store = 'newmonster "' + mymonster4 + '" \n'	
 }
-leader = randomItem(team3_empty)
+leader = randomItem(team3_3_empty)
 
 text += mymonsterstore
 text += descrroll
