@@ -181,7 +181,7 @@ let team1 = [
 	{name: "Seal Guard", num: 1, gold: 50, iron: 25, chance: 10},
 		
 	//mean little boy
-	{name: "Hobmark Crossbows", num: 15, gold: 50, iron: 5, chance: 100},
+	{name: "Hobmark Crossbow", num: 15, gold: 50, iron: 5, chance: 100},
 	{name: "Hobmark Soldier", num: 15, gold: 50, iron: 5, chance: 100},
 	{name: "Hobmark Defender", num: 15, gold: 50, iron: 10, chance: 100},
 	{name: "Hobmark Hammer", num: 10, gold: 30, iron: 5, chance: 100},	
