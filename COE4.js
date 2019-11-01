@@ -378,7 +378,7 @@ let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear',
 			 'the Fold','the Legion','the Light','Rebirth','the Reach','the Tower',
 			 'the Inbetween','Blades','the Trees','the East','the West','the South',
 			 'the North','the Pale','the Wish','the Sands','El','the Mirror','Harmony',
-			 'Hades','Haproons','the First Sin','the Oriant','the Monastery','the Craft',
+			 'Hades','Haproons','the First Sin','the Orient','the Monastery','the Craft',
 			 'the Winds','Many Colors','White Robes','the Trove','the Horde','Hate'
 			 ]
 let team8 = ['5','6','7','40','41','42','43','70','90','105','109','158','196',
