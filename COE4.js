@@ -297,6 +297,23 @@ div {
   cursor: pointer;
    position: fixed; 
 }
+.button_log {
+  background-color: darkgrey;
+  border: inset gold;
+  height: 23;   
+  width: 252; 
+  bottom: 40;
+  right: 5; 
+  color: black;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+   position: fixed; 
+}
 .button_check {
   background-color: darkgrey;
   border: inset gold;
@@ -780,7 +797,7 @@ div {
 <br>
 Choose how many custom classes you want. Conquest of Elysium can only load a maximum of 75 classes, including the ones in base game.
 <br>
-<br> 
+<br>  
 <div class="windowfollow3">
 <h3>Units the Radomizer is allowed to Use</h3>
 </div>
@@ -939,6 +956,10 @@ Choose how many custom classes you want. Conquest of Elysium can only load a max
 <div class="button_est">
 <b> <p id="mainout2" style="font-family:System;"></p></b>
 </div>
+
+<div class="button_log">
+<b>Logical Upgrade Progression</b><input type="checkbox" id="pokemon" value="true" Checked> 
+</div>
 <button class="button_normal" onclick='download_file("Randomclasses.c4m", download())' id="downloadbutton">Save Random Classes</button>
 
 <button class="button_el" onclick='download_file("Randomclasses_2.c4m", download2())' id="downloadbutton2">Overwrite Voice of El, Dryad, Baron, and Troll King*</button>
@@ -953,6 +974,9 @@ Choose how many custom classes you want. Conquest of Elysium can only load a max
 <br>
 <br>
 - Random classes start with a random tier 1 ritual. Vanilla classes normally start with tier 2 rituals. Ticking the <b> Start with Level 2 Rituals</b> box will ensure randomly generated classes will start with tier 2 rituals too.
+<br>
+<br>
+- The <B>Logical Upgrade Progression</b> option will sort units by power so that a commander will upgrade into a more powerful unit. It is not a sure thing, though. Still, this should help prevent wildly ridiculous transformations I.E. a Ritual level 2 Ettin upgrading into a Black Cat Familiar upon level 3.
 <p id="mainoutput" style="font-family:Serif;"></p>
 
 <h2 style="font-family:verdana;">Install Instructions</h2>
