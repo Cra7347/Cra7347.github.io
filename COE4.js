@@ -67,16 +67,16 @@ let team1 = [
 	{name: "Mezu", num: 1, gold: 50, iron: 5, chance: 10},
 	
 //barbarian
-	{name: "Barbarian Bowman", num: 7, gold: 50, iron: 0, chance: 100},
-	{name: "Barbarian Cavalry", num: 7, gold: 50, iron: 0, chance: 100},
-	{name: "Barbarian Lancer", num: 7, gold: 50, iron: 10, chance: 100},
-	{name: "Barbarian Swordsman", num: 7, gold: 50, iron: 0, chance: 100},
-	{name: "Barbarian Lancer", num: 7, gold: 50, iron: 0, chance: 100},
-	{name: "Barbarian Warrior", num: 7, gold: 50, iron: 0, chance: 100},
-	{name: "Crystal Amazon", num: 8, gold: 50, iron: 0, chance: 100},
-	{name: "Garnet Amazon", num: 8, gold: 50, iron: 0, chance: 100},
-	{name: "Jade Amazon", num: 8, gold: 50, iron: 0, chance: 100},
-	{name: "Onyx Amazon", num: 8, gold: 50, iron: 0, chance: 100},
+	{name: "Barbarian Bowman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Barbarian Cavalry", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Barbarian Lancer", num: 5, gold: 50, iron: 10, chance: 100},
+	{name: "Barbarian Swordsman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Barbarian Lancer", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Barbarian Warrior", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Crystal Amazon", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Garnet Amazon", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Jade Amazon", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Onyx Amazon", num: 5, gold: 50, iron: 0, chance: 100},
 	
 //Hoburg
 	{name: "Burgmeister Guard", num: 10, gold: 40, iron: 10, chance: 100},
