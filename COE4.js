@@ -17,21 +17,16 @@ let four
 let roll
 let limit
 
-let team1 = [
+let team1_melee = [
 //vanilla humans
 	{name: "Spearman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Archer", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Swordsman", num: 5, gold: 50, iron: 5, chance: 100},	
 	{name: "Heavy Infantry", num: 5, gold: 50, iron: 25, chance: 100},
 	{name: "Crossbowman", num: 5, gold: 50, iron: 5, chance: 100},	
 	{name: "Catapult", num: 1, gold: 25, iron: 50, chance: 100},	
 	{name: "Bandit", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Slinger", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Scout", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Halberdier", num: 5, gold: 50, iron: 5, chance: 100},	
 	{name: "Pikeneer", num: 5, gold: 50, iron: 5, chance: 100},
-	{name: "Longbowman", num: 4, gold: 50, iron: 0, chance: 100},	
-	{name: "Tower Guard", num: 5, gold: 50, iron: 15, chance: 100},	
 	{name: "Trebuchet", num: 1, gold: 50, iron: 50, chance: 100},	
 	{name: "War Dog", num: 4, gold: 25, iron: 0, chance: 100},	
 	{name: "Zweihander", num: 5, gold: 50, iron: 10, chance: 100},
@@ -54,12 +49,10 @@ let team1 = [
 	{name: "Wolf Kin", num: 10, gold: 50, iron: 0, chance: 100},
 	{name: "Wolf Kin Reaver", num: 7, gold: 50, iron: 10, chance: 100},
 //bakemono
-	{name: "Bakemono Archer", num: 5, gold: 25, iron: 1, chance: 100},
 	{name: "Bakemono Soldier", num: 5, gold: 25, iron: 1, chance: 100},
 	{name: "Bakemono Swordsman", num: 5, gold: 25, iron: 3, chance: 100},
 	{name: "O Bakemono", num: 1, gold: 25, iron: 0, chance: 100},
 	{name: "Dai Bakemono", num: 3, gold: 50, iron: 15, chance: 100},
-	{name: "Dai Bakemono Archer", num: 3, gold: 50, iron: 15, chance: 100},
 	{name: "Aka Oni", num: 3, gold: 60, iron: 0, chance: 10},
 	{name: "Ao Oni", num: 3, gold: 60, iron: 0, chance: 10},
 	{name: "Kappa", num: 4, gold: 50, iron: 25, chance: 100},
@@ -67,8 +60,6 @@ let team1 = [
 	{name: "Mezu", num: 1, gold: 50, iron: 5, chance: 10},
 	
 //barbarian
-	{name: "Barbarian Bowman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Barbarian Cavalry", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Barbarian Lancer", num: 5, gold: 50, iron: 10, chance: 100},
 	{name: "Barbarian Swordsman", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Barbarian Lancer", num: 5, gold: 50, iron: 0, chance: 100},
@@ -80,11 +71,9 @@ let team1 = [
 	
 //Hoburg
 	{name: "Burgmeister Guard", num: 10, gold: 40, iron: 10, chance: 100},
-	{name: "Hoburg Crossbow", num: 15, gold: 50, iron: 5, chance: 100},
 	{name: "Hoburg Defender", num: 15, gold: 50, iron: 10, chance: 100},
 	{name: "Hoburg Militia", num: 15, gold: 50, iron: 0, chance: 100},
 	{name: "Hoburg Pikeneer", num: 10, gold: 30, iron: 5, chance: 100},
-	{name: "Hoburg Slinger", num: 15, gold: 50, iron: 0, chance: 100},
 	{name: "Hoburg Soldier", num: 15, gold: 50, iron: 5, chance: 100},
 	{name: "Hog Knight", num: 5, gold: 50, iron: 10, chance: 100},
 	
@@ -92,7 +81,6 @@ let team1 = [
 	{name: "Imp", num: 5, gold: 50, iron: 0, chance: 100},	
 	
 //Druid
-	{name: "Barechested Slinger", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Barechested Swordsman", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Barechested Warrior", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Beast Cavalry", num: 3, gold: 50, iron: 5, chance: 100},	
@@ -103,7 +91,6 @@ let team1 = [
 	{name: "Barechested Warrior", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Beast Cavalry", num: 3, gold: 50, iron: 5, chance: 100},	
 	{name: "Boar Warrior", num: 4, gold: 50, iron: 10, chance: 100},
-	{name: "Hornblower", num: 1, gold: 30, iron: 0, chance: 100},
 	{name: "Bear", num: 3, gold: 50, iron: 0, chance: 100},
 	{name: "Boar", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Camel", num: 7, gold: 50, iron: 0, chance: 100},
@@ -125,17 +112,14 @@ let team1 = [
 	{name: "Wolf", num: 6, gold: 50, iron: 0, chance: 100},
 
 //Dwarf
-	{name: "Dwarf Arbalest", num: 5, gold: 0, iron: 50, chance: 100},
 	{name: "Dwarf Guard", num: 5, gold: 0, iron: 60, chance: 100},
 	{name: "Dwarf Warrior", num: 5, gold: 0, iron: 50, chance: 100},
 	{name: "Dwarf", num: 5, gold: 0, iron: 40, chance: 100},
-	{name: "Dwarven Ballista", num: 1, gold: 0, iron: 60, chance: 100},	
-	{name: "Outdoor Dwarf", num: 5, gold: 30, iron: 30, chance: 100},	
+	{name: "Dwarven Ballista", num: 1, gold: 0, iron: 60, chance: 100},		
 
 //Enchanter
 	{name: "Animated Armor", num: 5, gold: 0, iron: 50, chance: 100},
 	{name: "Terracotta Soldier", num: 5, gold: 60, iron: 0, chance: 100},
-	{name: "Living Bow", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Dancing Sword", num: 5, gold: 40, iron: 5, chance: 100},	
 	{name: "Gargoyle", num: 1, gold: 20, iron: 5, chance: 100},	
 
@@ -147,7 +131,6 @@ let team1 = [
 	{name: "War Shambler", num: 4, gold: 50, iron: 20, chance: 100},		
 
 //Baal
-	{name: "Ba'alite Archer", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Ba'alite Heavy Infantry", num: 5, gold: 50, iron: 25, chance: 100},
 	{name: "Ba'alite Spearman", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Ba'alite Zealot", num: 5, gold: 50, iron: 5, chance: 100},	
@@ -178,7 +161,6 @@ let team1 = [
 	{name: "Seal Guard", num: 1, gold: 50, iron: 25, chance: 10},
 		
 	//mean little boy
-	{name: "Hobmark Crossbow", num: 15, gold: 50, iron: 5, chance: 100},
 	{name: "Hobmark Soldier", num: 15, gold: 50, iron: 5, chance: 100},
 	{name: "Hobmark Defender", num: 15, gold: 50, iron: 10, chance: 100},
 	{name: "Hobmark Hammer", num: 10, gold: 30, iron: 5, chance: 100},	
@@ -193,7 +175,6 @@ let team1 = [
 
 	// witch
 	
-	{name: "Androphag Archer", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Androphag Cavalry", num: 5, gold: 50, iron: 10, chance: 100},
 	{name: "Androphag Spearman", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Black Cat Familiar", num: 25, gold: 50, iron: 0, chance: 100},	
@@ -214,7 +195,6 @@ let team1 = [
 	{name: "Dragon Hatchling", num: 1, gold: 25, iron: 5, chance: 10},
 	{name: "Cyclops", num: 1, gold: 120, iron: 0, chance: 10},
 	{name: "Siren", num: 1, gold: 25, iron: 0, chance: 50},
-	{name: "Pygmy", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Sinner", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "Brass Claw Horror", num: 2, gold: 70, iron: 20, chance: 100},
 	{name: "Float Cat Horror", num: 1, gold: 40, iron: 0, chance: 100},
@@ -226,7 +206,6 @@ let team1 = [
 	{name: "Caveman", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "Voi Spearman", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Voi Axeman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Voi Archer", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Peshti Spearman", num: 5, gold: 50, iron: 5, chance: 100},
 	{name: "Militia", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "Heavy Spearman", num: 5, gold: 50, iron: 25, chance: 100},
@@ -237,8 +216,66 @@ let team1 = [
 	{name: "Ichtyid Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "War Elephant", num: 1, gold: 65, iron: 0, chance: 10},		
 	{name: "Wolf Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Wolf Tribe Bowman", num: 5, gold: 50, iron: 0, chance: 100},	
+	]
+
+	
+let team1_ranged = [
+//vanilla humans
+	{name: "Archer", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Crossbowman", num: 5, gold: 50, iron: 5, chance: 100},		
+	{name: "Bandit", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Slinger", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Scout", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Longbowman", num: 4, gold: 50, iron: 0, chance: 100},	
+	{name: "Tower Guard", num: 5, gold: 50, iron: 15, chance: 100},		
+	
+// troll
+	{name: "Goblin Archer", num: 10, gold: 50, iron: 0, chance: 100},
+//bakemono
+	{name: "Bakemono Archer", num: 5, gold: 25, iron: 1, chance: 100},
+	{name: "Dai Bakemono Archer", num: 3, gold: 50, iron: 15, chance: 100},
+	
+//barbarian
+	{name: "Barbarian Bowman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Barbarian Cavalry", num: 5, gold: 50, iron: 0, chance: 100},
+	
+//Hoburg
+	{name: "Hoburg Crossbow", num: 15, gold: 50, iron: 5, chance: 100},
+	{name: "Hoburg Slinger", num: 15, gold: 50, iron: 0, chance: 100},
+		
+	
+//Druid
+	{name: "Barechested Slinger", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Hornblower", num: 1, gold: 30, iron: 0, chance: 100},
+	{name: "Barechested Slinger", num: 5, gold: 50, iron: 0, chance: 100},
+
+//Dwarf
+	{name: "Dwarf Arbalest", num: 5, gold: 0, iron: 50, chance: 100},	
+	{name: "Outdoor Dwarf", num: 5, gold: 30, iron: 30, chance: 100},	
+
+//Enchanter
+	{name: "Living Bow", num: 5, gold: 50, iron: 0, chance: 100},	
+	
+
+//Baal
+	{name: "Ba'alite Archer", num: 5, gold: 50, iron: 0, chance: 100},
+	
+		
+	{name: "Hobmark Crossbow", num: 15, gold: 50, iron: 5, chance: 100},
+			
+
+	// witch
+	
+	{name: "Androphag Archer", num: 5, gold: 50, iron: 0, chance: 100},
+	
+	
+//weird	
+	{name: "Voi Archer", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Wolf Tribe Bowman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Pygmy", num: 5, gold: 50, iron: 0, chance: 100},	
 	]	
+
+	
 let team2 = [
 //vanilla humans
 	{name: "Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},
@@ -321,7 +358,8 @@ let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of 
 			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Spine Membrane Horror","Horror Mantis",
 			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Mound King","Snake",'Markgraf',
 			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',
-			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo","Miracle Eye"
+			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo","Miracle Eye",
+			 'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
 			 ]
 
 let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider","Ichtyid Captain",
@@ -438,6 +476,620 @@ let team13 = ['icon "Randomclass/Randombanner.tga"' + '\n',
 			  'icon "Randomclass/Randombanner_4.tga"' + '\n',			  
 			  ]	
 			  
+let team1_melee_empty = [
+	{name: "Spearman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Swordsman", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Heavy Infantry", num: 5, gold: 50, iron: 25, chance: 100},
+	{name: "Bandit", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Halberdier", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Pikeneer", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "War Dog", num: 4, gold: 25, iron: 0, chance: 100},	
+	{name: "Zweihander", num: 5, gold: 50, iron: 10, chance: 100},
+	{name: "Militia", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Heavy Spearman", num: 5, gold: 50, iron: 25, chance: 100},
+	{name: "Light Cavalry", num: 4, gold: 50, iron: 0, chance: 100},
+	{name: "Heavy Cavalry", num: 4, gold: 50, iron: 20, chance: 100},
+	{name: "Lion Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Hyena Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "War Elephant", num: 1, gold: 65, iron: 0, chance: 10},		
+	{name: "Wolf Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+]
+let team1_ranged_empty = [
+	{name: "Crossbowman", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Slinger", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Tower Guard", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Archer", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Scout", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Catapult", num: 1, gold: 25, iron: 50, chance: 100},	
+	{name: "Trebuchet", num: 1, gold: 50, iron: 50, chance: 100},
+	{name: "Ballista", num: 2, gold: 25, iron: 50, chance: 100},	
+]	
+let team2_empty = [
+	{name: "Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},
+	{name: "Commander", gold: 40, iron: 0, chance: 10, goldplus: 10},
+	{name: "Mounted Commander", gold: 40, iron: 0, chance: 10, goldplus: 10},
+	{name: "Priest", gold: 50, iron: 0, chance: 5, goldplus: 10},
+	{name: "Alchemist", gold: 40, iron: 0, chance: 10, goldplus: 5},
+	{name: "Court Mage", gold: 40, iron: 0, chance: 10, goldplus: 5},
+	{name: "High Lord", gold: 50, iron: 0, chance: 10, goldplus: 5},
+	{name: "Monk", gold: 40, iron: 0, chance: 10, goldplus: 5},	
+]
+let team3_empty = [
+	"Old Wizard","White Wizard","Dark Wizard","Golden Wizard","King"	
+]
+let team3_2_empty = [
+	"Animist","Astrologer","Pyromancer","Sea FAther","Ice Druid"
+]
+let team3_3_empty = [
+	"Spearman","Captain","Priest","Mounted Commander","Commander","Hedge Wizard","Monk","Court Mage",
+	"Knight","Scout","Alchemist","Princess","Assassin"
+]
+//Animals
+let team1_melee_animal = [
+	{name: "Bear", num: 3, gold: 50, iron: 0, chance: 100},
+	{name: "Boar", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Camel", num: 7, gold: 50, iron: 0, chance: 100},
+	{name: "Deer", num: 15, gold: 50, iron: 0, chance: 100},
+	{name: "Dog", num: 8, gold: 50, iron: 0, chance: 100},
+	{name: "Donkey", num: 8, gold: 50, iron: 0, chance: 100},
+	{name: "Giant Mantis", num: 3, gold: 50, iron: 0, chance: 100},		
+	{name: "Giant Moose", num: 1, gold: 90, iron: 0, chance: 15},
+	{name: "Giant Rat", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Horse", num: 4, gold: 50, iron: 0, chance: 100},	
+	{name: "Goat", num: 15, gold: 50, iron: 0, chance: 100},
+	{name: "Great Boar", num: 3, gold: 50, iron: 0, chance: 100},
+	{name: "Rabbit", num: 20, gold: 50, iron: 0, chance: 100},	
+	{name: "Rat", num: 20, gold: 50, iron: 0, chance: 100},
+	{name: "Snake", num: 10, gold: 50, iron: 0, chance: 100},
+	{name: "Serpent", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Wolf", num: 6, gold: 50, iron: 0, chance: 100},
+	{name: "Winter Wolf", num: 3, gold: 50, iron: 0, chance: 100},	
+	{name: "Black Cat Familiar", num: 25, gold: 50, iron: 0, chance: 100},	
+	{name: "Crocodile", num: 1, gold: 20, iron: 0, chance: 100},	
+	{name: "Frog", num: 25, gold: 50, iron: 0, chance: 100},	
+	{name: "Large Spider", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Scorpion", num: 10, gold: 50, iron: 0, chance: 100},	
+]
+let team1_ranged_animal = [
+	{name: "Giant Ant", num: 3, gold: 50, iron: 0, chance: 100},
+	{name: "Fire Ant", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Giant Toad", num: 1, gold: 40, iron: 0, chance: 100},	
+]
+let team2_animal = [
+	{name: "Amphiptere", gold: 70, iron: 0, chance: 3, goldplus: 80},
+	{name: "Wyvern", gold: 50, iron: 0, chance: 3, goldplus: 70},
+	{name: "Giant Snail", gold: 30, iron: 0, chance: 10, goldplus: 10},			
+]
+let team3_animal = ["Giant Moose",
+					"Monster Boar"	
+]
+let team3_2_animal = [		 
+			 "Scorpion Beast","Wyvern",
+			 "Monster Toad","Leogryph",
+			 "Winter Wolf",		
+]
+let team3_3_animal = ["Wolf","Rabbit","Deer","Moose","Great Boar",
+			 "Black Cat Familiar","Serpent","Large Spider",
+			 "Giant Snail","Rat","Giant Rat",
+			 "Rabbit","Beast Bat","Ape","Snake",'Dog',			
+]
+
+//Druid
+let team1_melee_druid = [
+	{name: "Barechested Swordsman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Barechested Warrior", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Beast Cavalry", num: 3, gold: 50, iron: 5, chance: 100},	
+	{name: "Boar Warrior", num: 4, gold: 50, iron: 10, chance: 100},
+	{name: "Hornblower", num: 1, gold: 30, iron: 0, chance: 100},
+	{name: "Barechested Slinger", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Barechested Swordsman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Barechested Warrior", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Beast Cavalry", num: 3, gold: 50, iron: 5, chance: 100},	
+	{name: "Boar Warrior", num: 4, gold: 50, iron: 10, chance: 100},
+]
+let team1_ranged_druid = [
+	{name: "Barechested Slinger", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Hornblower", num: 1, gold: 30, iron: 0, chance: 100},
+	{name: "Barechested Slinger", num: 5, gold: 50, iron: 0, chance: 100},	
+]
+let team2_druid = [
+	{name: "Vergobret", gold: 30, iron: 0, chance: 5, goldplus: 10},
+	{name: "Chieftain", gold: 40, iron: 0, chance: 3, goldplus: 10},		
+]
+let team3_druid = ['Eye Tyrant',"Beholder",
+]
+let team3_2_druid = [		 
+			 "Chieftain","Vergobret",	
+]
+let team3_3_druid = ["Chieftain","Vergobret","Hornblower",		
+]
+
+//Troll
+let team1_melee_troll = [
+	{name: "Ettin", num: 1, gold: 75, iron: 0, chance: 10},
+	{name: "Forest Troll", num: 1, gold: 40, iron: 10, chance: 10},	
+	{name: "Goblin", num: 15, gold: 50, iron: 0, chance: 100},	
+	{name: "Goblin Spearman", num: 15, gold: 50, iron: 0, chance: 100},	
+	{name: "Ogre", num: 1, gold: 25, iron: 0, chance: 100},	
+	{name: "Troll", num: 1, gold: 50, iron: 20, chance: 10},
+	{name: "Wolf Kin", num: 10, gold: 50, iron: 0, chance: 100},
+	{name: "Wolf Kin Reaver", num: 7, gold: 50, iron: 10, chance: 100},
+	{name: "Rock Troll", num: 1, gold: 50, iron: 60, chance: 10},
+]
+let team1_ranged_troll = [
+	{name: "Goblin Archer", num: 10, gold: 50, iron: 0, chance: 100},
+	{name: "Hill Giant", num: 1, gold: 100, iron: 0, chance: 10},
+	{name: "Forest Giant", num: 1, gold: 80, iron: 0, chance: 10},
+]
+let team2_troll = [
+	{name: "Goblin Chieftain", gold: 25, iron: 0, chance: 5, goldplus: 20},
+	{name: "Goblin Hero", gold: 10, iron: 0, chance: 5, goldplus: 50},
+	{name: "Goblin Murderer", gold: 10, iron: 0, chance: 5, goldplus: 40},		
+	{name: "Ogre Chief", gold: 35, iron: 0, chance: 5, goldplus: 20},
+]
+let team3_troll = ["Hill Giant","Dragon"
+]
+let team3_2_troll = ["Forest Giant","Rock Troll","Troll King"	
+]
+let team3_3_troll = ["Ettin","Forest Troll","Troll","Goblin Chieftain",
+				     "Goblin Hero","Ogre Chieftain","Goblin Murderer"		
+]
+
+//El
+let team1_melee_el = [
+	{name: "Flagellant", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Templar", num: 3, gold: 50, iron: 25, chance: 100},
+	{name: "Temple Guard", num: 5, gold: 50, iron: 5, chance: 100},
+]
+
+//Bakemono
+let team1_melee_bakemono = [
+	{name: "Bakemono Soldier", num: 5, gold: 25, iron: 1, chance: 100},
+	{name: "Bakemono Swordsman", num: 5, gold: 25, iron: 3, chance: 100},
+	{name: "O Bakemono", num: 1, gold: 25, iron: 0, chance: 100},
+	{name: "Dai Bakemono", num: 3, gold: 50, iron: 15, chance: 100},
+	{name: "Aka Oni", num: 3, gold: 60, iron: 0, chance: 10},
+	{name: "Ao Oni", num: 3, gold: 60, iron: 0, chance: 10},
+	{name: "Kappa", num: 4, gold: 50, iron: 25, chance: 100},
+	{name: "Karasu Tengu", num: 2, gold: 50, iron: 10, chance: 100},
+	{name: "Mezu", num: 1, gold: 50, iron: 5, chance: 10},
+]
+let team1_ranged_bakemono = [
+	{name: "Bakemono Archer", num: 5, gold: 25, iron: 1, chance: 100},
+	{name: "Bakemono Bowman", num: 1, gold: 25, iron: 0, chance: 100},	
+	{name: "Dai Bakemono Archer", num: 3, gold: 50, iron: 15, chance: 100},
+	
+]
+let team2_bakemono = [
+	{name: "Kitsune", gold: 60, iron: 0, chance: 5, goldplus: 40},
+	{name: "Bakemono General", gold: 60, iron: 0, chance: 10, goldplus: 10},
+]
+let team3_bakemono = ["Dai Tengu"
+]
+let team3_2_bakemono = [		 
+			 "Mezu","Kuro Oni","Mujina","Hannya"	
+]
+let team3_3_bakemono = ["Konoha Tengu","Kappa","Bakemono Sho","Bakemono Bowman",
+					 "O Bakemono","Dai Bakemono"		
+]
+
+//Barbarian
+let team1_melee_barbarian = [
+	{name: "Barbarian Lancer", num: 5, gold: 50, iron: 10, chance: 100},
+	{name: "Barbarian Swordsman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Barbarian Lancer", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Barbarian Warrior", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Crystal Amazon", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Garnet Amazon", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Jade Amazon", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Onyx Amazon", num: 5, gold: 50, iron: 0, chance: 100},
+]
+let team1_ranged_barbarian = [
+	{name: "Barbarian Bowman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Barbarian Cavalry", num: 5, gold: 50, iron: 0, chance: 100},
+		
+]
+let team2_barbarian = [
+	{name: "Mounted Chief", gold: 40, iron: 0, chance: 10, goldplus: 10},	
+	{name: "Soothsayer", gold: 40, iron: 0, chance: 5, goldplus: 20},
+	{name: "Mounted Commander", gold: 40, iron: 0, chance: 10, goldplus: 10},
+
+]
+let team3_barbarian = [
+]
+let team3_2_barbarian = [		 
+
+]
+let team3_3_barbarian = ["Soothsayer","Mounted Chief", "Barbarian Leader"		
+]
+//Hoburg
+let team1_melee_hoburg = [
+	{name: "Burgmeister Guard", num: 10, gold: 40, iron: 10, chance: 100},
+	{name: "Hoburg Defender", num: 15, gold: 50, iron: 10, chance: 100},
+	{name: "Hoburg Militia", num: 15, gold: 50, iron: 0, chance: 100},
+	{name: "Hoburg Pikeneer", num: 10, gold: 30, iron: 5, chance: 100},
+	{name: "Hoburg Soldier", num: 15, gold: 50, iron: 5, chance: 100},
+	{name: "Hog Knight", num: 5, gold: 50, iron: 10, chance: 100},
+]
+let team1_ranged_hoburg = [
+	{name: "Hoburg Crossbow", num: 15, gold: 50, iron: 5, chance: 100},
+	{name: "Hoburg Slinger", num: 15, gold: 50, iron: 0, chance: 100},
+		
+]
+let team2_hoburg = [
+	{name: "Hogmeister", gold: 25, iron: 0, chance: 10, goldplus: 5},	
+
+]
+let team3_hoburg = ["Saphire Iron Dragon"
+]
+let team3_2_hoburg = [		 
+
+]
+let team3_3_hoburg = ["Soothsayer","Mounted Chief", "Barbarian Leader"		
+]
+
+//Dwarf
+let team1_melee_dwarf = [
+	{name: "Dwarf Guard", num: 5, gold: 0, iron: 60, chance: 100},
+	{name: "Dwarf Warrior", num: 5, gold: 0, iron: 50, chance: 100},
+	{name: "Dwarf", num: 5, gold: 0, iron: 40, chance: 100},
+]
+let team1_ranged_dwarf = [
+	{name: "Dwarven Ballista", num: 1, gold: 0, iron: 40, chance: 100},
+	{name: "Dwarf Arbalest", num: 5, gold: 0, iron: 50, chance: 100},	
+	{name: "Outdoor Dwarf", num: 5, gold: 30, iron: 30, chance: 100},		
+]
+let team2_dwarf = [
+	{name: "Dwarf Commander", gold: 20, iron: 0, chance: 10, goldplus: 10},	
+
+]
+let team3_dwarf = [
+]
+let team3_2_dwarf = [		 
+
+]
+let team3_3_dwarf = ["Dwarf Commander",	
+]
+
+//Dryad
+let team1_melee_dryad = [
+	{name: "Satyr", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Centaur", num: 3, gold: 60, iron: 0, chance: 100},	
+	{name: "Minotaur", num: 3, gold: 60, iron: 0, chance: 100},
+	{name: "Harpy", num: 5, gold: 50, iron: 0, chance: 100},
+]
+let team1_ranged_dryad = [
+	{name: "Centauride", num: 3, gold: 60, iron: 0, chance: 100},	
+]
+let team2_dryad = [
+	{name: "Harpy", gold: 30, iron: 0, chance: 10, goldplus: 10},
+	{name: "Satyr Commander", gold: 30, iron: 0, chance: 10, goldplus: 10},	
+
+]
+let team3_dryad = [
+]
+let team3_2_dryad = ['Minotaur Lord'		 
+
+]
+let team3_3_dryad = ["Satyr Commander","Harpy"	
+]
+
+//Cultist
+let team1_melee_cult = [
+	{name: "Deep One", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Deep One Warrior", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Shambler", num: 4, gold: 50, iron: 8, chance: 100},	
+	{name: "War Shambler", num: 4, gold: 50, iron: 20, chance: 100},
+	{name: "Hybrid Fisherman", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Hybrid Soldier", num: 5, gold: 50, iron: 0, chance: 100},	
+]
+let team1_ranged_cult = [
+	{name: "Yithian", num: 1, gold: 40, iron: 0, chance: 25},	
+]
+let team2_cult = [
+	{name: "Kraken", gold: 60, iron: 0, chance: 5, goldplus: 50},
+	{name: "Yithian Sage", gold: 60, iron: 0, chance: 5, goldplus: 60},	
+
+]
+let team3_cult = [
+
+]
+let team3_2_cult = ["Yithian Sage","Kraken"		 
+
+]
+let team3_3_cult = ["Weirdo","Insane Fisherman","Deep One","Shambler"	
+]
+//Enchanter
+let team1_melee_enchanter = [
+	{name: "Animated Armor", num: 5, gold: 0, iron: 50, chance: 100},
+	{name: "Terracotta Soldier", num: 5, gold: 60, iron: 0, chance: 100},
+	{name: "Dancing Sword", num: 5, gold: 40, iron: 5, chance: 100},	
+	{name: "Gargoyle", num: 1, gold: 20, iron: 5, chance: 100},		
+]
+let team1_ranged_enchanter = [
+	{name: "Living Bow", num: 5, gold: 50, iron: 0, chance: 100},		
+]
+let team2_enchanter = [
+	{name: "Wood Golem", gold: 50, iron: 0, chance: 3, goldplus: 50},
+	{name: "Animated Armor", gold: 40, iron: 0, chance: 5, goldplus: 10},
+	{name: "Dancing Sword", gold: 10, iron: 0, chance: 10, goldplus: 10},
+	{name: "Living Bow", gold: 10, iron: 0, chance: 10, goldplus: 10},	
+
+]
+let team3_enchanter = ["Oak Golem"
+
+
+]
+let team3_2_enchanter = ["Stone Golem","Necrotod"		 
+
+]
+let team3_3_enchanter = ["Wood Golem",'Flesh Golem',"Dancing Sword","Living Bow","Animated Armor"	
+]
+
+//Baal
+let team1_melee_baal = [
+	{name: "Ba'alite Heavy Infantry", num: 5, gold: 50, iron: 25, chance: 100},
+	{name: "Ba'alite Spearman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Ba'alite Zealot", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Large Spider", num: 5, gold: 50, iron: 0, chance: 100},		
+]
+let team1_ranged_baal = [
+	{name: "Ba'alite Archer", num: 5, gold: 50, iron: 0, chance: 100},
+			
+]
+let team2_baal = [
+
+]
+let team3_baal = ["Sirrush","Manticore","Scorpion Man"
+
+
+]
+let team3_2_baal = ["Shed","Giant Beast","Anakite Captain"		 
+
+]
+let team3_3_baal = ["Se'ir","Giant Scorpion"	
+]
+
+//Pale One
+let team1_melee_paleone = [
+	{name: "Pale One", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Pale One Soldier", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Cavern Guard", num: 5, gold: 50, iron: 20, chance: 100},	
+	{name: "Ancient Pale One", num: 1, gold: 40, iron: 15, chance: 25},	
+	{name: "Seal Guard", num: 1, gold: 50, iron: 25, chance: 10},		
+]
+let team1_ranged_paleone = [
+	{name: "Ancient Hurler", num: 1, gold: 40, iron: 0, chance: 25},
+			
+]
+let team2_paleone = [
+	{name: "Pale One Commander", gold: 50, iron: 0, chance: 10, goldplus: 10},
+	{name: "Pale One Scout", gold: 40, iron: 0, chance: 5, goldplus: 10},
+]
+let team3_paleone = ["Sirrush","Manticore","Scorpion Man"
+
+
+]
+let team3_2_paleone = ["King of the Deep","Olm Sage","Anakite Captain","Cave Grub","Magma Child",
+					   "Troglodyte","Ancient Commander"
+
+]
+let team3_3_paleone = ["Olm","Cave Cow"	
+]
+
+//Homark
+let team1_melee_homark = [
+	{name: "Hobmark Soldier", num: 15, gold: 50, iron: 5, chance: 100},
+	{name: "Hobmark Defender", num: 15, gold: 50, iron: 10, chance: 100},
+	{name: "Hobmark Hammer", num: 10, gold: 30, iron: 5, chance: 100},
+	{name: "Hobmark Pikaneer", num: 10, gold: 30, iron: 5, chance: 100},	
+	{name: "Markgraf Guard", num: 10, gold: 40, iron: 10, chance: 100},	
+	{name: "Hog Hussar", num: 5, gold: 50, iron: 5, chance: 100},		
+]
+let team1_ranged_homark = [
+	{name: "Hobmark Crossbow", num: 15, gold: 50, iron: 5, chance: 100},
+			
+]
+let team2_homark = [
+
+]
+let team3_homark = [
+
+
+]
+let team3_2_homark = [
+
+]
+let team3_3_homark = ["Markmeister","Markgraf"	
+]
+
+//Warlock
+let team1_melee_warlock = [
+	{name: "Lesser Fire", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Lesser Water", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Lesser Earth", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Winter Wolf", num: 3, gold: 50, iron: 0, chance: 100},			
+]
+let team1_ranged_warlock = [
+
+			
+]
+let team2_warlock = [
+	{name: "Fire Elemental", gold: 70, iron: 0, chance: 5, goldplus: 70},
+	{name: "Water Elemental", gold: 70, iron: 0, chance: 5, goldplus: 70},
+	{name: "Air Elemental", gold: 70, iron: 0, chance: 5, goldplus: 70},
+	{name: "Earth Elemental", gold: 70, iron: 0, chance: 5, goldplus: 70},
+]
+let team3_warlock = ["Lake Troll King"
+
+
+]
+let team3_2_warlock = ["Fire Elemental","Water Elemental","Earth Elemental","Air Elemental","Earth Gnome","Lake Troll","Yeti"
+
+]
+let team3_3_warlock = ["Lesser Fire","Lesser Water","Lesser Earth","Earth Gnome","Salamander","Flame Spirit","Sylph","Winter Wolf"
+]
+
+//Witch
+let team1_melee_witch = [
+	{name: "Androphag Cavalry", num: 5, gold: 50, iron: 10, chance: 100},
+	{name: "Androphag Spearman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Marsh Worm", num: 1, gold: 30, iron: 0, chance: 100},	
+	{name: "Hydra Hatchling", num: 1, gold: 20, iron: 0, chance: 100},			
+]
+let team1_ranged_witch = [
+	{name: "Androphag Archer", num: 5, gold: 50, iron: 0, chance: 100},
+			
+]
+let team2_witch = [
+	{name: "Marsh Worm", gold: 30, iron: 0, chance: 5, goldplus: 30},
+	{name: "Androphag Lord", gold: 50, iron: 0, chance: 5, goldplus: 10},
+	{name: "Manflayer", gold: 70, iron: 0, chance: 5, goldplus: 20},	
+]
+let team3_witch = ["Wyrm","Hydra"
+
+
+]
+let team3_2_witch = ["Creeping Doom","Root Monster","Swamp Drake","Doppelganger Captain"
+
+]
+let team3_3_witch = ["Hyra Hatchling","Swamp Thing","Marhs Worm"
+]
+//Senator
+let team1_melee_senator = [
+	{name: "Hastati", num: 5, gold: 45, iron: 5, chance: 100},
+	{name: "Princep", num: 5, gold: 50, iron: 10, chance: 100},
+	{name: "Praetorian Guard", num: 5, gold: 60, iron: 20, chance: 100},
+	{name: "Velite", num: 5, gold: 40, iron: 0, chance: 100},			
+]
+let team1_ranged_senator = [
+			
+]
+let team2_senator = [
+	{name: "Reveler", gold: 30, iron: 0, chance: 5, goldplus: 30},
+	{name: "Centurion", gold: 30, iron: 0, chance: 5, goldplus: 30},
+	{name: "Leo", gold: 40, iron: 0, chance: 5, goldplus: 30},
+	{name: "Renata", gold: 50, iron: 0, chance: 5, goldplus: 20},	
+	{name: "Renatus", gold: 110, iron: 0, chance: 5, goldplus: 20},
+	{name: "Serpent Acolyte", gold: 50, iron: 0, chance: 5, goldplus: 20},	
+]
+let team3_senator = [
+
+
+]
+let team3_2_senator = ["Serpent Priest","Heliodromus","Renatus"
+
+]
+let team3_3_senator = ["Reveler","Gladiator","Centurion","Senator","Leo"
+]
+
+//Demon
+let team1_melee_demon = [
+	{name: "Imp", num: 5, gold: 50, iron: 0, chance: 100},				
+]
+let team1_ranged_demon = [
+			
+]
+let team2_demon = [
+]
+let team3_demon = ["Greater Demon"
+
+
+]
+let team3_2_demon = ["Serpent Fiend","Devil","Storm Demon"
+
+]
+let team3_3_demon = ["Imp","Lesser Demon","Bone Imp","Fiery Imp"
+]
+
+//Undead
+let team1_melee_undead = [				
+]
+let team1_ranged_undead = [
+			
+]
+let team2_undead = [
+	{name: "Mound King", gold: 30, iron: 0, chance: 10, goldplus: 10},	
+]
+let team3_undead = ["Mummy","Carrion","Tartarian Spirit"
+
+
+]
+let team3_2_undead = ["Wight","Wraith"
+
+]
+let team3_3_undead = ["Mound King","Ghost"
+]
+
+//Priest
+let team1_melee_priest = [	
+	{name: "Tribal Warrior", num: 7, gold: 50, iron: 0, chance: 100},
+	{name: "Jungle Warrior", num: 6, gold: 50, iron: 0, chance: 100},
+	{name: "Feathered Warrior", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Jaguar Warrior", num: 5, gold: 50, iron: 0, chance: 25},	
+	{name: "Ancient Pale One", num: 1, gold: 40, iron: 15, chance: 25},	
+	{name: "Seal Guard", num: 1, gold: 50, iron: 25, chance: 10},			
+]
+
+	
+//Weird
+let team1_melee_weird = [
+	{name: "Dragon Hatchling", num: 1, gold: 25, iron: 5, chance: 10},
+	{name: "Cyclops", num: 1, gold: 120, iron: 0, chance: 10},
+	{name: "Siren", num: 1, gold: 25, iron: 0, chance: 50},
+	{name: "Sinner", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Brass Claw Horror", num: 2, gold: 70, iron: 20, chance: 100},
+	{name: "Float Cat Horror", num: 1, gold: 40, iron: 0, chance: 100},
+	{name: "Hybrid Fisherman", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Hybrid Soldier", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Runner", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Lizardman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Lizardman Warrior", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Caveman", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Voi Spearman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Voi Axeman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Peshti Spearman", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Militia", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Heavy Spearman", num: 5, gold: 50, iron: 25, chance: 100},
+	{name: "Light Cavalry", num: 4, gold: 50, iron: 0, chance: 100},
+	{name: "Heavy Cavalry", num: 4, gold: 50, iron: 20, chance: 100},
+	{name: "Lion Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Hyena Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Ichtyid Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "War Elephant", num: 1, gold: 65, iron: 0, chance: 10},		
+	{name: "Wolf Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},			
+]
+let team1_ranged_weird = [
+	{name: "Voi Archer", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Wolf Tribe Bowman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Pygmy", num: 5, gold: 50, iron: 0, chance: 100},	
+	]				
+
+let team2_weird = [
+	{name: "Dragon Hatchling", gold: 40, iron: 0, chance: 5, goldplus: 40},
+	{name: "Mind Slime Horror", gold: 60, iron: 0, chance: 5, goldplus: 40},
+	{name: "Peddler", gold: 20, iron: 0, chance: 5, goldplus: 40},	
+	{name: "Brass Claw Horror", gold: 70, iron: 0, chance: 5, goldplus: 40},
+	{name: "Caveman Chief", gold: 40, iron: 0, chance: 5, goldplus: 10},
+	{name: "Ichtyid Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},	
+]
+let team3_weird = ['Hidden Aboleth',"Moon Horror",
+			 'Horror Olm',"Ormr","Python",
+			 "Gore Tide Horror", 
+
+
+		 
+
+
+
+]
+let team3_2_weird = ["Hidden Aboleth","Formless Spawn","Displacer Beast","Hidden Freak",
+			 "Demonic Locust","Dream Horror","Gelatinous Cube","Rakshasa"
+
+]
+let team3_3_weird = ["Miracle Eye","Freak Lord","Lizardman Shaman","Spine Membrane Horror","Horror Mantis","Ichtyid Captain",
+]	
+			  
 let	text	
 let picky
 let shuffle 
@@ -466,6 +1118,27 @@ let descrroll
 let dump
 var id = setInterval(test, 300);
 var rit2 = false;
+var animalcheck = false;
+var druidcheck = false;
+var trollcheck = false;
+var elcheck = false;
+var bakemonocheck = false;
+var dwarfcheck = false;
+var hoburgcheck = false;
+var dryadcheck = false;
+var cultcheck = false;
+var enchantercheck = false;
+var bakemonocheck = false;
+var baalcheck = false;
+var paleonecheck = false;
+var homarkcheck = false;
+var warlockcheck = false;
+var witchcheck = false;
+var senatorcheck = false;
+var weirdcheck = false;
+var undeadcheck = false;
+var demoncheck = false;
+var priestcheck = false;
 function test(){
 
 classnumber = parseInt(document.getElementById("classnumber").value, 10);
@@ -856,6 +1529,208 @@ comnumber = 0
 classnumber = parseInt(document.getElementById("classnumber").value, 10);
 unitnumber = parseInt(document.getElementById("unitnumber").value, 10);
 comnumber = parseInt(document.getElementById("comnumber").value, 10);
+animalcheck = document.getElementById("animalcheck").checked;	
+druidcheck = document.getElementById("druidcheck").checked;
+trollcheck = document.getElementById("trollcheck").checked;
+elcheck = document.getElementById("elcheck").checked;
+bakemonocheck = document.getElementById("bakemonocheck").checked;
+barbariancheck = document.getElementById("barbariancheck").checked;
+hoburgcheck = document.getElementById("hoburgcheck").checked;
+dwarfcheck = document.getElementById("dwarfcheck").checked;
+dryadcheck = document.getElementById("dryadcheck").checked;
+cultcheck = document.getElementById("cultcheck").checked;
+enchantercheck = document.getElementById("enchantercheck").checked;
+baalcheck = document.getElementById("baalcheck").checked;
+paleonecheck = document.getElementById("paleonecheck").checked;
+homarkcheck = document.getElementById("homarkcheck").checked;
+warlockcheck = document.getElementById("warlockcheck").checked;
+undeadcheck = document.getElementById("undeadcheck").checked;
+demoncheck = document.getElementById("demoncheck").checked;
+priestcheck = document.getElementById("priestcheck").checked;
+senatorcheck = document.getElementById("senatorcheck").checked;
+witchcheck = document.getElementById("witchcheck").checked;
+weirdcheck = document.getElementById("weirdcheck").checked;
+
+let team1_melee_empty = [
+	{name: "Spearman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Swordsman", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Heavy Infantry", num: 5, gold: 50, iron: 25, chance: 100},
+	{name: "Bandit", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Halberdier", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Pikeneer", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "War Dog", num: 4, gold: 25, iron: 0, chance: 100},	
+	{name: "Zweihander", num: 5, gold: 50, iron: 10, chance: 100},
+	{name: "Militia", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Heavy Spearman", num: 5, gold: 50, iron: 25, chance: 100},
+	{name: "Light Cavalry", num: 4, gold: 50, iron: 0, chance: 100},
+	{name: "Heavy Cavalry", num: 4, gold: 50, iron: 20, chance: 100},
+	{name: "Lion Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Hyena Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "War Elephant", num: 1, gold: 65, iron: 0, chance: 10},		
+	{name: "Wolf Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+]
+let team1_ranged_empty = [
+	{name: "Crossbowman", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Slinger", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Tower Guard", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Archer", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Scout", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Catapult", num: 1, gold: 25, iron: 50, chance: 100},	
+	{name: "Trebuchet", num: 1, gold: 50, iron: 50, chance: 100},
+	{name: "Ballista", num: 2, gold: 25, iron: 50, chance: 100},	
+]	
+let team2_empty = [
+	{name: "Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},
+	{name: "Commander", gold: 40, iron: 0, chance: 10, goldplus: 10},
+	{name: "Mounted Commander", gold: 40, iron: 0, chance: 10, goldplus: 10},
+	{name: "Priest", gold: 50, iron: 0, chance: 5, goldplus: 10},
+	{name: "Alchemist", gold: 40, iron: 0, chance: 10, goldplus: 5},
+	{name: "Court Mage", gold: 40, iron: 0, chance: 10, goldplus: 5},
+	{name: "High Lord", gold: 50, iron: 0, chance: 10, goldplus: 5},
+	{name: "Monk", gold: 40, iron: 0, chance: 10, goldplus: 5},	
+]
+let team3_empty = [
+	"Old Wizard","White Wizard","Dark Wizard","Golden Wizard","King"	
+]
+let team3_2_empty = [
+	"Animist","Astrologer","Pyromancer","Sea FAther","Ice Druid"
+]
+let team3_3_empty = [
+	"Spearman","Captain","Priest","Mounted Commander","Commander","Hedge Wizard","Monk","Court Mage",
+	"Knight","Scout","Alchemist","Princess","Assassin"
+]
+
+
+if(animalcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_animal)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_animal)
+team2_empty = team2_empty.concat(team2_animal)
+team3_empty = team3_empty.concat(team3_animal)
+team3_2_empty = team3_2_empty.concat(team3_2_animal)
+team3_3_empty = team3_3_empty.concat(team3_3_animal)
+}
+if(trollcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_troll)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_troll)
+team2_empty = team2_empty.concat(team2_troll)
+team3_empty = team3_empty.concat(team3_troll)
+team3_2_empty = team3_2_empty.concat(team3_2_troll)
+team3_3_empty = team3_3_empty.concat(team3_3_troll)
+}
+if(elcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_el)
+
+}
+if(bakemonocheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_bakemono)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_bakemono)
+team2_empty = team2_empty.concat(team2_bakemono)
+team3_empty = team3_empty.concat(team3_bakemono)
+team3_2_empty = team3_2_empty.concat(team3_2_bakemono)
+team3_3_empty = team3_3_empty.concat(team3_3_bakemono)
+}
+if(barbariancheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_barbarian)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_barbarian)
+team2_empty = team2_empty.concat(team2_barbarian)
+team3_3_empty = team3_3_empty.concat(team3_3_barbarian)
+}
+if(dwarfcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_dwarf)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_dwarf)
+team2_empty = team2_empty.concat(team2_dwarf)
+team3_3_empty = team3_3_empty.concat(team3_3_dwarf)
+}
+
+if(hoburgcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_hoburg)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_hoburg)
+team3_empty = team3_empty.concat(team3_hoburg)
+team3_3_empty = team3_3_empty.concat(team3_3_hoburg)
+}
+if(dryadcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_dryad)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_dryad)
+team2_empty = team2_empty.concat(team2_dryad)
+team3_2_empty = team3_3_empty.concat(team3_2_dryad)
+team3_3_empty = team3_3_empty.concat(team3_3_dryad)
+}
+if(cultcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_cult)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_cult)
+team2_empty = team2_empty.concat(team2_cult)
+team3_2_empty = team3_3_empty.concat(team3_2_cult)
+team3_3_empty = team3_3_empty.concat(team3_3_cult)
+}
+
+if(enchantercheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_enchanter)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_enchanter)
+team2_empty = team2_empty.concat(team2_enchanter)
+team3_empty = team3_empty.concat(team3_enchanter)
+team3_2_empty = team3_3_empty.concat(team3_2_enchanter)
+team3_3_empty = team3_3_empty.concat(team3_3_enchanter)
+}
+
+if(baalcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_baal)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_baal)
+team3_empty = team3_empty.concat(team3_baal)
+team3_2_empty = team3_3_empty.concat(team3_2_baal)
+team3_3_empty = team3_3_empty.concat(team3_3_baal)
+}
+
+if(paleonecheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_paleone)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_paleone)
+team2_empty = team2_empty.concat(team2_paleone)
+team3_empty = team3_empty.concat(team3_paleone)
+team3_2_empty = team3_3_empty.concat(team3_2_paleone)
+team3_3_empty = team3_3_empty.concat(team3_3_paleone)
+}
+
+if(homarkcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_homark)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_homark)
+team3_3_empty = team3_3_empty.concat(team3_3_homark)
+}
+if(warlockcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_warlock)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_warlock)
+team2_empty = team2_empty.concat(team2_warlock)
+team3_empty = team3_empty.concat(team3_warlock)
+team3_2_empty = team3_3_empty.concat(team3_2_warlock)
+team3_3_empty = team3_3_empty.concat(team3_3_warlock)
+}
+
+if(senatorcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_senator)
+team2_empty = team2_empty.concat(team2_senator)
+team3_2_empty = team3_3_empty.concat(team3_2_senator)
+team3_3_empty = team3_3_empty.concat(team3_3_senator)
+}
+
+if(undeadcheck === true){	
+team3_empty = team3_empty.concat(team3_undead)
+team3_2_empty = team3_3_empty.concat(team3_2_undead)
+team3_3_empty = team3_3_empty.concat(team3_3_undead)
+}
+
+if(demoncheck === true){
+team1_melee_empty = team1_melee_empty.concat(team1_melee_demon)	
+team3_empty = team3_empty.concat(team3_demon)
+team3_2_empty = team3_3_empty.concat(team3_2_demon)
+team3_3_empty = team3_3_empty.concat(team3_3_demon)
+}
+
+if(weirdcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_weird)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_weird)
+team2_empty = team2_empty.concat(team2_weird)
+team3_empty = team3_empty.concat(team3_weird)
+team3_2_empty = team3_3_empty.concat(team3_2_weird)
+team3_3_empty = team3_3_empty.concat(team3_3_weird)
+}
 if(classnumber <= 1){
 classnumber = 1	
 }	
@@ -868,11 +1743,11 @@ z = 0
 w = 0
 v = 0
 
+console.log(team1_ranged_empty )
+console.log(team1_melee_empty )
 limit = (Math.floor(Math.random() * unitnumber)) + 1
 limit2 = Math.floor(Math.random() * comnumber) + 1
-if(limit <= 0){
-limit = 4	
-}
+
 if(limit2 <= 0){
 limit2 = 4	
 }	
@@ -910,7 +1785,7 @@ if(coin != 3){
 mymonster3 =	 randomItem(team5) + " " + randomItem(team6)
 mymonster3store = 'newmonster "' + mymonster3 + '" \n'	
 }
-leader = randomItem(team3_2)
+leader = randomItem(team3_3_empty)
 
 text += mymonsterstore
 text += descrroll
@@ -994,7 +1869,7 @@ text += 'rank -1 \n'
 text += 'mastery 1 \n'
 text += ' \n'
 
-leader = randomItem(team3_3)	
+leader = randomItem(team3_2_empty)	
 text += mymonster2store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -1077,7 +1952,7 @@ text += 'rank -1 \n'
 text += 'mastery 2 \n'
 text += ' \n'
 
-leader = randomItem(team3)	
+leader = randomItem(team3_empty)	
 text += mymonster3store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -1165,11 +2040,29 @@ text += 'newclass \n'
 text += 'setclassname "'+ mymonster + '" \n'
 text += 'class' + descrroll
 text += 'clearrec  \n'
+
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
+
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+
+limit = limit - 2 
+
+if(limit <= 0){
+limit = 1	
+}
+
+
 while (x <= limit){	
 x++
-roll = Math.floor(Math.random() * team1.length)
-text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
-if (team1[roll].name === "Satyr"){
+coin = Math.floor(Math.random() * 1)
+if(coin === 1){
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+
+
+if (team1_melee_empty[roll].name=== "Satyr"){
 text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
 text += 'reclimiter "=Satyr" \n'
 text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
@@ -1181,7 +2074,7 @@ text += 'reclimiter "=Satyr" \n'
 text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
 text += 'reclimiter "=Satyr" \n'
 }
-if (team1[roll].name === "Centaur"){
+if (team1_melee_empty[roll].name === "Centaur"){
 text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
 text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
@@ -1189,16 +2082,7 @@ text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
 text += 'reclimiter "=Centaur" \n'
 }
-if (team1[roll].name === "Centauride"){
-text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
-text += 'reclimiter "=Centauride" \n'
-text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
-text += 'reclimiter "=Centauride" \n'
-text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
-text += 'reclimiter "=Centauride" \n'
-
-}
-if (team1[roll].name === "Minotaur"){
+if (team1_melee_empty[roll].name === "Minotaur"){
 text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
 text += 'reclimiter "=Minotaur" \n'
 text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
@@ -1207,18 +2091,33 @@ text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
 text += 'reclimiter "=Minotaur" \n'
 
 }
-if (team1[roll].name === "Harpy"){
+if (team1_melee_empty[roll].name === "Harpy"){
 text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
 text += 'reclimiter "=Harpy" \n'
 }
+}
+if(coin === 0){
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
+
+
+if (team1_ranged_empty[roll].name === "Centauride"){
+text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centauride" \n'
+}
+}
 }
 
 
 while (y <= limit2){	
 y++
-roll = Math.floor(Math.random() * team2.length)
-text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
+roll = Math.floor(Math.random() * team2_empty.length)
+text += 'addcomrec "' + team2_empty[roll].name + '" '+ team2_empty[roll].chance + ' ' + team2_empty[roll].gold + ' ' + team2_empty[roll].goldplus + ' ' + team2_empty[roll].iron + ' \n'
 
 }
 if(shuffle2 === 11){
@@ -1259,20 +2158,20 @@ text += 'nostdtroops  \n'
 text += 'clearstartunits  \n'
 hasunits = 0
 
-roll = Math.floor(Math.random() * team1.length)
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num +' \n'
+hasunits += team1_melee_empty[roll].num
 
-roll = Math.floor(Math.random() * team1.length)
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addstartunits "' + team1_ranged_empty[roll].name + '" '+ team1_ranged_empty[roll].num +' \n'
+hasunits += team1_ranged_empty[roll].num
 
 if(hasunits < 9){
-roll = Math.floor(Math.random() * team1.length)	
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num  +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_melee_empty.length)	
+text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
+hasunits += team1_melee_empty[roll].num
 }
-roll = Math.floor(Math.random() * team2.length)	
+roll = Math.floor(Math.random() *  team2_empty.length)	
 
 rit2 = document.getElementById("rit2").checked;	
 
@@ -1282,7 +2181,7 @@ text += 'setmaincom "' + mymonster + '"  \n'
 if(rit2 === true){	
 text += 'setmaincom "' + mymonster2 + '"  \n'
 }
-text += 'addstartcom "' + team2[roll].name + '"  \n'
+text += 'addstartcom "' + team2_empty[roll].name + '"  \n'
 if (shuffle2 === 14){	
 text += 'addstartcom "Young Dvala"  \n'
 }
@@ -1712,6 +2611,208 @@ w = 0
 v = 0
 unitnumber = parseInt(document.getElementById("unitnumber").value, 10);
 comnumber = parseInt(document.getElementById("comnumber").value, 10);
+animalcheck = document.getElementById("animalcheck").checked;	
+druidcheck = document.getElementById("druidcheck").checked;
+trollcheck = document.getElementById("trollcheck").checked;
+elcheck = document.getElementById("elcheck").checked;
+bakemonocheck = document.getElementById("bakemonocheck").checked;
+barbariancheck = document.getElementById("barbariancheck").checked;
+hoburgcheck = document.getElementById("hoburgcheck").checked;
+dwarfcheck = document.getElementById("dwarfcheck").checked;
+dryadcheck = document.getElementById("dryadcheck").checked;
+cultcheck = document.getElementById("cultcheck").checked;
+enchantercheck = document.getElementById("enchantercheck").checked;
+baalcheck = document.getElementById("baalcheck").checked;
+paleonecheck = document.getElementById("paleonecheck").checked;
+homarkcheck = document.getElementById("homarkcheck").checked;
+warlockcheck = document.getElementById("warlockcheck").checked;
+undeadcheck = document.getElementById("undeadcheck").checked;
+demoncheck = document.getElementById("demoncheck").checked;
+priestcheck = document.getElementById("priestcheck").checked;
+senatorcheck = document.getElementById("senatorcheck").checked;
+witchcheck = document.getElementById("witchcheck").checked;
+weirdcheck = document.getElementById("weirdcheck").checked;
+
+let team1_melee_empty = [
+	{name: "Spearman", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Swordsman", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Heavy Infantry", num: 5, gold: 50, iron: 25, chance: 100},
+	{name: "Bandit", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Halberdier", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Pikeneer", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "War Dog", num: 4, gold: 25, iron: 0, chance: 100},	
+	{name: "Zweihander", num: 5, gold: 50, iron: 10, chance: 100},
+	{name: "Militia", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Heavy Spearman", num: 5, gold: 50, iron: 25, chance: 100},
+	{name: "Light Cavalry", num: 4, gold: 50, iron: 0, chance: 100},
+	{name: "Heavy Cavalry", num: 4, gold: 50, iron: 20, chance: 100},
+	{name: "Lion Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Hyena Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "War Elephant", num: 1, gold: 65, iron: 0, chance: 10},		
+	{name: "Wolf Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
+]
+let team1_ranged_empty = [
+	{name: "Crossbowman", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Slinger", num: 5, gold: 50, iron: 5, chance: 100},
+	{name: "Tower Guard", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Archer", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Scout", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Catapult", num: 1, gold: 25, iron: 50, chance: 100},	
+	{name: "Trebuchet", num: 1, gold: 50, iron: 50, chance: 100},
+	{name: "Ballista", num: 2, gold: 25, iron: 50, chance: 100},	
+]	
+let team2_empty = [
+	{name: "Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},
+	{name: "Commander", gold: 40, iron: 0, chance: 10, goldplus: 10},
+	{name: "Mounted Commander", gold: 40, iron: 0, chance: 10, goldplus: 10},
+	{name: "Priest", gold: 50, iron: 0, chance: 5, goldplus: 10},
+	{name: "Alchemist", gold: 40, iron: 0, chance: 10, goldplus: 5},
+	{name: "Court Mage", gold: 40, iron: 0, chance: 10, goldplus: 5},
+	{name: "High Lord", gold: 50, iron: 0, chance: 10, goldplus: 5},
+	{name: "Monk", gold: 40, iron: 0, chance: 10, goldplus: 5},	
+]
+let team3_empty = [
+	"Old Wizard","White Wizard","Dark Wizard","Golden Wizard","King"	
+]
+let team3_2_empty = [
+	"Animist","Astrologer","Pyromancer","Sea FAther","Ice Druid"
+]
+let team3_3_empty = [
+	"Spearman","Captain","Priest","Mounted Commander","Commander","Hedge Wizard","Monk","Court Mage",
+	"Knight","Scout","Alchemist","Princess","Assassin"
+]
+
+
+if(animalcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_animal)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_animal)
+team2_empty = team2_empty.concat(team2_animal)
+team3_empty = team3_empty.concat(team3_animal)
+team3_2_empty = team3_2_empty.concat(team3_2_animal)
+team3_3_empty = team3_3_empty.concat(team3_3_animal)
+}
+if(trollcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_troll)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_troll)
+team2_empty = team2_empty.concat(team2_troll)
+team3_empty = team3_empty.concat(team3_troll)
+team3_2_empty = team3_2_empty.concat(team3_2_troll)
+team3_3_empty = team3_3_empty.concat(team3_3_troll)
+}
+if(elcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_el)
+
+}
+if(bakemonocheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_bakemono)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_bakemono)
+team2_empty = team2_empty.concat(team2_bakemono)
+team3_empty = team3_empty.concat(team3_bakemono)
+team3_2_empty = team3_2_empty.concat(team3_2_bakemono)
+team3_3_empty = team3_3_empty.concat(team3_3_bakemono)
+}
+if(barbariancheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_barbarian)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_barbarian)
+team2_empty = team2_empty.concat(team2_barbarian)
+team3_3_empty = team3_3_empty.concat(team3_3_barbarian)
+}
+if(dwarfcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_dwarf)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_dwarf)
+team2_empty = team2_empty.concat(team2_dwarf)
+team3_3_empty = team3_3_empty.concat(team3_3_dwarf)
+}
+
+if(hoburgcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_hoburg)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_hoburg)
+team3_empty = team3_empty.concat(team3_hoburg)
+team3_3_empty = team3_3_empty.concat(team3_3_hoburg)
+}
+if(dryadcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_dryad)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_dryad)
+team2_empty = team2_empty.concat(team2_dryad)
+team3_2_empty = team3_3_empty.concat(team3_2_dryad)
+team3_3_empty = team3_3_empty.concat(team3_3_dryad)
+}
+if(cultcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_cult)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_cult)
+team2_empty = team2_empty.concat(team2_cult)
+team3_2_empty = team3_3_empty.concat(team3_2_cult)
+team3_3_empty = team3_3_empty.concat(team3_3_cult)
+}
+
+if(enchantercheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_enchanter)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_enchanter)
+team2_empty = team2_empty.concat(team2_enchanter)
+team3_empty = team3_empty.concat(team3_enchanter)
+team3_2_empty = team3_3_empty.concat(team3_2_enchanter)
+team3_3_empty = team3_3_empty.concat(team3_3_enchanter)
+}
+
+if(baalcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_baal)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_baal)
+team3_empty = team3_empty.concat(team3_baal)
+team3_2_empty = team3_3_empty.concat(team3_2_baal)
+team3_3_empty = team3_3_empty.concat(team3_3_baal)
+}
+
+if(paleonecheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_paleone)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_paleone)
+team2_empty = team2_empty.concat(team2_paleone)
+team3_empty = team3_empty.concat(team3_paleone)
+team3_2_empty = team3_3_empty.concat(team3_2_paleone)
+team3_3_empty = team3_3_empty.concat(team3_3_paleone)
+}
+
+if(homarkcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_homark)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_homark)
+team3_3_empty = team3_3_empty.concat(team3_3_homark)
+}
+if(warlockcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_warlock)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_warlock)
+team2_empty = team2_empty.concat(team2_warlock)
+team3_empty = team3_empty.concat(team3_warlock)
+team3_2_empty = team3_3_empty.concat(team3_2_warlock)
+team3_3_empty = team3_3_empty.concat(team3_3_warlock)
+}
+
+if(senatorcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_senator)
+team2_empty = team2_empty.concat(team2_senator)
+team3_2_empty = team3_3_empty.concat(team3_2_senator)
+team3_3_empty = team3_3_empty.concat(team3_3_senator)
+}
+
+if(undeadcheck === true){	
+team3_empty = team3_empty.concat(team3_undead)
+team3_2_empty = team3_3_empty.concat(team3_2_undead)
+team3_3_empty = team3_3_empty.concat(team3_3_undead)
+}
+
+if(demoncheck === true){
+team1_melee_empty = team1_melee_empty.concat(team1_melee_demon)	
+team3_empty = team3_empty.concat(team3_demon)
+team3_2_empty = team3_3_empty.concat(team3_2_demon)
+team3_3_empty = team3_3_empty.concat(team3_3_demon)
+}
+
+if(weirdcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_weird)
+team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_weird)
+team2_empty = team2_empty.concat(team2_weird)
+team3_empty = team3_empty.concat(team3_weird)
+team3_2_empty = team3_3_empty.concat(team3_2_weird)
+team3_3_empty = team3_3_empty.concat(team3_3_weird)
+}
 
 limit = (Math.floor(Math.random() * unitnumber)) + 1
 limit2 = Math.floor(Math.random() * comnumber) + 1
@@ -1753,7 +2854,7 @@ if(coin != 3){
 mymonster3 =	 randomItem(team5) + " " + randomItem(team6)
 mymonster3store = 'newmonster "' + mymonster3 + '" \n'	
 }
-leader = randomItem(team3_2)
+leader = randomItem(team3_3_empty)
 
 text += mymonsterstore
 text += descrroll
@@ -1772,7 +2873,7 @@ text += 'rank -1 \n'
 text += 'mastery 1 \n'
 text += ' \n'
 
-leader = randomItem(team3_3)	
+leader = randomItem(team3_2_empty)	
 text += mymonster2store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -1790,7 +2891,7 @@ text += 'rank -1 \n'
 text += 'mastery 2 \n'
 text += ' \n'
 
-leader = randomItem(team3)	
+leader = randomItem(team3_empty)	
 text += mymonster3store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -1810,11 +2911,22 @@ text += ' \n'
 
 text += 'selectclass 1 \n'
 text += 'clearrec  \n'
+limit = limit - 2 
+
+if(limit <= 0){
+limit = 1	
+}
+
+
 while (x <= limit){	
 x++
-roll = Math.floor(Math.random() * team1.length)
-text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
-if (team1[roll].name === "Satyr"){
+coin = Math.floor(Math.random() * 1)
+if(coin === 1){
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+
+
+if (team1_melee_empty[roll].name=== "Satyr"){
 text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
 text += 'reclimiter "=Satyr" \n'
 text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
@@ -1826,7 +2938,7 @@ text += 'reclimiter "=Satyr" \n'
 text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
 text += 'reclimiter "=Satyr" \n'
 }
-if (team1[roll].name === "Centaur"){
+if (team1_melee_empty[roll].name === "Centaur"){
 text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
 text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
@@ -1834,16 +2946,7 @@ text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
 text += 'reclimiter "=Centaur" \n'
 }
-if (team1[roll].name === "Centauride"){
-text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
-text += 'reclimiter "=Centauride" \n'
-text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
-text += 'reclimiter "=Centauride" \n'
-text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
-text += 'reclimiter "=Centauride" \n'
-
-}
-if (team1[roll].name === "Minotaur"){
+if (team1_melee_empty[roll].name === "Minotaur"){
 text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
 text += 'reclimiter "=Minotaur" \n'
 text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
@@ -1852,16 +2955,31 @@ text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
 text += 'reclimiter "=Minotaur" \n'
 
 }
-if (team1[roll].name === "Harpy"){
+if (team1_melee_empty[roll].name === "Harpy"){
 text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
 text += 'reclimiter "=Harpy" \n'
 }
+}
+if(coin === 0){
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
+
+
+if (team1_ranged_empty[roll].name === "Centauride"){
+text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centauride" \n'
+}
+}
 }
 while (y <= limit2){	
 y++
-roll = Math.floor(Math.random() * team2.length)
-text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
+roll = Math.floor(Math.random() * team2_empty.length)
+text += 'addcomrec "' + team2_empty[roll].name + '" '+ team2_empty[roll].chance + ' ' + team2_empty[roll].gold + ' ' + team2_empty[roll].goldplus + ' ' + team2_empty[roll].iron + ' \n'
 
 }
 text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
@@ -1873,20 +2991,20 @@ text += 'clearstartunits  \n'
 
 hasunits = 0
 
-roll = Math.floor(Math.random() * team1.length)
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num +' \n'
+hasunits += team1_melee_empty[roll].num
 
-roll = Math.floor(Math.random() * team1.length)
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addstartunits "' + team1_ranged_empty.name + '" '+ team1_ranged_empty.num +' \n'
+hasunits += team1_ranged_empty[roll].num
 
 if(hasunits < 9){
-roll = Math.floor(Math.random() * team1.length)	
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num  +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_melee_empty.length)	
+text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
+hasunits += team1_melee_empty[roll].num
 }
-roll = Math.floor(Math.random() * team2.length)
+roll = Math.floor(Math.random() * team2_empty.length)
 		
 rit2 = document.getElementById("rit2").checked;	
 
@@ -1897,7 +3015,7 @@ if(rit2 === true){
 text += 'setmaincom "' + mymonster2 + '"  \n'
 }
 
-text += 'addstartcom "' + team2[roll].name + '"  \n'
+text += 'addstartcom "' + team2_empty[roll].name + '"  \n'
 text += 'hometerr 30 \n'
 coin = Math.floor(Math.random() * 4)
 text += 'clearstartterr \n'
@@ -1914,9 +3032,7 @@ v = 0
 limit = (Math.floor(Math.random() * unitnumber)) + 1
 limit2 = Math.floor(Math.random() * comnumber) + 1
 limit3 = Math.floor(Math.random() * 4)
-if(limit <= 0){
-limit = 4	
-}
+
 if(limit2 <= 0){
 limit2 = 4	
 }	
@@ -1951,7 +3067,7 @@ if(coin != 3){
 mymonster3 =	 randomItem(team5) + " " + randomItem(team6)
 mymonster3store = 'newmonster "' + mymonster3 + '" \n'	
 }
-leader = randomItem(team3_2)
+leader = randomItem(team3_3_empty)
 
 text += mymonsterstore
 text += descrroll
@@ -1971,7 +3087,7 @@ text += 'rank -1 \n'
 text += 'mastery 1 \n'
 text += ' \n'
 
-leader = randomItem(team3_3)	
+leader = randomItem(team3_2_empty)	
 text += mymonster2store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -1990,7 +3106,7 @@ text += 'rank -1 \n'
 text += 'mastery 2 \n'
 text += ' \n'
 
-leader = randomItem(team3)	
+leader = randomItem(team3_empty)	
 text += mymonster3store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -2011,11 +3127,22 @@ text += ' \n'
 
 text += 'selectclass 21 \n'
 text += 'clearrec  \n'
+limit = limit - 2 
+
+if(limit <= 0){
+limit = 1	
+}
+
+
 while (x <= limit){	
 x++
-roll = Math.floor(Math.random() * team1.length)
-text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
-if (team1[roll].name === "Satyr"){
+coin = Math.floor(Math.random() * 1)
+if(coin === 1){
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+
+
+if (team1_melee_empty[roll].name=== "Satyr"){
 text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
 text += 'reclimiter "=Satyr" \n'
 text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
@@ -2027,7 +3154,7 @@ text += 'reclimiter "=Satyr" \n'
 text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
 text += 'reclimiter "=Satyr" \n'
 }
-if (team1[roll].name === "Centaur"){
+if (team1_melee_empty[roll].name === "Centaur"){
 text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
 text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
@@ -2035,16 +3162,7 @@ text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
 text += 'reclimiter "=Centaur" \n'
 }
-if (team1[roll].name === "Centauride"){
-text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
-text += 'reclimiter "=Centauride" \n'
-text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
-text += 'reclimiter "=Centauride" \n'
-text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
-text += 'reclimiter "=Centauride" \n'
-
-}
-if (team1[roll].name === "Minotaur"){
+if (team1_melee_empty[roll].name === "Minotaur"){
 text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
 text += 'reclimiter "=Minotaur" \n'
 text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
@@ -2053,16 +3171,31 @@ text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
 text += 'reclimiter "=Minotaur" \n'
 
 }
-if (team1[roll].name === "Harpy"){
+if (team1_melee_empty[roll].name === "Harpy"){
 text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
 text += 'reclimiter "=Harpy" \n'
 }
+}
+if(coin === 0){
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
+
+
+if (team1_ranged_empty[roll].name === "Centauride"){
+text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centauride" \n'
+}
+}
 }
 while (y <= limit2){	
 y++
-roll = Math.floor(Math.random() * team2.length)
-text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
+roll = Math.floor(Math.random() * team2_empty.length)
+text += 'addcomrec "' + team2_empty[roll].name + '" '+ team2_empty[roll].chance + ' ' + team2_empty[roll].gold + ' ' + team2_empty[roll].goldplus + ' ' + team2_empty[roll].iron + ' \n'
 
 }
 text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
@@ -2073,21 +3206,21 @@ text += 'reclimiter  "='+ mymonster2 +'" \n'
 text += 'clearstartunits  \n'
 hasunits = 0
 
-roll = Math.floor(Math.random() * team1.length)
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num +' \n'
+hasunits += team1_melee_empty[roll].num
 
-roll = Math.floor(Math.random() * team1.length)
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addstartunits "' + team1_ranged_empty.name + '" '+ team1_ranged_empty.num +' \n'
+hasunits += team1_ranged_empty[roll].num
 
 if(hasunits < 9){
-roll = Math.floor(Math.random() * team1.length)	
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num  +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_melee_empty.length)	
+text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
+hasunits += team1_melee_empty[roll].num
 }
 
-roll = Math.floor(Math.random() * team2.length)	
+roll = Math.floor(Math.random() * team2_empty.length)	
 rit2 = document.getElementById("rit2").checked;	
 
 if(rit2 === false){	
@@ -2096,7 +3229,7 @@ text += 'setmaincom "' + mymonster + '"  \n'
 if(rit2 === true){	
 text += 'setmaincom "' + mymonster2 + '"  \n'
 }
-text += 'addstartcom "' + team2[roll].name + '"  \n'
+text += 'addstartcom "' + team2_empty[roll].name + '"  \n'
 text += 'hometerr ' + randomItem(team4) + '  \n'
 coin = Math.floor(Math.random() * 4)
 text += 'clearstartterr \n'	
@@ -2112,9 +3245,7 @@ v = 0
 limit = (Math.floor(Math.random() * unitnumber)) + 1
 limit2 = Math.floor(Math.random() * comnumber) + 1
 limit3 = Math.floor(Math.random() * 4)
-if(limit <= 0){
-limit = 4	
-}
+
 if(limit2 <= 0){
 limit2 = 4	
 }		
@@ -2149,7 +3280,7 @@ if(coin != 3){
 mymonster3 =	 randomItem(team5) + " " + randomItem(team6)
 mymonster3store = 'newmonster "' + mymonster3 + '" \n'	
 }
-leader = randomItem(team3_2)
+leader = randomItem(team3_3_empty)
 
 text += mymonsterstore
 text += descrroll
@@ -2169,7 +3300,7 @@ text += 'rank -1 \n'
 text += 'mastery 1 \n'
 text += ' \n'
 
-leader = randomItem(team3_3)	
+leader = randomItem(team3_2_empty)	
 text += mymonster2store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -2188,7 +3319,7 @@ text += 'rank -1 \n'
 text += 'mastery 2 \n'
 text += ' \n'
 
-leader = randomItem(team3)	
+leader = randomItem(team3_empty)	
 text += mymonster3store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -2209,11 +3340,22 @@ text += ' \n'
 
 text += 'selectclass 14 \n'
 text += 'clearrec  \n'
+limit = limit - 2 
+
+if(limit <= 0){
+limit = 1	
+}
+
+
 while (x <= limit){	
 x++
-roll = Math.floor(Math.random() * team1.length)
-text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
-if (team1[roll].name === "Satyr"){
+coin = Math.floor(Math.random() * 1)
+if(coin === 1){
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+
+
+if (team1_melee_empty[roll].name=== "Satyr"){
 text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
 text += 'reclimiter "=Satyr" \n'
 text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
@@ -2225,7 +3367,7 @@ text += 'reclimiter "=Satyr" \n'
 text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
 text += 'reclimiter "=Satyr" \n'
 }
-if (team1[roll].name === "Centaur"){
+if (team1_melee_empty[roll].name === "Centaur"){
 text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
 text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
@@ -2233,16 +3375,7 @@ text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
 text += 'reclimiter "=Centaur" \n'
 }
-if (team1[roll].name === "Centauride"){
-text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
-text += 'reclimiter "=Centauride" \n'
-text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
-text += 'reclimiter "=Centauride" \n'
-text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
-text += 'reclimiter "=Centauride" \n'
-
-}
-if (team1[roll].name === "Minotaur"){
+if (team1_melee_empty[roll].name === "Minotaur"){
 text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
 text += 'reclimiter "=Minotaur" \n'
 text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
@@ -2251,36 +3384,51 @@ text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
 text += 'reclimiter "=Minotaur" \n'
 
 }
-if (team1[roll].name === "Harpy"){
+if (team1_melee_empty[roll].name === "Harpy"){
 text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
 text += 'reclimiter "=Harpy" \n'
 }
+}
+if(coin === 0){
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
+
+
+if (team1_ranged_empty[roll].name === "Centauride"){
+text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centauride" \n'
+}
+}
 }
 while (y <= limit2){	
 y++
-roll = Math.floor(Math.random() * team2.length)
-text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
+roll = Math.floor(Math.random() * team2_empty.length)
+text += 'addcomrec "' + team2_empty[roll].name + '" '+ team2_empty[roll].chance + ' ' + team2_empty[roll].gold + ' ' + team2_empty[roll].goldplus + ' ' + team2_empty[roll].iron + ' \n'
 
 }
 text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
 text += 'clearstartunits  \n'
 hasunits = 0
 
-roll = Math.floor(Math.random() * team1.length)
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num +' \n'
+hasunits += team1_melee_empty[roll].num
 
-roll = Math.floor(Math.random() * team1.length)
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addstartunits "' + team1_ranged_empty.name + '" '+ team1_ranged_empty.num +' \n'
+hasunits += team1_ranged_empty[roll].num
 
 if(hasunits < 9){
-roll = Math.floor(Math.random() * team1.length)	
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num  +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_melee_empty.length)	
+text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
+hasunits += team1_melee_empty[roll].num
 }
-roll = Math.floor(Math.random() * team2.length)
+roll = Math.floor(Math.random() * team2_empty.length)
 	
 rit2 = document.getElementById("rit2").checked;	
 
@@ -2290,7 +3438,7 @@ text += 'setmaincom "' + mymonster + '"  \n'
 if(rit2 === true){	
 text += 'setmaincom "' + mymonster2 + '"  \n'
 }
-text += 'addstartcom "' + team2[roll].name + '"  \n'
+text += 'addstartcom "' + team2_empty[roll].name + '"  \n'
 text += 'hometerr ' + randomItem(team4) + '  \n'
 coin = Math.floor(Math.random() * 4)
 text += 'clearstartterr \n'	
@@ -2305,9 +3453,7 @@ v = 0
 limit = (Math.floor(Math.random() * unitnumber)) + 1
 limit2 = Math.floor(Math.random() * comnumber) + 1
 limit3 = Math.floor(Math.random() * 4)
-if(limit <= 0){
-limit = 4	
-}
+
 if(limit2 <= 0){
 limit2 = 4	
 }	
@@ -2352,7 +3498,7 @@ if(coin != 3){
 mymonster4 =	 randomItem(team5) + " " + randomItem(team6)
 mymonster4store = 'newmonster "' + mymonster4 + '" \n'	
 }
-leader = randomItem(team3_2)
+leader = randomItem(team3_empty)
 
 text += mymonsterstore
 text += descrroll
@@ -2372,7 +3518,7 @@ text += 'rank -1 \n'
 text += 'mastery 1 \n'
 text += ' \n'
 
-leader = randomItem(team3_3)	
+leader = randomItem(team3_2_empty)	
 text += mymonster2store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -2391,7 +3537,7 @@ text += 'rank -1 \n'
 text += 'mastery 2 \n'
 text += ' \n'
 
-leader = randomItem(team3)	
+leader = randomItem(team3_empty)	
 text += mymonster3store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -2410,7 +3556,7 @@ text += 'rank -1 \n'
 text += 'mastery 3 \n'
 text += ' \n'
 
-leader = randomItem(team3)	
+leader = randomItem(team3_empty)	
 text += mymonster4store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -2432,11 +3578,22 @@ text += ' \n'
 
 text += 'selectclass 21 \n'
 text += 'clearrec  \n'
+limit = limit - 2 
+
+if(limit <= 0){
+limit = 1	
+}
+
+
 while (x <= limit){	
 x++
-roll = Math.floor(Math.random() * team1.length)
-text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
-if (team1[roll].name === "Satyr"){
+coin = Math.floor(Math.random() * 1)
+if(coin === 1){
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+
+
+if (team1_melee_empty[roll].name=== "Satyr"){
 text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
 text += 'reclimiter "=Satyr" \n'
 text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
@@ -2448,7 +3605,7 @@ text += 'reclimiter "=Satyr" \n'
 text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
 text += 'reclimiter "=Satyr" \n'
 }
-if (team1[roll].name === "Centaur"){
+if (team1_melee_empty[roll].name === "Centaur"){
 text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
 text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
@@ -2456,16 +3613,7 @@ text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
 text += 'reclimiter "=Centaur" \n'
 }
-if (team1[roll].name === "Centauride"){
-text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
-text += 'reclimiter "=Centauride" \n'
-text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
-text += 'reclimiter "=Centauride" \n'
-text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
-text += 'reclimiter "=Centauride" \n'
-
-}
-if (team1[roll].name === "Minotaur"){
+if (team1_melee_empty[roll].name === "Minotaur"){
 text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
 text += 'reclimiter "=Minotaur" \n'
 text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
@@ -2474,18 +3622,33 @@ text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
 text += 'reclimiter "=Minotaur" \n'
 
 }
-if (team1[roll].name === "Harpy"){
+if (team1_melee_empty[roll].name === "Harpy"){
 text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
 text += 'reclimiter "=Harpy" \n'
 }
+}
+if(coin === 0){
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
+
+
+if (team1_ranged_empty[roll].name === "Centauride"){
+text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centauride" \n'
+}
+}
 }
 text += 'addunitrec "Temple Guard" 100 5 50 0 5 \n'
 text += 'recxcost 12 5 \n'
 while (y <= limit2){	
 y++
-roll = Math.floor(Math.random() * team2.length)
-text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
+roll = Math.floor(Math.random() * team2_empty.length)
+text += 'addcomrec "' + team2_empty[roll].name + '" '+ team2_empty[roll].chance + ' ' + team2_empty[roll].gold + ' ' + team2_empty[roll].goldplus + ' ' + team2_empty[roll].iron + ' \n'
 
 }
 text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
@@ -2497,21 +3660,20 @@ text += 'addcomrec "'+ mymonster4 +'" 100 600 0 0 \n'
 text += 'reclimiter  "='+ mymonster3 +'" \n'
 text += 'clearstartunits  \n'
 hasunits = 0
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num +' \n'
+hasunits += team1_melee_empty[roll].num
 
-roll = Math.floor(Math.random() * team1.length)
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits += team1[roll].num
-
-roll = Math.floor(Math.random() * team1.length)
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addstartunits "' + team1_ranged_empty.name + '" '+ team1_ranged_empty.num +' \n'
+hasunits += team1_ranged_empty[roll].num
 
 if(hasunits < 9){
-roll = Math.floor(Math.random() * team1.length)	
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num  +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_melee_empty.length)	
+text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
+hasunits += team1_melee_empty[roll].num
 }
-roll = Math.floor(Math.random() * team2.length)
+roll = Math.floor(Math.random() * team2_empty.length)
 rit2 = document.getElementById("rit2").checked;	
 
 if(rit2 === false){	
@@ -2520,7 +3682,7 @@ text += 'setmaincom "' + mymonster + '"  \n'
 if(rit2 === true){	
 text += 'setmaincom "' + mymonster2 + '"  \n'
 }
-text += 'addstartcom "' + team2[roll].name + '"  \n'
+text += 'addstartcom "' + team2_empty[roll].name + '"  \n'
 text += 'hometerr ' + randomItem(team4) + '  \n'
 coin = Math.floor(Math.random() * 4)
 text += 'clearstartterr \n'	
@@ -2536,9 +3698,7 @@ v = 0
 limit = (Math.floor(Math.random() * unitnumber)) + 1
 limit2 = Math.floor(Math.random() * comnumber) + 1
 limit3 = Math.floor(Math.random() * 4)
-if(limit <= 0){
-limit = 4	
-}
+
 if(limit2 <= 0){
 limit2 = 4	
 }		
@@ -2573,7 +3733,7 @@ if(coin != 3){
 mymonster3 =	 randomItem(team5) + " " + randomItem(team6)
 mymonster3store = 'newmonster "' + mymonster3 + '" \n'	
 }
-leader = randomItem(team3_2)
+leader = randomItem(team3_3_empty)
 
 text += mymonsterstore
 text += descrroll
@@ -2593,7 +3753,7 @@ text += 'rank -1 \n'
 text += 'mastery 1 \n'
 text += ' \n'
 
-leader = randomItem(team3_3)	
+leader = randomItem(team3_2_empty)	
 text += mymonster2store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -2612,7 +3772,7 @@ text += 'rank -1 \n'
 text += 'mastery 2 \n'
 text += ' \n'
 
-leader = randomItem(team3)	
+leader = randomItem(team3_empty)	
 text += mymonster3store	
 text += descrroll
 text += 'copystats "' + leader + '" \n'
@@ -2633,11 +3793,22 @@ text += ' \n'
 
 text += 'selectclass 24 \n'
 text += 'clearrec  \n'
+limit = limit - 2 
+
+if(limit <= 0){
+limit = 1	
+}
+
+
 while (x <= limit){	
 x++
-roll = Math.floor(Math.random() * team1.length)
-text += 'addunitrec "' + team1[roll].name + '" '+ team1[roll].chance + ' ' + team1[roll].num + ' ' + team1[roll].gold + ' 0 ' + team1[roll].iron + ' \n'
-if (team1[roll].name === "Satyr"){
+coin = Math.floor(Math.random() * 1)
+if(coin === 1){
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+
+
+if (team1_melee_empty[roll].name=== "Satyr"){
 text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
 text += 'reclimiter "=Satyr" \n'
 text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
@@ -2649,7 +3820,7 @@ text += 'reclimiter "=Satyr" \n'
 text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
 text += 'reclimiter "=Satyr" \n'
 }
-if (team1[roll].name === "Centaur"){
+if (team1_melee_empty[roll].name === "Centaur"){
 text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
 text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
@@ -2657,16 +3828,7 @@ text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
 text += 'reclimiter "=Centaur" \n'
 }
-if (team1[roll].name === "Centauride"){
-text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
-text += 'reclimiter "=Centauride" \n'
-text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
-text += 'reclimiter "=Centauride" \n'
-text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
-text += 'reclimiter "=Centauride" \n'
-
-}
-if (team1[roll].name === "Minotaur"){
+if (team1_melee_empty[roll].name === "Minotaur"){
 text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
 text += 'reclimiter "=Minotaur" \n'
 text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
@@ -2675,32 +3837,48 @@ text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
 text += 'reclimiter "=Minotaur" \n'
 
 }
-if (team1[roll].name === "Harpy"){
+if (team1_melee_empty[roll].name === "Harpy"){
 text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
 text += 'reclimiter "=Harpy" \n'
 }
+}
+if(coin === 0){
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
+
+
+if (team1_ranged_empty[roll].name === "Centauride"){
+text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
+text += 'reclimiter "=Centauride" \n'
+text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centauride" \n'
+}
+}
 }
 while (y <= limit2){	
 y++
 roll = Math.floor(Math.random() * team2.length)
-text += 'addcomrec "' + team2[roll].name + '" '+ team2[roll].chance + ' ' + team2[roll].gold + ' ' + team2[roll].goldplus + ' ' + team2[roll].iron + ' \n'
+text += 'addcomrec "' + team2_empty[roll].name + '" '+ team2_empty[roll].chance + ' ' + team2_empty[roll].gold + ' ' + team2_empty[roll].goldplus + ' ' + team2_empty[roll].iron + ' \n'
 
 }
 text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
 text += 'clearstartunits  \n'
 hasunits = 0
-while (z <= 1){	
-z++
-roll = Math.floor(Math.random() * team1.length)
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_melee_empty.length)
+text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num +' \n'
+hasunits += team1_melee_empty[roll].num
 
-}
+roll = Math.floor(Math.random() * team1_ranged_empty.length)
+text += 'addstartunits "' + team1_ranged_empty.name + '" '+ team1_ranged_empty.num +' \n'
+hasunits += team1_ranged_empty[roll].num
+
 if(hasunits < 9){
-roll = Math.floor(Math.random() * team1.length)	
-text += 'addstartunits "' + team1[roll].name + '" '+ team1[roll].num  +' \n'
-hasunits += team1[roll].num
+roll = Math.floor(Math.random() * team1_melee_empty.length)	
+text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
+hasunits += team1_melee_empty[roll].num
 }
 
 roll = Math.floor(Math.random() * team2.length)
@@ -2712,7 +3890,7 @@ text += 'setmaincom "' + mymonster + '"  \n'
 if(rit2 === true){	
 text += 'setmaincom "' + mymonster2 + '"  \n'
 }
-text += 'addstartcom "' + team2[roll].name + '"  \n'
+text += 'addstartcom "' + team2_empty[roll].name + '"  \n'
 text += 'hometerr 236 \n'
 coin = Math.floor(Math.random() * 4)
 text += 'clearstartterr \n'	
