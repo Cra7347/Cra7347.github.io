@@ -2085,7 +2085,7 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 2 \n'	
 }
 text += 'rank -1 \n'
-text += 'mastery 2 \n'
+text += 'mastery 1 \n'
 text += ' \n'
 
 leader = randomItem(team3_empty)	
@@ -2191,7 +2191,7 @@ text += 'spellweaponbonus ' + spell + ' 3 \n'
 }
 text += 'rank -1 \n'
 
-text += 'mastery 3 \n'
+
 text += ' \n'
 
 text += 'newclass \n'
@@ -2286,7 +2286,7 @@ text += 'templerec \n'
 text += 'addcomrec "Oracle of the Dead" 0 150 30 0 \n'
 text += 'templerec \n'
 }
-if(shuffle2 === 12){
+if(shuffle2 === 9){
 text += 'addcomrec "Sun Temple Attendant" 3 45 20 0 \n'
 text += 'templerec \n'
 text += 'addcomrec "Blood Temple Attendant" 3 45 20 0 \n'
@@ -3153,7 +3153,7 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 2 \n'	
 }
 text += 'rank -1 \n'
-text += 'mastery 2 \n'
+text += 'mastery 1 \n'
 text += ' \n'
 
 leader = randomItem(team3_empty)	
@@ -3192,7 +3192,7 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 3 \n'	
 }
 text += 'rank -1 \n'
-text += 'mastery 3 \n'
+
 text += ' \n'
 
 text += 'selectclass 1 \n'
@@ -3438,7 +3438,7 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 2 \n'	
 }
 text += 'rank -1 \n'
-text += 'mastery 2 \n'
+text += 'mastery 1 \n'
 text += ' \n'
 
 leader = randomItem(team3_empty)	
@@ -3478,7 +3478,6 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 3 \n'	
 }
 text += 'rank -1 \n'
-text += 'mastery 3 \n'
 text += ' \n'
 
 text += 'selectclass 14 \n'
@@ -3726,7 +3725,7 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 2 \n'	
 }
 text += 'rank -1 \n'
-text += 'mastery 2 \n'
+text += 'mastery 1 \n'
 text += ' \n'
 
 leader = randomItem(team3_empty)	
@@ -3766,7 +3765,7 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 3 \n'	
 }
 text += 'rank -1 \n'
-text += 'mastery 3 \n'
+
 text += ' \n'
 
 leader = randomItem(team3_empty)	
@@ -4052,7 +4051,7 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 2 \n'	
 }
 text += 'rank -1 \n'
-text += 'mastery 2 \n'
+text += 'mastery 1 \n'
 text += ' \n'
 
 leader = randomItem(team3_empty)	
@@ -4092,7 +4091,7 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 3 \n'	
 }
 text += 'rank -1 \n'
-text += 'mastery 3 \n'
+
 text += ' \n'
 
 text += 'selectclass 24 \n'
