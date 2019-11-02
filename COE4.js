@@ -2214,7 +2214,7 @@ limit = 1
 
 while (x <= limit){	
 x++
-coin = Math.floor(Math.random() * 1)
+coin = Math.floor(Math.random() * 2)
 if(coin === 1){
 roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
@@ -3213,7 +3213,7 @@ limit = 1
 
 while (x <= limit){	
 x++
-coin = Math.floor(Math.random() * 1)
+coin = Math.floor(Math.random() * 2)
 if(coin === 1){
 roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
@@ -3499,7 +3499,7 @@ limit = 1
 
 while (x <= limit){	
 x++
-coin = Math.floor(Math.random() * 1)
+coin = Math.floor(Math.random() * 2)
 if(coin === 1){
 roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
@@ -3828,7 +3828,7 @@ limit = 1
 
 while (x <= limit){	
 x++
-coin = Math.floor(Math.random() * 1)
+coin = Math.floor(Math.random() * 2)
 if(coin === 1){
 roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
@@ -4113,7 +4113,7 @@ limit = 1
 
 while (x <= limit){	
 x++
-coin = Math.floor(Math.random() * 1)
+coin = Math.floor(Math.random() * 2)
 if(coin === 1){
 roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
