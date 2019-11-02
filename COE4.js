@@ -396,7 +396,9 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',
 			 'Seducing','Bloodthirsty','Imprisoned','Yearning','Emerging','Aspiring','Mourning','Loyal',
 			 'Pitiful','Cherubic','Secretive','Thunder','Polar','Crying','Gravel','Toothy',
 			 'Bile','Vomit','Tribal','Horned','Electronic','Winged','Nubile','Encrusted',
-			 'Bejeweled','Honest','Robber','Amoeba','Disgusting','Yearly'
+			 'Bejeweled','Honest','Robber','Amoeba','Disgusting','Yearly',"Mystic","Geotic",
+			 "Ironside","Red","Blue","Yellow","Unthawed","Mute","Deaf","Blind",
+			 "Green","Pink","Purple","Orange","Grey","Black","White","Silver","Gold"
 	
 			 ]
 
@@ -410,7 +412,9 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 'Mutant','Ninja','Dragon','Scholar','Wonderland','Lunatic','Multiplier','Gamemaster',
 			 'Nymph','Lassie','Climber','Berserker','Thrall','Gravekeeper','Consort','Doll',
 			 'Edge','Clown','Piston','Mane','Arc','Kami','Giant','Goliath','Bug','Hussar',
-			 'Raja','Key','Kitten','Sloar','Esquire','Keeper','Enigma','Glutton','Autocrat'
+			 'Raja','Key','Kitten','Sloar','Esquire','Keeper','Enigma','Glutton','Autocrat',
+			 "Genius","Genie","Jinn","Prophet","Wanderer","Sophist","Pymander","Fetus",
+			 "Larvae","Gorgon","Medusa","Malefactor","Blackguard"
 			 ]	
 
 let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear','the Swamp',
@@ -419,7 +423,8 @@ let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear',
 			 'the Inbetween','Blades','the Trees','the East','the West','the South',
 			 'the North','the Pale','the Wish','the Sands','El','the Mirror','Harmony',
 			 'Hades','Haproons','the First Sin','the Orient','the Monastery','the Craft',
-			 'the Winds','Many Colors','White Robes','the Trove','the Horde','Hate'
+			 'the Winds','Many Colors','White Robes','the Trove','the Horde','Hate',
+			 "Of the Lamp","Ulm","C'tis","Fomoria","R'lyeh","Ermor","Sin"
 			 ]
 let team8 = ['5','6','7','40','41','42','43','70','90','105','109','158','196',
 		     '222'
