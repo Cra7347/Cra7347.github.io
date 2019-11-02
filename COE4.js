@@ -414,7 +414,8 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 'Edge','Clown','Piston','Mane','Arc','Kami','Giant','Goliath','Bug','Hussar',
 			 'Raja','Key','Kitten','Sloar','Esquire','Keeper','Enigma','Glutton','Autocrat',
 			 "Genius","Genie","Jinn","Prophet","Wanderer","Sophist","Pymander","Fetus",
-			 "Larvae","Gorgon","Medusa","Malefactor","Blackguard"
+			 "Larvae","Gorgon","Medusa","Malefactor","Blackguard","Brute","Thug","Coveter",
+			 "Son","Daughter"
 			 ]	
 
 let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear','the Swamp',
@@ -424,7 +425,7 @@ let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear',
 			 'the North','the Pale','the Wish','the Sands','El','the Mirror','Harmony',
 			 'Hades','Haproons','the First Sin','the Orient','the Monastery','the Craft',
 			 'the Winds','Many Colors','White Robes','the Trove','the Horde','Hate',
-			 "Of the Lamp","Ulm","C'tis","Fomoria","R'lyeh","Ermor","Sin"
+			 "Of the Lamp","Ulm","C'tis","Fomoria","R'lyeh","Ermor","Sin","The Storm"
 			 ]
 let team8 = ['5','6','7','40','41','42','43','70','90','105','109','158','196',
 		     '222'
@@ -3765,7 +3766,7 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 3 \n'	
 }
 text += 'rank -1 \n'
-
+text += 'mastery 1 \n'
 text += ' \n'
 
 leader = randomItem(team3_empty)	
@@ -3805,7 +3806,7 @@ if(coin2 === 1){
 text += 'spellweaponbonus ' + spell + ' 3 \n'	
 }
 text += 'rank -1 \n'
-text += 'mastery 4 \n'
+
 text += ' \n'
 
 
