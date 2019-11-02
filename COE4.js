@@ -37,13 +37,13 @@ let team1_melee = [
 	{name: "Temple Guard", num: 5, gold: 50, iron: 5, chance: 100},
 // troll
 	{name: "Ettin", num: 1, gold: 75, iron: 0, chance: 10},
-	{name: "Forest Giant", num: 1, gold: 80, iron: 0, chance: 10},
+	{name: "Forest Giant", num: 1, gold: 80, iron: 0, chance: 5},
 	{name: "Forest Troll", num: 1, gold: 40, iron: 10, chance: 10},	
 	{name: "Goblin Archer", num: 10, gold: 50, iron: 0, chance: 100},
 	{name: "Goblin", num: 15, gold: 50, iron: 0, chance: 100},	
 	{name: "Goblin Spearman", num: 15, gold: 50, iron: 0, chance: 100},	
 	{name: "Ogre", num: 1, gold: 25, iron: 0, chance: 100},	
-	{name: "Hill Giant", num: 1, gold: 100, iron: 0, chance: 10},
+	{name: "Hill Giant", num: 1, gold: 110, iron: 0, chance: 5},
 	{name: "Rock Troll", num: 1, gold: 50, iron: 60, chance: 10},
 	{name: "Troll", num: 1, gold: 50, iron: 20, chance: 10},
 	{name: "Wolf Kin", num: 10, gold: 50, iron: 0, chance: 100},
@@ -627,8 +627,8 @@ let team1_melee_troll = [
 ]
 let team1_ranged_troll = [
 	{name: "Goblin Archer", num: 10, gold: 50, iron: 0, chance: 100},
-	{name: "Hill Giant", num: 1, gold: 100, iron: 0, chance: 10},
-	{name: "Forest Giant", num: 1, gold: 80, iron: 0, chance: 10},
+	{name: "Hill Giant", num: 1, gold: 110, iron: 0, chance: 5},
+	{name: "Forest Giant", num: 1, gold: 80, iron: 0, chance: 5},
 ]
 let team2_troll = [
 	{name: "Goblin Chieftain", gold: 25, iron: 0, chance: 5, goldplus: 20},
