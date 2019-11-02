@@ -1885,6 +1885,8 @@ if(leader === "Black Cat Familiar" ||
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -1981,12 +1983,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -2081,12 +2086,16 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -3062,6 +3071,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3098,12 +3108,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -3134,12 +3147,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -3336,12 +3352,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -3373,12 +3392,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -3410,12 +3432,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -3610,12 +3635,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -3647,12 +3675,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -3684,12 +3715,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -3889,12 +3923,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -3926,12 +3963,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -3963,12 +4003,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -4000,12 +4043,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -4203,12 +4249,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -4240,12 +4289,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
@@ -4277,12 +4329,15 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
    leader === "Bear" || 
