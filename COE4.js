@@ -1883,7 +1883,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
@@ -1989,7 +1989,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -2092,7 +2092,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
@@ -3084,7 +3084,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3121,7 +3121,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3160,7 +3160,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3365,7 +3365,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3405,7 +3405,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3445,7 +3445,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3653,7 +3653,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3693,7 +3693,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3733,7 +3733,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3773,7 +3773,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3979,7 +3979,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -4019,7 +4019,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -4059,7 +4059,7 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
-hproll = Math.floor(Math.random() * 28) + 1
+hproll = Math.floor(Math.random() * 28) + 5
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
