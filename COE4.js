@@ -631,7 +631,7 @@ let team3_troll = ["Hill Giant","Dragon"
 ]
 let team3_2_troll = ["Forest Giant","Rock Troll","Troll King","Ettin"	
 ]
-let team3_3_troll = ["Ettin","Forest Troll","Troll","Goblin Chieftain",
+let team3_3_troll = ["Ettin","Forest Troll","Troll","Goblin Chieftain","Goblin",
 				     "Goblin Hero","Ogre Chieftain","Goblin Murderer"		
 ]
 
@@ -640,6 +640,19 @@ let team1_melee_el = [
 	{name: "Flagellant", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Templar", num: 3, gold: 50, iron: 25, chance: 100},
 	{name: "Temple Guard", num: 5, gold: 50, iron: 5, chance: 100},
+]	
+let team2_el = [
+	{name: "Preacher", gold: 20, iron: 0, chance: 5, goldplus: 20},
+	{name: "Missionary", gold: 20, iron: 0, chance: 5, goldplus: 20},
+	{name: "Angel Captain", gold: 60, iron: 0, chance: 5, goldplus: 20},		
+	{name: "Inquisitor Leader", gold: 50, iron: 0, chance: 5, goldplus: 10},
+	{name: "High Inquisitor Leader", gold: 80, iron: 0, chance: 5, goldplus: 10},
+]
+let team3_el = [
+]
+let team3_2_el = ["High Inquisitor Leader","Angel Captain"
+]
+let team3_3_el = ["Preacher","Missionary","Inquisitor Leader"	
 ]
 
 //Bakemono
@@ -1142,6 +1155,9 @@ var priestcheck = false;
 
 var pokemon = false;
 
+let hproll
+
+
 function test(){
 
 classnumber = parseInt(document.getElementById("classnumber").value, 10);
@@ -1523,6 +1539,58 @@ text += 'clearmove \n'
 text += 'float \n'
 text += 'rank -1 \n'
 text += ' \n'
+
+text += 'newmonster "Preacher" \n'
+text += 'name "Preacher" \n'
+text += 'descr "" \n'
+text += 'copystats "Saint" \n'
+text += 'copyspr "Saint" \n'
+text += 'clearspec \n'
+text += 'clearmove \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Missionary" \n'
+text += 'name "Missionary" \n'
+text += 'descr "" \n'
+text += 'copystats "Pilgrim" \n'
+text += 'copyspr "Pilgrim" \n'
+text += 'clearspec \n'
+text += 'clearmove \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Inquisitor Leader" \n'
+text += 'name "Inquisitor Leader" \n'
+text += 'descr "" \n'
+text += 'copystats "Inquisitor" \n'
+text += 'copyspr "Inquisitor" \n'
+text += 'clearspec \n'
+text += 'clearmove \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "High Inquisitor Leader" \n'
+text += 'name "Hign Inquisitor Leader" \n'
+text += 'descr "" \n'
+text += 'copystats "High Inquisitor" \n'
+text += 'copyspr "High Inquisitor" \n'
+text += 'clearspec \n'
+text += 'clearmove \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Angel Captain" \n'
+text += 'name "Angel Captain" \n'
+text += 'descr "" \n'
+text += 'copystats "Angel" \n'
+text += 'copyspr "Angel" \n'
+text += 'clearspec \n'
+text += 'awe 1 \n'
+text += 'clearmove \n'
+text += 'flying \n'
+text += 'rank -1 \n'
+text += ' \n'
 	
 	
 i = 0
@@ -1623,6 +1691,9 @@ team3_3_empty = team3_3_empty.concat(team3_3_troll)
 }
 if(elcheck === true){	
 team1_melee_empty = team1_melee_empty.concat(team1_melee_el)
+team2_empty = team2_empty.concat(team2_el)
+team3_2_empty = team3_2_empty.concat(team3_2_el)
+team3_3_empty = team3_3_empty.concat(team3_3_el)
 
 }
 if(bakemonocheck === true){	
@@ -1801,6 +1872,27 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+hproll = Math.floor(Math.random() * 28) + 1
+
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
+
+
 if(shuffle2 === 0){
 text += 'power 1 1 \n'
 text += 'power 2 1 \n'
@@ -1884,6 +1976,23 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
 
 if(shuffle2 === 0){
 text += 'power 1 2 \n'
@@ -1966,6 +2075,24 @@ text += mymonster3store
 text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
+
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
 
 if(shuffle2 === 0){
 text += 'power 1 3 \n'
@@ -2611,6 +2738,59 @@ text += 'float \n'
 text += 'rank -1 \n'
 text += ' \n'
 
+text += 'newmonster "Preacher" \n'
+text += 'name "Preacher" \n'
+text += 'descr "" \n'
+text += 'copystats "Saint" \n'
+text += 'copyspr "Saint" \n'
+text += 'clearspec \n'
+text += 'clearmove \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Missionary" \n'
+text += 'name "Missionary" \n'
+text += 'descr "" \n'
+text += 'copystats "Pilgrim" \n'
+text += 'copyspr "Pilgrim" \n'
+text += 'clearspec \n'
+text += 'clearmove \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Inquisitor Leader" \n'
+text += 'name "Inquisitor Leader" \n'
+text += 'descr "" \n'
+text += 'copystats "Inquisitor" \n'
+text += 'copyspr "Inquisitor" \n'
+text += 'clearspec \n'
+text += 'clearmove \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "High Inquisitor Leader" \n'
+text += 'name "Hign Inquisitor Leader" \n'
+text += 'descr "" \n'
+text += 'copystats "High Inquisitor" \n'
+text += 'copyspr "High Inquisitor" \n'
+text += 'clearspec \n'
+text += 'clearmove \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Angel Captain" \n'
+text += 'name "Angel Captain" \n'
+text += 'descr "" \n'
+text += 'copystats "Angel" \n'
+text += 'copyspr "Angel" \n'
+text += 'clearspec \n'
+text += 'awe 1 \n'
+text += 'clearmove \n'
+text += 'flying \n'
+text += 'rank -1 \n'
+text += ' \n'
+
+
 descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'
 
 x = 0
@@ -2711,6 +2891,9 @@ team3_3_empty = team3_3_empty.concat(team3_3_troll)
 }
 if(elcheck === true){	
 team1_melee_empty = team1_melee_empty.concat(team1_melee_el)
+team2_empty = team2_empty.concat(team2_el)
+team3_2_empty = team3_2_empty.concat(team3_2_el)
+team3_3_empty = team3_3_empty.concat(team3_3_el)
 
 }
 if(bakemonocheck === true){	
@@ -2874,6 +3057,24 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
+
 text += 'power 6 1 \n'		
 
 coin2 = Math.floor(Math.random() * 2)
@@ -2892,6 +3093,24 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
+
 text += 'power 6 2 \n'
 	
 coin2 = Math.floor(Math.random() * 2)
@@ -2909,6 +3128,24 @@ text += mymonster3store
 text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
+
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
 
 text += 'power 6 3 \n'
 
@@ -3094,6 +3331,24 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
+
 text += 'power 25 1 \n'	
 text += 'gatherrelics \n'	
 
@@ -3113,6 +3368,24 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
+
 text += 'power 25 2 \n'
 text += 'gatherrelics \n'
 	
@@ -3131,6 +3404,24 @@ text += mymonster3store
 text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
+
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
 
 text += 'power 25 3 \n'
 text += 'gatherrelics \n'
@@ -3314,6 +3605,24 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
+
 text += 'power 22 1 \n'	
 text += 'gatherfungus \n'	
 
@@ -3333,6 +3642,24 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
+
 text += 'power 22 2 \n'
 text += 'gatherfungus \n'
 	
@@ -3351,6 +3678,24 @@ text += mymonster3store
 text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
+
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
 
 text += 'power 22 3 \n'
 text += 'gatherfungus \n'
@@ -3539,6 +3884,24 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
+
 text += 'power 25 1 \n'	
 text += 'gatherrelics \n'	
 
@@ -3557,6 +3920,24 @@ text += mymonster2store
 text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
+
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
 
 text += 'power 25 2 \n'
 text += 'gatherrelics \n'
@@ -3577,6 +3958,24 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
+
 text += 'power 25 3 \n'
 text += 'gatherrelics \n'
 
@@ -3595,6 +3994,24 @@ text += mymonster4store
 text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
+
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
 
 text += 'power 25 4 \n'
 text += 'gatherrelics \n'
@@ -3781,6 +4198,24 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
+
 text += 'power 47 1 \n'	
 text += 'gatherherbs \n'	
 
@@ -3800,6 +4235,24 @@ text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
+
 text += 'power 47 2 \n'
 text += 'gatherherbs \n'
 	
@@ -3818,6 +4271,24 @@ text += mymonster3store
 text += descrroll
 text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
+
+if(leader === "Black Cat Familiar" || 
+   leader === "Rabbit" ||
+   leader === "Dog" ||  
+   leader === "Wolf" || 
+   leader === "Snake" ||  
+   leader === "Ape" ||
+   leader === "Imp" ||  
+   leader === "Goblin" || 
+   leader === "Bear" || 
+   leader === "Boar" ||
+   leader === "Serpent" ||  
+   leader === "Giant Snail" || 
+   leader === "Large Spider" ||  
+   leader === "Harpy" ||
+   leader === "Giant Scorpion"  ){
+text += 'hp ' + hproll + ' \n'	
+}
 
 text += 'power 47 3 \n'
 text += 'gatherherbs \n'
