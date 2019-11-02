@@ -440,6 +440,7 @@ let team9 = ['Once upon a time, a great evil fell upon Elysium.',
 			 'Unbeknownst to the mortal of the Elysium plane, the forces of the Nexus held a great contest to determine a warrior who was worthy of universal aclaim. A powerful untamed creature won the contest through pure savagery alone, but managed to escape into the mortal world to test its might upon Elysium.',	
 			 'Once upon a time, a small boy found a strange egg in the woods and took it home with him to show to his family. Little did the family know a strange thing emerged at night and crawled into the forests of Elysium and grew in the dark solitude.',
 			 'In the darkest woods of Elysium, a poor peasant gave birth to a squirming monstrosity. Overcome by pity, she tried desperatly to hide the creature from the outside world, but was eventually tempted to sell her progeny to a travelling circus for a moderate sum of gold. Later the monster escaped in the heart of the night, driven by a lust to see the outside world.',		
+			 'Legends tell of a small town overrun by demonic forces. It seems that a wandering mage had delved too far into a forbidden ritual and had released a terrible evil into the lowest floors of a bottomless dungeon. Against all odds, a noble paladin fought his way to the bottom of the cursed dungeon and attempted to destroy the monster once and for all. But, in a cruel turn of fate, he was defeated and possessed by the very evil he sought to destroy, allowing the ancient evil wandered into Elysium.',
 			 ]
 
 let team10 = ['It was due to this force that the invading barbarians and squabbling nobles were driven away.',
@@ -471,8 +472,9 @@ let team12 = ['But, fate is not kind and the master fell from grace.',
 			  'In a desperate bid, the warring forces of Elysium temporarly joined forces to deal with this threat, but against all odds, their alliance was dashed in a crushing defeat.',
 			  'Overcome by fatigue, the monster decided to settle down for a long nap, sparing the world... for now.',
 			  'The monster was eventually captured by an oriental warrior and taken away to a far eastern monastery. Instead of killing the beast, the warrior spared the monster and taught it a strange code of honor.',
-			  'To everybodies suprise, the monster was overthrown by a mysterious young boy who was barely out of diapers. With a mere sling as a weapon, he brought low the threat and later was made emperor of Elysium after the army staged a coup in his honor. Still, the monster was not completely gone and waited for its chance to arise again for revenge.',			  
-			  'To everybodies horror, to finalize its reign of terror, the monster produced a strange melody that enraptured the children of Elysium. In a disturbing procession, it merrily led the children into the sea where they drowned. The monster disappeared for decades soon after, but peasants spread rumors of its inevitable return.',	
+			  'To the surprise of many, the monster was overthrown by a mysterious young boy who was barely out of diapers. With a mere sling as a weapon, he brought low the threat and later was made emperor of Elysium after the army staged a coup in his honor. Still, the monster was not completely gone and waited for its chance to arise again for revenge.',			  
+			  'To the horror of many, to finalize its reign of terror, the monster produced a strange melody that enraptured the children of Elysium. In a disturbing procession, it merrily led the children into the sea where they drowned. The monster disappeared for decades soon after, but peasants spread rumors of its inevitable return.',	
+			  "To finalize its reign of terror, the monster sought to free its long imprisoned sibling from an ancient prison. Travelling east to secure its goal, all of Elysium lies in its warpath."
 			  ]
 let team13 = ['icon "Randomclass/Randombanner.tga"' + '\n',
 			  'icon "Randomclass/Randombanner_1.tga"' + '\n',
