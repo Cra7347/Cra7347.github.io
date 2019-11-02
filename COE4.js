@@ -525,11 +525,11 @@ let team3_empty = [
 	"Old Wizard","White Wizard","Dark Wizard","Golden Wizard","King"	
 ]
 let team3_2_empty = [
-	"Animist","Astrologer","Pyromancer","Sea Father","Ice Druid"
+	"Animist","Astrologer","Pyromancer","Sea Father","Ice Druid","War Elephant"
 ]
 let team3_3_empty = [
 	"Spearman","Captain","Priest","Mounted Commander","Commander","Hedge Wizard","Monk","Court Mage",
-	"Knight","Scout","Alchemist","Princess","Assassin"
+	"Knight","Scout","Alchemist","Princess","Assassin","Lion King"
 ]
 //Animals
 let team1_melee_animal = [
@@ -576,8 +576,8 @@ let team3_2_animal = [
 			 "Winter Wolf",		
 ]
 let team3_3_animal = ["Wolf","Rabbit","Deer","Moose","Great Boar",
-			 "Black Cat Familiar","Serpent","Large Spider",
-			 "Giant Snail","Rat","Giant Rat",
+			 "Black Cat Familiar","Serpent","Large Spider","Elephant",
+			 "Giant Snail","Rat","Giant Rat","Tiger","Lion",
 			 "Rabbit","Beast Bat","Ape","Snake",'Dog',			
 ]
 
@@ -1678,11 +1678,11 @@ let team3_empty = [
 	"Old Wizard","White Wizard","Dark Wizard","Golden Wizard","King"	
 ]
 let team3_2_empty = [
-	"Animist","Astrologer","Pyromancer","Sea Father","Ice Druid"
+	"Animist","Astrologer","Pyromancer","Sea Father","Ice Druid","War Elephant"
 ]
 let team3_3_empty = [
 	"Spearman","Captain","Priest","Mounted Commander","Commander","Hedge Wizard","Monk","Court Mage",
-	"Knight","Scout","Alchemist","Princess","Assassin"
+	"Knight","Scout","Alchemist","Princess","Assassin","Lion King"
 ]
 
 
@@ -2894,11 +2894,11 @@ let team3_empty = [
 	"Old Wizard","White Wizard","Dark Wizard","Golden Wizard","King"	
 ]
 let team3_2_empty = [
-	"Animist","Astrologer","Pyromancer","Sea Father","Ice Druid"
+	"Animist","Astrologer","Pyromancer","Sea Father","Ice Druid","War Elephant"
 ]
 let team3_3_empty = [
 	"Spearman","Captain","Priest","Mounted Commander","Commander","Hedge Wizard","Monk","Court Mage",
-	"Knight","Scout","Alchemist","Princess","Assassin"
+	"Knight","Scout","Alchemist","Princess","Assassin","Lion King"
 ]
 
 
