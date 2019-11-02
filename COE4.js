@@ -583,7 +583,7 @@ let team3_2_animal = [
 ]
 let team3_3_animal = ["Wolf","Rabbit","Deer","Moose","Great Boar",
 			 "Black Cat Familiar","Serpent","Large Spider","Elephant",
-			 "Giant Snail","Rat","Giant Rat","Tiger","Lion",
+			 "Giant Snail","Rat","Giant Rat","Tiger","Lion","Monkey",
 			 "Rabbit","Beast Bat","Ape","Snake",'Dog',"Goat"		
 ]
 
@@ -820,7 +820,7 @@ let team2_cult = [
 let team3_cult = [
 
 ]
-let team3_2_cult = ["Yithian Sage","Kraken"		 
+let team3_2_cult = ["Yithian Sage","Kraken","Giant Crab"		 
 
 ]
 let team3_3_cult = ["Weirdo","Insane Fisherman","Deep One","Shambler"	
