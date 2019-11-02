@@ -397,7 +397,7 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',
 			 'Pitiful','Cherubic','Secretive','Thunder','Polar','Crying','Gravel','Toothy',
 			 'Bile','Vomit','Tribal','Horned','Electronic','Winged','Nubile','Encrusted',
 			 'Bejeweled','Honest','Robber','Amoeba','Disgusting','Yearly',"Mystic","Geotic",
-			 "Ironside","Red","Blue","Yellow","Unthawed","Mute","Deaf","Blind",
+			 "Ironside","Red","Blue","Yellow","Unthawed","Mute","Deaf","Blind","Vorpal",
 			 "Green","Pink","Purple","Orange","Grey","Black","White","Silver","Gold"
 	
 			 ]
