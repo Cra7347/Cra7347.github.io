@@ -584,7 +584,7 @@ let team3_2_animal = [
 let team3_3_animal = ["Wolf","Rabbit","Deer","Moose","Great Boar",
 			 "Black Cat Familiar","Serpent","Large Spider","Elephant",
 			 "Giant Snail","Rat","Giant Rat","Tiger","Lion",
-			 "Rabbit","Beast Bat","Ape","Snake",'Dog',			
+			 "Rabbit","Beast Bat","Ape","Snake",'Dog',"Goat"		
 ]
 
 //Druid
@@ -1114,6 +1114,7 @@ let team3_2_weird = ["Hidden Aboleth","Formless Spawn","Displacer Beast","Hidden
 
 ]
 let team3_3_weird = ["Miracle Eye","Freak Lord","Lizardman Shaman","Spine Membrane Horror","Horror Mantis","Ichtyid Captain",
+					 "Brass Claw Horror","Mind Slime Horror","Float Cat Horror"
 ]	
 			  
 let	text	
@@ -1903,6 +1904,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -1998,6 +2000,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -2008,6 +2011,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -2112,6 +2116,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -3093,14 +3098,18 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
    leader === "Wolf" || 
    leader === "Snake" ||  
    leader === "Ape" ||
+   leader === "Dancing Sword" ||  
+   leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -3130,6 +3139,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3140,6 +3150,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -3169,6 +3180,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3179,6 +3191,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -3374,6 +3387,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3384,6 +3398,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -3414,6 +3429,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3424,6 +3440,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -3454,6 +3471,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3464,6 +3482,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -3661,6 +3680,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3671,6 +3691,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -3701,6 +3722,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3711,6 +3733,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -3741,6 +3764,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3751,6 +3775,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -3781,6 +3806,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3791,6 +3817,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -3987,6 +4014,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -3997,6 +4025,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -4027,6 +4056,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -4037,6 +4067,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
@@ -4067,6 +4098,7 @@ text += 'copystats "' + leader + '" \n'
 text += 'copyspr "' + leader + '" \n'
 
 hproll = Math.floor(Math.random() * 28) + 5
+
 if(leader === "Black Cat Familiar" || 
    leader === "Rabbit" ||
    leader === "Dog" ||  
@@ -4077,6 +4109,7 @@ if(leader === "Black Cat Familiar" ||
    leader === "Living Bow" ||  
    leader === "Imp" ||  
    leader === "Goblin" || 
+    leader === "Goat" ||   
    leader === "Bear" || 
    leader === "Boar" ||
    leader === "Serpent" ||  
