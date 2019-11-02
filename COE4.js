@@ -383,7 +383,7 @@ let team4 = ['3','9','20','22','23','24','25','26','28','29','30','31',
 			 '156','160','210','213','216','219','223'
 			 ]	
 
-let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',
+let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',"Relic",
 			 'Aging','Burning','Cuddly','Plump','Dying','Lovely','Golden','Crystal',
 			 'Mighty', 'Blood','Abyssal','Plague','Void','Sullen','Ivory','Beast','Bull',
 			 'Mindless','Questing','Armored','Little','Greater','Elder','Newborn',
@@ -398,7 +398,8 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',
 			 'Bile','Vomit','Tribal','Horned','Electronic','Winged','Nubile','Encrusted',
 			 'Bejeweled','Honest','Robber','Amoeba','Disgusting','Yearly',"Mystic","Geotic",
 			 "Ironside","Red","Blue","Yellow","Unthawed","Mute","Deaf","Blind","Vorpal",
-			 "Green","Pink","Purple","Orange","Grey","Black","White","Silver","Gold"
+			 "Green","Pink","Purple","Orange","Grey","Black","White","Silver","Gold",
+			 "Trove","Witch","Feel"
 	
 			 ]
 
@@ -415,7 +416,7 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 'Raja','Key','Kitten','Sloar','Esquire','Keeper','Enigma','Glutton','Autocrat',
 			 "Genius","Genie","Jinn","Prophet","Wanderer","Sophist","Pymander","Fetus",
 			 "Larvae","Gorgon","Medusa","Malefactor","Blackguard","Brute","Thug","Coveter",
-			 "Son","Daughter"
+			 "Son","Daughter","Boot","Phantom","Senator"
 			 ]	
 
 let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear','the Swamp',
