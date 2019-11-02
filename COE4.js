@@ -399,7 +399,7 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',"Re
 			 'Bejeweled','Honest','Robber','Amoeba','Disgusting','Yearly',"Mystic","Geotic",
 			 "Ironside","Red","Blue","Yellow","Unthawed","Mute","Deaf","Blind","Vorpal",
 			 "Green","Pink","Purple","Orange","Grey","Black","White","Silver","Gold",
-			 "Trove","Witch","Feel"
+			 "Trove","Witch","Feel","Crusader","Honey","Hugging","Dungeon","Boss","Wishing"
 	
 			 ]
 
@@ -416,7 +416,10 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 'Raja','Key','Kitten','Sloar','Esquire','Keeper','Enigma','Glutton','Autocrat',
 			 "Genius","Genie","Jinn","Prophet","Wanderer","Sophist","Pymander","Fetus",
 			 "Larvae","Gorgon","Medusa","Malefactor","Blackguard","Brute","Thug","Coveter",
-			 "Son","Daughter","Boot","Phantom","Senator"
+			 "Son","Daughter","Boot","Phantom","Senator","Shaper","Enchanter","Meanie","King",
+			 "Diadochi","Czar","Kaiser","Tiger","Meister","Chimera","Doctor","Roach","Pest",
+			 "Emir","Vizier","Pharaoh","Pontiff","Disciple","Parent"
+	
 			 ]	
 
 let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear','the Swamp',
@@ -426,7 +429,8 @@ let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear',
 			 'the North','the Pale','the Wish','the Sands','El','the Mirror','Harmony',
 			 'Hades','Haproons','the First Sin','the Orient','the Monastery','the Craft',
 			 'the Winds','Many Colors','White Robes','the Trove','the Horde','Hate',
-			 "Of the Lamp","Ulm","C'tis","Fomoria","R'lyeh","Ermor","Sin","The Storm"
+			 "Of the Lamp","Ulm","C'tis","Fomoria","R'lyeh","Ermor","Sin","The Storm",
+			 "Revelations","the Mount","the Peak"
 			 ]
 let team8 = ['5','6','7','40','41','42','43','70','90','105','109','158','196',
 		     '222'
