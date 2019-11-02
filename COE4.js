@@ -139,9 +139,9 @@ let team1_melee = [
 
 	//Dryad
 	{name: "Satyr", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Centaur", num: 3, gold: 60, iron: 0, chance: 100},
-	{name: "Centauride", num: 3, gold: 60, iron: 0, chance: 100},	
-	{name: "Minotaur", num: 3, gold: 60, iron: 0, chance: 100},
+	{name: "Centaur", num: 3, gold: 50, iron: 0, chance: 100},
+	{name: "Centauride", num: 3, gold: 50, iron: 0, chance: 100},	
+	{name: "Minotaur", num: 3, gold: 50, iron: 0, chance: 100},
 	{name: "Harpy", num: 5, gold: 50, iron: 0, chance: 100},	
 
 	//Pale One
@@ -772,12 +772,12 @@ let team3_3_dwarf = ["Dwarf Commander",
 //Dryad
 let team1_melee_dryad = [
 	{name: "Satyr", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Centaur", num: 3, gold: 60, iron: 0, chance: 100},	
-	{name: "Minotaur", num: 3, gold: 60, iron: 0, chance: 100},
+	{name: "Centaur", num: 3, gold: 50, iron: 0, chance: 100},	
+	{name: "Minotaur", num: 3, gold: 50, iron: 0, chance: 100},
 	{name: "Harpy", num: 5, gold: 50, iron: 0, chance: 100},
 ]
 let team1_ranged_dryad = [
-	{name: "Centauride", num: 3, gold: 60, iron: 0, chance: 100},	
+	{name: "Centauride", num: 3, gold: 50, iron: 0, chance: 100},	
 ]
 let team2_dryad = [
 	{name: "Harpy", gold: 30, iron: 0, chance: 10, goldplus: 10},
@@ -3232,7 +3232,7 @@ text += 'reclimiter "=Satyr" \n'
 if (team1_melee_empty[roll].name === "Centaur"){
 text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
 text += 'reclimiter "=Centaur" \n'
-text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'addunitrec "Centaur Cataphract" 100 53 25 0 25 \n'
 text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
 text += 'reclimiter "=Centaur" \n'
@@ -3518,7 +3518,7 @@ text += 'reclimiter "=Satyr" \n'
 if (team1_melee_empty[roll].name === "Centaur"){
 text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
 text += 'reclimiter "=Centaur" \n'
-text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'addunitrec "Centaur Cataphract" 100 53 25 0 25 \n'
 text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
 text += 'reclimiter "=Centaur" \n'
@@ -3847,7 +3847,7 @@ text += 'reclimiter "=Satyr" \n'
 if (team1_melee_empty[roll].name === "Centaur"){
 text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
 text += 'reclimiter "=Centaur" \n'
-text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'addunitrec "Centaur Cataphract" 100 53 25 0 25 \n'
 text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
 text += 'reclimiter "=Centaur" \n'
@@ -4132,7 +4132,7 @@ text += 'reclimiter "=Satyr" \n'
 if (team1_melee_empty[roll].name === "Centaur"){
 text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
 text += 'reclimiter "=Centaur" \n'
-text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'addunitrec "Centaur Cataphract" 100 53 25 0 25 \n'
 text += 'reclimiter "=Centaur" \n'
 text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
 text += 'reclimiter "=Centaur" \n'
