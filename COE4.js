@@ -669,7 +669,7 @@ let team1_melee_bakemono = [
 ]
 let team1_ranged_bakemono = [
 	{name: "Bakemono Archer", num: 5, gold: 25, iron: 1, chance: 100},
-	{name: "Bakemono Bowman", num: 1, gold: 25, iron: 0, chance: 100},	
+	{name: "Bakemono Bowman", num: 5, gold: 25, iron: 0, chance: 100},	
 	{name: "Dai Bakemono Archer", num: 3, gold: 50, iron: 15, chance: 100},
 	
 ]
