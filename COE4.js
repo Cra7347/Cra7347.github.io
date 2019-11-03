@@ -387,7 +387,7 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',"Re
 			 'Aging','Burning','Cuddly','Plump','Dying','Lovely','Golden','Crystal',
 			 'Mighty', 'Blood','Abyssal','Plague','Void','Sullen','Ivory','Beast','Bull',
 			 'Mindless','Questing','Armored','Little','Greater','Elder','Newborn',
-			 'Starving','Gurgling','Reaching','Diving','Beckoning','Soulless',
+			 'Starving','Gurgling','Reaching','Diving','Beckoning','Soulless',"Eraser","Ruby","Emerald","Saphire",
 			 'Soul','Greedy','Cursed','Pale','Coughing','Profane','False','Crunching',
 			 'Devil','Quaking','Comical','Unforgiving','Godly','Merry','Dwarf','Elf','Human',
 			 'Goblin','Choking','Unsurly','Bushido','Warpath','Blightooze','Swimming',
@@ -418,7 +418,8 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 "Larvae","Gorgon","Medusa","Malefactor","Blackguard","Brute","Thug","Coveter",
 			 "Son","Daughter","Boot","Phantom","Senator","Shaper","Enchanter","Meanie","King",
 			 "Diadochi","Czar","Kaiser","Tiger","Meister","Chimera","Doctor","Roach","Pest",
-			 "Emir","Vizier","Pharaoh","Pontiff","Disciple","Parent"
+			 "Emir","Vizier","Pharaoh","Pontiff","Disciple","Parent","Head","Extortioner",
+			 "Executioner","Bey","Hetman","Beg","Chanyu"
 	
 			 ]	
 
@@ -427,7 +428,7 @@ let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear',
 			 'the Fold','the Legion','the Light','Rebirth','the Reach','the Tower',
 			 'the Inbetween','Blades','the Trees','the East','the West','the South',
 			 'the North','the Pale','the Wish','the Sands','El','the Mirror','Harmony',
-			 'Hades','Haproons','the First Sin','the Orient','the Monastery','the Craft',
+			 'Hades','Harpoons','the First Sin','the Orient','the Monastery','the Craft',
 			 'the Winds','Many Colors','White Robes','the Trove','the Horde','Hate',
 			 "Of the Lamp","Ulm","C'tis","Fomoria","R'lyeh","Ermor","Sin","The Storm",
 			 "Revelations","the Mount","the Peak"
