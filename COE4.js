@@ -937,7 +937,7 @@ let team1_melee_warlock = [
 	{name: "Winter Wolf", num: 3, gold: 50, iron: 0, chance: 100},			
 ]
 let team1_ranged_warlock = [
-
+	{name: "Cloud Elemental", num: 5, gold: 50, iron: 0, chance: 100},
 			
 ]
 let team2_warlock = [
@@ -953,7 +953,7 @@ let team3_warlock = ["Lake Troll King"
 let team3_2_warlock = ["Fire Elemental","Water Elemental","Earth Elemental","Air Elemental","Earth Gnome","Lake Troll","Yeti"
 
 ]
-let team3_3_warlock = ["Lesser Fire","Lesser Water","Lesser Earth","Earth Gnome","Salamander","Flame Spirit","Sylph","Winter Wolf"
+let team3_3_warlock = ["Lesser Fire","Lesser Water","Lesser Earth","Earth Gnome","Salamander","Flame Spirit","Sylph","Winter Wolf","Cloud Elemental"
 ]
 
 //Witch
