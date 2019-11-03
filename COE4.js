@@ -599,6 +599,7 @@ let team1_melee_druid = [
 	{name: "Barechested Warrior", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Beast Cavalry", num: 3, gold: 50, iron: 5, chance: 100},	
 	{name: "Boar Warrior", num: 4, gold: 50, iron: 10, chance: 100},
+	{name: "Man Trap", num: 4, gold: 50, iron: 0, chance: 100},	
 ]
 let team1_ranged_druid = [
 	{name: "Barechested Slinger", num: 5, gold: 50, iron: 0, chance: 100},
@@ -614,7 +615,7 @@ let team3_druid = ['Eye Tyrant',"Beholder",
 let team3_2_druid = [		 
 			 "Chieftain","Vergobret",	
 ]
-let team3_3_druid = ["Chieftain","Vergobret","Hornblower",		
+let team3_3_druid = ["Chieftain","Vergobret","Hornblower","Man Trap"		
 ]
 
 //Troll
@@ -771,7 +772,7 @@ let team2_dwarf = [
 ]
 let team3_dwarf = [
 ]
-let team3_2_dwarf = [		 
+let team3_2_dwarf = ["Living Boulder"		 
 
 ]
 let team3_3_dwarf = ["Dwarf Commander",	
@@ -1611,6 +1612,24 @@ text += 'allitemslots \n'
 text += 'clearmove \n'
 text += 'flying \n'
 text += 'rank -1 \n'
+text += ' \n'
+
+text += 'newmonster "Man Trap" \n'
+text += 'name "Man Trap" \n'
+text += 'descr " A carnivorous plant. Its feet-like roots allow it to move around as it looks for victims. When a victom comes within range, the Man Trap strikes out with its deadly teeth. The Man Trap moves slowly, but its attack is nothing to be laughed at. If used wisely, the long-lasting Man Trap can be very helpful." \n'
+text += 'copystats "Venus Trap" \n'
+text += 'copyspr "Venus Trap" \n'
+text += 'clearmove \n'
+text += 'slow \n'
+text += ' \n'
+
+text += 'newmonster "Stone Trap" \n'
+text += 'name "Stone Trap" \n'
+text += 'descr "" \n'
+text += 'copystats "Living Boulder" \n'
+text += 'copyspr "Living Boulder" \n'
+text += 'clearmove \n'
+text += 'slow \n'
 text += ' \n'	
 	
 i = 0
@@ -1716,6 +1735,14 @@ team3_2_empty = team3_2_empty.concat(team3_2_el)
 team3_3_empty = team3_3_empty.concat(team3_3_el)
 
 }
+if(druidcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_druid)
+team2_empty = team2_empty.concat(team2_druid)
+team3_2_empty = team3_2_empty.concat(team3_2_druid)
+team3_3_empty = team3_3_empty.concat(team3_3_druid)
+
+}
+
 if(bakemonocheck === true){	
 team1_melee_empty = team1_melee_empty.concat(team1_melee_bakemono)
 team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_bakemono)
@@ -1734,6 +1761,7 @@ if(dwarfcheck === true){
 team1_melee_empty = team1_melee_empty.concat(team1_melee_dwarf)
 team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_dwarf)
 team2_empty = team2_empty.concat(team2_dwarf)
+team3_2_empty = team3_2_empty.concat(team3_2_dwarf)
 team3_3_empty = team3_3_empty.concat(team3_3_dwarf)
 }
 
@@ -2830,6 +2858,23 @@ text += 'flying \n'
 text += 'rank -1 \n'
 text += ' \n'
 
+text += 'newmonster "Man Trap" \n'
+text += 'name "Man Trap" \n'
+text += 'descr " A carnivorous plant. Its feet-like roots allow it to move around as it looks for victims. When a victom comes within range, the Man Trap strikes out with its deadly teeth. The Man Trap moves slowly, but its attack is nothing to be laughed at. If used wisely, the long-lasting Man Trap can be very helpful." \n'
+text += 'copystats "Venus Trap" \n'
+text += 'copyspr "Venus Trap" \n'
+text += 'clearmove \n'
+text += 'slow \n'
+text += ' \n'
+
+text += 'newmonster "Stone Trap" \n'
+text += 'name "Stone Trap" \n'
+text += 'descr "" \n'
+text += 'copystats "Living Boulder" \n'
+text += 'copyspr "Living Boulder" \n'
+text += 'clearmove \n'
+text += 'slow \n'
+text += ' \n'	
 
 descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'
 
@@ -2954,7 +2999,16 @@ if(dwarfcheck === true){
 team1_melee_empty = team1_melee_empty.concat(team1_melee_dwarf)
 team1_ranged_empty = team1_ranged_empty.concat(team1_ranged_dwarf)
 team2_empty = team2_empty.concat(team2_dwarf)
+team3_2_empty = team3_2_empty.concat(team3_2_dwarf)
 team3_3_empty = team3_3_empty.concat(team3_3_dwarf)
+}
+
+if(druidcheck === true){	
+team1_melee_empty = team1_melee_empty.concat(team1_melee_druid)
+team2_empty = team2_empty.concat(team2_druid)
+team3_2_empty = team3_2_empty.concat(team3_2_druid)
+team3_3_empty = team3_3_empty.concat(team3_3_druid)
+
 }
 
 if(hoburgcheck === true){	
