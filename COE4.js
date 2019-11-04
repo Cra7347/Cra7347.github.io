@@ -111,6 +111,7 @@ let team11 = ['Later, it would be crowned king of the land, obtaining power only
 			  ]			 
 
 let team12 = ['But, fate is not kind and the master fell from grace.',
+			  'To grow even more powerful, the monster made a deal with the seven demon lords. The beast was infused with unholy magic and fattened with the nectar of a thousand sinners, but at the cost its immortal soul. The monster now strives to enslave all of Elysium for the infernal powers, lest it fails and dooms itself to an eternity of torment.',
 			  'Only when it was time to seek a mate, did the world finally know peace.',
 			  'Now, it is too late. Having grown too powerful, the world is at the mercy of the monster.',
 			  'Villagers spread rumors that it is still somewhere inside the darkest forests of Elysium, ready to burst out when we least expect it.',
@@ -121,7 +122,7 @@ let team12 = ['But, fate is not kind and the master fell from grace.',
 			  'To the surprise of many, the monster was overthrown by a mysterious young boy who was barely out of diapers. With a mere sling as a weapon, he brought low the threat and later was made emperor of Elysium after the army staged a coup in his honor. Still, the monster was not completely gone and waited for its chance to arise again for revenge.',			  
 			  'To the horror of many, to finalize its reign of terror, the monster produced a strange melody that enraptured the children of Elysium. In a disturbing procession, it merrily led the children into the sea where they drowned. The monster disappeared for decades soon after, but peasants spread rumors of its inevitable return.',	
 			  "To finalize its reign of terror, the monster sought to free its long imprisoned sibling from an ancient prison. Travelling east to secure its goal, all of Elysium lies in its warpath.",
-			  "When a stranger offered to stop the monster for an extortionate fee, the nobles of Elysium had no choice but agree, as they had already burned through all other options. Oddly enough, the stranger traped the monster in a strange playing card and succeeded in saving the land But, when it came time to collect his fee, the nobles, realized they were bankrupted by the crisis and refused to pay him. In revenge, he released the monster from its card to terrorize the land once again, only this time, he was the master."
+			  "When a stranger offered to stop the monster for an extortionate fee, the nobles of Elysium had no choice but agree, as they had already burned through all other options. Oddly enough, the stranger traped the monster in a strange playing card and succeeded in saving the land, But, when it came time to collect his fee, the nobles, realized they were bankrupted by the crisis and refused to pay him. In revenge, he released the monster from its card to terrorize the land once again, only this time, he was the master."
 			  ]
 let team13 = ['icon "Randomclass/Randombanner.tga"' + '\n',
 			  'icon "Randomclass/Randombanner_1.tga"' + '\n',
