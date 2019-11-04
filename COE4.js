@@ -2664,7 +2664,7 @@ text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
 text += 'reclimiter "=Centauride" \n'
 }
 }
-}
+
 
 
 while (y <= limit2){	
@@ -2742,7 +2742,9 @@ text += 'addstartcom "Young Dvala"  \n'
 if(shuffle2 === 15){
 text += 'addstartcom "Warlock'+ illapp +'s Apprentice" \n'
 }
+
 text += 'hometerr ' + randomItem(team4) + '  \n'
+
 coin = Math.floor(Math.random() * 4)
 if(coin === 3){
 text += 'addstartterr '+ randomItem(team8) + '\n'	
@@ -2751,7 +2753,7 @@ if(shuffle2 === 6){
 text += 'addstartterr 70 \n'	
 }		
 text += ' \n'
-
+}
 dump += text
 return dump
   var element = document.createElement('a');
