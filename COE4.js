@@ -2593,6 +2593,7 @@ text += 'addstartunits "Slinger" 10 \n'
 }
 
 if(saneshuffle !== "swap"){
+	
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
 text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
@@ -2600,10 +2601,10 @@ roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
 
 limit = limit - 2 
-}
+
 if(limit <= 0){
 limit = 1	
-
+}
 
 
 while (x <= limit){	
@@ -2703,7 +2704,7 @@ text += 'addmercrec "Golden Mirror" 100 1 150 0 0\n'
 if(shuffle2 === 15){
 text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
 }
-
+}
 
 text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
 text += 'nostdtroops  \n'
@@ -2750,7 +2751,7 @@ if(shuffle2 === 6){
 text += 'addstartterr 70 \n'	
 }		
 text += ' \n'
-}
+
 dump += text
 return dump
   var element = document.createElement('a');
