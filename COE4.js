@@ -388,7 +388,7 @@ let team2_hoburg = [
 	{name: "Hogmeister", gold: 25, iron: 0, chance: 10, goldplus: 5},	
 
 ]
-let team3_hoburg = ["Saphire Iron Dragon"
+let team3_hoburg = [
 ]
 let team3_2_hoburg = [		 
 
