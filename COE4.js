@@ -16,367 +16,6 @@ let v = 0
 let four
 let roll
 let limit
-
-let team1_melee = [
-//vanilla humans
-	{name: "Spearman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Swordsman", num: 5, gold: 50, iron: 5, chance: 100},	
-	{name: "Heavy Infantry", num: 5, gold: 50, iron: 25, chance: 100},
-	{name: "Crossbowman", num: 5, gold: 50, iron: 5, chance: 100},	
-	{name: "Catapult", num: 1, gold: 25, iron: 50, chance: 100},	
-	{name: "Bandit", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Halberdier", num: 5, gold: 50, iron: 5, chance: 100},	
-	{name: "Pikeneer", num: 5, gold: 50, iron: 5, chance: 100},
-	{name: "Trebuchet", num: 1, gold: 50, iron: 50, chance: 100},	
-	{name: "War Dog", num: 4, gold: 25, iron: 0, chance: 100},	
-	{name: "Zweihander", num: 5, gold: 50, iron: 10, chance: 100},
-	
-//El	
-	{name: "Flagellant", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Templar", num: 3, gold: 50, iron: 25, chance: 100},
-	{name: "Temple Guard", num: 5, gold: 50, iron: 5, chance: 100},
-// troll
-	{name: "Ettin", num: 1, gold: 75, iron: 0, chance: 10},
-	{name: "Forest Giant", num: 1, gold: 80, iron: 0, chance: 5},
-	{name: "Forest Troll", num: 1, gold: 40, iron: 10, chance: 10},	
-	{name: "Goblin Archer", num: 10, gold: 50, iron: 0, chance: 100},
-	{name: "Goblin", num: 15, gold: 50, iron: 0, chance: 100},	
-	{name: "Goblin Spearman", num: 15, gold: 50, iron: 0, chance: 100},	
-	{name: "Ogre", num: 1, gold: 25, iron: 0, chance: 100},	
-	{name: "Hill Giant", num: 1, gold: 110, iron: 0, chance: 5},
-	{name: "Rock Troll", num: 1, gold: 50, iron: 60, chance: 10},
-	{name: "Troll", num: 1, gold: 50, iron: 20, chance: 10},
-	{name: "Wolf Kin", num: 10, gold: 50, iron: 0, chance: 100},
-	{name: "Wolf Kin Reaver", num: 7, gold: 50, iron: 10, chance: 100},
-//bakemono
-	{name: "Bakemono Soldier", num: 5, gold: 25, iron: 1, chance: 100},
-	{name: "Bakemono Swordsman", num: 5, gold: 25, iron: 3, chance: 100},
-	{name: "O Bakemono", num: 1, gold: 25, iron: 0, chance: 100},
-	{name: "Dai Bakemono", num: 3, gold: 50, iron: 15, chance: 100},
-	{name: "Aka Oni", num: 3, gold: 60, iron: 0, chance: 10},
-	{name: "Ao Oni", num: 3, gold: 60, iron: 0, chance: 10},
-	{name: "Kappa", num: 4, gold: 50, iron: 25, chance: 100},
-	{name: "Karasu Tengu", num: 2, gold: 50, iron: 10, chance: 100},
-	{name: "Mezu", num: 1, gold: 50, iron: 5, chance: 10},
-	
-//barbarian
-	{name: "Barbarian Lancer", num: 5, gold: 50, iron: 10, chance: 100},
-	{name: "Barbarian Swordsman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Barbarian Lancer", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Barbarian Warrior", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Crystal Amazon", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Garnet Amazon", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Jade Amazon", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Onyx Amazon", num: 5, gold: 50, iron: 0, chance: 100},
-	
-//Hoburg
-	{name: "Burgmeister Guard", num: 10, gold: 40, iron: 10, chance: 100},
-	{name: "Hoburg Defender", num: 15, gold: 50, iron: 10, chance: 100},
-	{name: "Hoburg Militia", num: 15, gold: 50, iron: 0, chance: 100},
-	{name: "Hoburg Pikeneer", num: 10, gold: 30, iron: 5, chance: 100},
-	{name: "Hoburg Soldier", num: 15, gold: 50, iron: 5, chance: 100},
-	{name: "Hog Knight", num: 5, gold: 50, iron: 10, chance: 100},
-	
-//Demon
-	{name: "Imp", num: 5, gold: 50, iron: 0, chance: 100},	
-	
-//Druid
-	{name: "Barechested Swordsman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Barechested Warrior", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Beast Cavalry", num: 3, gold: 50, iron: 5, chance: 100},	
-	{name: "Boar Warrior", num: 4, gold: 50, iron: 10, chance: 100},
-	{name: "Hornblower", num: 1, gold: 30, iron: 0, chance: 100},
-	{name: "Barechested Slinger", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Barechested Swordsman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Barechested Warrior", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Beast Cavalry", num: 3, gold: 50, iron: 5, chance: 100},	
-	{name: "Boar Warrior", num: 4, gold: 50, iron: 10, chance: 100},
-	{name: "Bear", num: 3, gold: 50, iron: 0, chance: 100},
-	{name: "Boar", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Camel", num: 7, gold: 50, iron: 0, chance: 100},
-	{name: "Deer", num: 15, gold: 50, iron: 0, chance: 100},
-	{name: "Dog", num: 8, gold: 50, iron: 0, chance: 100},
-	{name: "Donkey", num: 8, gold: 50, iron: 0, chance: 100},
-	{name: "Fire Ant", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Giant Mantis", num: 3, gold: 50, iron: 0, chance: 100},	
-	{name: "Giant Ant", num: 3, gold: 50, iron: 0, chance: 100},	
-	{name: "Giant Moose", num: 1, gold: 90, iron: 0, chance: 15},
-	{name: "Giant Rat", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Horse", num: 4, gold: 50, iron: 0, chance: 100},	
-	{name: "Goat", num: 15, gold: 50, iron: 0, chance: 100},
-	{name: "Great Boar", num: 3, gold: 50, iron: 0, chance: 100},
-	{name: "Rabbit", num: 20, gold: 50, iron: 0, chance: 100},	
-	{name: "Rat", num: 20, gold: 50, iron: 0, chance: 100},
-	{name: "Snake", num: 10, gold: 50, iron: 0, chance: 100},
-	{name: "Serpent", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Wolf", num: 6, gold: 50, iron: 0, chance: 100},
-
-//Dwarf
-	{name: "Dwarf Guard", num: 5, gold: 0, iron: 60, chance: 100},
-	{name: "Dwarf Warrior", num: 5, gold: 0, iron: 50, chance: 100},
-	{name: "Dwarf", num: 5, gold: 0, iron: 40, chance: 100},
-	{name: "Dwarven Ballista", num: 1, gold: 0, iron: 60, chance: 100},		
-
-//Enchanter
-	{name: "Animated Armor", num: 5, gold: 0, iron: 50, chance: 100},
-	{name: "Terracotta Soldier", num: 5, gold: 60, iron: 0, chance: 100},
-	{name: "Dancing Sword", num: 5, gold: 40, iron: 5, chance: 100},	
-	{name: "Gargoyle", num: 1, gold: 20, iron: 5, chance: 100},	
-
-//cult
-	{name: "Deep One", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Deep One Warrior", num: 5, gold: 50, iron: 5, chance: 100},
-	{name: "Shambler", num: 4, gold: 50, iron: 8, chance: 100},
-	{name: "Yithian", num: 1, gold: 40, iron: 0, chance: 25},	
-	{name: "War Shambler", num: 4, gold: 50, iron: 20, chance: 100},		
-
-//Baal
-	{name: "Ba'alite Heavy Infantry", num: 5, gold: 50, iron: 25, chance: 100},
-	{name: "Ba'alite Spearman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Ba'alite Zealot", num: 5, gold: 50, iron: 5, chance: 100},	
-	{name: "Large Spider", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Scorpion", num: 10, gold: 50, iron: 0, chance: 100},
-
-	//Dryad
-	{name: "Satyr", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Centaur", num: 3, gold: 50, iron: 0, chance: 100},
-	{name: "Centauride", num: 3, gold: 50, iron: 0, chance: 100},	
-	{name: "Minotaur", num: 3, gold: 50, iron: 0, chance: 100},
-	{name: "Harpy", num: 5, gold: 50, iron: 0, chance: 100},	
-
-	//Pale One
-	{name: "Pale One", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Pale One Soldier", num: 5, gold: 50, iron: 5, chance: 100},
-	{name: "Cavern Guard", num: 5, gold: 50, iron: 20, chance: 100},
-	{name: "Ancient Hurler", num: 1, gold: 40, iron: 0, chance: 25},	
-	{name: "Ancient Pale One", num: 1, gold: 40, iron: 15, chance: 25},	
-	{name: "Seal Guard", num: 1, gold: 50, iron: 25, chance: 10},
-	
-	//big dumb jaguar man
-	{name: "Tribal Warrior", num: 7, gold: 50, iron: 0, chance: 100},
-	{name: "Jungle Warrior", num: 6, gold: 50, iron: 0, chance: 100},
-	{name: "Feathered Warrior", num: 5, gold: 50, iron: 5, chance: 100},
-	{name: "Jaguar Warrior", num: 5, gold: 50, iron: 0, chance: 25},	
-	{name: "Ancient Pale One", num: 1, gold: 40, iron: 15, chance: 25},	
-	{name: "Seal Guard", num: 1, gold: 50, iron: 25, chance: 10},
-		
-	//mean little boy
-	{name: "Hobmark Soldier", num: 15, gold: 50, iron: 5, chance: 100},
-	{name: "Hobmark Defender", num: 15, gold: 50, iron: 10, chance: 100},
-	{name: "Hobmark Hammer", num: 10, gold: 30, iron: 5, chance: 100},	
-	{name: "Markgraf Guard", num: 10, gold: 40, iron: 10, chance: 100},	
-	{name: "Hog Hussar", num: 5, gold: 50, iron: 5, chance: 100},
-		
-	//warlock
-	{name: "Lesser Fire", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Lesser Water", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Lesser Earth", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Winter Wolf", num: 3, gold: 50, iron: 0, chance: 100},	
-
-	// witch
-	
-	{name: "Androphag Cavalry", num: 5, gold: 50, iron: 10, chance: 100},
-	{name: "Androphag Spearman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Black Cat Familiar", num: 25, gold: 50, iron: 0, chance: 100},	
-	{name: "Crocodile", num: 1, gold: 20, iron: 0, chance: 100},	
-	{name: "Frog", num: 25, gold: 50, iron: 0, chance: 100},	
-	{name: "Giant Toad", num: 1, gold: 40, iron: 0, chance: 100},
-	{name: "Marsh Worm", num: 1, gold: 30, iron: 0, chance: 100},	
-	{name: "Giant Snail", num: 8, gold: 50, iron: 0, chance: 100},
-	{name: "Hydra Hatchling", num: 1, gold: 20, iron: 0, chance: 100},	
-	
-	//Senator
-	{name: "Hastati", num: 5, gold: 45, iron: 5, chance: 100},
-	{name: "Princep", num: 5, gold: 50, iron: 10, chance: 100},
-	{name: "Praetorian Guard", num: 5, gold: 60, iron: 20, chance: 100},
-	{name: "Velite", num: 5, gold: 40, iron: 0, chance: 100},
-	
-//weird	
-	{name: "Dragon Hatchling", num: 1, gold: 25, iron: 5, chance: 10},
-	{name: "Cyclops", num: 1, gold: 120, iron: 0, chance: 10},
-	{name: "Siren", num: 1, gold: 25, iron: 0, chance: 50},
-	{name: "Sinner", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Brass Claw Horror", num: 2, gold: 70, iron: 20, chance: 100},
-	{name: "Float Cat Horror", num: 1, gold: 40, iron: 0, chance: 100},
-	{name: "Hybrid Fisherman", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Hybrid Soldier", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Runner", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Lizardman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Lizardman Warrior", num: 5, gold: 50, iron: 5, chance: 100},
-	{name: "Caveman", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Voi Spearman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Voi Axeman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Peshti Spearman", num: 5, gold: 50, iron: 5, chance: 100},
-	{name: "Militia", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Heavy Spearman", num: 5, gold: 50, iron: 25, chance: 100},
-	{name: "Light Cavalry", num: 4, gold: 50, iron: 0, chance: 100},
-	{name: "Heavy Cavalry", num: 4, gold: 50, iron: 20, chance: 100},
-	{name: "Lion Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Hyena Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Ichtyid Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "War Elephant", num: 1, gold: 65, iron: 0, chance: 10},		
-	{name: "Wolf Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
-	]
-
-	
-let team1_ranged = [
-//vanilla humans
-	{name: "Archer", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Crossbowman", num: 5, gold: 50, iron: 5, chance: 100},		
-	{name: "Bandit", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Slinger", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Scout", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Longbowman", num: 4, gold: 50, iron: 0, chance: 100},	
-	{name: "Tower Guard", num: 5, gold: 50, iron: 15, chance: 100},		
-	
-// troll
-	{name: "Goblin Archer", num: 10, gold: 50, iron: 0, chance: 100},
-//bakemono
-	{name: "Bakemono Archer", num: 5, gold: 25, iron: 1, chance: 100},
-	{name: "Dai Bakemono Archer", num: 3, gold: 50, iron: 15, chance: 100},
-	
-//barbarian
-	{name: "Barbarian Bowman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Barbarian Cavalry", num: 5, gold: 50, iron: 0, chance: 100},
-	
-//Hoburg
-	{name: "Hoburg Crossbow", num: 15, gold: 50, iron: 5, chance: 100},
-	{name: "Hoburg Slinger", num: 15, gold: 50, iron: 0, chance: 100},
-		
-	
-//Druid
-	{name: "Barechested Slinger", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Hornblower", num: 1, gold: 30, iron: 0, chance: 100},
-	{name: "Barechested Slinger", num: 5, gold: 50, iron: 0, chance: 100},
-
-//Dwarf
-	{name: "Dwarf Arbalest", num: 5, gold: 0, iron: 50, chance: 100},	
-	{name: "Outdoor Dwarf", num: 5, gold: 30, iron: 30, chance: 100},	
-
-//Enchanter
-	{name: "Living Bow", num: 5, gold: 50, iron: 0, chance: 100},	
-	
-
-//Baal
-	{name: "Ba'alite Archer", num: 5, gold: 50, iron: 0, chance: 100},
-	
-		
-	{name: "Hobmark Crossbow", num: 15, gold: 50, iron: 5, chance: 100},
-			
-
-	// witch
-	
-	{name: "Androphag Archer", num: 5, gold: 50, iron: 0, chance: 100},
-	
-	
-//weird	
-	{name: "Voi Archer", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Wolf Tribe Bowman", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Pygmy", num: 5, gold: 50, iron: 0, chance: 100},	
-	]	
-
-	
-let team2 = [
-//vanilla humans
-	{name: "Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},
-	{name: "Commander", gold: 40, iron: 0, chance: 10, goldplus: 10},
-	{name: "Mounted Chief", gold: 40, iron: 0, chance: 10, goldplus: 10},	
-	{name: "Soothsayer", gold: 40, iron: 0, chance: 5, goldplus: 20},
-	{name: "Mounted Commander", gold: 40, iron: 0, chance: 10, goldplus: 10},
-	{name: "Priest", gold: 50, iron: 0, chance: 5, goldplus: 10},	
-	{name: "Monk", gold: 50, iron: 0, chance: 10, goldplus: 10},
-	{name: "Hedge Wizard", gold: 40, iron: 0, chance: 5, goldplus: 40},
-	{name: "High Lord", gold: 40, iron: 5, chance: 10, goldplus: 50},
-	{name: "Scout", gold: 1, iron: 0, chance: 10, goldplus: 40},
-	{name: "Assassin", gold: 70, iron: 0, chance: 10, goldplus: 50},
-	{name: "White Wizard", gold: 100, iron: 0, chance: 3, goldplus: 100},
-	{name: "Alchemist", gold: 40, iron: 0, chance: 10, goldplus: 10},
-	{name: "Court Mage", gold: 40, iron: 0, chance: 10, goldplus: 10},
-	{name: "Princess", gold: 40, iron: 0, chance: 5, goldplus: 100},
-
-//weird	
-	{name: "Dragon Hatchling", gold: 40, iron: 0, chance: 5, goldplus: 40},
-	{name: "Mind Slime Horror", gold: 60, iron: 0, chance: 5, goldplus: 40},
-	{name: "Peddler", gold: 20, iron: 0, chance: 5, goldplus: 40},	
-	{name: "Amphiptere", gold: 70, iron: 0, chance: 3, goldplus: 80},
-	{name: "Wyvern", gold: 50, iron: 0, chance: 3, goldplus: 70},
-	{name: "Gargoyle", gold: 50, iron: 0, chance: 5, goldplus: 30},
-	{name: "Wood Golem", gold: 50, iron: 0, chance: 3, goldplus: 50},
-	{name: "Animated Armor", gold: 50, iron: 0, chance: 5, goldplus: 10},
-	{name: "Kraken", gold: 60, iron: 0, chance: 5, goldplus: 50},
-	{name: "Yithian Sage", gold: 60, iron: 0, chance: 5, goldplus: 60},
-	{name: "Brass Claw Horror", gold: 70, iron: 0, chance: 5, goldplus: 40},
-	{name: "Cave Grub", gold: 60, iron: 0, chance: 5, goldplus: 60},
-	{name: "Fire Elemental", gold: 70, iron: 0, chance: 5, goldplus: 70},
-	{name: "Water Elemental", gold: 70, iron: 0, chance: 5, goldplus: 70},
-	{name: "Air Elemental", gold: 70, iron: 0, chance: 5, goldplus: 70},
-	{name: "Earth Elemental", gold: 70, iron: 0, chance: 5, goldplus: 70},
-	{name: "Lake Troll", gold: 60, iron: 20, chance: 5, goldplus: 20},
-	{name: "Kitsune", gold: 60, iron: 0, chance: 5, goldplus: 40},
-	{name: "Swamp Drake", gold: 40, iron: 0, chance: 5, goldplus: 30},
-	{name: "Reveler", gold: 30, iron: 0, chance: 5, goldplus: 30},
-	{name: "Centurion", gold: 30, iron: 0, chance: 5, goldplus: 30},
-	{name: "Leo", gold: 40, iron: 0, chance: 5, goldplus: 30},
-	{name: "Renata", gold: 50, iron: 0, chance: 5, goldplus: 20},	
-	{name: "Renatus", gold: 110, iron: 0, chance: 5, goldplus: 20},
-	{name: "Serpent Acolyte", gold: 50, iron: 0, chance: 5, goldplus: 20},	
-	{name: "Uba", gold: 50, iron: 0, chance: 5, goldplus: 50},
-	{name: "Caveman Chief", gold: 40, iron: 0, chance: 5, goldplus: 10},
-	{name: "Ichtyid Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},	
-	{name: "Pale One Commander", gold: 50, iron: 0, chance: 10, goldplus: 10},
-	{name: "Giant Snail", gold: 30, iron: 0, chance: 10, goldplus: 10},	
-	{name: "Mound King", gold: 30, iron: 0, chance: 10, goldplus: 10},	
-	{name: "Harpy", gold: 30, iron: 0, chance: 10, goldplus: 10},
-	{name: "Satyr Commander", gold: 30, iron: 0, chance: 10, goldplus: 10},
-	{name: "Dancing Sword", gold: 10, iron: 0, chance: 10, goldplus: 10},
-	{name: "Living Bow", gold: 20, iron: 0, chance: 10, goldplus: 10},
-	]
-
-let team3 = ["Beholder","Eye Tyrant","King","Senator",'Python','Hidden Aboleth','Scorpion Man',
-			 "High Lord","Yeti","Wyrm","Moon Horror",'Horror Olm',"Ormr",
-			 "Troll King","Doppelganger Captain","Gore Tide Horror", "Olm Sage", "King of the Deep",
-			 "Dragon","Captain","Freak Lord","Lizardman Shaman","Spine Membrane Horror","Horror Mantis",
-			 "Wood Golem","Stone Golem",'Flesh Golem','Gargoyle','Troglodyte','Lesser Demon',"Serpent Fiend","Spine Devil",		 
-			 "Hydra","Formless Spawn","Yithian Sage","Displacer Beast","Ichtyid Captain",'Harlequin',
-			 "Carrion","Dracolich","Mummy","Tartarian Spirit","Barbarian Leader","Mounted Chief",
-			 "Manticore","Demonic Locust","Goblin","Hidden Freak","Large Spider","Dream Horror","Anakite Captain",
-			 "Lake Troll King","Gelatinous Cube","Black Cat Familiar","Creeping Doom","Rakshasa","Hanya",
-			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard",'Commander','Mounted Commander',
-			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
-			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Mound King","Snake",
-			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout",'Markgraf',
-			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',			 
-			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo","Miracle Eye"
-			 ]
-			 
-let team3_2 = ["High Lord","Troll King","Doppelganger Captain", "Olm", "King of the Deep","Ichtyid Captain",
-			 "Captain","Hydra Hatchling","Yithian","Wood Golem","Stone Golem",'Flesh Golem','Gargoyle','Troglodyte',
-			 "Barbarian Leader","Mounted Chief","Hogmeister",'Wolf','Serpent','Senator','Harlequin',"Hanya",
-			 "Demonic Locust",'Scorpion Beast','Lesser Fire','Lesser Earth',"Goblin",'Commander','Mounted Commander',
-			 "Lake Troll","Black Cat Familiar",'Lesser Water','Cave Grub',"Large Spider",'Lesser Demon',"Serpent Fiend","Spine Devil",
-			 "Rabbit","Beast Bat","Freak Lord","Lizardman Shaman",'Hidden Aboleth',"Anakite Captain",
-			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape","Spine Membrane Horror","Horror Mantis",
-			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Mound King","Snake",'Markgraf',
-			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',
-			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo","Miracle Eye",
-			 'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
-			 ]
-
-let team3_3 = ["Beholder","King","Senator","Goblin","Hidden Freak","Large Spider","Ichtyid Captain",
-			 "High Lord","Yeti","Wood Golem","Stone Golem",'Flesh Golem','Priest','Commander','Mounted Commander',
-			 "Troll King","Doppelganger Captain", "Olm Sage", "King of the Deep","Rakshasa",'Harlequin',
-			 "Captain",'Scorpion Beast','Lesser Fire','Lesser Earth','Gargoyle',"Olm Sage","Spine Membrane Horror","Horror Mantis",
-			 "Hydra","Formless Spawn","Yithian Sage","Displacer Beast",'Lesser Water','Cave Grub',"Anakite Captain",
-			 "Carrion","Mummy","Barbarian Leader","Mounted Chief",'Troglodyte',"Dream Horror",'Markgraf',
-			 "Manticore","Demonic Locust",'Scorpion Beast','Lesser Fire','Lesser Earth',"Hanya",
-			 "Lake Troll King","Gelatinous Cube","Black Cat Familiar","Creeping Doom",'Lesser Demon',"Serpent Fiend","Spine Devil",
-			 "Monster Toad","Giant Snail","Serpent Priest","White Wizard","Freak Lord","Lizardman Shaman",
-			 "Rabbit","Golden Mirror","Beast Bat",'Fire Elemental','Water Elemental','Air Elemental','Earth Elemental',
-			 "Earth Gnome","Sylph","Undine","Winter Wolf","Ape",'Hidden Aboleth',"Mound King",
-			 "Assassin","Monk","Court Mage","Spearman","Ghost","Wight","Scout","Snake","Miracle Eye",		 
-			 "Goblin Murderer",'Ettin','Troll','Rock Troll','Forest Troll','Dog','Harpy','Minotaur Lord',
-			 "Dancing Sword","Living Bow","Necrotod","Deep One","Weirdo"			 
-			 ]					 
 			 
 let team4 = ['3','9','20','22','23','24','25','26','28','29','30','31',
 			 '38','57','106','113','110','112','114','121','124','151','152','154',
@@ -832,7 +471,8 @@ let team3_3_cult = ["Weirdo","Insane Fisherman","Deep One","Shambler"
 let team1_melee_enchanter = [
 	{name: "Animated Armor", num: 5, gold: 0, iron: 50, chance: 100},
 	{name: "Terracotta Soldier", num: 5, gold: 60, iron: 0, chance: 100},
-	{name: "Dancing Sword", num: 5, gold: 40, iron: 5, chance: 100},	
+	{name: "Dancing Sword", num: 5, gold: 30, iron: 5, chance: 100},	
+	{name: "Terracotta Soldier", num: 5, gold: 40, iron: 5, chance: 100},
 	{name: "Gargoyle", num: 1, gold: 20, iron: 5, chance: 100},		
 ]
 let team1_ranged_enchanter = [
@@ -852,7 +492,7 @@ let team3_enchanter = ["Oak Golem"
 let team3_2_enchanter = ["Stone Golem","Necrotod"		 
 
 ]
-let team3_3_enchanter = ["Wood Golem",'Flesh Golem',"Dancing Sword","Living Bow","Animated Armor"	
+let team3_3_enchanter = ["Wood Golem",'Flesh Golem',"Dancing Sword","Living Bow","Animated Armor","Gargoyle"	
 ]
 
 //Baal
@@ -895,7 +535,7 @@ let team2_paleone = [
 	{name: "Pale One Commander", gold: 50, iron: 0, chance: 10, goldplus: 10},
 	{name: "Pale One Scout", gold: 40, iron: 0, chance: 5, goldplus: 10},
 ]
-let team3_paleone = ["Sirrush","Manticore","Scorpion Man"
+let team3_paleone = [
 
 
 ]
@@ -956,7 +596,7 @@ let team3_warlock = ["Lake Troll King"
 let team3_2_warlock = ["Fire Elemental","Water Elemental","Earth Elemental","Air Elemental","Earth Gnome","Lake Troll","Yeti"
 
 ]
-let team3_3_warlock = ["Lesser Fire","Lesser Water","Lesser Earth","Earth Gnome","Salamander","Flame Spirit","Sylph","Winter Wolf","Cloud Elemental"
+let team3_3_warlock = ["Lesser Fire","Lesser Water","Lesser Earth","Earth Gnome","Salamander","Flame Spirit","Sylph","Winter Wolf","Cloud Elemental","Mud Warrior"
 ]
 
 //Witch
@@ -1856,6 +1496,7 @@ team3_empty = team3_empty.concat(team3_weird)
 team3_2_empty = team3_2_empty.concat(team3_2_weird)
 team3_3_empty = team3_3_empty.concat(team3_3_weird)
 }
+
 
 if(pokemon === false){	
 team3_2_empty = team3_2_empty.concat(team3_3_empty)
