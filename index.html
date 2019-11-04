@@ -777,6 +777,39 @@ div {
   cursor: pointer;
        position: absolute;  
 }
+
+  .jokes {
+  background-color: lightgrey;
+  border: inset gold;
+  width: 135; 
+  bottom: -540;
+  right: -02; 
+  color: black;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+       position: absolute;  
+}
+  .jokebutton {
+  background-color: darkgrey;
+  border: inset gold;
+  width: 135; 
+  bottom: -575;
+  right: -02; 
+  color: black;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+       position: absolute;  
+}
 }
 
 </style>
@@ -951,7 +984,11 @@ Choose how many custom classes you want. Conquest of Elysium can only load a max
 <b>Start with Level 2 Rituals</b><input type="checkbox" id="rit2" value="true"> 
 </div>
 <div class="button_est2">
-<b> <p id="mainout" style="font-family:System;"></p> </b>
+<b>Level of Randomization</b><br>
+<select id="saneshuffle">
+  <option value="insane">Insane</option>
+  <option value="swap">Swap Vanilla Units</option>
+</select>
 </div>
 <div class="button_est">
 <b> <p id="mainout2" style="font-family:System;"></p></b>
