@@ -35,7 +35,7 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',"Re
 			 'Seducing','Bloodthirsty','Imprisoned','Yearning','Emerging','Aspiring','Mourning','Loyal',
 			 'Pitiful','Cherubic','Secretive','Thunder','Polar','Crying','Gravel','Toothy',
 			 'Bile','Vomit','Tribal','Horned','Electronic','Winged','Nubile','Encrusted',
-			 'Bejeweled','Honest','Robber','Amoeba','Disgusting','Yearly',"Mystic","Geotic",
+			 'Bejeweled','Honest','Robber','Amoeba','Disgusting','Yearly',"Mystic","Goetic",
 			 "Ironside","Red","Blue","Yellow","Unthawed","Mute","Deaf","Blind","Vorpal",
 			 "Green","Pink","Purple","Orange","Grey","Black","White","Silver","Gold",
 			 "Trove","Witch","Feel","Crusader","Honey","Hugging","Dungeon","Boss","Wishing"
@@ -234,7 +234,6 @@ let team1_melee_druid = [
 	{name: "Barechested Warrior", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Beast Cavalry", num: 3, gold: 50, iron: 5, chance: 100},	
 	{name: "Boar Warrior", num: 4, gold: 50, iron: 10, chance: 100},
-	{name: "Hornblower", num: 1, gold: 30, iron: 0, chance: 100},
 	{name: "Barechested Slinger", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Barechested Swordsman", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Barechested Warrior", num: 5, gold: 50, iron: 0, chance: 100},
@@ -249,7 +248,8 @@ let team1_ranged_druid = [
 ]
 let team2_druid = [
 	{name: "Vergobret", gold: 30, iron: 0, chance: 5, goldplus: 10},
-	{name: "Chieftain", gold: 40, iron: 0, chance: 3, goldplus: 10},		
+	{name: "Chieftain", gold: 40, iron: 0, chance: 5, goldplus: 10},
+	{name: "Hornblower", gold: 25, iron: 0, chance: 3, goldplus: 10},	
 ]
 let team3_druid = ['Eye Tyrant',"Beholder",
 ]
@@ -668,7 +668,7 @@ let team3_demon = ["Greater Demon"
 let team3_2_demon = ["Serpent Fiend","Devil","Storm Demon"
 
 ]
-let team3_3_demon = ["Imp","Lesser Demon","Bone Imp","Fiery Imp"
+let team3_3_demon = ["Imp","Lesser Demon","Fiery Imp"
 ]
 
 //Undead
@@ -764,6 +764,7 @@ let	text
 let picky
 let shuffle 
 let shuffle2
+let shuffle3
 let leader
 let leader2	 	 
 let Coin
@@ -811,7 +812,7 @@ var demoncheck = false;
 var priestcheck = false;
 
 var pokemon = false;
-
+var saneshuffle = "insane";
 let hproll
 
 
@@ -820,8 +821,7 @@ function test(){
 classnumber = parseInt(document.getElementById("classnumber").value, 10);
 unitnumber = parseInt(document.getElementById("unitnumber").value, 10);
 comnumber = parseInt(document.getElementById("comnumber").value, 10);	
-setInterval(function test2(){document.getElementById('mainout').innerHTML = "Classes to be Generated: " + (classnumber)
-})
+
 setInterval(function test3(){document.getElementById('mainout2').innerHTML = "Total Classes in Game after Generation: " + (classnumber + 21)
 })
 }
@@ -1303,6 +1303,7 @@ senatorcheck = document.getElementById("senatorcheck").checked;
 witchcheck = document.getElementById("witchcheck").checked;
 weirdcheck = document.getElementById("weirdcheck").checked;
 pokemon = document.getElementById("pokemon").checked;
+saneshuffle = document.getElementById("saneshuffle").value;
 
 let team1_melee_empty = [
 	{name: "Spearman", num: 5, gold: 50, iron: 0, chance: 100},
@@ -1881,6 +1882,717 @@ text += 'setclassname "'+ mymonster + '" \n'
 text += 'class' + descrroll
 text += 'clearrec  \n'
 
+shuffle3 = Math.floor(Math.random() * 17) + 1
+
+if(saneshuffle === "swap"){
+
+if(shuffle3 === 1){	
+text += 'addunitrec "Longbowman" 100 4 50 0 0 \n' 
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Zweihander" 100 5 50 0 10 \n'
+text += 'addunitrec "Tower Guard" 100 5 50 0 15 \n'
+text += 'addunitrec "Cavalryman" 100 3 50 0 20 \n'
+text += 'addunitrec "War Dog" 100 4 25 0 0 \n' 
+text += 'addunitrec "Ballista" 100 2 25 0 50 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addunitrec "Trebuchet" 100 1 50 0 50 \n'
+text += 'addunitrec "Spearman" 5 10 70 0 0 \n' 
+text += 'addunitrec "Archer" 5 10 70 0 0 \n' 
+text += 'addunitrec "Crossbowman" 5 10 70 0 7 \n' 
+text += 'addunitrec "Swordsman" 5 10 70 0 7 \n'
+text += 'addunitrec "Trebuchet" 10 2 75 0 75 \n' 
+text += 'addcomrec "High Lord" 20 50 10 10 \n' 
+text += 'reclimiter "+Hedge Wizard" \n'
+text += 'addcomrec "Court Mage" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Alchemist" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Monk" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+
+}
+
+if(shuffle3 === 2){	
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 3 && witchcheck === true){	
+text += 'addunitrec "Androphag Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Androphag Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Androphag Cavalry" 100 5 50 0 5 \n' 
+text += 'addcomrec "Androphag Lord" 5 50 10 0 \n'
+text += 'addcomrec "Manflayer" 2 70 20 0 \n'
+}
+
+if(shuffle3 === 3 && witchcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 4 && baalcheck === true){	
+text += 'addunitrec "Ba' + illapp + 'alite Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Ba' + illapp + 'alite Spearman" 100 5 50 0 0 \n'
+text += 'addunitrec "Ba' + illapp + 'alite Zealot" 100 5 50 0 5 \n'
+text += 'addunitrec "Ba' + illapp + 'alite Heavy infantry" 100 5 50 0 25 \n' 
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+}
+
+if(shuffle3 === 4 && baalcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck === true){	
+text += 'addunitrec "Bakemono Archer" 100 5 25 0 1 \n' 
+text += 'addunitrec "Bakemono Soldier" 100 5 25 0 1 \n'
+text += 'addunitrec "Bakemono Swordsman" 100 5 25 0 3 \n'
+text += 'addunitrec "Dai Bakemono" 25 3 50 0 15 \n'
+text += 'addunitrec "Dai Bakemono Archer" 25 3 50 0 15 \n'
+text += 'addunitrec "O Bakemono" 25 1 25 0 0 \n'
+text += 'addunitrec "Bakemono Bowman" 100 5 25 0 0 \n'
+text += 'addunitrec "Bakemono Sho" 100 5 25 0 0 \n'
+text += 'addcomrec "Bakemono General" 5 50 10 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck === true){	
+text += 'addunitrec "Barbarian Warrior" 100 7 50 0  0 \n'
+text += 'addunitrec "Barbarian Bowman" 100 7 50 0 0 \n'
+text += 'addunitrec "Barbarian Swordsman" 100 7 50 0 10 \n'
+text += 'addunitrec "Barbarian Cavalry" 100 4 50 0 0 \n'
+text += 'addunitrec "Barbarian Lancer" 100 4 50 0 10 \n'
+text += 'addunitrec "Barbarian Werebear" 10 1 25 0 0 \n'
+text += 'addcomrec  "Spirit Guide" 8 75 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Soothsayer" 8 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Barbarian Leader" 100 25 10 0 \n'
+text += 'reclimiter "-Barbarian Leader" \n'
+text += 'addcomrec  "Mounted Chief" 10 25 10 0 \n'
+text += 'addmercrec "Mounted Scout" 15 1 15 10 0 \n'
+text += 'addcomrec  "Crystal Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Crystal Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Crystal Priestess" \n'
+text += 'addunitrec "Crystal Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Crystal Priestess" \n'
+text += 'addcomrec  "Garnet Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Garnet Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Garnet Priestess" \n'
+text += 'addunitrec "Garnet Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Garnet Priestess" \n'
+text += 'addcomrec  "Jade Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Jade Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Jade Priestess" \n'
+text += 'addunitrec "Jade Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Jade Priestess" \n'
+text += 'addcomrec  "Onyx Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Onyx Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Onyx Priestess" \n'
+text += 'addunitrec "Onyx Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Onyx Priestess" \n'
+}
+
+if(shuffle3 === 6 && barbariancheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck === true){	
+text += 'addunitrec "Veles" 100 5 40 0 0 \n'
+text += 'addunitrec "Hastatus" 100 5 45 0 5 \n'
+text += 'addunitrec "Princeps" 100 5 50 0 10 \n'
+text += 'addunitrec "Princeps Solaris" 100 5 55 0 10 \n'
+text += 'reclimiter "+Leo" \n'
+text += 'addunitrec "Triarius" 100 5 55 0 20 \n'
+text += 'addunitrec "Praetorian Guard" 5 5 60 0 20 \n'
+
+text += 'addunitrec "Ballista" 100 2 25 0 50 \n'
+text += 'addunitrec "Hastatus" 5 10 65 0 5 \n'
+text += 'addmercrec "Standard" 50 1 20 0 0 \n'  
+text += 'addmercrec "Archer" 20 5 50 0 0 \n'
+text += 'addmercrec "Gladiator" 20 2 25 0 0 \n'
+text += 'addmercrec "Retiarius" 1 2 25 0 0 \n'
+
+text += 'addcomrec "Centurion" 25 35 10 0 \n'
+text += 'addcomrec "Leo" 5 50 20 0 \n'
+text += 'addcomrec "Heliodromus" 1 90 20 0 \n'
+text += 'libraryrec \n'
+text += 'addcomrec "Renata" 5 50 20 0 \n'
+text += 'addcomrec "Renatus" 1 110 20 0 \n'
+text += 'libraryrec \n'
+text += 'addcomrec "Serpent Acolyte" 5 50 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Serpent Priest" 2 90 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Reveler" 5 50 20 0 \n'
+text += 'addcomrec "Augur" 5 50 20 0 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck === true){	
+
+text += 'addunitrec "Pale One" 100 5 50 0 0 \n'
+text += 'addunitrec "Pale One Soldier" 100 5 50 0 5 \n'
+text += 'addunitrec "Cavern Guard" 100 5 50 0 20 \n'
+text += 'addunitrec "Ancient Hurler" 25 1 40 0 0 \n'
+text += 'addunitrec "Ancient Pale One" 25 1 40 0 15 \n'
+text += 'addunitrec "Seal Guard" 25 1 50 0 25 \n'
+
+text += 'addcomrec "Ancient Commander" 5 60 20 15 \n'
+text += 'addcomrec "Pale One Commander" 10 40 10 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 9 && druidcheck === true){	
+
+text += 'addunitrec "Barechested Slinger" 100 5 50 0 0 \n'
+text += 'addunitrec "Barechested Swordsman" 100 5 50 0 0 \n'
+text += 'addunitrec "Barechested Warrior" 100 5 50 0 0 \n'
+text += 'addunitrec "Beast Cavalry" 100 5 50 0 5 \n'
+text += 'addunitrec "Boar Warrior" 15 4 50 0 10 \n'
+
+text += 'addcomrec "Chieftain" 10 40 10 0 \n'
+text += 'addcomrec "Hornblower" 5 25 10 0 \n'
+text += 'addcomrec "Vergobret" 5 30 10 0 \n'
+}
+
+if(shuffle3 === 9 && druidcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck === true){	
+
+text += 'addunitrec "Hoburg Militia" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Slinger" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Soldier" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Pikeneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hoburg Crossbow" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Guard" 100 10 40 0 10 \n'
+text += 'addunitrec "Hoburg Defender" 100 15 50 0 10 \n'
+text += 'addunitrec "Hog Knight" 100 5 50 0 10 \n'
+
+text += 'addcomrec "Hogmeister" 10 25 5 0 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+
+if(shuffle3 === 11 && priestcheck ===true){	
+
+text += 'addunitrec "Tribal Warrior" 100 7 50 0 0 \n'
+text += 'addunitrec "Jungle Warrior" 100 6 50 0 0 \n'
+text += 'addunitrec "Feathered Warrior" 100 5 50 0 5 \n'
+text += 'addunitrec "Jaguar Warrior" 30 5 50 0 0 \n'
+
+}
+
+if(shuffle3 === 11 && priestcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 12 && trollcheck === true){	
+
+text += 'addunitrec  "Goblin" 100 15 50 0 0 \n'
+text += 'addunitrec  "Ogre" 100 1 25 0 0 \n'
+text += 'addunitrec  "Goblin Spearman" 40 15 50 0 0 \n'
+text += 'addunitrec  "Goblin Archer" 20 10 50 0 0 \n'
+text += 'addunitrec  "Wolf Kin" 20 10 50 0 0 \n'
+text += 'addunitrec  "Wolf Kin Reaver" 20 7 50 0 10 \n'
+text += 'addunitrec  "Rock Troll" 20 1 50 0 60 \n'
+text += 'addunitrec  "Troll" 30 1 50 0 20 \n'
+text += 'addunitrec  "Forest Troll" 40 1 40 0 10 \n'
+text += 'addunitrec  "Hill Giant" 5 1 100 0 0 \n'
+text += 'addunitrec  "Ettin" 10 1 75 0 0 \n'
+text += 'addcomrec   "Goblin Chieftain" 7 25 20 0 \n'
+text += 'addcomrec   "Ogre Chief" 3 35 20 0 \n'
+text += 'addcomrec   "Forest Giant" 5 70 20 0 \n'
+
+text += 'addmercrec  "Goblin Murderer" 3 1 10 40 0 \n'
+text += 'addcomrec   "Goblin Hero" 3 10 50 0 \n'
+
+}
+
+if(shuffle3 === 12 && trollcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 13 && elcheck === true){
+
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n'	
+text += 'addunitrec "Archer" 100 5 50 0 0 \n'
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n' 	
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Temple Guard" 100 5 50 0 5 \n'
+text += 'addunitrec "Templar" 100 5 50 0 15  \n'                      
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+
+text += 'addcomrec "Missionary" 5 20 10 0 \n'
+
+}
+
+if(shuffle3 === 13 && elcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck === true){
+text += 'addunitrec "Dwarf Worker" 100 5 30 0 0 \n'
+
+text += 'addunitrec "Dwarf" 100 5 0 0 20 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Warrior" 100 5 0 0 30 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Guard" 100 5 0 0 40 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Arbarlest" 100 5 0 0 30 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Outdoor Dwarf" 100 2 10 0 10 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarven Ballista" 100 1 0 0 40  \n'
+
+text += 'addmercrec "Archer" 3 10 150 0 0 \n'                    
+text += 'addmercrec "Crossbowman" 3 10 150 0 0 \n' 
+text += 'addmercrec "Pikeneer" 3 10 150 0 10 \n'                    
+text += 'addmercrec "Pikeneer" 3 20 250 0 10 \n'                    
+text += 'addmercrec "Spearman" 3 10 150 0 0 \n'                 
+text += 'addmercrec "Swordsman" 3 10 150 0 10 \n'  
+
+text += 'addcomrec "Dwarf Commander" 15 20 10 0 \n'
+
+}
+
+if(shuffle3 === 14 && dwarfcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck === true){
+	
+text += 'addunitrec "Hoburg Militia" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Slinger" 100 15 50 0 0 \n'
+text += 'addunitrec "Hobmark Soldier" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Pikeneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Hammerer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Pickaneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Crossbow" 100 15 50 0 5 \n'
+text += 'addunitrec "Markgraf Guard" 100 10 40 0 10 \n'
+text += 'addunitrec "Hobmark Defender" 100 15 50 0 10 \n'
+text += 'addunitrec "Hog Hussar" 100 5 50 0 5 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 25 \n'
+
+text += 'addcomrec "Hogmeister" 10 25 5 0 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck === true){
+
+text += 'addunitrec "Satyr " 100 5 50 0 0 \n'	
+text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Hoplite" 100 5 25 0 15 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Steel Hoplite" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+
+text += 'addunitrec "Centaur" 100 3 50 0 0 \n'
+text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centaur" \n'
+
+text += 'addunitrec "Minotaur" 100 3 50 0 0 \n'
+text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
+text += 'reclimiter "=Minotaur" \n'
+
+text += 'addunitrec "Harpy" 100 5 50 0 0 \n'
+text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
+text += 'reclimiter "=Harpy" \n'
+
+text += 'addcomrec "Satyr Commander" 10 40 10  0 \n'
+text += 'addcomrec "Hoplite Commander" 5 40 10 5 \n'
+text += 'addcomrec "Centaur Commander" 5 50 15 5 \n'
+text += 'addcomrec "Cataphract Commander" 3 50 15 10 \n'
+
+}
+
+if(shuffle3 === 16 && dryadcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 17){
+text += 'addunitrec "Militia" 100 5 50 0 0 \n' 
+text += 'addunitrec "Slinger" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Light Cavalry" 100 3 50 0 0 \n'
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Tower Guard" 100 5 50 0 15 \n'
+text += 'addunitrec "Cavalryman" 100 3 50 0 20 \n'
+text += 'addunitrec "Heavy Cavalry" 100 3 50 0 20 \n'
+text += 'addunitrec "Heavy Infantry" 100 5 50 0 25 \n'
+text += 'addunitrec "Heavy Spearman" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addunitrec "Spearman" 5 10 70 0 0 \n' 
+text += 'addunitrec "Archer" 5 10 70 0 0 \n' 
+
+text += 'addcomrec "Court Mage" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Alchemist" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "White Wizard" 0 100 100 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Monk" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Priest" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+text += 'addcomrec "Commander" 10 40 10 0 \n'
+text += 'addcomrec "Mounted Commander" 5 40 10 0 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+}
+
+if(shuffle2 === 11){
+text += 'addcomrec "Oracle of Subterranean Fire" 0 150 30 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Oracle of Subterranean Waters" 0 150 30 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Oracle of the Dead" 0 150 30 0 \n'
+text += 'templerec \n'
+}
+if(shuffle2 === 9){
+text += 'addcomrec "Sun Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Blood Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Sky Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Rain Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Moon Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Death Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+}
+if (shuffle2 === 13){	
+text += 'addmercrec "Mirror" 100 1 10 0 0\n'
+text += 'addmercrec "Large Mirror" 100 1 25 0 0\n'
+text += 'addmercrec "Silver Mirror" 100 1 50 0 0\n'
+text += 'addmercrec "Golden Mirror" 100 1 150 0 0\n'
+}
+if(shuffle2 === 15){
+text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
+}
+
+text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
+text += 'clearstartunits  \n'
+if(shuffle3 === 1){	
+text += 'addstartunits "Cavalryman" 5 \n'
+text += 'addstartunits "Spearman" 6 \n'
+text += 'addstartunits "Archer" 5 \n'
+}
+if(shuffle3 === 2){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+if(shuffle3 === 3 && witchcheck === true){	
+text += 'addstartunits "Androphag Spearman" 5 \n'
+text += 'addstartunits "Androphag Archer" 5 \n'
+text += 'addstartunits "Androphag Cavalry" 1 \n'
+}
+if(shuffle3 === 3 && witchcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+if(shuffle3 === 4 && baalcheck === true){	
+text += 'addstartunits "Ba' + illapp + 'alite Spearman" 10 \n'
+text += 'addstartunits "Ba' + illapp + 'alite Archer" 5 \n'
+}
+
+if(shuffle3 === 4 && baalcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck === true){	
+text += 'addstartunits "Bakemono Spearman" 15 \n'
+text += 'addstartunits "Bakemono Sho" 15 \n'
+text += 'addstartunits "Bakemono Bowman" 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck === true){	
+text += 'addstartunits "Barbarian Warrior" 15 \n'
+text += 'addstartunits "Barbarian Bowman" 5 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck === true){	
+text += 'addstartunits "Velite" 10 \n'
+text += 'addstartunits "Hastati" 5 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck === true){	
+text += 'addstartunits "Pale One" 10 \n'
+text += 'addstartunits "Pale One Soldier" 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 9 && druidcheck === true){	
+text += 'addstartunits "Barechested Warrior" 10 \n'
+text += 'addstartunits "Barechested Slinger" 5 \n'
+}
+
+if(shuffle3 === 9 && druidcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck ===true){	
+text += 'addstartunits "Hoburg Crossbow" 10 \n'
+text += 'addstartunits "Hoburg Defender" 5 \n'
+text += 'addstartunits "Hoburg Soldier" 10 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 11 && priestcheck === true){	
+text += 'addstartunits "Tribal Warrior" 10 \n'
+text += 'addstartunits "Jungle Warrior" 10 \n'
+}
+
+if(shuffle3 === 11 && priestcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 12 && trollcheck === true){	
+text += 'addstartunits "Goblin" 15 \n'
+text += 'addstartunits "Rock Troll" 1 \n'
+}
+
+if(shuffle3 === 12 && trollcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 13 && elcheck === true){	
+text += 'addstartunits "Spearman" 10 \n'
+text += 'addstartunits "Halberdier" 8 \n'
+}
+
+if(shuffle3 === 13 && elcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck === true){	
+text += 'addstartunits "Dwarf Worker" 12 \n'
+text += 'addstartunits "Dwarf" 5 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck === true){	
+text += 'addstartunits "Hobmark Soldier" 10 \n'
+text += 'addstartunits "Hobmark Defender" 5 \n'
+text += 'addstartunits "Hobmark Crossbow" 10 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck === true){	
+text += 'addstartunits "Satyr Warrior" 5 \n'
+text += 'addstartunits "Satyr Javelinist" 5 \n'
+text += 'addstartunits "Harpy" 1 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 17){	
+text += 'addstartunits "Militia" 10 \n'
+text += 'addstartunits "Slinger" 10 \n'
+}
+}
+
+if(saneshuffle !== "swap"){
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
 text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
@@ -1888,10 +2600,10 @@ roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
 
 limit = limit - 2 
-
+}
 if(limit <= 0){
 limit = 1	
-}
+
 
 
 while (x <= limit){	
@@ -2010,6 +2722,7 @@ if(hasunits < 9){
 roll = Math.floor(Math.random() * team1_melee_empty.length)	
 text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
 hasunits += team1_melee_empty[roll].num
+}
 }
 roll = Math.floor(Math.random() *  team2_empty.length)	
 
@@ -2550,6 +3263,7 @@ senatorcheck = document.getElementById("senatorcheck").checked;
 witchcheck = document.getElementById("witchcheck").checked;
 weirdcheck = document.getElementById("weirdcheck").checked;
 pokemon = document.getElementById("pokemon").checked;
+saneshuffle = document.getElementById("saneshuffle").value;
 
 let team1_melee_empty = [
 	{name: "Spearman", num: 5, gold: 50, iron: 0, chance: 100},
@@ -2914,6 +3628,685 @@ text += ' \n'
 text += 'selectclass 1 \n'
 text += 'clearrec  \n'
 
+shuffle3 = Math.floor(Math.random() * 17) + 1
+
+if(saneshuffle === "swap"){
+
+if(shuffle3 === 1){	
+text += 'addunitrec "Longbowman" 100 4 50 0 0 \n' 
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Zweihander" 100 5 50 0 10 \n'
+text += 'addunitrec "Tower Guard" 100 5 50 0 15 \n'
+text += 'addunitrec "Cavalryman" 100 3 50 0 20 \n'
+text += 'addunitrec "War Dog" 100 4 25 0 0 \n' 
+text += 'addunitrec "Ballista" 100 2 25 0 50 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addunitrec "Trebuchet" 100 1 50 0 50 \n'
+text += 'addunitrec "Spearman" 5 10 70 0 0 \n' 
+text += 'addunitrec "Archer" 5 10 70 0 0 \n' 
+text += 'addunitrec "Crossbowman" 5 10 70 0 7 \n' 
+text += 'addunitrec "Swordsman" 5 10 70 0 7 \n'
+text += 'addunitrec "Trebuchet" 10 2 75 0 75 \n' 
+text += 'addcomrec "High Lord" 20 50 10 10 \n' 
+text += 'reclimiter "+Hedge Wizard" \n'
+text += 'addcomrec "Court Mage" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Alchemist" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Monk" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+
+}
+
+if(shuffle3 === 2){	
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 3 && witchcheck === true){	
+text += 'addunitrec "Androphag Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Androphag Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Androphag Cavalry" 100 5 50 0 5 \n' 
+text += 'addcomrec "Androphag Lord" 5 50 10 0 \n'
+text += 'addcomrec "Manflayer" 2 70 20 0 \n'
+}
+
+if(shuffle3 === 3 && witchcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 4 && baalcheck === true){	
+text += 'addunitrec "Ba' + illapp + 'alite Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Ba' + illapp + 'alite Spearman" 100 5 50 0 0 \n'
+text += 'addunitrec "Ba' + illapp + 'alite Zealot" 100 5 50 0 5 \n'
+text += 'addunitrec "Ba' + illapp + 'alite Heavy infantry" 100 5 50 0 25 \n' 
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+}
+
+if(shuffle3 === 4 && baalcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck === true){	
+text += 'addunitrec "Bakemono Archer" 100 5 25 0 1 \n' 
+text += 'addunitrec "Bakemono Soldier" 100 5 25 0 1 \n'
+text += 'addunitrec "Bakemono Swordsman" 100 5 25 0 3 \n'
+text += 'addunitrec "Dai Bakemono" 25 3 50 0 15 \n'
+text += 'addunitrec "Dai Bakemono Archer" 25 3 50 0 15 \n'
+text += 'addunitrec "O Bakemono" 25 1 25 0 0 \n'
+text += 'addunitrec "Bakemono Bowman" 100 5 25 0 0 \n'
+text += 'addunitrec "Bakemono Sho" 100 5 25 0 0 \n'
+text += 'addcomrec "Bakemono General" 5 50 10 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck === true){	
+text += 'addunitrec "Barbarian Warrior" 100 7 50 0  0 \n'
+text += 'addunitrec "Barbarian Bowman" 100 7 50 0 0 \n'
+text += 'addunitrec "Barbarian Swordsman" 100 7 50 0 10 \n'
+text += 'addunitrec "Barbarian Cavalry" 100 4 50 0 0 \n'
+text += 'addunitrec "Barbarian Lancer" 100 4 50 0 10 \n'
+text += 'addunitrec "Barbarian Werebear" 10 1 25 0 0 \n'
+text += 'addcomrec  "Spirit Guide" 8 75 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Soothsayer" 8 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Barbarian Leader" 100 25 10 0 \n'
+text += 'reclimiter "-Barbarian Leader" \n'
+text += 'addcomrec  "Mounted Chief" 10 25 10 0 \n'
+text += 'addmercrec "Mounted Scout" 15 1 15 10 0 \n'
+text += 'addcomrec  "Crystal Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Crystal Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Crystal Priestess" \n'
+text += 'addunitrec "Crystal Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Crystal Priestess" \n'
+text += 'addcomrec  "Garnet Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Garnet Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Garnet Priestess" \n'
+text += 'addunitrec "Garnet Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Garnet Priestess" \n'
+text += 'addcomrec  "Jade Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Jade Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Jade Priestess" \n'
+text += 'addunitrec "Jade Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Jade Priestess" \n'
+text += 'addcomrec  "Onyx Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Onyx Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Onyx Priestess" \n'
+text += 'addunitrec "Onyx Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Onyx Priestess" \n'
+}
+
+if(shuffle3 === 6 && barbariancheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck === true){	
+text += 'addunitrec "Veles" 100 5 40 0 0 \n'
+text += 'addunitrec "Hastatus" 100 5 45 0 5 \n'
+text += 'addunitrec "Princeps" 100 5 50 0 10 \n'
+text += 'addunitrec "Princeps Solaris" 100 5 55 0 10 \n'
+text += 'reclimiter "+Leo" \n'
+text += 'addunitrec "Triarius" 100 5 55 0 20 \n'
+text += 'addunitrec "Praetorian Guard" 5 5 60 0 20 \n'
+
+text += 'addunitrec "Ballista" 100 2 25 0 50 \n'
+text += 'addunitrec "Hastatus" 5 10 65 0 5 \n'
+text += 'addmercrec "Standard" 50 1 20 0 0 \n'  
+text += 'addmercrec "Archer" 20 5 50 0 0 \n'
+text += 'addmercrec "Gladiator" 20 2 25 0 0 \n'
+text += 'addmercrec "Retiarius" 1 2 25 0 0 \n'
+
+text += 'addcomrec "Centurion" 25 35 10 0 \n'
+text += 'addcomrec "Leo" 5 50 20 0 \n'
+text += 'addcomrec "Heliodromus" 1 90 20 0 \n'
+text += 'libraryrec \n'
+text += 'addcomrec "Renata" 5 50 20 0 \n'
+text += 'addcomrec "Renatus" 1 110 20 0 \n'
+text += 'libraryrec \n'
+text += 'addcomrec "Serpent Acolyte" 5 50 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Serpent Priest" 2 90 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Reveler" 5 50 20 0 \n'
+text += 'addcomrec "Augur" 5 50 20 0 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck === true){	
+
+text += 'addunitrec "Pale One" 100 5 50 0 0 \n'
+text += 'addunitrec "Pale One Soldier" 100 5 50 0 5 \n'
+text += 'addunitrec "Cavern Guard" 100 5 50 0 20 \n'
+text += 'addunitrec "Ancient Hurler" 25 1 40 0 0 \n'
+text += 'addunitrec "Ancient Pale One" 25 1 40 0 15 \n'
+text += 'addunitrec "Seal Guard" 25 1 50 0 25 \n'
+
+text += 'addcomrec "Ancient Commander" 5 60 20 15 \n'
+text += 'addcomrec "Pale One Commander" 10 40 10 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 9 && druidcheck === true){	
+
+text += 'addunitrec "Barechested Slinger" 100 5 50 0 0 \n'
+text += 'addunitrec "Barechested Swordsman" 100 5 50 0 0 \n'
+text += 'addunitrec "Barechested Warrior" 100 5 50 0 0 \n'
+text += 'addunitrec "Beast Cavalry" 100 5 50 0 5 \n'
+text += 'addunitrec "Boar Warrior" 15 4 50 0 10 \n'
+
+text += 'addcomrec "Chieftain" 10 40 10 0 \n'
+text += 'addcomrec "Hornblower" 5 25 10 0 \n'
+text += 'addcomrec "Vergobret" 5 30 10 0 \n'
+}
+
+if(shuffle3 === 9 && druidcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck === true){	
+
+text += 'addunitrec "Hoburg Militia" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Slinger" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Soldier" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Pikeneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hoburg Crossbow" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Guard" 100 10 40 0 10 \n'
+text += 'addunitrec "Hoburg Defender" 100 15 50 0 10 \n'
+text += 'addunitrec "Hog Knight" 100 5 50 0 10 \n'
+
+text += 'addcomrec "Hogmeister" 10 25 5 0 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+
+if(shuffle3 === 11 && priestcheck ===true){	
+
+text += 'addunitrec "Tribal Warrior" 100 7 50 0 0 \n'
+text += 'addunitrec "Jungle Warrior" 100 6 50 0 0 \n'
+text += 'addunitrec "Feathered Warrior" 100 5 50 0 5 \n'
+text += 'addunitrec "Jaguar Warrior" 30 5 50 0 0 \n'
+
+}
+
+if(shuffle3 === 11 && priestcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 12 && trollcheck === true){	
+
+text += 'addunitrec  "Goblin" 100 15 50 0 0 \n'
+text += 'addunitrec  "Ogre" 100 1 25 0 0 \n'
+text += 'addunitrec  "Goblin Spearman" 40 15 50 0 0 \n'
+text += 'addunitrec  "Goblin Archer" 20 10 50 0 0 \n'
+text += 'addunitrec  "Wolf Kin" 20 10 50 0 0 \n'
+text += 'addunitrec  "Wolf Kin Reaver" 20 7 50 0 10 \n'
+text += 'addunitrec  "Rock Troll" 20 1 50 0 60 \n'
+text += 'addunitrec  "Troll" 30 1 50 0 20 \n'
+text += 'addunitrec  "Forest Troll" 40 1 40 0 10 \n'
+text += 'addunitrec  "Hill Giant" 5 1 100 0 0 \n'
+text += 'addunitrec  "Ettin" 10 1 75 0 0 \n'
+text += 'addcomrec   "Goblin Chieftain" 7 25 20 0 \n'
+text += 'addcomrec   "Ogre Chief" 3 35 20 0 \n'
+text += 'addcomrec   "Forest Giant" 5 70 20 0 \n'
+
+text += 'addmercrec  "Goblin Murderer" 3 1 10 40 0 \n'
+text += 'addcomrec   "Goblin Hero" 3 10 50 0 \n'
+
+}
+
+if(shuffle3 === 12 && trollcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 13 && elcheck === true){
+
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n'	
+text += 'addunitrec "Archer" 100 5 50 0 0 \n'
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n' 	
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Temple Guard" 100 5 50 0 5 \n'
+text += 'addunitrec "Templar" 100 5 50 0 15  \n'                      
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+
+text += 'addcomrec "Missionary" 5 20 10 0 \n'
+
+}
+
+if(shuffle3 === 13 && elcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck === true){
+text += 'addunitrec "Dwarf Worker" 100 5 30 0 0 \n'
+
+text += 'addunitrec "Dwarf" 100 5 0 0 20 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Warrior" 100 5 0 0 30 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Guard" 100 5 0 0 40 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Arbarlest" 100 5 0 0 30 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Outdoor Dwarf" 100 2 10 0 10 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarven Ballista" 100 1 0 0 40  \n'
+
+text += 'addmercrec "Archer" 3 10 150 0 0 \n'                    
+text += 'addmercrec "Crossbowman" 3 10 150 0 0 \n' 
+text += 'addmercrec "Pikeneer" 3 10 150 0 10 \n'                    
+text += 'addmercrec "Pikeneer" 3 20 250 0 10 \n'                    
+text += 'addmercrec "Spearman" 3 10 150 0 0 \n'                 
+text += 'addmercrec "Swordsman" 3 10 150 0 10 \n'   
+
+text += 'addcomrec "Dwarf Commander" 15 20 10 0 \n'
+
+}
+
+if(shuffle3 === 14 && dwarfcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck === true){
+	
+text += 'addunitrec "Hoburg Militia" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Slinger" 100 15 50 0 0 \n'
+text += 'addunitrec "Hobmark Soldier" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Pikeneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Hammerer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Pickaneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Crossbow" 100 15 50 0 5 \n'
+text += 'addunitrec "Markgraf Guard" 100 10 40 0 10 \n'
+text += 'addunitrec "Hobmark Defender" 100 15 50 0 10 \n'
+text += 'addunitrec "Hog Hussar" 100 5 50 0 5 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 25 \n'
+
+text += 'addcomrec "Hogmeister" 10 25 5 0 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck === true){
+
+text += 'addunitrec "Satyr " 100 5 50 0 0 \n'	
+text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Hoplite" 100 5 25 0 15 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Steel Hoplite" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+
+text += 'addunitrec "Centaur" 100 3 50 0 0 \n'
+text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centaur" \n'
+
+text += 'addunitrec "Minotaur" 100 3 50 0 0 \n'
+text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
+text += 'reclimiter "=Minotaur" \n'
+
+text += 'addunitrec "Harpy" 100 5 50 0 0 \n'
+text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
+text += 'reclimiter "=Harpy" \n'
+
+text += 'addcomrec "Satyr Commander" 10 40 10  0 \n'
+text += 'addcomrec "Hoplite Commander" 5 40 10 5 \n'
+text += 'addcomrec "Centaur Commander" 5 50 15 5 \n'
+text += 'addcomrec "Cataphract Commander" 3 50 15 10 \n'
+
+}
+
+if(shuffle3 === 16 && dryadcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 17){
+text += 'addunitrec "Militia" 100 5 50 0 0 \n' 
+text += 'addunitrec "Slinger" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Light Cavalry" 100 3 50 0 0 \n'
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Tower Guard" 100 5 50 0 15 \n'
+text += 'addunitrec "Cavalryman" 100 3 50 0 20 \n'
+text += 'addunitrec "Heavy Cavalry" 100 3 50 0 20 \n'
+text += 'addunitrec "Heavy Infantry" 100 5 50 0 25 \n'
+text += 'addunitrec "Heavy Spearman" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addunitrec "Spearman" 5 10 70 0 0 \n' 
+text += 'addunitrec "Archer" 5 10 70 0 0 \n' 
+
+text += 'addcomrec "Court Mage" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Alchemist" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "White Wizard" 0 100 100 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Monk" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Priest" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+text += 'addcomrec "Commander" 10 40 10 0 \n'
+text += 'addcomrec "Mounted Commander" 5 40 10 0 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+}
+
+text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
+text += 'clearstartunits  \n'
+if(shuffle3 === 1){	
+text += 'addstartunits "Cavalryman" 5 \n'
+text += 'addstartunits "Spearman" 6 \n'
+text += 'addstartunits "Archer" 5 \n'
+}
+if(shuffle3 === 2){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+if(shuffle3 === 3 && witchcheck === true){	
+text += 'addstartunits "Androphag Spearman" 5 \n'
+text += 'addstartunits "Androphag Archer" 5 \n'
+text += 'addstartunits "Androphag Cavalry" 1 \n'
+}
+if(shuffle3 === 3 && witchcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+if(shuffle3 === 4 && baalcheck === true){	
+text += 'addstartunits "Ba' + illapp + 'alite Spearman" 10 \n'
+text += 'addstartunits "Ba' + illapp + 'alite Archer" 5 \n'
+}
+
+if(shuffle3 === 4 && baalcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck === true){	
+text += 'addstartunits "Bakemono Spearman" 15 \n'
+text += 'addstartunits "Bakemono Sho" 15 \n'
+text += 'addstartunits "Bakemono Bowman" 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck === true){	
+text += 'addstartunits "Barbarian Warrior" 15 \n'
+text += 'addstartunits "Barbarian Bowman" 5 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck === true){	
+text += 'addstartunits "Velite" 10 \n'
+text += 'addstartunits "Hastati" 5 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck === true){	
+text += 'addstartunits "Pale One" 10 \n'
+text += 'addstartunits "Pale One Soldier" 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 9 && druidcheck === true){	
+text += 'addstartunits "Barechested Warrior" 10 \n'
+text += 'addstartunits "Barechested Slinger" 5 \n'
+}
+
+if(shuffle3 === 9 && druidcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck ===true){	
+text += 'addstartunits "Hoburg Crossbow" 10 \n'
+text += 'addstartunits "Hoburg Defender" 5 \n'
+text += 'addstartunits "Hoburg Soldier" 10 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 11 && priestcheck === true){	
+text += 'addstartunits "Tribal Warrior" 10 \n'
+text += 'addstartunits "Jungle Warrior" 10 \n'
+}
+
+if(shuffle3 === 11 && priestcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 12 && trollcheck === true){	
+text += 'addstartunits "Goblin" 15 \n'
+text += 'addstartunits "Rock Troll" 1 \n'
+}
+
+if(shuffle3 === 12 && trollcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 13 && elcheck === true){	
+text += 'addstartunits "Spearman" 10 \n'
+text += 'addstartunits "Halberdier" 8 \n'
+}
+
+if(shuffle3 === 13 && elcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck === true){	
+text += 'addstartunits "Dwarf Worker" 12 \n'
+text += 'addstartunits "Dwarf" 5 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck === true){	
+text += 'addstartunits "Hobmark Soldier" 10 \n'
+text += 'addstartunits "Hobmark Defender" 5 \n'
+text += 'addstartunits "Hobmark Crossbow" 10 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck === true){	
+text += 'addstartunits "Satyr Warrior" 5 \n'
+text += 'addstartunits "Satyr Javelinist" 5 \n'
+text += 'addstartunits "Harpy" 1 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 17){	
+text += 'addstartunits "Militia" 10 \n'
+text += 'addstartunits "Slinger" 10 \n'
+}
+}
+
+if(saneshuffle !== "swap"){
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
 text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
@@ -3012,6 +4405,7 @@ if(hasunits < 9){
 roll = Math.floor(Math.random() * team1_melee_empty.length)	
 text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
 hasunits += team1_melee_empty[roll].num
+}
 }
 roll = Math.floor(Math.random() * team2_empty.length)
 		
@@ -3204,6 +4598,719 @@ text += ' \n'
 
 text += 'selectclass 14 \n'
 text += 'clearrec  \n'
+
+
+shuffle3 = Math.floor(Math.random() * 17) + 1
+
+if(saneshuffle === "swap"){
+
+if(shuffle3 === 1){	
+text += 'addunitrec "Longbowman" 100 4 50 0 0 \n' 
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Zweihander" 100 5 50 0 10 \n'
+text += 'addunitrec "Tower Guard" 100 5 50 0 15 \n'
+text += 'addunitrec "Cavalryman" 100 3 50 0 20 \n'
+text += 'addunitrec "War Dog" 100 4 25 0 0 \n' 
+text += 'addunitrec "Ballista" 100 2 25 0 50 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addunitrec "Trebuchet" 100 1 50 0 50 \n'
+text += 'addunitrec "Spearman" 5 10 70 0 0 \n' 
+text += 'addunitrec "Archer" 5 10 70 0 0 \n' 
+text += 'addunitrec "Crossbowman" 5 10 70 0 7 \n' 
+text += 'addunitrec "Swordsman" 5 10 70 0 7 \n'
+text += 'addunitrec "Trebuchet" 10 2 75 0 75 \n' 
+text += 'addcomrec "High Lord" 20 50 10 10 \n' 
+text += 'reclimiter "+Hedge Wizard" \n'
+text += 'addcomrec "Court Mage" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Alchemist" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Monk" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+
+}
+
+if(shuffle3 === 2){	
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 3 && witchcheck === true){	
+text += 'addunitrec "Androphag Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Androphag Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Androphag Cavalry" 100 5 50 0 5 \n' 
+text += 'addcomrec "Androphag Lord" 5 50 10 0 \n'
+text += 'addcomrec "Manflayer" 2 70 20 0 \n'
+}
+
+if(shuffle3 === 3 && witchcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 4 && baalcheck === true){	
+text += 'addunitrec "Ba' + illapp + 'alite Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Ba' + illapp + 'alite Spearman" 100 5 50 0 0 \n'
+text += 'addunitrec "Ba' + illapp + 'alite Zealot" 100 5 50 0 5 \n'
+text += 'addunitrec "Ba' + illapp + 'alite Heavy infantry" 100 5 50 0 25 \n' 
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+}
+
+if(shuffle3 === 4 && baalcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck === true){	
+text += 'addunitrec "Bakemono Archer" 100 5 25 0 1 \n' 
+text += 'addunitrec "Bakemono Soldier" 100 5 25 0 1 \n'
+text += 'addunitrec "Bakemono Swordsman" 100 5 25 0 3 \n'
+text += 'addunitrec "Dai Bakemono" 25 3 50 0 15 \n'
+text += 'addunitrec "Dai Bakemono Archer" 25 3 50 0 15 \n'
+text += 'addunitrec "O Bakemono" 25 1 25 0 0 \n'
+text += 'addunitrec "Bakemono Bowman" 100 5 25 0 0 \n'
+text += 'addunitrec "Bakemono Sho" 100 5 25 0 0 \n'
+text += 'addcomrec "Bakemono General" 5 50 10 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck === true){	
+text += 'addunitrec "Barbarian Warrior" 100 7 50 0  0 \n'
+text += 'addunitrec "Barbarian Bowman" 100 7 50 0 0 \n'
+text += 'addunitrec "Barbarian Swordsman" 100 7 50 0 10 \n'
+text += 'addunitrec "Barbarian Cavalry" 100 4 50 0 0 \n'
+text += 'addunitrec "Barbarian Lancer" 100 4 50 0 10 \n'
+text += 'addunitrec "Barbarian Werebear" 10 1 25 0 0 \n'
+text += 'addcomrec  "Spirit Guide" 8 75 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Soothsayer" 8 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Barbarian Leader" 100 25 10 0 \n'
+text += 'reclimiter "-Barbarian Leader" \n'
+text += 'addcomrec  "Mounted Chief" 10 25 10 0 \n'
+text += 'addmercrec "Mounted Scout" 15 1 15 10 0 \n'
+text += 'addcomrec  "Crystal Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Crystal Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Crystal Priestess" \n'
+text += 'addunitrec "Crystal Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Crystal Priestess" \n'
+text += 'addcomrec  "Garnet Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Garnet Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Garnet Priestess" \n'
+text += 'addunitrec "Garnet Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Garnet Priestess" \n'
+text += 'addcomrec  "Jade Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Jade Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Jade Priestess" \n'
+text += 'addunitrec "Jade Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Jade Priestess" \n'
+text += 'addcomrec  "Onyx Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Onyx Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Onyx Priestess" \n'
+text += 'addunitrec "Onyx Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Onyx Priestess" \n'
+}
+
+if(shuffle3 === 6 && barbariancheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck === true){	
+text += 'addunitrec "Veles" 100 5 40 0 0 \n'
+text += 'addunitrec "Hastatus" 100 5 45 0 5 \n'
+text += 'addunitrec "Princeps" 100 5 50 0 10 \n'
+text += 'addunitrec "Princeps Solaris" 100 5 55 0 10 \n'
+text += 'reclimiter "+Leo" \n'
+text += 'addunitrec "Triarius" 100 5 55 0 20 \n'
+text += 'addunitrec "Praetorian Guard" 5 5 60 0 20 \n'
+
+text += 'addunitrec "Ballista" 100 2 25 0 50 \n'
+text += 'addunitrec "Hastatus" 5 10 65 0 5 \n'
+text += 'addmercrec "Standard" 50 1 20 0 0 \n'  
+text += 'addmercrec "Archer" 20 5 50 0 0 \n'
+text += 'addmercrec "Gladiator" 20 2 25 0 0 \n'
+text += 'addmercrec "Retiarius" 1 2 25 0 0 \n'
+
+text += 'addcomrec "Centurion" 25 35 10 0 \n'
+text += 'addcomrec "Leo" 5 50 20 0 \n'
+text += 'addcomrec "Heliodromus" 1 90 20 0 \n'
+text += 'libraryrec \n'
+text += 'addcomrec "Renata" 5 50 20 0 \n'
+text += 'addcomrec "Renatus" 1 110 20 0 \n'
+text += 'libraryrec \n'
+text += 'addcomrec "Serpent Acolyte" 5 50 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Serpent Priest" 2 90 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Reveler" 5 50 20 0 \n'
+text += 'addcomrec "Augur" 5 50 20 0 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck === true){	
+
+text += 'addunitrec "Pale One" 100 5 50 0 0 \n'
+text += 'addunitrec "Pale One Soldier" 100 5 50 0 5 \n'
+text += 'addunitrec "Cavern Guard" 100 5 50 0 20 \n'
+text += 'addunitrec "Ancient Hurler" 25 1 40 0 0 \n'
+text += 'addunitrec "Ancient Pale One" 25 1 40 0 15 \n'
+text += 'addunitrec "Seal Guard" 25 1 50 0 25 \n'
+
+text += 'addcomrec "Ancient Commander" 5 60 20 15 \n'
+text += 'addcomrec "Pale One Commander" 10 40 10 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 9 && druidcheck === true){	
+
+text += 'addunitrec "Barechested Slinger" 100 5 50 0 0 \n'
+text += 'addunitrec "Barechested Swordsman" 100 5 50 0 0 \n'
+text += 'addunitrec "Barechested Warrior" 100 5 50 0 0 \n'
+text += 'addunitrec "Beast Cavalry" 100 5 50 0 5 \n'
+text += 'addunitrec "Boar Warrior" 15 4 50 0 10 \n'
+
+text += 'addcomrec "Chieftain" 10 40 10 0 \n'
+text += 'addcomrec "Hornblower" 5 25 10 0 \n'
+text += 'addcomrec "Vergobret" 5 30 10 0 \n'
+}
+
+if(shuffle3 === 9 && druidcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck === true){	
+
+text += 'addunitrec "Hoburg Militia" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Slinger" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Soldier" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Pikeneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hoburg Crossbow" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Guard" 100 10 40 0 10 \n'
+text += 'addunitrec "Hoburg Defender" 100 15 50 0 10 \n'
+text += 'addunitrec "Hog Knight" 100 5 50 0 10 \n'
+
+text += 'addcomrec "Hogmeister" 10 25 5 0 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+
+if(shuffle3 === 11 && priestcheck ===true){	
+
+text += 'addunitrec "Tribal Warrior" 100 7 50 0 0 \n'
+text += 'addunitrec "Jungle Warrior" 100 6 50 0 0 \n'
+text += 'addunitrec "Feathered Warrior" 100 5 50 0 5 \n'
+text += 'addunitrec "Jaguar Warrior" 30 5 50 0 0 \n'
+
+}
+
+if(shuffle3 === 11 && priestcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 12 && trollcheck === true){	
+
+text += 'addunitrec  "Goblin" 100 15 50 0 0 \n'
+text += 'addunitrec  "Ogre" 100 1 25 0 0 \n'
+text += 'addunitrec  "Goblin Spearman" 40 15 50 0 0 \n'
+text += 'addunitrec  "Goblin Archer" 20 10 50 0 0 \n'
+text += 'addunitrec  "Wolf Kin" 20 10 50 0 0 \n'
+text += 'addunitrec  "Wolf Kin Reaver" 20 7 50 0 10 \n'
+text += 'addunitrec  "Rock Troll" 20 1 50 0 60 \n'
+text += 'addunitrec  "Troll" 30 1 50 0 20 \n'
+text += 'addunitrec  "Forest Troll" 40 1 40 0 10 \n'
+text += 'addunitrec  "Hill Giant" 5 1 100 0 0 \n'
+text += 'addunitrec  "Ettin" 10 1 75 0 0 \n'
+text += 'addcomrec   "Goblin Chieftain" 7 25 20 0 \n'
+text += 'addcomrec   "Ogre Chief" 3 35 20 0 \n'
+text += 'addcomrec   "Forest Giant" 5 70 20 0 \n'
+
+text += 'addmercrec  "Goblin Murderer" 3 1 10 40 0 \n'
+text += 'addcomrec   "Goblin Hero" 3 10 50 0 \n'
+
+}
+
+if(shuffle3 === 12 && trollcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 13 && elcheck === true){
+
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n'	
+text += 'addunitrec "Archer" 100 5 50 0 0 \n'
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n' 	
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Temple Guard" 100 5 50 0 5 \n'
+text += 'addunitrec "Templar" 100 5 50 0 15  \n'                      
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+
+text += 'addcomrec "Missionary" 5 20 10 0 \n'
+
+}
+
+if(shuffle3 === 13 && elcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck === true){
+text += 'addunitrec "Dwarf Worker" 100 5 30 0 0 \n'
+
+text += 'addunitrec "Dwarf" 100 5 0 0 20 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Warrior" 100 5 0 0 30 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Guard" 100 5 0 0 40 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Arbarlest" 100 5 0 0 30 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Outdoor Dwarf" 100 2 10 0 10 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarven Ballista" 100 1 0 0 40  \n'
+
+text += 'addmercrec "Archer" 3 10 150 0 0 \n'                    
+text += 'addmercrec "Crossbowman" 3 10 150 0 0 \n' 
+text += 'addmercrec "Pikeneer" 3 10 150 0 10 \n'                    
+text += 'addmercrec "Pikeneer" 3 20 250 0 10 \n'                    
+text += 'addmercrec "Spearman" 3 10 150 0 0 \n'                 
+text += 'addmercrec "Swordsman" 3 10 150 0 10 \n'  
+
+text += 'addcomrec "Dwarf Commander" 15 20 10 0 \n'
+
+}
+
+if(shuffle3 === 14 && dwarfcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck === true){
+	
+text += 'addunitrec "Hoburg Militia" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Slinger" 100 15 50 0 0 \n'
+text += 'addunitrec "Hobmark Soldier" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Pikeneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Hammerer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Pickaneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Crossbow" 100 15 50 0 5 \n'
+text += 'addunitrec "Markgraf Guard" 100 10 40 0 10 \n'
+text += 'addunitrec "Hobmark Defender" 100 15 50 0 10 \n'
+text += 'addunitrec "Hog Hussar" 100 5 50 0 5 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 25 \n'
+
+text += 'addcomrec "Hogmeister" 10 25 5 0 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck === true){
+
+text += 'addunitrec "Satyr " 100 5 50 0 0 \n'	
+text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Hoplite" 100 5 25 0 15 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Steel Hoplite" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+
+text += 'addunitrec "Centaur" 100 3 50 0 0 \n'
+text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centaur" \n'
+
+text += 'addunitrec "Minotaur" 100 3 50 0 0 \n'
+text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
+text += 'reclimiter "=Minotaur" \n'
+
+text += 'addunitrec "Harpy" 100 5 50 0 0 \n'
+text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
+text += 'reclimiter "=Harpy" \n'
+
+text += 'addcomrec "Satyr Commander" 10 40 10  0 \n'
+text += 'addcomrec "Hoplite Commander" 5 40 10 5 \n'
+text += 'addcomrec "Centaur Commander" 5 50 15 5 \n'
+text += 'addcomrec "Cataphract Commander" 3 50 15 10 \n'
+
+}
+
+if(shuffle3 === 16 && dryadcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 17){
+text += 'addunitrec "Militia" 100 5 50 0 0 \n' 
+text += 'addunitrec "Slinger" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Light Cavalry" 100 3 50 0 0 \n'
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Tower Guard" 100 5 50 0 15 \n'
+text += 'addunitrec "Cavalryman" 100 3 50 0 20 \n'
+text += 'addunitrec "Heavy Cavalry" 100 3 50 0 20 \n'
+text += 'addunitrec "Heavy Infantry" 100 5 50 0 25 \n'
+text += 'addunitrec "Heavy Spearman" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addunitrec "Spearman" 5 10 70 0 0 \n' 
+text += 'addunitrec "Archer" 5 10 70 0 0 \n' 
+
+text += 'addcomrec "Court Mage" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Alchemist" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "White Wizard" 0 100 100 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Monk" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Priest" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+text += 'addcomrec "Commander" 10 40 10 0 \n'
+text += 'addcomrec "Mounted Commander" 5 40 10 0 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+}
+
+if(shuffle2 === 11){
+text += 'addcomrec "Oracle of Subterranean Fire" 0 150 30 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Oracle of Subterranean Waters" 0 150 30 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Oracle of the Dead" 0 150 30 0 \n'
+text += 'templerec \n'
+}
+if(shuffle2 === 9){
+text += 'addcomrec "Sun Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Blood Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Sky Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Rain Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Moon Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Death Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+}
+if (shuffle2 === 13){	
+text += 'addmercrec "Mirror" 100 1 10 0 0\n'
+text += 'addmercrec "Large Mirror" 100 1 25 0 0\n'
+text += 'addmercrec "Silver Mirror" 100 1 50 0 0\n'
+text += 'addmercrec "Golden Mirror" 100 1 150 0 0\n'
+}
+if(shuffle2 === 15){
+text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
+}
+
+text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
+text += 'clearstartunits  \n'
+if(shuffle3 === 1){	
+text += 'addstartunits "Cavalryman" 5 \n'
+text += 'addstartunits "Spearman" 6 \n'
+text += 'addstartunits "Archer" 5 \n'
+}
+if(shuffle3 === 2){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+if(shuffle3 === 3 && witchcheck === true){	
+text += 'addstartunits "Androphag Spearman" 5 \n'
+text += 'addstartunits "Androphag Archer" 5 \n'
+text += 'addstartunits "Androphag Cavalry" 1 \n'
+}
+if(shuffle3 === 3 && witchcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+if(shuffle3 === 4 && baalcheck === true){	
+text += 'addstartunits "Ba' + illapp + 'alite Spearman" 10 \n'
+text += 'addstartunits "Ba' + illapp + 'alite Archer" 5 \n'
+}
+
+if(shuffle3 === 4 && baalcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck === true){	
+text += 'addstartunits "Bakemono Spearman" 15 \n'
+text += 'addstartunits "Bakemono Sho" 15 \n'
+text += 'addstartunits "Bakemono Bowman" 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck === true){	
+text += 'addstartunits "Barbarian Warrior" 15 \n'
+text += 'addstartunits "Barbarian Bowman" 5 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck === true){	
+text += 'addstartunits "Velite" 10 \n'
+text += 'addstartunits "Hastati" 5 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck === true){	
+text += 'addstartunits "Pale One" 10 \n'
+text += 'addstartunits "Pale One Soldier" 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 9 && druidcheck === true){	
+text += 'addstartunits "Barechested Warrior" 10 \n'
+text += 'addstartunits "Barechested Slinger" 5 \n'
+}
+
+if(shuffle3 === 9 && druidcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck ===true){	
+text += 'addstartunits "Hoburg Crossbow" 10 \n'
+text += 'addstartunits "Hoburg Defender" 5 \n'
+text += 'addstartunits "Hoburg Soldier" 10 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 11 && priestcheck === true){	
+text += 'addstartunits "Tribal Warrior" 10 \n'
+text += 'addstartunits "Jungle Warrior" 10 \n'
+}
+
+if(shuffle3 === 11 && priestcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 12 && trollcheck === true){	
+text += 'addstartunits "Goblin" 15 \n'
+text += 'addstartunits "Rock Troll" 1 \n'
+}
+
+if(shuffle3 === 12 && trollcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 13 && elcheck === true){	
+text += 'addstartunits "Spearman" 10 \n'
+text += 'addstartunits "Halberdier" 8 \n'
+}
+
+if(shuffle3 === 13 && elcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck === true){	
+text += 'addstartunits "Dwarf Worker" 12 \n'
+text += 'addstartunits "Dwarf" 5 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck === true){	
+text += 'addstartunits "Hobmark Soldier" 10 \n'
+text += 'addstartunits "Hobmark Defender" 5 \n'
+text += 'addstartunits "Hobmark Crossbow" 10 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck === true){	
+text += 'addstartunits "Satyr Warrior" 5 \n'
+text += 'addstartunits "Satyr Javelinist" 5 \n'
+text += 'addstartunits "Harpy" 1 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 17){	
+text += 'addstartunits "Militia" 10 \n'
+text += 'addstartunits "Slinger" 10 \n'
+}
+}
+
+if(saneshuffle !== "swap"){
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
 text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
@@ -3298,6 +5405,7 @@ if(hasunits < 9){
 roll = Math.floor(Math.random() * team1_melee_empty.length)	
 text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
 hasunits += team1_melee_empty[roll].num
+}
 }
 roll = Math.floor(Math.random() * team2_empty.length)
 	
@@ -3541,6 +5649,719 @@ text += ' \n'
 
 text += 'selectclass 21 \n'
 text += 'clearrec  \n'
+
+
+shuffle3 = Math.floor(Math.random() * 17) + 1
+
+if(saneshuffle === "swap"){
+
+if(shuffle3 === 1){	
+text += 'addunitrec "Longbowman" 100 4 50 0 0 \n' 
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Zweihander" 100 5 50 0 10 \n'
+text += 'addunitrec "Tower Guard" 100 5 50 0 15 \n'
+text += 'addunitrec "Cavalryman" 100 3 50 0 20 \n'
+text += 'addunitrec "War Dog" 100 4 25 0 0 \n' 
+text += 'addunitrec "Ballista" 100 2 25 0 50 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addunitrec "Trebuchet" 100 1 50 0 50 \n'
+text += 'addunitrec "Spearman" 5 10 70 0 0 \n' 
+text += 'addunitrec "Archer" 5 10 70 0 0 \n' 
+text += 'addunitrec "Crossbowman" 5 10 70 0 7 \n' 
+text += 'addunitrec "Swordsman" 5 10 70 0 7 \n'
+text += 'addunitrec "Trebuchet" 10 2 75 0 75 \n' 
+text += 'addcomrec "High Lord" 20 50 10 10 \n' 
+text += 'reclimiter "+Hedge Wizard" \n'
+text += 'addcomrec "Court Mage" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Alchemist" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Monk" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+
+}
+
+if(shuffle3 === 2){	
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 3 && witchcheck === true){	
+text += 'addunitrec "Androphag Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Androphag Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Androphag Cavalry" 100 5 50 0 5 \n' 
+text += 'addcomrec "Androphag Lord" 5 50 10 0 \n'
+text += 'addcomrec "Manflayer" 2 70 20 0 \n'
+}
+
+if(shuffle3 === 3 && witchcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 4 && baalcheck === true){	
+text += 'addunitrec "Ba' + illapp + 'alite Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Ba' + illapp + 'alite Spearman" 100 5 50 0 0 \n'
+text += 'addunitrec "Ba' + illapp + 'alite Zealot" 100 5 50 0 5 \n'
+text += 'addunitrec "Ba' + illapp + 'alite Heavy infantry" 100 5 50 0 25 \n' 
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+}
+
+if(shuffle3 === 4 && baalcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck === true){	
+text += 'addunitrec "Bakemono Archer" 100 5 25 0 1 \n' 
+text += 'addunitrec "Bakemono Soldier" 100 5 25 0 1 \n'
+text += 'addunitrec "Bakemono Swordsman" 100 5 25 0 3 \n'
+text += 'addunitrec "Dai Bakemono" 25 3 50 0 15 \n'
+text += 'addunitrec "Dai Bakemono Archer" 25 3 50 0 15 \n'
+text += 'addunitrec "O Bakemono" 25 1 25 0 0 \n'
+text += 'addunitrec "Bakemono Bowman" 100 5 25 0 0 \n'
+text += 'addunitrec "Bakemono Sho" 100 5 25 0 0 \n'
+text += 'addcomrec "Bakemono General" 5 50 10 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck === true){	
+text += 'addunitrec "Barbarian Warrior" 100 7 50 0  0 \n'
+text += 'addunitrec "Barbarian Bowman" 100 7 50 0 0 \n'
+text += 'addunitrec "Barbarian Swordsman" 100 7 50 0 10 \n'
+text += 'addunitrec "Barbarian Cavalry" 100 4 50 0 0 \n'
+text += 'addunitrec "Barbarian Lancer" 100 4 50 0 10 \n'
+text += 'addunitrec "Barbarian Werebear" 10 1 25 0 0 \n'
+text += 'addcomrec  "Spirit Guide" 8 75 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Soothsayer" 8 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Barbarian Leader" 100 25 10 0 \n'
+text += 'reclimiter "-Barbarian Leader" \n'
+text += 'addcomrec  "Mounted Chief" 10 25 10 0 \n'
+text += 'addmercrec "Mounted Scout" 15 1 15 10 0 \n'
+text += 'addcomrec  "Crystal Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Crystal Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Crystal Priestess" \n'
+text += 'addunitrec "Crystal Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Crystal Priestess" \n'
+text += 'addcomrec  "Garnet Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Garnet Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Garnet Priestess" \n'
+text += 'addunitrec "Garnet Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Garnet Priestess" \n'
+text += 'addcomrec  "Jade Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Jade Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Jade Priestess" \n'
+text += 'addunitrec "Jade Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Jade Priestess" \n'
+text += 'addcomrec  "Onyx Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Onyx Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Onyx Priestess" \n'
+text += 'addunitrec "Onyx Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Onyx Priestess" \n'
+}
+
+if(shuffle3 === 6 && barbariancheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck === true){	
+text += 'addunitrec "Veles" 100 5 40 0 0 \n'
+text += 'addunitrec "Hastatus" 100 5 45 0 5 \n'
+text += 'addunitrec "Princeps" 100 5 50 0 10 \n'
+text += 'addunitrec "Princeps Solaris" 100 5 55 0 10 \n'
+text += 'reclimiter "+Leo" \n'
+text += 'addunitrec "Triarius" 100 5 55 0 20 \n'
+text += 'addunitrec "Praetorian Guard" 5 5 60 0 20 \n'
+
+text += 'addunitrec "Ballista" 100 2 25 0 50 \n'
+text += 'addunitrec "Hastatus" 5 10 65 0 5 \n'
+text += 'addmercrec "Standard" 50 1 20 0 0 \n'  
+text += 'addmercrec "Archer" 20 5 50 0 0 \n'
+text += 'addmercrec "Gladiator" 20 2 25 0 0 \n'
+text += 'addmercrec "Retiarius" 1 2 25 0 0 \n'
+
+text += 'addcomrec "Centurion" 25 35 10 0 \n'
+text += 'addcomrec "Leo" 5 50 20 0 \n'
+text += 'addcomrec "Heliodromus" 1 90 20 0 \n'
+text += 'libraryrec \n'
+text += 'addcomrec "Renata" 5 50 20 0 \n'
+text += 'addcomrec "Renatus" 1 110 20 0 \n'
+text += 'libraryrec \n'
+text += 'addcomrec "Serpent Acolyte" 5 50 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Serpent Priest" 2 90 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Reveler" 5 50 20 0 \n'
+text += 'addcomrec "Augur" 5 50 20 0 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck === true){	
+
+text += 'addunitrec "Pale One" 100 5 50 0 0 \n'
+text += 'addunitrec "Pale One Soldier" 100 5 50 0 5 \n'
+text += 'addunitrec "Cavern Guard" 100 5 50 0 20 \n'
+text += 'addunitrec "Ancient Hurler" 25 1 40 0 0 \n'
+text += 'addunitrec "Ancient Pale One" 25 1 40 0 15 \n'
+text += 'addunitrec "Seal Guard" 25 1 50 0 25 \n'
+
+text += 'addcomrec "Ancient Commander" 5 60 20 15 \n'
+text += 'addcomrec "Pale One Commander" 10 40 10 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 9 && druidcheck === true){	
+
+text += 'addunitrec "Barechested Slinger" 100 5 50 0 0 \n'
+text += 'addunitrec "Barechested Swordsman" 100 5 50 0 0 \n'
+text += 'addunitrec "Barechested Warrior" 100 5 50 0 0 \n'
+text += 'addunitrec "Beast Cavalry" 100 5 50 0 5 \n'
+text += 'addunitrec "Boar Warrior" 15 4 50 0 10 \n'
+
+text += 'addcomrec "Chieftain" 10 40 10 0 \n'
+text += 'addcomrec "Hornblower" 5 25 10 0 \n'
+text += 'addcomrec "Vergobret" 5 30 10 0 \n'
+}
+
+if(shuffle3 === 9 && druidcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck === true){	
+
+text += 'addunitrec "Hoburg Militia" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Slinger" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Soldier" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Pikeneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hoburg Crossbow" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Guard" 100 10 40 0 10 \n'
+text += 'addunitrec "Hoburg Defender" 100 15 50 0 10 \n'
+text += 'addunitrec "Hog Knight" 100 5 50 0 10 \n'
+
+text += 'addcomrec "Hogmeister" 10 25 5 0 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+
+if(shuffle3 === 11 && priestcheck ===true){	
+
+text += 'addunitrec "Tribal Warrior" 100 7 50 0 0 \n'
+text += 'addunitrec "Jungle Warrior" 100 6 50 0 0 \n'
+text += 'addunitrec "Feathered Warrior" 100 5 50 0 5 \n'
+text += 'addunitrec "Jaguar Warrior" 30 5 50 0 0 \n'
+
+}
+
+if(shuffle3 === 11 && priestcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 12 && trollcheck === true){	
+
+text += 'addunitrec  "Goblin" 100 15 50 0 0 \n'
+text += 'addunitrec  "Ogre" 100 1 25 0 0 \n'
+text += 'addunitrec  "Goblin Spearman" 40 15 50 0 0 \n'
+text += 'addunitrec  "Goblin Archer" 20 10 50 0 0 \n'
+text += 'addunitrec  "Wolf Kin" 20 10 50 0 0 \n'
+text += 'addunitrec  "Wolf Kin Reaver" 20 7 50 0 10 \n'
+text += 'addunitrec  "Rock Troll" 20 1 50 0 60 \n'
+text += 'addunitrec  "Troll" 30 1 50 0 20 \n'
+text += 'addunitrec  "Forest Troll" 40 1 40 0 10 \n'
+text += 'addunitrec  "Hill Giant" 5 1 100 0 0 \n'
+text += 'addunitrec  "Ettin" 10 1 75 0 0 \n'
+text += 'addcomrec   "Goblin Chieftain" 7 25 20 0 \n'
+text += 'addcomrec   "Ogre Chief" 3 35 20 0 \n'
+text += 'addcomrec   "Forest Giant" 5 70 20 0 \n'
+
+text += 'addmercrec  "Goblin Murderer" 3 1 10 40 0 \n'
+text += 'addcomrec   "Goblin Hero" 3 10 50 0 \n'
+
+}
+
+if(shuffle3 === 12 && trollcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 13 && elcheck === true){
+
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n'	
+text += 'addunitrec "Archer" 100 5 50 0 0 \n'
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n' 	
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Temple Guard" 100 5 50 0 5 \n'
+text += 'addunitrec "Templar" 100 5 50 0 15  \n'                      
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+
+text += 'addcomrec "Missionary" 5 20 10 0 \n'
+
+}
+
+if(shuffle3 === 13 && elcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck === true){
+text += 'addunitrec "Dwarf Worker" 100 5 30 0 0 \n'
+
+text += 'addunitrec "Dwarf" 100 5 0 0 20 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Warrior" 100 5 0 0 30 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Guard" 100 5 0 0 40 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Arbarlest" 100 5 0 0 30 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Outdoor Dwarf" 100 2 10 0 10 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarven Ballista" 100 1 0 0 40  \n'
+
+text += 'addmercrec "Archer" 3 10 150 0 0 \n'                    
+text += 'addmercrec "Crossbowman" 3 10 150 0 0 \n' 
+text += 'addmercrec "Pikeneer" 3 10 150 0 10 \n'                    
+text += 'addmercrec "Pikeneer" 3 20 250 0 10 \n'                    
+text += 'addmercrec "Spearman" 3 10 150 0 0 \n'                 
+text += 'addmercrec "Swordsman" 3 10 150 0 10 \n' 
+
+text += 'addcomrec "Dwarf Commander" 15 20 10 0 \n'
+
+}
+
+if(shuffle3 === 14 && dwarfcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck === true){
+	
+text += 'addunitrec "Hoburg Militia" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Slinger" 100 15 50 0 0 \n'
+text += 'addunitrec "Hobmark Soldier" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Pikeneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Hammerer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Pickaneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Crossbow" 100 15 50 0 5 \n'
+text += 'addunitrec "Markgraf Guard" 100 10 40 0 10 \n'
+text += 'addunitrec "Hobmark Defender" 100 15 50 0 10 \n'
+text += 'addunitrec "Hog Hussar" 100 5 50 0 5 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 25 \n'
+
+text += 'addcomrec "Hogmeister" 10 25 5 0 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck === true){
+
+text += 'addunitrec "Satyr " 100 5 50 0 0 \n'	
+text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Hoplite" 100 5 25 0 15 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Steel Hoplite" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+
+text += 'addunitrec "Centaur" 100 3 50 0 0 \n'
+text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centaur" \n'
+
+text += 'addunitrec "Minotaur" 100 3 50 0 0 \n'
+text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
+text += 'reclimiter "=Minotaur" \n'
+
+text += 'addunitrec "Harpy" 100 5 50 0 0 \n'
+text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
+text += 'reclimiter "=Harpy" \n'
+
+text += 'addcomrec "Satyr Commander" 10 40 10  0 \n'
+text += 'addcomrec "Hoplite Commander" 5 40 10 5 \n'
+text += 'addcomrec "Centaur Commander" 5 50 15 5 \n'
+text += 'addcomrec "Cataphract Commander" 3 50 15 10 \n'
+
+}
+
+if(shuffle3 === 16 && dryadcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 17){
+text += 'addunitrec "Militia" 100 5 50 0 0 \n' 
+text += 'addunitrec "Slinger" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Light Cavalry" 100 3 50 0 0 \n'
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Tower Guard" 100 5 50 0 15 \n'
+text += 'addunitrec "Cavalryman" 100 3 50 0 20 \n'
+text += 'addunitrec "Heavy Cavalry" 100 3 50 0 20 \n'
+text += 'addunitrec "Heavy Infantry" 100 5 50 0 25 \n'
+text += 'addunitrec "Heavy Spearman" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addunitrec "Spearman" 5 10 70 0 0 \n' 
+text += 'addunitrec "Archer" 5 10 70 0 0 \n' 
+
+text += 'addcomrec "Court Mage" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Alchemist" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "White Wizard" 0 100 100 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Monk" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Priest" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+text += 'addcomrec "Commander" 10 40 10 0 \n'
+text += 'addcomrec "Mounted Commander" 5 40 10 0 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+}
+
+if(shuffle2 === 11){
+text += 'addcomrec "Oracle of Subterranean Fire" 0 150 30 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Oracle of Subterranean Waters" 0 150 30 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Oracle of the Dead" 0 150 30 0 \n'
+text += 'templerec \n'
+}
+if(shuffle2 === 9){
+text += 'addcomrec "Sun Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Blood Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Sky Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Rain Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Moon Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Death Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+}
+if (shuffle2 === 13){	
+text += 'addmercrec "Mirror" 100 1 10 0 0\n'
+text += 'addmercrec "Large Mirror" 100 1 25 0 0\n'
+text += 'addmercrec "Silver Mirror" 100 1 50 0 0\n'
+text += 'addmercrec "Golden Mirror" 100 1 150 0 0\n'
+}
+if(shuffle2 === 15){
+text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
+}
+
+text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
+text += 'clearstartunits  \n'
+if(shuffle3 === 1){	
+text += 'addstartunits "Cavalryman" 5 \n'
+text += 'addstartunits "Spearman" 6 \n'
+text += 'addstartunits "Archer" 5 \n'
+}
+if(shuffle3 === 2){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+if(shuffle3 === 3 && witchcheck === true){	
+text += 'addstartunits "Androphag Spearman" 5 \n'
+text += 'addstartunits "Androphag Archer" 5 \n'
+text += 'addstartunits "Androphag Cavalry" 1 \n'
+}
+if(shuffle3 === 3 && witchcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+if(shuffle3 === 4 && baalcheck === true){	
+text += 'addstartunits "Ba' + illapp + 'alite Spearman" 10 \n'
+text += 'addstartunits "Ba' + illapp + 'alite Archer" 5 \n'
+}
+
+if(shuffle3 === 4 && baalcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck === true){	
+text += 'addstartunits "Bakemono Spearman" 15 \n'
+text += 'addstartunits "Bakemono Sho" 15 \n'
+text += 'addstartunits "Bakemono Bowman" 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck === true){	
+text += 'addstartunits "Barbarian Warrior" 15 \n'
+text += 'addstartunits "Barbarian Bowman" 5 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck === true){	
+text += 'addstartunits "Velite" 10 \n'
+text += 'addstartunits "Hastati" 5 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck === true){	
+text += 'addstartunits "Pale One" 10 \n'
+text += 'addstartunits "Pale One Soldier" 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 9 && druidcheck === true){	
+text += 'addstartunits "Barechested Warrior" 10 \n'
+text += 'addstartunits "Barechested Slinger" 5 \n'
+}
+
+if(shuffle3 === 9 && druidcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck ===true){	
+text += 'addstartunits "Hoburg Crossbow" 10 \n'
+text += 'addstartunits "Hoburg Defender" 5 \n'
+text += 'addstartunits "Hoburg Soldier" 10 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 11 && priestcheck === true){	
+text += 'addstartunits "Tribal Warrior" 10 \n'
+text += 'addstartunits "Jungle Warrior" 10 \n'
+}
+
+if(shuffle3 === 11 && priestcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 12 && trollcheck === true){	
+text += 'addstartunits "Goblin" 15 \n'
+text += 'addstartunits "Rock Troll" 1 \n'
+}
+
+if(shuffle3 === 12 && trollcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 13 && elcheck === true){	
+text += 'addstartunits "Spearman" 10 \n'
+text += 'addstartunits "Halberdier" 8 \n'
+}
+
+if(shuffle3 === 13 && elcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck === true){	
+text += 'addstartunits "Dwarf Worker" 12 \n'
+text += 'addstartunits "Dwarf" 5 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck === true){	
+text += 'addstartunits "Hobmark Soldier" 10 \n'
+text += 'addstartunits "Hobmark Defender" 5 \n'
+text += 'addstartunits "Hobmark Crossbow" 10 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck === true){	
+text += 'addstartunits "Satyr Warrior" 5 \n'
+text += 'addstartunits "Satyr Javelinist" 5 \n'
+text += 'addstartunits "Harpy" 1 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 17){	
+text += 'addstartunits "Militia" 10 \n'
+text += 'addstartunits "Slinger" 10 \n'
+}
+}
+
+if(saneshuffle !== "swap"){
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
 text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
@@ -3642,6 +6463,7 @@ if(hasunits < 9){
 roll = Math.floor(Math.random() * team1_melee_empty.length)	
 text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
 hasunits += team1_melee_empty[roll].num
+}
 }
 roll = Math.floor(Math.random() * team2_empty.length)
 rit2 = document.getElementById("rit2").checked;	
@@ -3832,6 +6654,719 @@ text += ' \n'
 
 text += 'selectclass 24 \n'
 text += 'clearrec  \n'
+
+
+shuffle3 = Math.floor(Math.random() * 17) + 1
+
+if(saneshuffle === "swap"){
+
+if(shuffle3 === 1){	
+text += 'addunitrec "Longbowman" 100 4 50 0 0 \n' 
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Zweihander" 100 5 50 0 10 \n'
+text += 'addunitrec "Tower Guard" 100 5 50 0 15 \n'
+text += 'addunitrec "Cavalryman" 100 3 50 0 20 \n'
+text += 'addunitrec "War Dog" 100 4 25 0 0 \n' 
+text += 'addunitrec "Ballista" 100 2 25 0 50 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addunitrec "Trebuchet" 100 1 50 0 50 \n'
+text += 'addunitrec "Spearman" 5 10 70 0 0 \n' 
+text += 'addunitrec "Archer" 5 10 70 0 0 \n' 
+text += 'addunitrec "Crossbowman" 5 10 70 0 7 \n' 
+text += 'addunitrec "Swordsman" 5 10 70 0 7 \n'
+text += 'addunitrec "Trebuchet" 10 2 75 0 75 \n' 
+text += 'addcomrec "High Lord" 20 50 10 10 \n' 
+text += 'reclimiter "+Hedge Wizard" \n'
+text += 'addcomrec "Court Mage" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Alchemist" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Monk" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+
+}
+
+if(shuffle3 === 2){	
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 3 && witchcheck === true){	
+text += 'addunitrec "Androphag Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Androphag Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Androphag Cavalry" 100 5 50 0 5 \n' 
+text += 'addcomrec "Androphag Lord" 5 50 10 0 \n'
+text += 'addcomrec "Manflayer" 2 70 20 0 \n'
+}
+
+if(shuffle3 === 3 && witchcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 4 && baalcheck === true){	
+text += 'addunitrec "Ba' + illapp + 'alite Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Ba' + illapp + 'alite Spearman" 100 5 50 0 0 \n'
+text += 'addunitrec "Ba' + illapp + 'alite Zealot" 100 5 50 0 5 \n'
+text += 'addunitrec "Ba' + illapp + 'alite Heavy infantry" 100 5 50 0 25 \n' 
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+}
+
+if(shuffle3 === 4 && baalcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck === true){	
+text += 'addunitrec "Bakemono Archer" 100 5 25 0 1 \n' 
+text += 'addunitrec "Bakemono Soldier" 100 5 25 0 1 \n'
+text += 'addunitrec "Bakemono Swordsman" 100 5 25 0 3 \n'
+text += 'addunitrec "Dai Bakemono" 25 3 50 0 15 \n'
+text += 'addunitrec "Dai Bakemono Archer" 25 3 50 0 15 \n'
+text += 'addunitrec "O Bakemono" 25 1 25 0 0 \n'
+text += 'addunitrec "Bakemono Bowman" 100 5 25 0 0 \n'
+text += 'addunitrec "Bakemono Sho" 100 5 25 0 0 \n'
+text += 'addcomrec "Bakemono General" 5 50 10 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck === true){	
+text += 'addunitrec "Barbarian Warrior" 100 7 50 0  0 \n'
+text += 'addunitrec "Barbarian Bowman" 100 7 50 0 0 \n'
+text += 'addunitrec "Barbarian Swordsman" 100 7 50 0 10 \n'
+text += 'addunitrec "Barbarian Cavalry" 100 4 50 0 0 \n'
+text += 'addunitrec "Barbarian Lancer" 100 4 50 0 10 \n'
+text += 'addunitrec "Barbarian Werebear" 10 1 25 0 0 \n'
+text += 'addcomrec  "Spirit Guide" 8 75 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Soothsayer" 8 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Barbarian Leader" 100 25 10 0 \n'
+text += 'reclimiter "-Barbarian Leader" \n'
+text += 'addcomrec  "Mounted Chief" 10 25 10 0 \n'
+text += 'addmercrec "Mounted Scout" 15 1 15 10 0 \n'
+text += 'addcomrec  "Crystal Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Crystal Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Crystal Priestess" \n'
+text += 'addunitrec "Crystal Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Crystal Priestess" \n'
+text += 'addcomrec  "Garnet Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Garnet Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Garnet Priestess" \n'
+text += 'addunitrec "Garnet Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Garnet Priestess" \n'
+text += 'addcomrec  "Jade Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Jade Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Jade Priestess" \n'
+text += 'addunitrec "Jade Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Jade Priestess" \n'
+text += 'addcomrec  "Onyx Priestess" 3 40 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec  "Onyx Sorceress" 3 80 20 0 \n'
+text += 'reclimiter "+Onyx Priestess" \n'
+text += 'addunitrec "Onyx Amazon" 25 8 50 0 0 \n'
+text += 'reclimiter "+Onyx Priestess" \n'
+}
+
+if(shuffle3 === 6 && barbariancheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck === true){	
+text += 'addunitrec "Veles" 100 5 40 0 0 \n'
+text += 'addunitrec "Hastatus" 100 5 45 0 5 \n'
+text += 'addunitrec "Princeps" 100 5 50 0 10 \n'
+text += 'addunitrec "Princeps Solaris" 100 5 55 0 10 \n'
+text += 'reclimiter "+Leo" \n'
+text += 'addunitrec "Triarius" 100 5 55 0 20 \n'
+text += 'addunitrec "Praetorian Guard" 5 5 60 0 20 \n'
+
+text += 'addunitrec "Ballista" 100 2 25 0 50 \n'
+text += 'addunitrec "Hastatus" 5 10 65 0 5 \n'
+text += 'addmercrec "Standard" 50 1 20 0 0 \n'  
+text += 'addmercrec "Archer" 20 5 50 0 0 \n'
+text += 'addmercrec "Gladiator" 20 2 25 0 0 \n'
+text += 'addmercrec "Retiarius" 1 2 25 0 0 \n'
+
+text += 'addcomrec "Centurion" 25 35 10 0 \n'
+text += 'addcomrec "Leo" 5 50 20 0 \n'
+text += 'addcomrec "Heliodromus" 1 90 20 0 \n'
+text += 'libraryrec \n'
+text += 'addcomrec "Renata" 5 50 20 0 \n'
+text += 'addcomrec "Renatus" 1 110 20 0 \n'
+text += 'libraryrec \n'
+text += 'addcomrec "Serpent Acolyte" 5 50 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Serpent Priest" 2 90 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Reveler" 5 50 20 0 \n'
+text += 'addcomrec "Augur" 5 50 20 0 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck === true){	
+
+text += 'addunitrec "Pale One" 100 5 50 0 0 \n'
+text += 'addunitrec "Pale One Soldier" 100 5 50 0 5 \n'
+text += 'addunitrec "Cavern Guard" 100 5 50 0 20 \n'
+text += 'addunitrec "Ancient Hurler" 25 1 40 0 0 \n'
+text += 'addunitrec "Ancient Pale One" 25 1 40 0 15 \n'
+text += 'addunitrec "Seal Guard" 25 1 50 0 25 \n'
+
+text += 'addcomrec "Ancient Commander" 5 60 20 15 \n'
+text += 'addcomrec "Pale One Commander" 10 40 10 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 9 && druidcheck === true){	
+
+text += 'addunitrec "Barechested Slinger" 100 5 50 0 0 \n'
+text += 'addunitrec "Barechested Swordsman" 100 5 50 0 0 \n'
+text += 'addunitrec "Barechested Warrior" 100 5 50 0 0 \n'
+text += 'addunitrec "Beast Cavalry" 100 5 50 0 5 \n'
+text += 'addunitrec "Boar Warrior" 15 4 50 0 10 \n'
+
+text += 'addcomrec "Chieftain" 10 40 10 0 \n'
+text += 'addcomrec "Hornblower" 5 25 10 0 \n'
+text += 'addcomrec "Vergobret" 5 30 10 0 \n'
+}
+
+if(shuffle3 === 9 && druidcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck === true){	
+
+text += 'addunitrec "Hoburg Militia" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Slinger" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Soldier" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Pikeneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hoburg Crossbow" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Guard" 100 10 40 0 10 \n'
+text += 'addunitrec "Hoburg Defender" 100 15 50 0 10 \n'
+text += 'addunitrec "Hog Knight" 100 5 50 0 10 \n'
+
+text += 'addcomrec "Hogmeister" 10 25 5 0 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+
+if(shuffle3 === 11 && priestcheck ===true){	
+
+text += 'addunitrec "Tribal Warrior" 100 7 50 0 0 \n'
+text += 'addunitrec "Jungle Warrior" 100 6 50 0 0 \n'
+text += 'addunitrec "Feathered Warrior" 100 5 50 0 5 \n'
+text += 'addunitrec "Jaguar Warrior" 30 5 50 0 0 \n'
+
+}
+
+if(shuffle3 === 11 && priestcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 12 && trollcheck === true){	
+
+text += 'addunitrec  "Goblin" 100 15 50 0 0 \n'
+text += 'addunitrec  "Ogre" 100 1 25 0 0 \n'
+text += 'addunitrec  "Goblin Spearman" 40 15 50 0 0 \n'
+text += 'addunitrec  "Goblin Archer" 20 10 50 0 0 \n'
+text += 'addunitrec  "Wolf Kin" 20 10 50 0 0 \n'
+text += 'addunitrec  "Wolf Kin Reaver" 20 7 50 0 10 \n'
+text += 'addunitrec  "Rock Troll" 20 1 50 0 60 \n'
+text += 'addunitrec  "Troll" 30 1 50 0 20 \n'
+text += 'addunitrec  "Forest Troll" 40 1 40 0 10 \n'
+text += 'addunitrec  "Hill Giant" 5 1 100 0 0 \n'
+text += 'addunitrec  "Ettin" 10 1 75 0 0 \n'
+text += 'addcomrec   "Goblin Chieftain" 7 25 20 0 \n'
+text += 'addcomrec   "Ogre Chief" 3 35 20 0 \n'
+text += 'addcomrec   "Forest Giant" 5 70 20 0 \n'
+
+text += 'addmercrec  "Goblin Murderer" 3 1 10 40 0 \n'
+text += 'addcomrec   "Goblin Hero" 3 10 50 0 \n'
+
+}
+
+if(shuffle3 === 12 && trollcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 13 && elcheck === true){
+
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n'	
+text += 'addunitrec "Archer" 100 5 50 0 0 \n'
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n' 	
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Temple Guard" 100 5 50 0 5 \n'
+text += 'addunitrec "Templar" 100 5 50 0 15  \n'                      
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+
+text += 'addcomrec "Missionary" 5 20 10 0 \n'
+
+}
+
+if(shuffle3 === 13 && elcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck === true){
+text += 'addunitrec "Dwarf Worker" 100 5 30 0 0 \n'
+
+text += 'addunitrec "Dwarf" 100 5 0 0 20 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Warrior" 100 5 0 0 30 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Guard" 100 5 0 0 40 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarf Arbarlest" 100 5 0 0 30 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Outdoor Dwarf" 100 2 10 0 10 \n'
+text += 'reclimiter "=Dwarf Worker" \n'
+text += 'addunitrec "Dwarven Ballista" 100 1 0 0 40  \n'
+
+text += 'addmercrec "Archer" 3 10 150 0 0 \n'                    
+text += 'addmercrec "Crossbowman" 3 10 150 0 0 \n' 
+text += 'addmercrec "Pikeneer" 3 10 150 0 10 \n'                    
+text += 'addmercrec "Pikeneer" 3 20 250 0 10 \n'                    
+text += 'addmercrec "Spearman" 3 10 150 0 0 \n'                 
+text += 'addmercrec "Swordsman" 3 10 150 0 10 \n' 
+
+text += 'addcomrec "Dwarf Commander" 15 20 10 0 \n'
+
+}
+
+if(shuffle3 === 14 && dwarfcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck === true){
+	
+text += 'addunitrec "Hoburg Militia" 100 15 50 0 0 \n'
+text += 'addunitrec "Hoburg Slinger" 100 15 50 0 0 \n'
+text += 'addunitrec "Hobmark Soldier" 100 15 50 0 5 \n'
+text += 'addunitrec "Hoburg Pikeneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Hammerer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Pickaneer" 100 10 30 0 5 \n'
+text += 'addunitrec "Hobmark Crossbow" 100 15 50 0 5 \n'
+text += 'addunitrec "Markgraf Guard" 100 10 40 0 10 \n'
+text += 'addunitrec "Hobmark Defender" 100 15 50 0 10 \n'
+text += 'addunitrec "Hog Hussar" 100 5 50 0 5 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 25 \n'
+
+text += 'addcomrec "Hogmeister" 10 25 5 0 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck === true){
+
+text += 'addunitrec "Satyr " 100 5 50 0 0 \n'	
+text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Warrior" 100 5 25 0 0 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Hoplite" 100 5 25 0 15 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Steel Hoplite" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+text += 'addunitrec "Satyr Sniper" 100 5 25 0 25 \n'
+text += 'reclimiter "=Satyr" \n'
+
+text += 'addunitrec "Centaur" 100 3 50 0 0 \n'
+text += 'addunitrec "Centaur Warrior" 100 3 25 0 0 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Centaur Cataphract" 100 5325 0 25 \n'
+text += 'reclimiter "=Centaur" \n'
+text += 'addunitrec "Steel Cataphract" 100 3 25 0 50 \n'
+text += 'reclimiter "=Centaur" \n'
+
+text += 'addunitrec "Minotaur" 100 3 50 0 0 \n'
+text += 'addunitrec "Minotaur Warrior" 100 3 50 0 0 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Bronze Bull" 100 3 50 0 25 \n'
+text += 'reclimiter "=Minotaur" \n'
+text += 'addunitrec "Steel Bull" 100 3 50 0 50 \n'
+text += 'reclimiter "=Minotaur" \n'
+
+text += 'addunitrec "Harpy" 100 5 50 0 0 \n'
+text += 'addunitrec "Stymphalian Bird" 100 5 15 0 25 \n'
+text += 'reclimiter "=Harpy" \n'
+
+text += 'addcomrec "Satyr Commander" 10 40 10  0 \n'
+text += 'addcomrec "Hoplite Commander" 5 40 10 5 \n'
+text += 'addcomrec "Centaur Commander" 5 50 15 5 \n'
+text += 'addcomrec "Cataphract Commander" 3 50 15 10 \n'
+
+}
+
+if(shuffle3 === 16 && dryadcheck !== true){
+text += 'addunitrec "Spearman" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Crossbowman" 100 5 50 0 5 \n' 
+text += 'addunitrec "Swordsman" 100 5 50 0 5 \n'
+text += 'addunitrec "Heavy Infatry" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+}
+
+if(shuffle3 === 17){
+text += 'addunitrec "Militia" 100 5 50 0 0 \n' 
+text += 'addunitrec "Slinger" 100 5 50 0 0 \n' 
+text += 'addunitrec "Archer" 100 5 50 0 0 \n' 
+text += 'addunitrec "Light Cavalry" 100 3 50 0 0 \n'
+text += 'addunitrec "Pikeneer" 100 5 50 0 5 \n' 
+text += 'addunitrec "Halberdier" 100 5 50 0 5 \n'
+text += 'addunitrec "Tower Guard" 100 5 50 0 15 \n'
+text += 'addunitrec "Cavalryman" 100 3 50 0 20 \n'
+text += 'addunitrec "Heavy Cavalry" 100 3 50 0 20 \n'
+text += 'addunitrec "Heavy Infantry" 100 5 50 0 25 \n'
+text += 'addunitrec "Heavy Spearman" 100 5 50 0 25 \n'
+text += 'addunitrec "Catapult" 100 1 25 0 50 \n'
+text += 'addunitrec "Spearman" 5 10 70 0 0 \n' 
+text += 'addunitrec "Archer" 5 10 70 0 0 \n' 
+
+text += 'addcomrec "Court Mage" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Alchemist" 3 45 15 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "White Wizard" 0 100 100 0 \n' 
+text += 'libraryrec \n'
+text += 'addcomrec "Monk" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Priest" 3 45 15 0 \n' 
+text += 'templerec \n'
+text += 'addcomrec "Scout" 5 15 10 0 \n'
+text += 'addcomrec "Captain" 10 40 10 0 \n'
+text += 'addcomrec "Commander" 10 40 10 0 \n'
+text += 'addcomrec "Mounted Commander" 5 40 10 0 \n'
+text += 'addcomrec "Assassin" 2 80 30 0 \n'
+}
+
+if(shuffle2 === 11){
+text += 'addcomrec "Oracle of Subterranean Fire" 0 150 30 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Oracle of Subterranean Waters" 0 150 30 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Oracle of the Dead" 0 150 30 0 \n'
+text += 'templerec \n'
+}
+if(shuffle2 === 9){
+text += 'addcomrec "Sun Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Blood Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Sky Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Rain Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Moon Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+text += 'addcomrec "Death Temple Attendant" 3 45 20 0 \n'
+text += 'templerec \n'
+}
+if (shuffle2 === 13){	
+text += 'addmercrec "Mirror" 100 1 10 0 0\n'
+text += 'addmercrec "Large Mirror" 100 1 25 0 0\n'
+text += 'addmercrec "Silver Mirror" 100 1 50 0 0\n'
+text += 'addmercrec "Golden Mirror" 100 1 150 0 0\n'
+}
+if(shuffle2 === 15){
+text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
+}
+
+text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
+text += 'clearstartunits  \n'
+if(shuffle3 === 1){	
+text += 'addstartunits "Cavalryman" 5 \n'
+text += 'addstartunits "Spearman" 6 \n'
+text += 'addstartunits "Archer" 5 \n'
+}
+if(shuffle3 === 2){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+if(shuffle3 === 3 && witchcheck === true){	
+text += 'addstartunits "Androphag Spearman" 5 \n'
+text += 'addstartunits "Androphag Archer" 5 \n'
+text += 'addstartunits "Androphag Cavalry" 1 \n'
+}
+if(shuffle3 === 3 && witchcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+if(shuffle3 === 4 && baalcheck === true){	
+text += 'addstartunits "Ba' + illapp + 'alite Spearman" 10 \n'
+text += 'addstartunits "Ba' + illapp + 'alite Archer" 5 \n'
+}
+
+if(shuffle3 === 4 && baalcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck === true){	
+text += 'addstartunits "Bakemono Spearman" 15 \n'
+text += 'addstartunits "Bakemono Sho" 15 \n'
+text += 'addstartunits "Bakemono Bowman" 5 \n'
+}
+
+if(shuffle3 === 5 && bakemonocheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck === true){	
+text += 'addstartunits "Barbarian Warrior" 15 \n'
+text += 'addstartunits "Barbarian Bowman" 5 \n'
+}
+
+if(shuffle3 === 6 && barbariancheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck === true){	
+text += 'addstartunits "Velite" 10 \n'
+text += 'addstartunits "Hastati" 5 \n'
+}
+
+if(shuffle3 === 7 && senatorcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck === true){	
+text += 'addstartunits "Pale One" 10 \n'
+text += 'addstartunits "Pale One Soldier" 5 \n'
+}
+
+if(shuffle3 === 8 && paleonecheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 9 && druidcheck === true){	
+text += 'addstartunits "Barechested Warrior" 10 \n'
+text += 'addstartunits "Barechested Slinger" 5 \n'
+}
+
+if(shuffle3 === 9 && druidcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck ===true){	
+text += 'addstartunits "Hoburg Crossbow" 10 \n'
+text += 'addstartunits "Hoburg Defender" 5 \n'
+text += 'addstartunits "Hoburg Soldier" 10 \n'
+}
+
+if(shuffle3 === 10 && hoburgcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 11 && priestcheck === true){	
+text += 'addstartunits "Tribal Warrior" 10 \n'
+text += 'addstartunits "Jungle Warrior" 10 \n'
+}
+
+if(shuffle3 === 11 && priestcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 12 && trollcheck === true){	
+text += 'addstartunits "Goblin" 15 \n'
+text += 'addstartunits "Rock Troll" 1 \n'
+}
+
+if(shuffle3 === 12 && trollcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 13 && elcheck === true){	
+text += 'addstartunits "Spearman" 10 \n'
+text += 'addstartunits "Halberdier" 8 \n'
+}
+
+if(shuffle3 === 13 && elcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck === true){	
+text += 'addstartunits "Dwarf Worker" 12 \n'
+text += 'addstartunits "Dwarf" 5 \n'
+}
+
+if(shuffle3 === 14 && dwarfcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck === true){	
+text += 'addstartunits "Hobmark Soldier" 10 \n'
+text += 'addstartunits "Hobmark Defender" 5 \n'
+text += 'addstartunits "Hobmark Crossbow" 10 \n'
+}
+
+if(shuffle3 === 15 && homarkcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck === true){	
+text += 'addstartunits "Satyr Warrior" 5 \n'
+text += 'addstartunits "Satyr Javelinist" 5 \n'
+text += 'addstartunits "Harpy" 1 \n'
+}
+
+if(shuffle3 === 16 && dryadcheck !== true){	
+text += 'addstartunits "Swordsman" 8 \n'
+text += 'addstartunits "Crossbowman" 5 \n'
+}
+
+if(shuffle3 === 17){	
+text += 'addstartunits "Militia" 10 \n'
+text += 'addstartunits "Slinger" 10 \n'
+}
+}
+
+if(saneshuffle !== "swap"){
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
 text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
@@ -3926,7 +7461,7 @@ roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
 hasunits += team1_melee_empty[roll].num
 }
-
+}
 roll = Math.floor(Math.random() * team2_empty.length)
 rit2 = document.getElementById("rit2").checked;	
 
