@@ -2654,7 +2654,6 @@ roll = Math.floor(Math.random() * team1_ranged_empty.length)
 text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
 
 
-
 if (team1_ranged_empty[roll].name === "Centauride"){
 text += 'addunitrec "Centauride Warrior" 100 3 25 0 0 \n'
 text += 'reclimiter "=Centauride" \n'
@@ -2662,6 +2661,7 @@ text += 'addunitrec "Centauride Cataphract" 100 3 25 0 25 \n'
 text += 'reclimiter "=Centauride" \n'
 text += 'addunitrec "Centauride Crossbow" 100 3 25 0 50 \n'
 text += 'reclimiter "=Centauride" \n'
+}
 }
 }
 
@@ -2753,7 +2753,7 @@ if(shuffle2 === 6){
 text += 'addstartterr 70 \n'	
 }		
 text += ' \n'
-}
+
 dump += text
 return dump
   var element = document.createElement('a');
