@@ -2704,10 +2704,11 @@ text += 'addmercrec "Golden Mirror" 100 1 150 0 0\n'
 if(shuffle2 === 15){
 text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
 }
-}
+
 
 text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
 text += 'nostdtroops  \n'
+
 text += 'clearstartunits  \n'
 hasunits = 0
 
@@ -2753,7 +2754,7 @@ if(shuffle2 === 6){
 text += 'addstartterr 70 \n'	
 }		
 text += ' \n'
-
+}
 dump += text
 return dump
   var element = document.createElement('a');
@@ -2767,6 +2768,7 @@ return dump
 
   document.body.removeChild(element);	
 }
+
 // El and Troll King
 function download2(filename, text) {
 dump = " "	
