@@ -815,6 +815,9 @@ var priestcheck = false;
 var pokemon = false;
 var saneshuffle = "insane";
 let hproll
+let startstore
+let startstore2
+let startstore3
 
 
 function test(){
@@ -2597,9 +2600,12 @@ if(saneshuffle !== "swap"){
 	
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
 text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
+startstore = roll
+startstore3 = roll
 
 roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+startstore2 = roll
 
 limit = limit - 2 
 
@@ -2613,8 +2619,8 @@ x++
 coin = Math.floor(Math.random() * 2)
 if(coin === 1){
 roll = Math.floor(Math.random() * team1_melee_empty.length)
+startstore3 = roll
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
-
 
 if (team1_melee_empty[roll].name=== "Satyr"){
 text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
@@ -2714,17 +2720,17 @@ text += 'clearstartunits  \n'
 hasunits = 0
 
 roll = Math.floor(Math.random() * team1_melee_empty.length)
-text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num +' \n'
-hasunits += team1_melee_empty[roll].num
+text += 'addstartunits "' + team1_melee_empty[startstore2].name + '" '+ team1_melee_empty[startstore2].num +' \n'
+hasunits += team1_melee_empty[startstore2].num
 
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
-text += 'addstartunits "' + team1_ranged_empty[roll].name + '" '+ team1_ranged_empty[roll].num +' \n'
-hasunits += team1_ranged_empty[roll].num
+text += 'addstartunits "' + team1_ranged_empty[startstore].name + '" '+ team1_ranged_empty[startstore].num +' \n'
+hasunits += team1_ranged_empty[startstore].num
 
 if(hasunits < 9){
 roll = Math.floor(Math.random() * team1_melee_empty.length)	
-text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
-hasunits += team1_melee_empty[roll].num
+text += 'addstartunits "' + team1_melee_empty[startstore3].name + '" '+ team1_melee_empty[startstore3].num  +' \n'
+hasunits += team1_melee_empty[startstore3].num
 }
 }
 roll = Math.floor(Math.random() *  team2_empty.length)	
@@ -4315,10 +4321,12 @@ text += 'addstartunits "Slinger" 10 \n'
 if(saneshuffle !== "swap"){
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
 text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
+startstore = roll
+startstore3 = roll
 
 roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
-
+startstore2 = roll
 limit = limit - 2 
 
 if(limit <= 0){
@@ -4331,6 +4339,7 @@ x++
 coin = Math.floor(Math.random() * 2)
 if(coin === 1){
 roll = Math.floor(Math.random() * team1_melee_empty.length)
+startstore3 = roll
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
 
 
@@ -4400,17 +4409,17 @@ text += 'clearstartunits  \n'
 hasunits = 0
 
 roll = Math.floor(Math.random() * team1_melee_empty.length)
-text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num +' \n'
-hasunits += team1_melee_empty[roll].num
+text += 'addstartunits "' + team1_melee_empty[startstore2].name + '" '+ team1_melee_empty[startstore2].num +' \n'
+hasunits += team1_melee_empty[startstore2].num
 
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
-text += 'addstartunits "' + team1_ranged_empty[roll].name + '" '+ team1_ranged_empty[roll].num +' \n'
-hasunits += team1_ranged_empty[roll].num
+text += 'addstartunits "' + team1_ranged_empty[startstore].name + '" '+ team1_ranged_empty[startstore].num +' \n'
+hasunits += team1_ranged_empty[startstore].num
 
 if(hasunits < 9){
 roll = Math.floor(Math.random() * team1_melee_empty.length)	
-text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
-hasunits += team1_melee_empty[roll].num
+text += 'addstartunits "' + team1_melee_empty[startstore3].name + '" '+ team1_melee_empty[startstore3].num  +' \n'
+hasunits += team1_melee_empty[startstore3].num
 }
 }
 roll = Math.floor(Math.random() * team2_empty.length)
@@ -5319,9 +5328,13 @@ text += 'addstartunits "Slinger" 10 \n'
 if(saneshuffle !== "swap"){
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
 text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
+startstore = roll
+startstore3 = roll
 
 roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+startstore2 = roll
+
 
 limit = limit - 2 
  
@@ -5336,6 +5349,7 @@ x++
 coin = Math.floor(Math.random() * 2)
 if(coin === 1){
 roll = Math.floor(Math.random() * team1_melee_empty.length)
+startstore3 = roll
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
 
 
@@ -5400,17 +5414,17 @@ text += 'clearstartunits  \n'
 hasunits = 0
 
 roll = Math.floor(Math.random() * team1_melee_empty.length)
-text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num +' \n'
-hasunits += team1_melee_empty[roll].num
+text += 'addstartunits "' + team1_melee_empty[startstore2].name + '" '+ team1_melee_empty[startstore2].num +' \n'
+hasunits += team1_melee_empty[startstore2].num
 
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
-text += 'addstartunits "' + team1_ranged_empty[roll].name + '" '+ team1_ranged_empty[roll].num +' \n'
-hasunits += team1_ranged_empty[roll].num
+text += 'addstartunits "' + team1_ranged_empty[startstore].name + '" '+ team1_ranged_empty[startstore].num +' \n'
+hasunits += team1_ranged_empty[startstore].num
 
 if(hasunits < 9){
 roll = Math.floor(Math.random() * team1_melee_empty.length)	
-text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
-hasunits += team1_melee_empty[roll].num
+text += 'addstartunits "' + team1_melee_empty[startstore3].name + '" '+ team1_melee_empty[startstore3].num  +' \n'
+hasunits += team1_melee_empty[startstore3].num
 }
 }
 roll = Math.floor(Math.random() * team2_empty.length)
@@ -6370,9 +6384,12 @@ text += 'addstartunits "Slinger" 10 \n'
 if(saneshuffle !== "swap"){
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
 text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
+startstore = roll
+startstore3 = roll
 
 roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+startstore2 = roll
 
 limit = limit - 2 
 
@@ -6387,8 +6404,8 @@ x++
 coin = Math.floor(Math.random() * 2)
 if(coin === 1){
 roll = Math.floor(Math.random() * team1_melee_empty.length)
+startstore3 = roll
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
-
 
 if (team1_melee_empty[roll].name=== "Satyr"){
 text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
@@ -6458,17 +6475,17 @@ text += 'reclimiter  "='+ mymonster3 +'" \n'
 text += 'clearstartunits  \n'
 hasunits = 0
 roll = Math.floor(Math.random() * team1_melee_empty.length)
-text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num +' \n'
-hasunits += team1_melee_empty[roll].num
+text += 'addstartunits "' + team1_melee_empty[startstore2].name + '" '+ team1_melee_empty[startstore2].num +' \n'
+hasunits += team1_melee_empty[startstore2].num
 
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
-text += 'addstartunits "' + team1_ranged_empty[roll].name + '" '+ team1_ranged_empty[roll].num +' \n'
-hasunits += team1_ranged_empty[roll].num
+text += 'addstartunits "' + team1_ranged_empty[startstore].name + '" '+ team1_ranged_empty[startstore].num +' \n'
+hasunits += team1_ranged_empty[startstore].num
 
 if(hasunits < 9){
 roll = Math.floor(Math.random() * team1_melee_empty.length)	
-text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
-hasunits += team1_melee_empty[roll].num
+text += 'addstartunits "' + team1_melee_empty[startstore3].name + '" '+ team1_melee_empty[startstore3].num  +' \n'
+hasunits += team1_melee_empty[startstore3].num
 }
 }
 roll = Math.floor(Math.random() * team2_empty.length)
@@ -7375,9 +7392,12 @@ text += 'addstartunits "Slinger" 10 \n'
 if(saneshuffle !== "swap"){
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
 text += 'addunitrec "' + team1_ranged_empty[roll].name + '" '+  team1_ranged_empty[roll].chance + ' ' +  team1_ranged_empty[roll].num + ' ' + team1_ranged_empty[roll].gold + ' 0 ' + team1_ranged_empty[roll].iron + ' \n'
+startstore = roll
+startstore3 = roll
 
 roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
+startstore2 = roll
 
 limit = limit - 2 
 
@@ -7393,7 +7413,7 @@ coin = Math.floor(Math.random() * 2)
 if(coin === 1){
 roll = Math.floor(Math.random() * team1_melee_empty.length)
 text += 'addunitrec "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].chance + ' ' +  team1_melee_empty[roll].num + ' ' + team1_melee_empty[roll].gold + ' 0 ' + team1_melee_empty[roll].iron + ' \n'
-
+startstore3 = roll
 
 if (team1_melee_empty[roll].name=== "Satyr"){
 text += 'addunitrec "Satyr Javelinist" 100 5 25 0 0 \n'
@@ -7455,17 +7475,17 @@ text += 'addcomrec "'+ mymonster +'" 5 60 30 0 \n'
 text += 'clearstartunits  \n'
 hasunits = 0
 roll = Math.floor(Math.random() * team1_melee_empty.length)
-text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num +' \n'
-hasunits += team1_melee_empty[roll].num
+text += 'addstartunits "' + team1_melee_empty[startstore2].name + '" '+ team1_melee_empty[startstore2].num +' \n'
+hasunits += team1_melee_empty[startstore2].num
 
 roll = Math.floor(Math.random() * team1_ranged_empty.length)
-text += 'addstartunits "' + team1_ranged_empty[roll].name + '" '+ team1_ranged_empty[roll].num +' \n'
-hasunits += team1_ranged_empty[roll].num
+text += 'addstartunits "' + team1_ranged_empty[startstore].name + '" '+ team1_ranged_empty[startstore].num +' \n'
+hasunits += team1_ranged_empty[startstore].num
 
 if(hasunits < 9){
 roll = Math.floor(Math.random() * team1_melee_empty.length)	
-text += 'addstartunits "' + team1_melee_empty[roll].name + '" '+ team1_melee_empty[roll].num  +' \n'
-hasunits += team1_melee_empty[roll].num
+text += 'addstartunits "' + team1_melee_empty[startstore3].name + '" '+ team1_melee_empty[startstore3].num  +' \n'
+hasunits += team1_melee_empty[startstore3].num
 }
 }
 roll = Math.floor(Math.random() * team2_empty.length)
