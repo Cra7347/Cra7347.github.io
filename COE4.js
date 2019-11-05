@@ -38,7 +38,8 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',"Re
 			 'Bejeweled','Honest','Robber','Amoeba','Disgusting','Yearly',"Mystic","Goetic",
 			 "Ironside","Red","Blue","Yellow","Unthawed","Mute","Deaf","Blind","Vorpal",
 			 "Green","Pink","Purple","Orange","Grey","Black","White","Silver","Gold",
-			 "Trove","Witch","Feel","Crusader","Honey","Hugging","Dungeon","Boss","Wishing"
+			 "Trove","Witch","Feel","Crusader","Honey","Hugging","Dungeon","Boss","Wishing",
+			 "Tortured","Disemboweled","Grotesque","Scattering"
 	
 			 ]
 
@@ -58,7 +59,8 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 "Son","Daughter","Boot","Phantom","Senator","Shaper","Enchanter","Meanie","King",
 			 "Diadochi","Czar","Kaiser","Tiger","Meister","Chimera","Doctor","Roach","Pest",
 			 "Emir","Vizier","Pharaoh","Pontiff","Disciple","Parent","Head","Extortioner",
-			 "Executioner","Bey","Hetman","Beg","Chanyu"
+			 "Executioner","Bey","Hetman","Beg","Chanyu","Defenestrator","Hierophant","Spook",
+			 "Maimer","Fey","Artist","Painter"
 	
 			 ]	
 
@@ -6458,6 +6460,8 @@ text += 'reclimiter "=Centauride" \n'
 }
 }
 text += 'addunitrec "Temple Guard" 100 5 50 0 5 \n'
+text += 'recxcost 12 5 \n'
+text += 'addunitrec "Templar" 25 5 50 0 15 \n'
 text += 'recxcost 12 5 \n'
 while (y <= limit2){	
 y++
