@@ -702,7 +702,7 @@ let team1_melee_priest = [
 	{name: "Jungle Warrior", num: 6, gold: 50, iron: 0, chance: 100},
 	{name: "Feathered Warrior", num: 5, gold: 50, iron: 5, chance: 100},
 	{name: "Jaguar Warrior", num: 5, gold: 50, iron: 0, chance: 25},	
-	{name: "Ancient Pale One", num: 1, gold: 40, iron: 15, chance: 25},	
+	{name: "Toad Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "Seal Guard", num: 1, gold: 50, iron: 25, chance: 10},			
 ]
 
