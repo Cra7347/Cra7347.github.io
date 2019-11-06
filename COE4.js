@@ -72,7 +72,7 @@ let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear',
 			 'the North','the Pale','the Wish','the Sands','El','the Mirror','Harmony',
 			 'Hades','Harpoons','the First Sin','the Orient','the Monastery','the Craft',
 			 'the Winds','Many Colors','White Robes','the Trove','the Horde','Hate',
-			 "Of the Lamp","Ulm","C'tis","Fomoria","R'lyeh","Ermor","Sin","The Storm",
+			 "the Lamp","Ulm","C'tis","Fomoria","R'lyeh","Ermor","Sin","The Storm",
 			 "Revelations","the Mount","the Peak","Alanjeh","Kendaria","Londor","Drangleic",
 			 "Tristram"
 			 ]
