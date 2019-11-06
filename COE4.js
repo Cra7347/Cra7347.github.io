@@ -205,7 +205,8 @@ let team1_melee_animal = [
 	{name: "Crocodile", num: 1, gold: 20, iron: 0, chance: 100},	
 	{name: "Frog", num: 25, gold: 50, iron: 0, chance: 100},	
 	{name: "Large Spider", num: 5, gold: 50, iron: 0, chance: 100},	
-	{name: "Scorpion", num: 10, gold: 50, iron: 0, chance: 100},	
+	{name: "Scorpion", num: 10, gold: 50, iron: 0, chance: 100},
+	{name: "Small Spider", num: 10, gold: 50, iron: 0, chance: 100},	
 ]
 let team1_ranged_animal = [
 	{name: "Giant Ant", num: 3, gold: 50, iron: 0, chance: 100},
@@ -707,7 +708,6 @@ let team1_melee_priest = [
 //Weird
 let team1_melee_weird = [
 	{name: "Dragon Hatchling", num: 1, gold: 25, iron: 5, chance: 10},
-	{name: "Cyclops", num: 1, gold: 120, iron: 0, chance: 10},
 	{name: "Siren", num: 1, gold: 25, iron: 0, chance: 50},
 	{name: "Sinner", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "Brass Claw Horror", num: 2, gold: 70, iron: 20, chance: 100},
@@ -744,6 +744,7 @@ let team2_weird = [
 	{name: "Brass Claw Horror", gold: 70, iron: 0, chance: 5, goldplus: 40},
 	{name: "Caveman Chief", gold: 40, iron: 0, chance: 5, goldplus: 10},
 	{name: "Ichtyid Captain", gold: 40, iron: 0, chance: 10, goldplus: 10},	
+	{name: "Moldwynd", gold: 60, iron: 0, chance: 10, goldplus: 20},
 ]
 let team3_weird = ['Hidden Aboleth',"Moon Horror",
 			 'Horror Olm',"Ormr","Python",
@@ -756,11 +757,11 @@ let team3_weird = ['Hidden Aboleth',"Moon Horror",
 
 ]
 let team3_2_weird = ["Hidden Aboleth","Formless Spawn","Displacer Beast","Hidden Freak",
-			 "Demonic Locust","Dream Horror","Gelatinous Cube","Rakshasa"
+			 "Demonic Locust","Dream Horror","Gelatinous Cube","Rakshasa","Moldwynd"
 
 ]
 let team3_3_weird = ["Miracle Eye","Freak Lord","Lizardman Shaman","Spine Membrane Horror","Horror Mantis","Ichtyid Captain",
-					 "Brass Claw Horror","Mind Slime Horror","Float Cat Horror"
+					 "Brass Claw Horror","Mind Slime Horror","Float Cat Horror","Moldwynd"
 ]	
 			  
 let	text	
@@ -1278,7 +1279,23 @@ text += 'copystats "Living Boulder" \n'
 text += 'copyspr "Living Boulder" \n'
 text += 'clearmove \n'
 text += 'slow \n'
-text += ' \n'	
+text += ' \n'
+
+text += 'newmonster "Moldwynd" \n'
+text += 'name "Moldwynd" \n'
+text += 'descr "" \n'
+text += 'copystats "Troglodyte" \n'
+text += 'hp 22 \n'
+text += 'mr 5 \n'
+text += 'spr1 "Randomclass/ugly_1.tga" \n'
+text += 'spr2 "Randomclass/ugly_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 5 "Bite" \n'
+text += 'clearspec \n'
+text += 'spellweapon 58 1 \n'
+text += 'flying \n'
+text += 'rank 0	\n'
+text += ' \n'
 	
 i = 0
 classnumber = 0	
@@ -3244,6 +3261,22 @@ text += 'copystats "Living Boulder" \n'
 text += 'copyspr "Living Boulder" \n'
 text += 'clearmove \n'
 text += 'slow \n'
+text += ' \n'
+
+text += 'newmonster "Moldwynd" \n'
+text += 'name "Moldwynd" \n'
+text += 'descr "" \n'
+text += 'copystats "Troglodyte" \n'
+text += 'hp 22 \n'
+text += 'mr 5 \n'
+text += 'spr1 "Randomclass/ugly_1.tga" \n'
+text += 'spr2 "Randomclass/ugly_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 5 "Bite" \n'
+text += 'clearspec \n'
+text += 'spellweapon 58 1 \n'
+text += 'flying \n'
+text += 'rank 0	\n'
 text += ' \n'	
 
 descrroll =	'descr "' + randomItem(team9) + ' ' + randomItem(team10) + ' ' + randomItem(team11) + ' ' + randomItem(team12) + '" \n'
