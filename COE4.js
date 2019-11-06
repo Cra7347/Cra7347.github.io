@@ -39,7 +39,8 @@ let team5 = ['Dastardly','Unbeatable', 'Fiery', 'Frightening','Old','Oozing',"Re
 			 "Ironside","Red","Blue","Yellow","Unthawed","Mute","Deaf","Blind","Vorpal",
 			 "Green","Pink","Purple","Orange","Grey","Black","White","Silver","Gold",
 			 "Trove","Witch","Feel","Crusader","Honey","Hugging","Dungeon","Boss","Wishing",
-			 "Tortured","Disemboweled","Grotesque","Scattering"
+			 "Tortured","Disemboweled","Grotesque","Scattering","Milky","Molted","Bearded",
+	         "Baptized"
 	
 			 ]
 
@@ -60,7 +61,7 @@ let team6 = ['King','Queen','Prince','Demon','Duke','Worm','Princess','Thief','S
 			 "Diadochi","Czar","Kaiser","Tiger","Meister","Chimera","Doctor","Roach","Pest",
 			 "Emir","Vizier","Pharaoh","Pontiff","Disciple","Parent","Head","Extortioner",
 			 "Executioner","Bey","Hetman","Beg","Chanyu","Defenestrator","Hierophant","Spook",
-			 "Maimer","Fey","Artist","Painter"
+			 "Maimer","Fey","Artist","Painter","Punk","Judicator","Bailiff","Accuser","Turncoat"
 	
 			 ]	
 
@@ -72,7 +73,8 @@ let team7 = ['Hell','the Throne','Souls','Pain','Love','Darkness','Ooze','Fear',
 			 'Hades','Harpoons','the First Sin','the Orient','the Monastery','the Craft',
 			 'the Winds','Many Colors','White Robes','the Trove','the Horde','Hate',
 			 "Of the Lamp","Ulm","C'tis","Fomoria","R'lyeh","Ermor","Sin","The Storm",
-			 "Revelations","the Mount","the Peak"
+			 "Revelations","the Mount","the Peak","Alanjeh","Kendaria","Londor","Drangleic",
+			 "Tristram"
 			 ]
 let team8 = ['5','6','7','40','41','42','43','70','90','105','109','158','196',
 		     '222'
