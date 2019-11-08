@@ -519,7 +519,7 @@ let team3_baal = ["Sirrush","Manticore","Scorpion Man"
 
 
 ]
-let team3_2_baal = ["Shed","Giant Beast","Anakite Captain"		 
+let team3_2_baal = ["Shed","Scorpion Beast","Anakite Captain"		 
 
 ]
 let team3_3_baal = ["Se'ir","Giant Scorpion"	
