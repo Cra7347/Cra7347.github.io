@@ -1070,6 +1070,7 @@ If your download is not working, consider switching to a recommended browser.
         dlink.onclick = function(e) {
             // revokeObjectURL needs a delay to work properly
 			// Test push for github, change the data amount zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+			//Github, why wont you publish my changes unless I do this >_<
             var that = this;
             setTimeout(function() {
                 window.URL.revokeObjectURL(that.href);
@@ -1079,8 +1080,28 @@ If your download is not working, consider switching to a recommended browser.
         dlink.click();
         dlink.remove();
     }
+	
+ //     var openFile = function(event) {
+ //       var input = event.target;
+//
+ //       var reader = new FileReader();
+ //       reader.onload = function(){
+//          var text = reader.result;
+//		  var text = text.substring(
+//			text.indexOf("newmonster"), 
+//			text.indexOf('/n')
+//		);		  
+ //         var node = document.getElementById('output');
+//          node.innerText = text;
+ //         console.log(reader.result.substring(0, 200));
+ //       };
+ //       reader.readAsText(input.files[0]);
+ //     };
     </script>
-
+<!--	
+    <input type='file' accept='.c4m' onchange='openFile(event)'><br>
+    <div id='output'>
+ -->	
 </body>
 <script src="COE4.js"></script>
 </html>
