@@ -2453,6 +2453,12 @@ text += 'addmercrec "Large Mirror" 100 1 25 0 0\n'
 text += 'addmercrec "Silver Mirror" 100 1 50 0 0\n'
 text += 'addmercrec "Golden Mirror" 100 1 150 0 0\n'
 }
+if (shuffle2 === 14){	
+text += 'addunitrec "Dwarf Warrior" 100 5 0 0 30\n'
+text += 'reclimiter  "=Dwarf Worker"\n'
+text += 'addunitrec "Dwarf Guard" 100 5 0 0 40\n'
+text += 'reclimiter  "=Dwarf Worker"\n'
+}
 if(shuffle2 === 15){
 text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
 }
@@ -2728,6 +2734,12 @@ text += 'addmercrec "Mirror" 100 1 10 0 0\n'
 text += 'addmercrec "Large Mirror" 100 1 25 0 0\n'
 text += 'addmercrec "Silver Mirror" 100 1 50 0 0\n'
 text += 'addmercrec "Golden Mirror" 100 1 150 0 0\n'
+}
+if (shuffle2 === 14){	
+text += 'addunitrec "Dwarf Warrior" 100 5 0 0 30\n'
+text += 'reclimiter  "=Dwarf Worker"\n'
+text += 'addunitrec "Dwarf Guard" 100 5 0 0 40\n'
+text += 'reclimiter  "=Dwarf Worker"\n'
 }
 if(shuffle2 === 15){
 text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
@@ -5198,6 +5210,12 @@ text += 'addmercrec "Large Mirror" 100 1 25 0 0\n'
 text += 'addmercrec "Silver Mirror" 100 1 50 0 0\n'
 text += 'addmercrec "Golden Mirror" 100 1 150 0 0\n'
 }
+if (shuffle2 === 14){	
+text += 'addunitrec "Dwarf Warrior" 100 5 0 0 30\n'
+text += 'reclimiter  "=Dwarf Worker"\n'
+text += 'addunitrec "Dwarf Guard" 100 5 0 0 40\n'
+text += 'reclimiter  "=Dwarf Worker"\n'
+}
 if(shuffle2 === 15){
 text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
 }
@@ -6254,6 +6272,12 @@ text += 'addmercrec "Large Mirror" 100 1 25 0 0\n'
 text += 'addmercrec "Silver Mirror" 100 1 50 0 0\n'
 text += 'addmercrec "Golden Mirror" 100 1 150 0 0\n'
 }
+if (shuffle2 === 14){	
+text += 'addunitrec "Dwarf Warrior" 100 5 0 0 30\n'
+text += 'reclimiter  "=Dwarf Worker"\n'
+text += 'addunitrec "Dwarf Guard" 100 5 0 0 40\n'
+text += 'reclimiter  "=Dwarf Worker"\n'
+}
 if(shuffle2 === 15){
 text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
 }
@@ -7263,6 +7287,12 @@ text += 'addmercrec "Mirror" 100 1 10 0 0\n'
 text += 'addmercrec "Large Mirror" 100 1 25 0 0\n'
 text += 'addmercrec "Silver Mirror" 100 1 50 0 0\n'
 text += 'addmercrec "Golden Mirror" 100 1 150 0 0\n'
+}
+if (shuffle2 === 14){	
+text += 'addunitrec "Dwarf Warrior" 100 5 0 0 30\n'
+text += 'reclimiter  "=Dwarf Worker"\n'
+text += 'addunitrec "Dwarf Guard" 100 5 0 0 40\n'
+text += 'reclimiter  "=Dwarf Worker"\n'
 }
 if(shuffle2 === 15){
 text += 'addcomrec "Warlock'+ illapp +'s Apprentice" 5 55 20 0 \n'
