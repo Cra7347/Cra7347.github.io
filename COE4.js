@@ -580,13 +580,13 @@ let team3_3_homark = ["Markmeister","Markgraf"
 
 //Warlock
 let team1_melee_warlock = [
-	{name: "Lesser Fire", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Lesser Water", num: 5, gold: 50, iron: 0, chance: 100},
-	{name: "Lesser Earth", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Lesser Fire", num: 5, gold: 60, iron: 0, chance: 100},
+	{name: "Lesser Water", num: 5, gold: 60, iron: 0, chance: 100},
+	{name: "Lesser Earth", num: 5, gold: 50, iron: 5, chance: 100},
 	{name: "Winter Wolf", num: 3, gold: 50, iron: 0, chance: 100},			
 ]
 let team1_ranged_warlock = [
-	{name: "Cloud Elemental", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Cloud Elemental", num: 5, gold: 60, iron: 0, chance: 100},
 			
 ]
 let team2_warlock = [
@@ -731,7 +731,10 @@ let team1_melee_weird = [
 	{name: "Hyena Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Ichtyid Warrior", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "War Elephant", num: 1, gold: 65, iron: 0, chance: 10},		
-	{name: "Wolf Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},			
+	{name: "Wolf Tribe Warrior", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Evil Toy", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Monster", num: 5, gold: 50, iron: 0, chance: 100},	
+	{name: "Plague Rat", num: 5, gold: 50, iron: 0, chance: 100},	
 ]
 let team1_ranged_weird = [
 	{name: "Voi Archer", num: 5, gold: 50, iron: 0, chance: 100},
@@ -750,7 +753,7 @@ let team2_weird = [
 ]
 let team3_weird = ['Hidden Aboleth',"Moon Horror",
 			 'Horror Olm',"Ormr","Python",
-			 "Gore Tide Horror", 
+			 "Gore Tide Horror", "Plague Rat","Amanra","Monster"
 
 
 		 
@@ -759,11 +762,11 @@ let team3_weird = ['Hidden Aboleth',"Moon Horror",
 
 ]
 let team3_2_weird = ["Hidden Aboleth","Formless Spawn","Displacer Beast","Hidden Freak",
-			 "Demonic Locust","Dream Horror","Gelatinous Cube","Rakshasa","Moldwynd"
+			 "Demonic Locust","Dream Horror","Gelatinous Cube","Rakshasa","Moldwynd","Ophanlot","Spine of Babylon"
 
 ]
 let team3_3_weird = ["Miracle Eye","Freak Lord","Lizardman Shaman","Spine Membrane Horror","Horror Mantis","Ichtyid Captain",
-					 "Brass Claw Horror","Mind Slime Horror","Float Cat Horror","Moldwynd"
+					 "Brass Claw Horror","Mind Slime Horror","Float Cat Horror","Moldwynd","Convulser"
 ]	
 			  
 let	text	
@@ -1299,6 +1302,341 @@ text += 'flying \n'
 text += 'rank 0	\n'
 text += ' \n'
 	
+text += 'newmonster "Headless Horseman" \n'
+text += 'name "Headless Horseman" \n'
+text += 'descr "Only in the darkest dreams of the few remaining Nemedian elders do the memories of the Nuckelavee roam free. Being a demon so foul, they brought death to world in the wake of their thunderous hooves. The Nuckelavee were both powerful demons and fey of nature, hailing the northern shores of the world. Considered cruel even among the vindictive dryads and hags, the Nucklelavee would eagerly kill and torture all those who despoiled various sacred bodies of water. Though long banished from both the mortal planes and the afterlife, the remains of their legacy live on in the blackest of forests. Only the Fomorians dare bring back these deadly monsters of yore to the world of living so that they may ride and slaughter again. Fortunately for the mortals of Elysium, the Fomorians are poor mages, and cannot fully restore the demon to its full glory. Rather, the Nuckelavee is returned in the form of a headless black rider, now called to prowl the forests. The headless horseman, though he bears a mere fraction of the Nuckelavee soul, is free to hunt and play amongst the lonely backroads." \n'
+text += 'copystats "Spectral Horseman" \n'
+text += 'spr1 "Randomclass/headless_1.tga" \n'
+text += 'spr2 "Randomclass/headless_2.tga" \n'
+text += 'fear 2 \n'
+text += 'stupid \n'
+text += 'forest2 \n'
+text += 'regeneration \n'
+text += 'stealth \n'
+text += 'noleader \n'
+ text += '\n'
+text += 'newmonster "Barghest" \n'
+text += 'name "Barghest" \n'
+text += 'descr "Barghest are huge, black fey hounds from the Fomorian plains. Some say they are the manifestation of darkness and ill fates. Peasants living near overgrown forests or bleak highlands would do well to stay indoors after night, less the black dog of the moors develop the urge to investigate the encroachments of man." \n'
+text += 'copystats "Wolf" \n'
+text += 'hp 25 \n'
+text += 'str 6 \n'
+text += 'mr 5 \n'
+text += 'spr1 "Randomclass/1768_1.tga" \n'
+text += 'spr2 "Randomclass/1768_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 9 42 \n'
+text += 'spiritsight \n'
+text += 'animal \n'
+text += 'stealth \n'
+text += 'regeneration \n'
+text += 'forest2 \n'
+text += 'stupid \n'
+ text += '\n'
+
+text += 'newmonster "Black Dog"\n'
+text += 'name "Black Dog"\n'
+text += 'descr "Black dogs are huge fey hounds from the Fomorian plains. Some say they are the manifestation of darkness and ill fates. Peasants living near overgrown forests or bleak highlands would do well to stay indoors after night, less the black dog of the moors develop the urge to investigate the encroachments of man."\n'
+text += 'copystats "Wolf"\n'
+text += 'hp 7\n'
+text += 'mr 4\n'
+text += 'spr1 "Randomclass/1769_1.tga"\n'
+text += 'spr2 "Randomclass/1769_2.tga"\n'
+text += 'spiritsight\n'
+text += 'animal\n'
+text += 'forest2\n'
+text += 'stealth\n'
+text += '\n'
+
+text += 'newmonster "Cath Sith"\n'
+text += 'name "Cath Sith"\n'
+text += 'descr "A witch who dares assume the form of a cat nine times bears the risk of becoming a Cath Sith permanently. Cath Sith are black fey cats of the highlands and moors. Although they are not as dire as the black dogs of the moors, they are still powerful masters of magic, regardless of their fluffy new form. Cath Sith often mean to do harm, such as killing a farmers hens, or rubbing up against a millers leg, cursing him to contract the plague the very next day. However, a Cath Sith is not completely heartless, one could possibly be appeased by gifts of gold or food. A lost little boy in the moors might even find his way back to his parents if he catches the eye of a lonely Cath Sith."\n'
+text += 'copystats "Black Cat Familiar"\n'
+text += 'copyspr "Black Cat Familiar"\n'
+text += 'hp 15\n'
+text += 'mor 7\n'
+text += 'mr 8\n'
+text += 'clearweapons\n'
+text += 'meleeweapon 4 "Claw"\n'
+text += 'spellweaponbonus 37 2\n'
+text += 'spellweaponbonus 40 2\n'
+text += 'stealth\n'
+text += 'forest2\n'
+text += 'stupid\n'
+text += 'lucky\n'
+text += '\n'
+
+text += 'newmonster "Witch Elm"\n'
+text += 'name "Witch Elm"\n'
+text += 'descr "Every once in awhile, a terrified peasant will stumble upon the corpse of a young girl in the hollow of an Elm tree trunk. Though perplexing, some have have theorized that this the work of witch covens dumping failed apprentices in some form of execution. More likely, it is the work of the Fomorians stealing children for their druidic spells. Fomorians can increase their power over the land if they plant the body of a budding young witch in the trunk of a rotting tree and curse its roots with toads blood. It is unknown why some Witch Elms fail to inflict any form of malady upon their intended target. Perhaps the Formorians are unable to tell which girls are developing into witchs, so they simply blindly kidnap and kill a random child for the ritual, hoping for some form of success."\n'
+text += 'copystats "Shadow Tree"\n'
+text += 'copyspr "Shadow Tree"\n'
+text += 'stealth\n'
+text += 'spawn1d6mon 35\n'
+text += '\n'
+
+text += 'newmonster "Wild Black Dog"\n'
+text += 'name "Wild Black Dog"\n'
+text += 'descr "Black dogs are huge fey hounds from the Fomorian plains. Some say they are the manifestation of darkness and ill fates. Peasants living near overgrown forests or bleak highlands would do well to stay indoors after night, less the black dog of the moors develop the urge to investigate the encroachments of man."\n'
+text += 'copystats "Wolf"\n'
+text += 'hp 15\n'
+text += 'mr 4\n'
+text += 'spr1 "Randomclass/1769_1.tga"\n'
+text += 'spr2 "Randomclass/1769_2.tga"\n'
+text += 'clearweapons\n'
+text += 'meleeweapon 8 "Bite"\n'
+text += 'spiritsight\n'
+text += 'animal\n'
+text += 'stealth\n'
+text += 'stupid\n'
+text += 'regeneration\n'
+text += '\n'
+
+text += 'newmonster "Fomorian King"\n'
+text += 'name "Fomorian King"\n'
+text += 'descr "The Fomorian King is a king of the giants who once guarded the realms of the watery dead. Under their rule the Fomorians emerged from the depths and sailed to distant shores to plunder and ravage the land with plague and gale. Punished for their sins, the Fomorians were banished and forced to find a new home. The Fomorian Kings are powerful storm crafters and death mages. They protected their land from the invading Patholonians and their descendants with plagues and further doomed their race. Fomorian Kings are cursed with a monsterous appearance and have only one eye. They are formidable shipwrights and can enter the ocean realms."\n'
+text += 'copystats "Hill Giant"\n'
+text += 'armor 1\n'
+text += 'mr 7\n'
+text += 'spr1 "Randomclass/1803_1.tga"\n'
+text += 'spr2 "Randomclass/1803_2.tga"\n'
+text += 'clearweapons\n'
+text += 'meleeweapon 15 "Spear"\n'
+text += 'rangedweaponbonus 15 "Javelin"\n'
+text += 'spellweapon 5 2\n'
+text += 'spellweapon 59 3\n'
+text += 'power 0 3\n'
+text += 'shield\n'
+text += 'badsight\n'
+text += 'spiritsight\n'
+text += 'water\n'
+text += 'rank -1\n'
+text += 'nametype 42\n'
+text += '\n'
+
+text += 'newmonster "Balor"\n'
+text += 'name "Balor"\n'
+text += 'descr "The Eye of Balor is dreadful curse upon the land. Where ever the lumbering giant goes, his baleful gaze falls upon the enemies of his divine rule. Forest fires and droughts are all attributed to the beams firing from his cursed eye."\n'
+text += 'copystats "Hill Giant"\n'
+text += 'hp 400\n'
+text += 'armor 3\n'
+text += 'mr 7\n'
+text += 'spr1 "Randomclass/1899_1.tga"\n'
+text += 'spr2 "Randomclass/1899_2.tga"\n'
+text += 'clearweapons\n'
+text += 'meleeweapon 20 "Spear"\n'
+text += 'rangedweaponbonus 20 "Javelin"\n'
+text += 'spellweapon 5 2\n'
+text += 'spellweapon 59 3\n'
+text += 'spellweapon 50 3\n'
+text += 'power 0 3\n'
+text += 'shield\n'
+text += 'badsight\n'
+text += 'spiritsight\n'
+text += 'water\n'
+text += 'rank -1\n'
+text += 'nametype 42\n'
+text += '\n'
+
+text += 'newmonster "Nemedian Sorceress"\n'
+text += 'name "Nemedian Sorceress"\n'
+text += 'descr "The Nemedians have merged the old magical traditions of their Partholonian ancestors and the magic of their Fomorian masters. Sorceresses skilled in death and air magic hide in the dark spires of Rath Chimbalth where they summon whispering shades of mist and darkness."\n'
+text += 'copystats "Archer"\n'
+text += 'armor 0\n'
+text += 'mr 4\n'
+text += 'spr1 "Randomclass/1792_1.tga"\n'
+text += 'spr2 "Randomclass/1792_2.tga"\n'
+text += 'clearweapons\n'
+text += 'meleeweapon 0 "Staff"\n'
+text += 'spellweapon 43 1\n'
+text += 'spellweapon 59 2\n'
+text += 'spiritsight\n'
+text += 'rank -1\n'
+text += 'nametype 43\n'
+text += '\n'
+
+text += 'newmonster "Nemedian Warrior"\n'
+text += 'name "Nemedian Warrior"\n'
+text += 'descr "Nemedians are the descendants of the Sauromatian Partholonians. They are a highly magical race far surperior to ordinary men, but they were few in number. With the arrival of the Witch Kings, they left Sauromatia for a better place. The Nemedians followed in the footsteps of their Partolonian ancestors and arrived in the rich land of the Fomorians. Soon war broke out. The Nemedians were victorious until the plague that once eradicated the Partholonians struck them a wiped out half the population. The war ended with the subjugation of the Nemedians. After a bloody rebellion, most of them fled the land, but a few of them still linger in the old fortress of Rath Chimbalth."\n'
+text += 'copystats "Heavy Infantry"\n'
+text += 'hp 10\n'
+text += 'spr1 "Randomclass/1790_1.tga"\n'
+text += 'spr2 "Randomclass/1790_2.tga"\n'
+text += 'clearweapons\n'
+text += 'meleeweapon 5 "Golden Spear"\n'
+text += 'meleeweapon 2 "Javelin"\n'
+text += 'shield\n'
+text += 'spiritsight\n'
+text += '\n'
+
+text += 'newweapon "Morrigan Spear" \n'
+text += 'clearwspec \n'
+text += 'trgrank 1 \n'
+text += 'range 1 \n'
+text += 'dmgtype 7 \n'
+text += 'dmg 0 \n'
+text += 'aoe 1 \n'
+text += 'sound 1 \n'
+text += 'init 3 \n'
+text += 'dispossess \n'
+
+text += 'newmonster "Morrigan" \n'
+text += 'name "Morrigan" \n'
+text += 'descr "The Morrigans are heralds of death, collectors of souls, and bringers of strife. They are the fates of the battleground, weaving threads of entrails with arrows for needles. Their chant colors the skies red before battle. In the shapes of crows, they pick out the eyes of the dead. The Morrigans are horrible beings of death and destruction. They appear as grisly warrior women armed with spears enchanted to kill." \n'
+text += 'copystats "Spearman" \n'
+text += 'hp 35 \n'
+text += 'armor 1 \n'
+text += 'mr 5 \n'
+text += 'mor 30 \n'
+text += 'spr1 "Randomclass/1821_1.tga" \n'
+text += 'spr2 "Randomclass/1821_2.tga" \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 15 "Morrigan Spear" \n'
+text += 'shield \n'
+text += 'spiritsight \n'
+text += 'stealth \n'
+text += 'fear 1 \n'
+text += 'poisonres 25 \n'
+text += 'undead \n'
+text += 'flying \n'	
+text += '\n'
+
+text += 'newmonster "Spine of Babylon"  \n'
+text += 'descr ""  \n'
+text += 'copystats "Ogre"  \n'
+text += 'hp 25 \n'
+text += 'mr 4 \n'
+text += 'str 5 \n'
+text += 'armor 1 \n'
+text += 'mor 15 \n'
+text += 'spr1 "Randomclass/qi.tga"  \n'
+text += 'spr2 "Randomclass/qi2.tga"  \n'
+text += 'clearweapons  \n'
+text += 'rangedweaponbonus 8 "Flick Barb" \n'
+text += 'spellweaponbonus 50 1  \n'
+text += 'rangedweaponbonus 1 "Charm"  \n'
+text += 'rangedweaponbonus 1 "Weakness"  \n'
+text += 'clearspec \n'
+text += 'rank -1  \n'
+text += ' \n'
+
+text += 'newmonster "Amanra"  \n'
+text += 'descr ""  \n'
+text += 'copystats "Ogre"  \n'
+text += 'hp 18 \n'
+text += 'mr 9 \n'
+text += 'str 4 \n'
+text += 'armor 0 \n'
+text += 'mor 15 \n'
+text += 'spr1 "Randomclass/kitty_1.tga"  \n'
+text += 'spr2 "Randomclass/kitty_2.tga"  \n'
+text += 'clearweapons  \n'
+text += 'meleeweapon 2 "Bite" \n'
+text += 'spellweaponbonus 38 2 \n'
+text += 'spellweaponbonus 6 1   \n'
+text += 'clearspec \n'
+text += 'rank -1  \n'
+text += ' \n'
+
+text += 'newmonster "Ophanlot"  \n'
+text += 'descr ""  \n'
+text += 'copystats "Ogre"  \n'
+text += 'hp 35 \n'
+text += 'mr 7 \n'
+text += 'str 4 \n'
+text += 'armor 2 \n'
+text += 'mor 15 \n'
+text += 'spr1 "Randomclass/kitty_3.tga"  \n'
+text += 'spr2 "Randomclass/kitty_4.tga"  \n'
+text += 'clearweapons  \n'
+text += 'meleeweapon 10 "Bite" \n'
+text += 'rangedweapon 2 "Invulnerability" \n'
+text += 'spellweaponbonus 49 2   \n'
+text += 'clearspec \n'
+text += 'holy \n'
+text += 'rank 1  \n'
+text += ' \n'
+
+text += 'newmonster "Evil Toy"  \n'
+text += 'descr ""  \n'
+text += 'copystats "Ogre"  \n'
+text += 'hp 6 \n'
+text += 'mr 7 \n'
+text += 'str 4 \n'
+text += 'armor 0 \n'
+text += 'mor 8 \n'
+text += 'spr1 "Randomclass/teddy_1.tga"  \n'
+text += 'spr2 "Randomclass/teddy_2.tga"  \n'
+text += 'clearweapons  \n'
+text += 'meleeweapon 6 "Bite" \n'
+text += 'clearspec \n'
+text += 'float \n'
+text += 'inanimate \n'
+text += 'poisonres 100 \n'
+text += 'fireres -50 \n'
+text += 'bluntres \n'
+text += 'stealth \n'
+text += 'rank 1   \n'
+text += ' \n'
+
+text += 'newmonster "Convulser"  \n'
+text += 'descr ""  \n'
+text += 'copystats "Maker of Ruins"  \n'
+text += 'hp 180 \n'
+text += 'mr 5 \n'
+text += 'str 8 \n'
+text += 'armor 1 \n'
+text += 'mor 15 \n'
+text += 'copyspr "Maker of Ruins" \n'
+text += 'clearweapons  \n'
+text += 'meleeweapon 1 "Earthquake" \n'
+text += 'meleeweapon 20 "Crush"   \n'
+text += 'clearspec \n'
+text += 'spiritsight \n'
+text += 'fireres 50 \n'
+text += 'coldres 50 \n'
+text += 'huge \n'
+text += 'slow \n'
+text += 'trample 5 \n'
+text += ' \n'
+
+text += 'newmonster "Plague Rat" \n'
+text += 'name "Plague Rat" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'spr1 "Randomclass/rat_1.tga"  \n'
+text += 'spr2 "Randomclass/rat_2.tga" \n'
+text += 'hp 3 \n'
+text += 'str 3 \n'
+text += 'armor 0 \n'
+text += 'mor 4 \n'
+text += 'mr 7 \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 4 "Poison Cloud"  \n'
+text += 'clearspec \n'
+text += 'poisonexpl 4 \n'
+text += 'poisonres 100 \n'
+text += 'diseaseres \n'
+text += ' \n'
+
+
+text += 'newmonster "Monster" \n'
+text += 'name "Monster" \n'
+text += 'descr "" \n'
+text += 'copystats "Spearman" \n'
+text += 'spr1 "Randomclass/mon4.tga"  \n'
+text += 'spr2 "Randomclass/mon5.tga" \n'
+text += 'hp 10 \n'
+text += 'str 4 \n'
+text += 'armor 0 \n'
+text += 'mor 4 \n'
+text += 'mr 7 \n'
+text += 'clearweapons \n'
+text += 'meleeweapon 5 "Claw"  \n'
+text += 'clearspec \n'
+text += ' \n'
+
+	
 i = 0
 classnumber = 0	
 unitnumber = 0
@@ -1350,9 +1688,9 @@ let team1_melee_empty = [
 ]
 let team1_ranged_empty = [
 	{name: "Crossbowman", num: 5, gold: 50, iron: 5, chance: 100},
-	{name: "Slinger", num: 5, gold: 50, iron: 5, chance: 100},
-	{name: "Tower Guard", num: 5, gold: 50, iron: 5, chance: 100},	
-	{name: "Archer", num: 5, gold: 50, iron: 5, chance: 100},	
+	{name: "Slinger", num: 5, gold: 50, iron: 0, chance: 100},
+	{name: "Tower Guard", num: 5, gold: 50, iron: 15, chance: 100},	
+	{name: "Archer", num: 5, gold: 50, iron: 0, chance: 100},	
 	{name: "Scout", num: 5, gold: 50, iron: 0, chance: 100},
 	{name: "Catapult", num: 1, gold: 25, iron: 50, chance: 100},	
 	{name: "Trebuchet", num: 1, gold: 50, iron: 50, chance: 100},
@@ -1551,7 +1889,118 @@ limit2 = 4
 limit3 = Math.floor(Math.random() * 4)	
 i++
 shuffle = randomItem(team8)
-shuffle2 = Math.floor(Math.random() * 16)
+shuffle2 = Math.floor(Math.random() * 17)
+
+if(shuffle2 === 16){
+text += 'selectterr 37 \n'
+text += 'ownable \n'
+text += 'herbs 1 \n'
+text += ' \n'
+
+text += 'newritpow \n'
+text += 'newritual "Ritual of mastery"  \n'
+text += 'level 1  \n'
+text += 'newrit 2  \n'
+text += 'levelup 2  \n'
+text += 'rebatelvl 2  \n'
+text += 'soundfx 57  \n'
+text += 'cost 2 120 \n'
+text += 'terr -1 \n'
+text += 'free \n'
+text += ' \n'
+
+text += 'newritual "Summon Morrigan" \n'
+text += 'descr "Summon the warrior maidens of the black broch."  \n'
+text += 'level 2 \n'
+text += 'summoning  \n'
+text += 'terr -1 \n'
+text += 'rebatelvl 5 \n'
+text += 'addstring "6*Morrigan"  \n'
+text += 'cost 2 350 \n'
+text += ' \n'
+
+text += 'newritual "Claim Ancient Forest" \n'
+text += 'descr "Carve the trunk of a ancient forest tree and coat it black iron to make a new tower."  \n'
+text += 'level 2 \n'
+text += 'summoning \n'
+text += 'terr 4 \n'
+text += 'addstring "2*Witch Elm"  \n'
+text += 'cost 0 30 \n'
+text += 'apcost 6 \n'
+text += 'alterloc 151 \n'
+text += ' \n'
+
+text += 'newritual "Season of the Witch" \n'
+text += 'descr "Summon the warrior maidens of the black broch."  \n'
+text += 'level 3 \n'
+text += 'summoning  \n'
+text += 'terr -1 \n'
+text += 'rebatelvl 5 \n'
+text += 'addstring "3d6*Morrigan & 3d6*Black Cat Familiar"  \n'
+text += 'cost 2 500 \n'
+text += ' \n'
+
+text += 'newritual "Defile Forest"  \n'
+text += 'descr "Haunt the forest with black magic. Shadow forests will harbor stealthy units who will gather herbs and conquer sites for you, along with killing all fungus." \n'
+text += 'level 1 \n'
+text += 'summoning \n'
+text += 'sum0chance 40  \n'
+text += 'terr -38 \n'
+text += 'terrscale50 4 \n'
+text += 'rebatelvl 5 \n'
+text += 'addstring "Witch Elm" \n'
+text += 'addstring "Headless Horseman"  \n'
+text += 'addstring "1d4*Barghest" \n'
+text += 'addstring "Cath Sith"  \n'
+text += 'cost 2 120 \n'
+text += 'alterloc 37 \n'
+text += ' \n'
+
+
+text += 'newritual "Summon Banshee" \n'
+text += ' descr "Summon a banshee to destroy your enemies. Beware, banshees are just as destructive to your troops as the enemies." \n'
+text += 'level 2 \n'
+text += 'summoning  \n'
+text += 'terr -1 \n'
+text += 'rebatelvl 5 \n'
+text += 'addstring "Banshee"  \n'
+text += 'cost 2 400 \n'
+text += ' \n'
+
+text += 'newritual "Druid Ritual" \n'
+text += 'descr "We are poor druids, but still know to call upon the henge for power."  \n'
+text += 'level 2 \n'
+text += 'summoning  \n'
+text += 'terr 90 \n'
+text += 'rebatelvl 5 \n'
+text += 'addstring "Rootmonster"  \n'
+text += 'cost 2 200 \n'
+text += ' \n'
+
+text += 'newritual "Summon Fomorian King"  \n'
+text += 'descr "Summon a true Fomorian giant. The Fomorian King is powerful caster and can travel across the sea." \n'
+text += 'level 2 \n'
+text += 'summoning  \n'
+text += 'terr 90 \n'
+text += 'rebatelvl 5 \n'
+text += 'addstring "c*Fomorian King"  \n'
+text += 'cost 2 500 \n'
+text += 'cost 0 100 \n'
+text += 'free \n'
+text += ' \n'
+
+text += 'newritual "Summon Balor" \n'
+text += 'descr "Summon a Balor the Evil Eye of Fomoria. Balor is the god of famine and is a powerful caster."  \n'
+text += 'level 3 \n'
+text += 'summoning  \n'
+text += 'terr 90 \n'
+text += 'rebatelvl 5 \n'
+text += 'addstring "c*Balor"  \n'
+text += 'cost 2 1000 \n'
+text += 'cost 0 150 \n'
+text += 'free \n'
+text += ' \n'
+}
 
 coin = Math.floor(Math.random() * 4)
 if(coin === 3){
@@ -1679,6 +2128,12 @@ if(shuffle2 === 15){
 
 text += 'gathergems \n'	
 }
+
+if(shuffle2 === 16){
+
+text += 'power 0 1 \n'
+text += 'gatherherbs \n'	
+}
 coin2 = Math.floor(Math.random() * 2)
 spell = Math.floor(Math.random() * 62)
 
@@ -1785,6 +2240,11 @@ if(shuffle2 === 15){
 
 text += 'gathergems \n'	
 }
+if(shuffle2 === 16){
+
+text += 'power 0 2 \n'
+text += 'gatherherbs \n'	
+}
 coin2 = Math.floor(Math.random() * 2)
 spell = Math.floor(Math.random() * 62)
 
@@ -1889,6 +2349,12 @@ text += 'gathergems \n'
 if(shuffle2 === 15){
 
 text += 'gathergems \n'	
+}
+
+if(shuffle2 === 16){
+
+text += 'power 0 3 \n'
+text += 'gatherherbs \n'	
 }
 
 coin2 = Math.floor(Math.random() * 2)
